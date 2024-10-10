@@ -25,4 +25,4 @@ touch next.config.js
 touch .env
 
 # Optional: Add a message to confirm completion
-echo "Project structure created successfully!"
+echo "Project structure created successfully with jojo!"
