@@ -16,7 +16,7 @@ git push -u origin main
 # --------Remove Repository:
 # rm -rf .git
 # git init
-# If you've initialized a local repository and want to connect it to a remote repository on GitHub, GitLab, etc., follow these steps:
+
 # git remote add origin https://github.com/jookie/news-stocks.git
 # streamlit run app.py  
 git remote add origin https://github.com/jookie/jojostock1.git
