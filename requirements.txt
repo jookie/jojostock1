@@ -1,0 +1,6 @@
+streamlit
+yfinance
+nltk
+pandas
+matplotlib
+beautifulsoup4
