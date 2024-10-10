@@ -19,9 +19,9 @@ git push -u origin main
 
 # git remote add origin https://github.com/jookie/news-stocks.git
 # streamlit run app.py  
-git remote add origin https://github.com/jookie/jojostock1.git
-git branch -M main
-git push -u origin main
+# git remote add origin https://github.com/jookie/jojostock1.git
+# git branch -M main
+# git push -u origin main
 
 
 
