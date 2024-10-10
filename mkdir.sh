@@ -16,7 +16,6 @@ mkdir -p public
 mkdir -p styles
 mkdir -p scripts
 
-
 # Create the necessary files
 touch app/train/page.tsx
 touch components/DataDisplay.tsx
