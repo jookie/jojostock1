@@ -1,0 +1,2 @@
+time/iterations,time/time_elapsed,time/fps,time/total_timesteps,train/reward
+1,6,298,2048,0.90263885
