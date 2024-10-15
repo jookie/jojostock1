@@ -7147,15 +7147,6 @@
         "documentation": {}
     },
     {
-        "label": "animation_demo",
-        "kind": 2,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "def animation_demo() -> None:\n      st.markdown(\"# Stock Training\")\n      st.sidebar.header(\"Stock Training\")\n      st.write(\n      \"\"\"This app shows how you can use Streamlit to build cool animations.\n      It displays an animated fractal based on the the Julia Set. Use the slider\n      to tune different parameters.\"\"\"\n)\nif __name__ == \"__main__\":\n    animation_demo()  ",
-        "detail": "app",
-        "documentation": {}
-    },
-    {
         "label": "API_KEY",
         "kind": 5,
         "importPath": "app",
@@ -7178,7 +7169,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')\n# Set page title and configure layout",
+        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')\ncustom_css = \"\"\"",
         "detail": "app",
         "documentation": {}
     },
@@ -7187,7 +7178,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "TRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')\n# Set page title and configure layout\nst.set_page_config(page_title=\"Stock prediction Trainig\", layout=\"wide\")",
+        "peekOfCode": "TRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')\ncustom_css = \"\"\"\n<style>",
         "detail": "app",
         "documentation": {}
     },
@@ -7196,7 +7187,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "TRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')\n# Set page title and configure layout\nst.set_page_config(page_title=\"Stock prediction Trainig\", layout=\"wide\")\ncustom_css = \"\"\"",
+        "peekOfCode": "TRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')\ncustom_css = \"\"\"\n<style>\nbody {",
         "detail": "app",
         "documentation": {}
     },
@@ -7205,7 +7196,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "TRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')\n# Set page title and configure layout\nst.set_page_config(page_title=\"Stock prediction Trainig\", layout=\"wide\")\ncustom_css = \"\"\"\n<style>",
+        "peekOfCode": "TRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */",
         "detail": "app",
         "documentation": {}
     },
@@ -7214,7 +7205,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "TRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')\n# Set page title and configure layout\nst.set_page_config(page_title=\"Stock prediction Trainig\", layout=\"wide\")\ncustom_css = \"\"\"\n<style>\nbody {",
+        "peekOfCode": "TRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */",
         "detail": "app",
         "documentation": {}
     },
@@ -7224,6 +7215,24 @@
         "importPath": "app",
         "description": "app",
         "peekOfCode": "custom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}\nh1 {\ncolor: #3498db; /* Heading color (light blue) */",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "up_candle",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "up_candle = \"📈\"  # \\U0001F4C8\ndown_candle = \"\"  # \\U0001F4C9\n# Set page title and configure layout\nst.set_page_config(\n      page_title=\"Stock prediction Trainig\", \n      layout=\"wide\",\n      page_icon= \"📈\"\n      )\n# Apply the custom CSS\nst.markdown(custom_css, unsafe_allow_html=True)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "down_candle",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "down_candle = \"\"  # \\U0001F4C9\n# Set page title and configure layout\nst.set_page_config(\n      page_title=\"Stock prediction Trainig\", \n      layout=\"wide\",\n      page_icon= \"📈\"\n      )\n# Apply the custom CSS\nst.markdown(custom_css, unsafe_allow_html=True)\n#page title and subtitle",
         "detail": "app",
         "documentation": {}
     },
@@ -7241,7 +7250,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "example_ticker_symbols = [\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",\n\"ADBE\", \"CRM\", \"INTC\", \"ORCL\", \"HD\"\n]\n# Use a selectbox to allow users to choose from example ticker symbols\nticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\nnews_tables = {}",
+        "peekOfCode": "example_ticker_symbols = [\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",\n\"ADBE\", \"CRM\", \"INTC\", \"ORCL\", \"HD\"\n]\n# Use a selectbox to allow users to choose from example ticker symbols\nticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# if ticker:",
         "detail": "app",
         "documentation": {}
     },
@@ -7250,16 +7259,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "ticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\nnews_tables = {}\nif ticker:\n      #Fetching stock price data\n            current_date = datetime.datetime.now().strftime(\"%Y-%m-%d\")\n            stock_data = yf.download(ticker, start=\"2000-01-01\", end=current_date)\n            url = finviz_url + ticker\n            req = Request(url=url, headers={\"user-agent\": \"my-app\"})\n            response = urlopen(req)\n            html = BeautifulSoup(response, features=\"html.parser\")",
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "news_tables",
-        "kind": 5,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "news_tables = {}\nif ticker:\n      #Fetching stock price data\n            current_date = datetime.datetime.now().strftime(\"%Y-%m-%d\")\n            stock_data = yf.download(ticker, start=\"2000-01-01\", end=current_date)\n            url = finviz_url + ticker\n            req = Request(url=url, headers={\"user-agent\": \"my-app\"})\n            response = urlopen(req)\n            html = BeautifulSoup(response, features=\"html.parser\")\n            news_table = html.find(id=\"news-table\")",
+        "peekOfCode": "ticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# if ticker:\n      #Fetching stock price data\ndef main():\n  from finrl.meta.preprocessor.yahoodownloader import YahooDownloader\n  import pandas as pd\n  check_and_make_directories([DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR])\n  \"\"\" Waiting data collection From Yahoo donloader ...\"\"\"\n  df = YahooDownloader(start_date = TRAIN_START_DATE,\n                      end_date = TRADE_END_DATE,",
         "detail": "app",
         "documentation": {}
     },

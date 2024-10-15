@@ -68,10 +68,6 @@ sys.path.append("../FinRL")
 import datetime
 import nltk
 nltk.download('vader_lexicon')
-
-# Set page title and configure layout
-st.set_page_config(page_title="Stock prediction Trainig", layout="wide")
-
 custom_css = """
 <style>
 body {
@@ -95,12 +91,26 @@ margin: 10px 0; /* Margin for paragraphs */
 
 </style>
 """
+# Representing an upward movement
+up_candle = "📈"  # \U0001F4C8
+down_candle = ""  # \U0001F4C9
+# Set page title and configure layout
+st.set_page_config(
+      page_title="Stock prediction Trainig", 
+      layout="wide",
+      page_icon= "📈"
+      )
+
 
 # Apply the custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
 
 #page title and subtitle
-st.title("Stock Price Ptediction Training ")
+st.title(
+      "Stock Price Ptediction Training 📉"
+    
+)
+
 st.markdown("Trainig to predict stock price movements for a given stock ticker symbol and its foundamental ratios")
 
 finviz_url = "https://finviz.com/quote.ashx?t="
@@ -116,73 +126,16 @@ example_ticker_symbols = [
 
 # Use a selectbox to allow users to choose from example ticker symbols
 ticker = st.selectbox("Select a stock ticker symbol or enter your own:", example_ticker_symbols)
-
-news_tables = {}
-if ticker:
+# if ticker:
       #Fetching stock price data
-            current_date = datetime.datetime.now().strftime("%Y-%m-%d")
-            stock_data = yf.download(ticker, start="2000-01-01", end=current_date)
       
-            url = finviz_url + ticker
-      
-            req = Request(url=url, headers={"user-agent": "my-app"})
-            response = urlopen(req)
-      
-            html = BeautifulSoup(response, features="html.parser")
-            news_table = html.find(id="news-table")
-            news_tables[ticker] = news_table
-if news_table:
-            parsed_data=[]
-            for ticker, news_table in news_tables.items():
-              for row in news_table.findAll('tr'):
-                  if row.a:
-                           title = row.a.text
-                           date_data = row.td.text.split()
-                           if len(date_data) == 1:
-                                  time = date_data[0]
-                           else:
-                                 date = date_data[1]
-                                 time = date_data[0]
-                           parsed_data.append([ticker, date, time, title])
-
-      
-            df = pd.DataFrame(parsed_data, columns=["Ticker", "Date", "Time", "Headline"])
-            vader = SentimentIntensityAnalyzer()
-            f = lambda title: vader.polarity_scores(title)["compound"]
-            df["Compound Score"] = df["Headline"].apply(f)
-            df["Date"] = pd.to_datetime(df["Date"], errors="coerce").dt.date
-            
-            
-            # Display data table
-            st.subheader("News Headlines and Sentiment Scores")
-            st.dataframe(df)
-            
-            # Sentiment summary
-            sentiment_summary = {
-            "Average Score": df["Compound Score"].mean(),
-            "Positive": (df["Compound Score"] > 0).sum() / len(df) * 100,
-            "Negative": (df["Compound Score"] < 0).sum() / len(df) * 100,
-            "Neutral": (df["Compound Score"] == 0).sum() / len(df) * 100,
-            }
-            st.subheader("Sentiment Summary")
-            st.write(sentiment_summary)
-            
-            plt.figure(figsize=(10, 8))
-            plt.plot(stock_data.index, stock_data["Close"])
-            plt.xlabel("Date")
-            plt.ylabel("Stock Price")
-            plt.title("Stock Price Movements - Line Chart")
-            plt.xticks(rotation=45)
-            st.subheader("Stock Price Movements - Line Chart")
-            st.pyplot(plt)
-
-else:
-      st.write("No news found for the entered stock ticker symbol.")
-
 def main():
   
   from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
   import pandas as pd
+  
+ 
+  
  
   check_and_make_directories([DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR])
   """ Waiting data collection From Yahoo donloader ..."""
@@ -527,21 +480,14 @@ def main():
   st.write("result: ", result)
   result.to_csv("result.csv")
 
-  # %matplotlib inline
   plt.rcParams["figure.figsize"] = (15,5)
-  plt.figure();
-  result.plot();
+  fig, ax = plt.subplots()
+  result.plot(ax=ax)
+  st.pyplot(fig)
 
-def animation_demo() -> None:
-      st.markdown("# Stock Training")
-      st.sidebar.header("Stock Training")
-      st.write(
-      """This app shows how you can use Streamlit to build cool animations.
-      It displays an animated fractal based on the the Julia Set. Use the slider
-      to tune different parameters."""
-)
+
+
 
 
 if __name__ == "__main__":
-    animation_demo()  
     main()
