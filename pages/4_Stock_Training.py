@@ -1,3 +1,5 @@
+# UNdata is a web-based data service for the global user community.
+# http://data.un.org/Explorer.aspx
 import nltk
 nltk.download('vader_lexicon')
 from urllib.request import urlopen, Request
