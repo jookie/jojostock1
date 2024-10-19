@@ -186,8 +186,9 @@ backtest_plot(df_account_value,
               baseline_start = df_account_value.loc[0,'date'],
               baseline_end = df_account_value.loc[len(df_account_value)-1,'date'])
 
-from alpaca.trading.enums import OrderSide, TimeInForce, OrderType
+
 import alpaca_trade_api as tradeapi
+from alpaca.trading.enums import OrderSide, TimeInForce, OrderType
 
 api = tradeapi.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')
 try:

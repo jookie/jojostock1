@@ -1,4 +1,5 @@
 from __future__ import annotations
+import streamlit as st
 # /content/papertrading_erl/actor.pth
 # /content/papertrading_erl_retrain/actor.pth
 import warnings
@@ -150,7 +151,7 @@ print(df_summary)
 unique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()
 df_trade_date = pd.DataFrame({'datadate':unique_trade_date})
 
-df_account_value=pd.DataFrame()
+df_account_value = pd.DataFrame()
 for i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):
     temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))
     df_account_value = df_account_value._append(temp,ignore_index=True)
@@ -186,7 +187,7 @@ backtest_plot(df_account_value,
               baseline_start = df_account_value.loc[0,'date'],
               baseline_end = df_account_value.loc[len(df_account_value)-1,'date'])
 
-from alpaca.trading.enums import OrderSide, TimeInForce, OrderType
+# from alpaca.trading.enums import OrderSide, TimeInForce, OrderType
 import alpaca_trade_api as tradeapi
 
 api = tradeapi.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')

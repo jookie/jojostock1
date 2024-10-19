@@ -96,6 +96,22 @@
         "documentation": {}
     },
     {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
         "label": "copy",
         "kind": 6,
         "isExtraImport": true,
@@ -418,6 +434,14 @@
         "documentation": {}
     },
     {
+        "label": "DRLAgent",
+        "importPath": "finrl.agents.stablebaselines3.models",
+        "description": "finrl.agents.stablebaselines3.models",
+        "isExtraImport": true,
+        "detail": "finrl.agents.stablebaselines3.models",
+        "documentation": {}
+    },
+    {
         "label": "DRLEnsembleAgent",
         "importPath": "finrl.agents.stablebaselines3.models",
         "description": "finrl.agents.stablebaselines3.models",
@@ -443,6 +467,14 @@
     },
     {
         "label": "DRLAgent",
+        "importPath": "finrl.agents.stablebaselines3.models",
+        "description": "finrl.agents.stablebaselines3.models",
+        "isExtraImport": true,
+        "detail": "finrl.agents.stablebaselines3.models",
+        "documentation": {}
+    },
+    {
+        "label": "DRLEnsembleAgent",
         "importPath": "finrl.agents.stablebaselines3.models",
         "description": "finrl.agents.stablebaselines3.models",
         "isExtraImport": true,
@@ -667,6 +699,46 @@
     },
     {
         "label": "TEST_START_DATE",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRAINED_MODEL_DIR",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
+        "label": "DATA_SAVE_DIR",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
+        "label": "INDICATORS",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
+        "label": "RESULTS_DIR",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TENSORBOARD_LOG_DIR",
         "importPath": "finrl.config",
         "description": "finrl.config",
         "isExtraImport": true,
@@ -763,46 +835,6 @@
     },
     {
         "label": "TRADE_END_DATE",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
-        "label": "DATA_SAVE_DIR",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
-        "label": "INDICATORS",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
-        "label": "RESULTS_DIR",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
-        "label": "TENSORBOARD_LOG_DIR",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
-        "label": "TRAINED_MODEL_DIR",
         "importPath": "finrl.config",
         "description": "finrl.config",
         "isExtraImport": true,
@@ -1282,6 +1314,78 @@
         "documentation": {}
     },
     {
+        "label": "DATA_SAVE_DIR",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRAINED_MODEL_DIR",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TENSORBOARD_LOG_DIR",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
+        "label": "RESULTS_DIR",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
+        "label": "INDICATORS",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRAIN_START_DATE",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRAIN_END_DATE",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_START_DATE",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_END_DATE",
+        "importPath": "finrl.config",
+        "description": "finrl.config",
+        "isExtraImport": true,
+        "detail": "finrl.config",
+        "documentation": {}
+    },
+    {
         "label": "TRADE_START_DATE",
         "importPath": "finrl.config",
         "description": "finrl.config",
@@ -1410,6 +1514,22 @@
         "documentation": {}
     },
     {
+        "label": "DOW_30_TICKER",
+        "importPath": "finrl.config_tickers",
+        "description": "finrl.config_tickers",
+        "isExtraImport": true,
+        "detail": "finrl.config_tickers",
+        "documentation": {}
+    },
+    {
+        "label": "check_and_make_directories",
+        "importPath": "finrl.main",
+        "description": "finrl.main",
+        "isExtraImport": true,
+        "detail": "finrl.main",
+        "documentation": {}
+    },
+    {
         "label": "check_and_make_directories",
         "importPath": "finrl.main",
         "description": "finrl.main",
@@ -1770,19 +1890,11 @@
         "documentation": {}
     },
     {
-        "label": "data_split",
-        "importPath": "finrl.meta.preprocessor.preprocessors",
-        "description": "finrl.meta.preprocessor.preprocessors",
+        "label": "StockTradingEnv",
+        "importPath": "finrl.meta.env_stock_trading.env_stocktrading",
+        "description": "finrl.meta.env_stock_trading.env_stocktrading",
         "isExtraImport": true,
-        "detail": "finrl.meta.preprocessor.preprocessors",
-        "documentation": {}
-    },
-    {
-        "label": "FeatureEngineer",
-        "importPath": "finrl.meta.preprocessor.preprocessors",
-        "description": "finrl.meta.preprocessor.preprocessors",
-        "isExtraImport": true,
-        "detail": "finrl.meta.preprocessor.preprocessors",
+        "detail": "finrl.meta.env_stock_trading.env_stocktrading",
         "documentation": {}
     },
     {
@@ -1795,38 +1907,6 @@
     },
     {
         "label": "FeatureEngineer",
-        "importPath": "finrl.meta.preprocessor.preprocessors",
-        "description": "finrl.meta.preprocessor.preprocessors",
-        "isExtraImport": true,
-        "detail": "finrl.meta.preprocessor.preprocessors",
-        "documentation": {}
-    },
-    {
-        "label": "data_split",
-        "importPath": "finrl.meta.preprocessor.preprocessors",
-        "description": "finrl.meta.preprocessor.preprocessors",
-        "isExtraImport": true,
-        "detail": "finrl.meta.preprocessor.preprocessors",
-        "documentation": {}
-    },
-    {
-        "label": "FeatureEngineer",
-        "importPath": "finrl.meta.preprocessor.preprocessors",
-        "description": "finrl.meta.preprocessor.preprocessors",
-        "isExtraImport": true,
-        "detail": "finrl.meta.preprocessor.preprocessors",
-        "documentation": {}
-    },
-    {
-        "label": "FeatureEngineer",
-        "importPath": "finrl.meta.preprocessor.preprocessors",
-        "description": "finrl.meta.preprocessor.preprocessors",
-        "isExtraImport": true,
-        "detail": "finrl.meta.preprocessor.preprocessors",
-        "documentation": {}
-    },
-    {
-        "label": "data_split",
         "importPath": "finrl.meta.preprocessor.preprocessors",
         "description": "finrl.meta.preprocessor.preprocessors",
         "isExtraImport": true,
@@ -1898,6 +1978,38 @@
         "documentation": {}
     },
     {
+        "label": "data_split",
+        "importPath": "finrl.meta.preprocessor.preprocessors",
+        "description": "finrl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "finrl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "FeatureEngineer",
+        "importPath": "finrl.meta.preprocessor.preprocessors",
+        "description": "finrl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "finrl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "data_split",
+        "importPath": "finrl.meta.preprocessor.preprocessors",
+        "description": "finrl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "finrl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "FeatureEngineer",
+        "importPath": "finrl.meta.preprocessor.preprocessors",
+        "description": "finrl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "finrl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
         "label": "FeatureEngineer",
         "importPath": "finrl.meta.preprocessor.preprocessors",
         "description": "finrl.meta.preprocessor.preprocessors",
@@ -1943,6 +2055,46 @@
         "description": "finrl.meta.preprocessor.preprocessors",
         "isExtraImport": true,
         "detail": "finrl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "FeatureEngineer",
+        "importPath": "finrl.meta.preprocessor.preprocessors",
+        "description": "finrl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "finrl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "data_split",
+        "importPath": "finrl.meta.preprocessor.preprocessors",
+        "description": "finrl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "finrl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "FeatureEngineer",
+        "importPath": "finrl.meta.preprocessor.preprocessors",
+        "description": "finrl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "finrl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "data_split",
+        "importPath": "finrl.meta.preprocessor.preprocessors",
+        "description": "finrl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "finrl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "YahooDownloader",
+        "importPath": "finrl.meta.preprocessor.yahoodownloader",
+        "description": "finrl.meta.preprocessor.yahoodownloader",
+        "isExtraImport": true,
+        "detail": "finrl.meta.preprocessor.yahoodownloader",
         "documentation": {}
     },
     {
@@ -2162,6 +2314,30 @@
         "documentation": {}
     },
     {
+        "label": "get_baseline",
+        "importPath": "finrl.plot",
+        "description": "finrl.plot",
+        "isExtraImport": true,
+        "detail": "finrl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "plot_return",
+        "importPath": "finrl.plot",
+        "description": "finrl.plot",
+        "isExtraImport": true,
+        "detail": "finrl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "backtest_stats",
+        "importPath": "finrl.plot",
+        "description": "finrl.plot",
+        "isExtraImport": true,
+        "detail": "finrl.plot",
+        "documentation": {}
+    },
+    {
         "label": "backtest_plot",
         "importPath": "finrl.plot",
         "description": "finrl.plot",
@@ -2210,30 +2386,6 @@
         "documentation": {}
     },
     {
-        "label": "backtest_stats",
-        "importPath": "finrl.plot",
-        "description": "finrl.plot",
-        "isExtraImport": true,
-        "detail": "finrl.plot",
-        "documentation": {}
-    },
-    {
-        "label": "get_baseline",
-        "importPath": "finrl.plot",
-        "description": "finrl.plot",
-        "isExtraImport": true,
-        "detail": "finrl.plot",
-        "documentation": {}
-    },
-    {
-        "label": "plot_return",
-        "importPath": "finrl.plot",
-        "description": "finrl.plot",
-        "isExtraImport": true,
-        "detail": "finrl.plot",
-        "documentation": {}
-    },
-    {
         "label": "backtest_plot",
         "importPath": "finrl.plot",
         "description": "finrl.plot",
@@ -2307,6 +2459,38 @@
     },
     {
         "label": "backtest_stats",
+        "importPath": "finrl.plot",
+        "description": "finrl.plot",
+        "isExtraImport": true,
+        "detail": "finrl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "backtest_stats",
+        "importPath": "finrl.plot",
+        "description": "finrl.plot",
+        "isExtraImport": true,
+        "detail": "finrl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "backtest_plot",
+        "importPath": "finrl.plot",
+        "description": "finrl.plot",
+        "isExtraImport": true,
+        "detail": "finrl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "get_daily_return",
+        "importPath": "finrl.plot",
+        "description": "finrl.plot",
+        "isExtraImport": true,
+        "detail": "finrl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "get_baseline",
         "importPath": "finrl.plot",
         "description": "finrl.plot",
         "isExtraImport": true,
@@ -2536,6 +2720,14 @@
         "isExtraImport": true,
         "importPath": "pprint",
         "description": "pprint",
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
+        "label": "pprint",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
         "detail": "pprint",
         "documentation": {}
     },
@@ -2827,6 +3019,47 @@
         "documentation": {}
     },
     {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "show_code",
+        "importPath": "streamlit.hello.utils",
+        "description": "streamlit.hello.utils",
+        "isExtraImport": true,
+        "detail": "streamlit.hello.utils",
+        "documentation": {}
+    },
+    {
+        "label": "show_code",
+        "importPath": "streamlit.hello.utils",
+        "description": "streamlit.hello.utils",
+        "isExtraImport": true,
+        "detail": "streamlit.hello.utils",
+        "documentation": {}
+    },
+    {
+        "label": "show_code",
+        "importPath": "streamlit.hello.utils",
+        "description": "streamlit.hello.utils",
+        "isExtraImport": true,
+        "detail": "streamlit.hello.utils",
+        "documentation": {}
+    },
+    {
+        "label": "show_code",
+        "importPath": "streamlit.hello.utils",
+        "description": "streamlit.hello.utils",
+        "isExtraImport": true,
+        "detail": "streamlit.hello.utils",
+        "documentation": {}
+    },
+    {
         "label": "PPO",
         "importPath": "stable_baselines3",
         "description": "stable_baselines3",
@@ -2904,23 +3137,6 @@
         "description": "finrl.applications.stock_trading.stock_trading",
         "isExtraImport": true,
         "detail": "finrl.applications.stock_trading.stock_trading",
-        "documentation": {}
-    },
-    {
-        "label": "drive",
-        "importPath": "google.colab",
-        "description": "google.colab",
-        "isExtraImport": true,
-        "detail": "google.colab",
-        "documentation": {}
-    },
-    {
-        "label": "condacolab",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "condacolab",
-        "description": "condacolab",
-        "detail": "condacolab",
         "documentation": {}
     },
     {
@@ -3151,30 +3367,6 @@
         "documentation": {}
     },
     {
-        "label": "OrderSide",
-        "importPath": "alpaca.trading.enums",
-        "description": "alpaca.trading.enums",
-        "isExtraImport": true,
-        "detail": "alpaca.trading.enums",
-        "documentation": {}
-    },
-    {
-        "label": "TimeInForce",
-        "importPath": "alpaca.trading.enums",
-        "description": "alpaca.trading.enums",
-        "isExtraImport": true,
-        "detail": "alpaca.trading.enums",
-        "documentation": {}
-    },
-    {
-        "label": "OrderType",
-        "importPath": "alpaca.trading.enums",
-        "description": "alpaca.trading.enums",
-        "isExtraImport": true,
-        "detail": "alpaca.trading.enums",
-        "documentation": {}
-    },
-    {
         "label": "APScheduler",
         "importPath": "flask_apscheduler",
         "description": "flask_apscheduler",
@@ -3191,53 +3383,12 @@
         "documentation": {}
     },
     {
-        "label": "streamlit",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "streamlit",
-        "description": "streamlit",
-        "detail": "streamlit",
-        "documentation": {}
-    },
-    {
         "label": "sphinx_rtd_theme",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "sphinx_rtd_theme",
         "description": "sphinx_rtd_theme",
         "detail": "sphinx_rtd_theme",
-        "documentation": {}
-    },
-    {
-        "label": "show_code",
-        "importPath": "streamlit.hello.utils",
-        "description": "streamlit.hello.utils",
-        "isExtraImport": true,
-        "detail": "streamlit.hello.utils",
-        "documentation": {}
-    },
-    {
-        "label": "show_code",
-        "importPath": "streamlit.hello.utils",
-        "description": "streamlit.hello.utils",
-        "isExtraImport": true,
-        "detail": "streamlit.hello.utils",
-        "documentation": {}
-    },
-    {
-        "label": "show_code",
-        "importPath": "streamlit.hello.utils",
-        "description": "streamlit.hello.utils",
-        "isExtraImport": true,
-        "detail": "streamlit.hello.utils",
-        "documentation": {}
-    },
-    {
-        "label": "show_code",
-        "importPath": "streamlit.hello.utils",
-        "description": "streamlit.hello.utils",
-        "isExtraImport": true,
-        "detail": "streamlit.hello.utils",
         "documentation": {}
     },
     {
@@ -4691,6 +4842,15 @@
         "documentation": {}
     },
     {
+        "label": "animation_demo",
+        "kind": 2,
+        "importPath": "docs.examples.PY.0_Animation_Demo",
+        "description": "docs.examples.PY.0_Animation_Demo",
+        "peekOfCode": "def animation_demo() -> None:\n    # Interactive Streamlit elements, like these sliders, return their value.\n    # This gives you an extremely simple interaction model.\n    iterations = st.sidebar.slider(\"Level of detail\", 2, 20, 10, 1)\n    separation = st.sidebar.slider(\"Separation\", 0.7, 2.0, 0.7885)\n    # Non-interactive elements return a placeholder to their location\n    # in the app. Here we're storing progress_bar to update it later.\n    progress_bar = st.sidebar.progress(0)\n    # These two elements will be filled in later, so we create a placeholder\n    # for them using st.empty()",
+        "detail": "docs.examples.PY.0_Animation_Demo",
+        "documentation": {}
+    },
+    {
         "label": "AlpacaPaperTrading",
         "kind": 6,
         "importPath": "docs.examples.PY.AlpacPaperTrading",
@@ -4979,381 +5139,381 @@
         "documentation": {}
     },
     {
-        "label": "YahooDownloader",
-        "kind": 6,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "class YahooDownloader:\n    Provides methods for retrieving daily stock data from\n    Yahoo Finance API\n    Attributes\n    ----------\n        start_date : str\n            start date of the data (modified from config.py)\n        end_date : str\n            end date of the data (modified from config.py)\n        ticker_list : list",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "os = sys.path.append(\"/content/drive/packages\")\nprint(os)\nimport itertools\n# %matplotlib inline\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split\nfrom finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv\nfrom finrl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "TRAIN_START_DATE",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "TRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTEST_START_DATE = '2021-10-01'\nTEST_END_DATE = '2023-03-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.head()\ndf.tail()\ndf.shape",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "TRAIN_END_DATE",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "TRAIN_END_DATE = '2021-10-01'\nTEST_START_DATE = '2021-10-01'\nTEST_END_DATE = '2023-03-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.head()\ndf.tail()\ndf.shape\ndf.sort_values(['date','tic']).head()",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "TEST_START_DATE",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "TEST_START_DATE = '2021-10-01'\nTEST_END_DATE = '2023-03-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.head()\ndf.tail()\ndf.shape\ndf.sort_values(['date','tic']).head()\nlen(df.tic.unique())",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "TEST_END_DATE",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "TEST_END_DATE = '2023-03-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.head()\ndf.tail()\ndf.shape\ndf.sort_values(['date','tic']).head()\nlen(df.tic.unique())\ndf.tic.value_counts()",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "df",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "df = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.head()\ndf.tail()\ndf.shape\ndf.sort_values(['date','tic']).head()\nlen(df.tic.unique())\ndf.tic.value_counts()\n\"\"\"# Part 4: Preprocess Data",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "INDICATORS",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "INDICATORS = ['macd',\n               'rsi_30',\n               'cci_30',\n               'dx_30']\nfe = FeatureEngineer(use_technical_indicator=True,\n                     tech_indicator_list = INDICATORS,\n                     use_turbulence=True,\n                     user_defined_feature = False)\nprocessed = fe.preprocess_data(df)\nprocessed = processed.copy()",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "fe",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "fe = FeatureEngineer(use_technical_indicator=True,\n                     tech_indicator_list = INDICATORS,\n                     use_turbulence=True,\n                     user_defined_feature = False)\nprocessed = fe.preprocess_data(df)\nprocessed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprocessed.sample(5)\n\"\"\"<a id='4'></a>",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "processed",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "processed = fe.preprocess_data(df)\nprocessed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprocessed.sample(5)\n\"\"\"<a id='4'></a>\n# Part 5. Design Environment\nConsidering the stochastic and interactive nature of the automated stock trading tasks, a financial task is modeled as a **Markov Decision Process (MDP)** problem. The training process involves observing stock price change, taking an action and reward's calculation to have the agent adjusting its strategy accordingly. By interacting with the environment, the trading agent will derive a trading strategy with the maximized rewards as time proceeds.\nOur trading environments, based on OpenAI Gym framework, simulate live stock markets with real market data according to the principle of time-driven simulation.\nThe action space describes the allowed actions that the agent interacts with the environment. Normally, action a includes three actions: {-1, 0, 1}, where -1, 0, 1 represent selling, holding, and buying one share. Also, an action can be carried upon multiple shares. We use an action space {-k,…,-1, 0, 1, …, k}, where k denotes the number of shares to buy and -k denotes the number of shares to sell. For example, \"Buy 10 shares of AAPL\" or \"Sell 10 shares of AAPL\" are 10 or -10, respectively. The continuous action space needs to be normalized to [-1, 1], since the policy is defined on a Gaussian distribution, which needs to be normalized and symmetric.",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "processed",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "processed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprocessed.sample(5)\n\"\"\"<a id='4'></a>\n# Part 5. Design Environment\nConsidering the stochastic and interactive nature of the automated stock trading tasks, a financial task is modeled as a **Markov Decision Process (MDP)** problem. The training process involves observing stock price change, taking an action and reward's calculation to have the agent adjusting its strategy accordingly. By interacting with the environment, the trading agent will derive a trading strategy with the maximized rewards as time proceeds.\nOur trading environments, based on OpenAI Gym framework, simulate live stock markets with real market data according to the principle of time-driven simulation.\nThe action space describes the allowed actions that the agent interacts with the environment. Normally, action a includes three actions: {-1, 0, 1}, where -1, 0, 1 represent selling, holding, and buying one share. Also, an action can be carried upon multiple shares. We use an action space {-k,…,-1, 0, 1, …, k}, where k denotes the number of shares to buy and -k denotes the number of shares to sell. For example, \"Buy 10 shares of AAPL\" or \"Sell 10 shares of AAPL\" are 10 or -10, respectively. The continuous action space needs to be normalized to [-1, 1], since the policy is defined on a Gaussian distribution, which needs to be normalized and symmetric.\n\"\"\"",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "processed",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "processed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprocessed.sample(5)\n\"\"\"<a id='4'></a>\n# Part 5. Design Environment\nConsidering the stochastic and interactive nature of the automated stock trading tasks, a financial task is modeled as a **Markov Decision Process (MDP)** problem. The training process involves observing stock price change, taking an action and reward's calculation to have the agent adjusting its strategy accordingly. By interacting with the environment, the trading agent will derive a trading strategy with the maximized rewards as time proceeds.\nOur trading environments, based on OpenAI Gym framework, simulate live stock markets with real market data according to the principle of time-driven simulation.\nThe action space describes the allowed actions that the agent interacts with the environment. Normally, action a includes three actions: {-1, 0, 1}, where -1, 0, 1 represent selling, holding, and buying one share. Also, an action can be carried upon multiple shares. We use an action space {-k,…,-1, 0, 1, …, k}, where k denotes the number of shares to buy and -k denotes the number of shares to sell. For example, \"Buy 10 shares of AAPL\" or \"Sell 10 shares of AAPL\" are 10 or -10, respectively. The continuous action space needs to be normalized to [-1, 1], since the policy is defined on a Gaussian distribution, which needs to be normalized and symmetric.\n\"\"\"\nstock_dimension = len(processed.tic.unique())",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "processed",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "processed = processed.replace(np.inf,0)\nprocessed.sample(5)\n\"\"\"<a id='4'></a>\n# Part 5. Design Environment\nConsidering the stochastic and interactive nature of the automated stock trading tasks, a financial task is modeled as a **Markov Decision Process (MDP)** problem. The training process involves observing stock price change, taking an action and reward's calculation to have the agent adjusting its strategy accordingly. By interacting with the environment, the trading agent will derive a trading strategy with the maximized rewards as time proceeds.\nOur trading environments, based on OpenAI Gym framework, simulate live stock markets with real market data according to the principle of time-driven simulation.\nThe action space describes the allowed actions that the agent interacts with the environment. Normally, action a includes three actions: {-1, 0, 1}, where -1, 0, 1 represent selling, holding, and buying one share. Also, an action can be carried upon multiple shares. We use an action space {-k,…,-1, 0, 1, …, k}, where k denotes the number of shares to buy and -k denotes the number of shares to sell. For example, \"Buy 10 shares of AAPL\" or \"Sell 10 shares of AAPL\" are 10 or -10, respectively. The continuous action space needs to be normalized to [-1, 1], since the policy is defined on a Gaussian distribution, which needs to be normalized and symmetric.\n\"\"\"\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "stock_dimension",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "stock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100,\n    \"initial_amount\": 1000000,\n    \"buy_cost_pct\": 0.001,\n    \"sell_cost_pct\": 0.001,\n    \"state_space\": state_space,\n    \"stock_dim\": stock_dimension,",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "state_space",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "state_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100,\n    \"initial_amount\": 1000000,\n    \"buy_cost_pct\": 0.001,\n    \"sell_cost_pct\": 0.001,\n    \"state_space\": state_space,\n    \"stock_dim\": stock_dimension,\n    \"tech_indicator_list\": INDICATORS,",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "env_kwargs",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "env_kwargs = {\n    \"hmax\": 100,\n    \"initial_amount\": 1000000,\n    \"buy_cost_pct\": 0.001,\n    \"sell_cost_pct\": 0.001,\n    \"state_space\": state_space,\n    \"stock_dim\": stock_dimension,\n    \"tech_indicator_list\": INDICATORS,\n    \"action_space\": stock_dimension,\n    \"reward_scaling\": 1e-4,",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "rebalance_window",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "rebalance_window = 63 # rebalance_window is the number of days to retrain the model\nvalidation_window = 63 # validation_window is the number of days to do validation and trading (e.g. if validation_window=63, then both validation and trading period will be 63 days)\nensemble_agent = DRLEnsembleAgent(df=processed,\n                 train_period=(TRAIN_START_DATE,TRAIN_END_DATE),\n                 val_test_period=(TEST_START_DATE,TEST_END_DATE),\n                 rebalance_window=rebalance_window,\n                 validation_window=validation_window,\n                 **env_kwargs)\nA2C_model_kwargs = {\n                    'n_steps': 5,",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "validation_window",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "validation_window = 63 # validation_window is the number of days to do validation and trading (e.g. if validation_window=63, then both validation and trading period will be 63 days)\nensemble_agent = DRLEnsembleAgent(df=processed,\n                 train_period=(TRAIN_START_DATE,TRAIN_END_DATE),\n                 val_test_period=(TEST_START_DATE,TEST_END_DATE),\n                 rebalance_window=rebalance_window,\n                 validation_window=validation_window,\n                 **env_kwargs)\nA2C_model_kwargs = {\n                    'n_steps': 5,\n                    'ent_coef': 0.005,",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "ensemble_agent",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "ensemble_agent = DRLEnsembleAgent(df=processed,\n                 train_period=(TRAIN_START_DATE,TRAIN_END_DATE),\n                 val_test_period=(TEST_START_DATE,TEST_END_DATE),\n                 rebalance_window=rebalance_window,\n                 validation_window=validation_window,\n                 **env_kwargs)\nA2C_model_kwargs = {\n                    'n_steps': 5,\n                    'ent_coef': 0.005,\n                    'learning_rate': 0.0007",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "A2C_model_kwargs",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "A2C_model_kwargs = {\n                    'n_steps': 5,\n                    'ent_coef': 0.005,\n                    'learning_rate': 0.0007\n                    }\nPPO_model_kwargs = {\n                    \"ent_coef\":0.01,\n                    \"n_steps\": 2048,\n                    \"learning_rate\": 0.00025,\n                    \"batch_size\": 128",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "PPO_model_kwargs",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "PPO_model_kwargs = {\n                    \"ent_coef\":0.01,\n                    \"n_steps\": 2048,\n                    \"learning_rate\": 0.00025,\n                    \"batch_size\": 128\n                    }\nDDPG_model_kwargs = {\n                      #\"action_noise\":\"ornstein_uhlenbeck\",\n                      \"buffer_size\": 10_000,\n                      \"learning_rate\": 0.0005,",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "DDPG_model_kwargs",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "DDPG_model_kwargs = {\n                      #\"action_noise\":\"ornstein_uhlenbeck\",\n                      \"buffer_size\": 10_000,\n                      \"learning_rate\": 0.0005,\n                      \"batch_size\": 64\n                    }\ntimesteps_dict = {'a2c' : 10_000,\n                 'ppo' : 10_000,\n                 'ddpg' : 10_000\n                 }",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "timesteps_dict",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "timesteps_dict = {'a2c' : 10_000,\n                 'ppo' : 10_000,\n                 'ddpg' : 10_000\n                 }\ndf_summary = ensemble_agent.run_ensemble_strategy(A2C_model_kwargs,\n                                                 PPO_model_kwargs,\n                                                 DDPG_model_kwargs,\n                                                 timesteps_dict)\ndf_summary\n\"\"\"<a id='6'></a>",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "df_summary",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "df_summary = ensemble_agent.run_ensemble_strategy(A2C_model_kwargs,\n                                                 PPO_model_kwargs,\n                                                 DDPG_model_kwargs,\n                                                 timesteps_dict)\ndf_summary\n\"\"\"<a id='6'></a>\n# Part 7: Backtest Our Strategy\nBacktesting plays a key role in evaluating the performance of a trading strategy. Automated backtesting tool is preferred because it reduces the human error. We usually use the Quantopian pyfolio package to backtest our trading strategies. It is easy to use and consists of various individual plots that provide a comprehensive image of the performance of a trading strategy.\n\"\"\"\nunique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "unique_trade_date",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "unique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()\ndf_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value=pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value.append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "df_trade_date",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "df_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value=pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value.append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()\n# Commented out IPython magic to ensure Python compatibility.",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "now",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "now = datetime.datetime.now().strftime('%Y%m%d-%Hh%M')\nperf_stats_all = backtest_stats(account_value=df_account_value)\nperf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nprint(\"==============Get Baseline Stats===========\")\ndf_dji_ = get_baseline(\n        ticker=\"^DJI\",\n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(df_dji_, value_col_name = 'close')",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "perf_stats_all",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "perf_stats_all = backtest_stats(account_value=df_account_value)\nperf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nprint(\"==============Get Baseline Stats===========\")\ndf_dji_ = get_baseline(\n        ticker=\"^DJI\",\n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(df_dji_, value_col_name = 'close')\ndf_dji = pd.DataFrame()",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "perf_stats_all",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "perf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nprint(\"==============Get Baseline Stats===========\")\ndf_dji_ = get_baseline(\n        ticker=\"^DJI\",\n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(df_dji_, value_col_name = 'close')\ndf_dji = pd.DataFrame()\ndf_dji['date'] = df_account_value['date']",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "df_dji_",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "df_dji_ = get_baseline(\n        ticker=\"^DJI\",\n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(df_dji_, value_col_name = 'close')\ndf_dji = pd.DataFrame()\ndf_dji['date'] = df_account_value['date']\ndf_dji['dji'] = df_dji_['close'] / df_dji_['close'][0] * env_kwargs[\"initial_amount\"]\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji.csv\")",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "stats",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "stats = backtest_stats(df_dji_, value_col_name = 'close')\ndf_dji = pd.DataFrame()\ndf_dji['date'] = df_account_value['date']\ndf_dji['dji'] = df_dji_['close'] / df_dji_['close'][0] * env_kwargs[\"initial_amount\"]\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji.csv\")\ndf_dji = df_dji.set_index(df_dji.columns[0])\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji+.csv\")\ndf_account_value.to_csv('df_account_value.csv')",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "df_dji",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "df_dji = pd.DataFrame()\ndf_dji['date'] = df_account_value['date']\ndf_dji['dji'] = df_dji_['close'] / df_dji_['close'][0] * env_kwargs[\"initial_amount\"]\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji.csv\")\ndf_dji = df_dji.set_index(df_dji.columns[0])\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji+.csv\")\ndf_account_value.to_csv('df_account_value.csv')\n\"\"\"<a id='6.2'></a>",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "df_dji['date']",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "df_dji['date'] = df_account_value['date']\ndf_dji['dji'] = df_dji_['close'] / df_dji_['close'][0] * env_kwargs[\"initial_amount\"]\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji.csv\")\ndf_dji = df_dji.set_index(df_dji.columns[0])\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji+.csv\")\ndf_account_value.to_csv('df_account_value.csv')\n\"\"\"<a id='6.2'></a>\n## 7.2 BackTestPlot",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "df_dji['dji']",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "df_dji['dji'] = df_dji_['close'] / df_dji_['close'][0] * env_kwargs[\"initial_amount\"]\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji.csv\")\ndf_dji = df_dji.set_index(df_dji.columns[0])\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji+.csv\")\ndf_account_value.to_csv('df_account_value.csv')\n\"\"\"<a id='6.2'></a>\n## 7.2 BackTestPlot\n\"\"\"",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "df_dji",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "df_dji = df_dji.set_index(df_dji.columns[0])\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji+.csv\")\ndf_account_value.to_csv('df_account_value.csv')\n\"\"\"<a id='6.2'></a>\n## 7.2 BackTestPlot\n\"\"\"\n# Commented out IPython magic to ensure Python compatibility.\n# print(\"==============Compare to DJIA===========\")\n# %matplotlib inline",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "df_result_ensemble",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "df_result_ensemble = pd.DataFrame({'date': df_account_value['date'], 'ensemble': df_account_value['account_value']})\ndf_result_ensemble = df_result_ensemble.set_index('date')\nprint(\"df_result_ensemble.columns: \", df_result_ensemble.columns)\n# df_result_ensemble.drop(df_result_ensemble.columns[0], axis = 1)\nprint(\"df_trade_date: \", df_trade_date)\n# df_result_ensemble['date'] = df_trade_date['datadate']\n# df_result_ensemble['account_value'] = df_account_value['account_value']\ndf_result_ensemble.to_csv(\"df_result_ensemble.csv\")\nprint(\"df_result_ensemble: \", df_result_ensemble)\nprint(\"==============Compare to DJIA===========\")",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "df_result_ensemble",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "df_result_ensemble = df_result_ensemble.set_index('date')\nprint(\"df_result_ensemble.columns: \", df_result_ensemble.columns)\n# df_result_ensemble.drop(df_result_ensemble.columns[0], axis = 1)\nprint(\"df_trade_date: \", df_trade_date)\n# df_result_ensemble['date'] = df_trade_date['datadate']\n# df_result_ensemble['account_value'] = df_account_value['account_value']\ndf_result_ensemble.to_csv(\"df_result_ensemble.csv\")\nprint(\"df_result_ensemble: \", df_result_ensemble)\nprint(\"==============Compare to DJIA===========\")\nresult = pd.DataFrame()",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "result",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "result = pd.DataFrame()\n# result = pd.merge(result, df_result_ensemble, left_index=True, right_index=True)\n# result = pd.merge(result, df_dji, left_index=True, right_index=True)\nresult = pd.merge(df_result_ensemble, df_dji, left_index=True, right_index=True)\nprint(\"result: \", result)\nresult.to_csv(\"result.csv\")\nresult.columns = ['ensemble', 'dji']\n# %matplotlib inline\nplt.rcParams[\"figure.figsize\"] = (15,5)\nplt.figure();",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "result",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "result = pd.merge(df_result_ensemble, df_dji, left_index=True, right_index=True)\nprint(\"result: \", result)\nresult.to_csv(\"result.csv\")\nresult.columns = ['ensemble', 'dji']\n# %matplotlib inline\nplt.rcParams[\"figure.figsize\"] = (15,5)\nplt.figure();\nresult.plot();",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "result.columns",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "result.columns = ['ensemble', 'dji']\n# %matplotlib inline\nplt.rcParams[\"figure.figsize\"] = (15,5)\nplt.figure();\nresult.plot();",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
-        "label": "plt.rcParams[\"figure.figsize\"]",
-        "kind": 5,
-        "importPath": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "description": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "peekOfCode": "plt.rcParams[\"figure.figsize\"] = (15,5)\nplt.figure();\nresult.plot();",
-        "detail": "docs.examples.PY.copy_of_finrl_ensemble_stocktrading_icaif_2020",
-        "documentation": {}
-    },
-    {
         "label": "stock_trading",
         "kind": 2,
         "importPath": "docs.examples.PY.df_account_value_a2c",
         "description": "docs.examples.PY.df_account_value_a2c",
         "peekOfCode": "def stock_trading(\n    train_start_date: str,\n    train_end_date: str,\n    trade_start_date: str,\n    trade_end_date: str,\n    if_store_actions: bool = True,\n    if_store_result: bool = True,\n    if_using_a2c: bool = True,\n    if_using_ddpg: bool = True,\n    if_using_ppo: bool = True,",
         "detail": "docs.examples.PY.df_account_value_a2c",
+        "documentation": {}
+    },
+    {
+        "label": "YahooDownloader",
+        "kind": 6,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "class YahooDownloader:\n    Provides methods for retrieving daily stock data from\n    Yahoo Finance API\n    Attributes\n    ----------\n        start_date : str\n            start date of the data (modified from config.py)\n        end_date : str\n            end date of the data (modified from config.py)\n        ticker_list : list",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "os = sys.path.append(\"/content/drive/packages\")\nprint(os)\nimport itertools\n# %matplotlib inline\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split\nfrom finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv\nfrom finrl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "TRAIN_START_DATE",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "TRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTEST_START_DATE = '2021-10-01'\nTEST_END_DATE = '2023-03-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.head()\ndf.tail()\ndf.shape",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "TRAIN_END_DATE",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "TRAIN_END_DATE = '2021-10-01'\nTEST_START_DATE = '2021-10-01'\nTEST_END_DATE = '2023-03-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.head()\ndf.tail()\ndf.shape\ndf.sort_values(['date','tic']).head()",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_START_DATE",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "TEST_START_DATE = '2021-10-01'\nTEST_END_DATE = '2023-03-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.head()\ndf.tail()\ndf.shape\ndf.sort_values(['date','tic']).head()\nlen(df.tic.unique())",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_END_DATE",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "TEST_END_DATE = '2023-03-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.head()\ndf.tail()\ndf.shape\ndf.sort_values(['date','tic']).head()\nlen(df.tic.unique())\ndf.tic.value_counts()",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "df = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.head()\ndf.tail()\ndf.shape\ndf.sort_values(['date','tic']).head()\nlen(df.tic.unique())\ndf.tic.value_counts()\n\"\"\"# Part 4: Preprocess Data",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "INDICATORS",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "INDICATORS = ['macd',\n               'rsi_30',\n               'cci_30',\n               'dx_30']\nfe = FeatureEngineer(use_technical_indicator=True,\n                     tech_indicator_list = INDICATORS,\n                     use_turbulence=True,\n                     user_defined_feature = False)\nprocessed = fe.preprocess_data(df)\nprocessed = processed.copy()",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "fe",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "fe = FeatureEngineer(use_technical_indicator=True,\n                     tech_indicator_list = INDICATORS,\n                     use_turbulence=True,\n                     user_defined_feature = False)\nprocessed = fe.preprocess_data(df)\nprocessed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprocessed.sample(5)\n\"\"\"<a id='4'></a>",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "processed",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "processed = fe.preprocess_data(df)\nprocessed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprocessed.sample(5)\n\"\"\"<a id='4'></a>\n# Part 5. Design Environment\nConsidering the stochastic and interactive nature of the automated stock trading tasks, a financial task is modeled as a **Markov Decision Process (MDP)** problem. The training process involves observing stock price change, taking an action and reward's calculation to have the agent adjusting its strategy accordingly. By interacting with the environment, the trading agent will derive a trading strategy with the maximized rewards as time proceeds.\nOur trading environments, based on OpenAI Gym framework, simulate live stock markets with real market data according to the principle of time-driven simulation.\nThe action space describes the allowed actions that the agent interacts with the environment. Normally, action a includes three actions: {-1, 0, 1}, where -1, 0, 1 represent selling, holding, and buying one share. Also, an action can be carried upon multiple shares. We use an action space {-k,…,-1, 0, 1, …, k}, where k denotes the number of shares to buy and -k denotes the number of shares to sell. For example, \"Buy 10 shares of AAPL\" or \"Sell 10 shares of AAPL\" are 10 or -10, respectively. The continuous action space needs to be normalized to [-1, 1], since the policy is defined on a Gaussian distribution, which needs to be normalized and symmetric.",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "processed",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "processed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprocessed.sample(5)\n\"\"\"<a id='4'></a>\n# Part 5. Design Environment\nConsidering the stochastic and interactive nature of the automated stock trading tasks, a financial task is modeled as a **Markov Decision Process (MDP)** problem. The training process involves observing stock price change, taking an action and reward's calculation to have the agent adjusting its strategy accordingly. By interacting with the environment, the trading agent will derive a trading strategy with the maximized rewards as time proceeds.\nOur trading environments, based on OpenAI Gym framework, simulate live stock markets with real market data according to the principle of time-driven simulation.\nThe action space describes the allowed actions that the agent interacts with the environment. Normally, action a includes three actions: {-1, 0, 1}, where -1, 0, 1 represent selling, holding, and buying one share. Also, an action can be carried upon multiple shares. We use an action space {-k,…,-1, 0, 1, …, k}, where k denotes the number of shares to buy and -k denotes the number of shares to sell. For example, \"Buy 10 shares of AAPL\" or \"Sell 10 shares of AAPL\" are 10 or -10, respectively. The continuous action space needs to be normalized to [-1, 1], since the policy is defined on a Gaussian distribution, which needs to be normalized and symmetric.\n\"\"\"",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "processed",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "processed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprocessed.sample(5)\n\"\"\"<a id='4'></a>\n# Part 5. Design Environment\nConsidering the stochastic and interactive nature of the automated stock trading tasks, a financial task is modeled as a **Markov Decision Process (MDP)** problem. The training process involves observing stock price change, taking an action and reward's calculation to have the agent adjusting its strategy accordingly. By interacting with the environment, the trading agent will derive a trading strategy with the maximized rewards as time proceeds.\nOur trading environments, based on OpenAI Gym framework, simulate live stock markets with real market data according to the principle of time-driven simulation.\nThe action space describes the allowed actions that the agent interacts with the environment. Normally, action a includes three actions: {-1, 0, 1}, where -1, 0, 1 represent selling, holding, and buying one share. Also, an action can be carried upon multiple shares. We use an action space {-k,…,-1, 0, 1, …, k}, where k denotes the number of shares to buy and -k denotes the number of shares to sell. For example, \"Buy 10 shares of AAPL\" or \"Sell 10 shares of AAPL\" are 10 or -10, respectively. The continuous action space needs to be normalized to [-1, 1], since the policy is defined on a Gaussian distribution, which needs to be normalized and symmetric.\n\"\"\"\nstock_dimension = len(processed.tic.unique())",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "processed",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "processed = processed.replace(np.inf,0)\nprocessed.sample(5)\n\"\"\"<a id='4'></a>\n# Part 5. Design Environment\nConsidering the stochastic and interactive nature of the automated stock trading tasks, a financial task is modeled as a **Markov Decision Process (MDP)** problem. The training process involves observing stock price change, taking an action and reward's calculation to have the agent adjusting its strategy accordingly. By interacting with the environment, the trading agent will derive a trading strategy with the maximized rewards as time proceeds.\nOur trading environments, based on OpenAI Gym framework, simulate live stock markets with real market data according to the principle of time-driven simulation.\nThe action space describes the allowed actions that the agent interacts with the environment. Normally, action a includes three actions: {-1, 0, 1}, where -1, 0, 1 represent selling, holding, and buying one share. Also, an action can be carried upon multiple shares. We use an action space {-k,…,-1, 0, 1, …, k}, where k denotes the number of shares to buy and -k denotes the number of shares to sell. For example, \"Buy 10 shares of AAPL\" or \"Sell 10 shares of AAPL\" are 10 or -10, respectively. The continuous action space needs to be normalized to [-1, 1], since the policy is defined on a Gaussian distribution, which needs to be normalized and symmetric.\n\"\"\"\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "stock_dimension",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "stock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100,\n    \"initial_amount\": 1000000,\n    \"buy_cost_pct\": 0.001,\n    \"sell_cost_pct\": 0.001,\n    \"state_space\": state_space,\n    \"stock_dim\": stock_dimension,",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "state_space",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "state_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100,\n    \"initial_amount\": 1000000,\n    \"buy_cost_pct\": 0.001,\n    \"sell_cost_pct\": 0.001,\n    \"state_space\": state_space,\n    \"stock_dim\": stock_dimension,\n    \"tech_indicator_list\": INDICATORS,",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "env_kwargs",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "env_kwargs = {\n    \"hmax\": 100,\n    \"initial_amount\": 1000000,\n    \"buy_cost_pct\": 0.001,\n    \"sell_cost_pct\": 0.001,\n    \"state_space\": state_space,\n    \"stock_dim\": stock_dimension,\n    \"tech_indicator_list\": INDICATORS,\n    \"action_space\": stock_dimension,\n    \"reward_scaling\": 1e-4,",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "rebalance_window",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "rebalance_window = 63 # rebalance_window is the number of days to retrain the model\nvalidation_window = 63 # validation_window is the number of days to do validation and trading (e.g. if validation_window=63, then both validation and trading period will be 63 days)\nensemble_agent = DRLEnsembleAgent(df=processed,\n                 train_period=(TRAIN_START_DATE,TRAIN_END_DATE),\n                 val_test_period=(TEST_START_DATE,TEST_END_DATE),\n                 rebalance_window=rebalance_window,\n                 validation_window=validation_window,\n                 **env_kwargs)\nA2C_model_kwargs = {\n                    'n_steps': 5,",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "validation_window",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "validation_window = 63 # validation_window is the number of days to do validation and trading (e.g. if validation_window=63, then both validation and trading period will be 63 days)\nensemble_agent = DRLEnsembleAgent(df=processed,\n                 train_period=(TRAIN_START_DATE,TRAIN_END_DATE),\n                 val_test_period=(TEST_START_DATE,TEST_END_DATE),\n                 rebalance_window=rebalance_window,\n                 validation_window=validation_window,\n                 **env_kwargs)\nA2C_model_kwargs = {\n                    'n_steps': 5,\n                    'ent_coef': 0.005,",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "ensemble_agent",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "ensemble_agent = DRLEnsembleAgent(df=processed,\n                 train_period=(TRAIN_START_DATE,TRAIN_END_DATE),\n                 val_test_period=(TEST_START_DATE,TEST_END_DATE),\n                 rebalance_window=rebalance_window,\n                 validation_window=validation_window,\n                 **env_kwargs)\nA2C_model_kwargs = {\n                    'n_steps': 5,\n                    'ent_coef': 0.005,\n                    'learning_rate': 0.0007",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "A2C_model_kwargs",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "A2C_model_kwargs = {\n                    'n_steps': 5,\n                    'ent_coef': 0.005,\n                    'learning_rate': 0.0007\n                    }\nPPO_model_kwargs = {\n                    \"ent_coef\":0.01,\n                    \"n_steps\": 2048,\n                    \"learning_rate\": 0.00025,\n                    \"batch_size\": 128",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "PPO_model_kwargs",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "PPO_model_kwargs = {\n                    \"ent_coef\":0.01,\n                    \"n_steps\": 2048,\n                    \"learning_rate\": 0.00025,\n                    \"batch_size\": 128\n                    }\nDDPG_model_kwargs = {\n                      #\"action_noise\":\"ornstein_uhlenbeck\",\n                      \"buffer_size\": 10_000,\n                      \"learning_rate\": 0.0005,",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "DDPG_model_kwargs",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "DDPG_model_kwargs = {\n                      #\"action_noise\":\"ornstein_uhlenbeck\",\n                      \"buffer_size\": 10_000,\n                      \"learning_rate\": 0.0005,\n                      \"batch_size\": 64\n                    }\ntimesteps_dict = {'a2c' : 10_000,\n                 'ppo' : 10_000,\n                 'ddpg' : 10_000\n                 }",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "timesteps_dict",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "timesteps_dict = {'a2c' : 10_000,\n                 'ppo' : 10_000,\n                 'ddpg' : 10_000\n                 }\ndf_summary = ensemble_agent.run_ensemble_strategy(A2C_model_kwargs,\n                                                 PPO_model_kwargs,\n                                                 DDPG_model_kwargs,\n                                                 timesteps_dict)\ndf_summary\n\"\"\"<a id='6'></a>",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "df_summary",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "df_summary = ensemble_agent.run_ensemble_strategy(A2C_model_kwargs,\n                                                 PPO_model_kwargs,\n                                                 DDPG_model_kwargs,\n                                                 timesteps_dict)\ndf_summary\n\"\"\"<a id='6'></a>\n# Part 7: Backtest Our Strategy\nBacktesting plays a key role in evaluating the performance of a trading strategy. Automated backtesting tool is preferred because it reduces the human error. We usually use the Quantopian pyfolio package to backtest our trading strategies. It is easy to use and consists of various individual plots that provide a comprehensive image of the performance of a trading strategy.\n\"\"\"\nunique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "unique_trade_date",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "unique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()\ndf_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value=pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value.append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "df_trade_date",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "df_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value=pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value.append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()\n# Commented out IPython magic to ensure Python compatibility.",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "now",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "now = datetime.datetime.now().strftime('%Y%m%d-%Hh%M')\nperf_stats_all = backtest_stats(account_value=df_account_value)\nperf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nprint(\"==============Get Baseline Stats===========\")\ndf_dji_ = get_baseline(\n        ticker=\"^DJI\",\n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(df_dji_, value_col_name = 'close')",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "perf_stats_all",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "perf_stats_all = backtest_stats(account_value=df_account_value)\nperf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nprint(\"==============Get Baseline Stats===========\")\ndf_dji_ = get_baseline(\n        ticker=\"^DJI\",\n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(df_dji_, value_col_name = 'close')\ndf_dji = pd.DataFrame()",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "perf_stats_all",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "perf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nprint(\"==============Get Baseline Stats===========\")\ndf_dji_ = get_baseline(\n        ticker=\"^DJI\",\n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(df_dji_, value_col_name = 'close')\ndf_dji = pd.DataFrame()\ndf_dji['date'] = df_account_value['date']",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "df_dji_",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "df_dji_ = get_baseline(\n        ticker=\"^DJI\",\n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(df_dji_, value_col_name = 'close')\ndf_dji = pd.DataFrame()\ndf_dji['date'] = df_account_value['date']\ndf_dji['dji'] = df_dji_['close'] / df_dji_['close'][0] * env_kwargs[\"initial_amount\"]\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji.csv\")",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "stats",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "stats = backtest_stats(df_dji_, value_col_name = 'close')\ndf_dji = pd.DataFrame()\ndf_dji['date'] = df_account_value['date']\ndf_dji['dji'] = df_dji_['close'] / df_dji_['close'][0] * env_kwargs[\"initial_amount\"]\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji.csv\")\ndf_dji = df_dji.set_index(df_dji.columns[0])\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji+.csv\")\ndf_account_value.to_csv('df_account_value.csv')",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "df_dji",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "df_dji = pd.DataFrame()\ndf_dji['date'] = df_account_value['date']\ndf_dji['dji'] = df_dji_['close'] / df_dji_['close'][0] * env_kwargs[\"initial_amount\"]\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji.csv\")\ndf_dji = df_dji.set_index(df_dji.columns[0])\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji+.csv\")\ndf_account_value.to_csv('df_account_value.csv')\n\"\"\"<a id='6.2'></a>",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "df_dji['date']",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "df_dji['date'] = df_account_value['date']\ndf_dji['dji'] = df_dji_['close'] / df_dji_['close'][0] * env_kwargs[\"initial_amount\"]\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji.csv\")\ndf_dji = df_dji.set_index(df_dji.columns[0])\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji+.csv\")\ndf_account_value.to_csv('df_account_value.csv')\n\"\"\"<a id='6.2'></a>\n## 7.2 BackTestPlot",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "df_dji['dji']",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "df_dji['dji'] = df_dji_['close'] / df_dji_['close'][0] * env_kwargs[\"initial_amount\"]\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji.csv\")\ndf_dji = df_dji.set_index(df_dji.columns[0])\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji+.csv\")\ndf_account_value.to_csv('df_account_value.csv')\n\"\"\"<a id='6.2'></a>\n## 7.2 BackTestPlot\n\"\"\"",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "df_dji",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "df_dji = df_dji.set_index(df_dji.columns[0])\nprint(\"df_dji: \", df_dji)\ndf_dji.to_csv(\"df_dji+.csv\")\ndf_account_value.to_csv('df_account_value.csv')\n\"\"\"<a id='6.2'></a>\n## 7.2 BackTestPlot\n\"\"\"\n# Commented out IPython magic to ensure Python compatibility.\n# print(\"==============Compare to DJIA===========\")\n# %matplotlib inline",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "df_result_ensemble",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "df_result_ensemble = pd.DataFrame({'date': df_account_value['date'], 'ensemble': df_account_value['account_value']})\ndf_result_ensemble = df_result_ensemble.set_index('date')\nprint(\"df_result_ensemble.columns: \", df_result_ensemble.columns)\n# df_result_ensemble.drop(df_result_ensemble.columns[0], axis = 1)\nprint(\"df_trade_date: \", df_trade_date)\n# df_result_ensemble['date'] = df_trade_date['datadate']\n# df_result_ensemble['account_value'] = df_account_value['account_value']\ndf_result_ensemble.to_csv(\"df_result_ensemble.csv\")\nprint(\"df_result_ensemble: \", df_result_ensemble)\nprint(\"==============Compare to DJIA===========\")",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "df_result_ensemble",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "df_result_ensemble = df_result_ensemble.set_index('date')\nprint(\"df_result_ensemble.columns: \", df_result_ensemble.columns)\n# df_result_ensemble.drop(df_result_ensemble.columns[0], axis = 1)\nprint(\"df_trade_date: \", df_trade_date)\n# df_result_ensemble['date'] = df_trade_date['datadate']\n# df_result_ensemble['account_value'] = df_account_value['account_value']\ndf_result_ensemble.to_csv(\"df_result_ensemble.csv\")\nprint(\"df_result_ensemble: \", df_result_ensemble)\nprint(\"==============Compare to DJIA===========\")\nresult = pd.DataFrame()",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "result = pd.DataFrame()\n# result = pd.merge(result, df_result_ensemble, left_index=True, right_index=True)\n# result = pd.merge(result, df_dji, left_index=True, right_index=True)\nresult = pd.merge(df_result_ensemble, df_dji, left_index=True, right_index=True)\nprint(\"result: \", result)\nresult.to_csv(\"result.csv\")\nresult.columns = ['ensemble', 'dji']\n# %matplotlib inline\nplt.rcParams[\"figure.figsize\"] = (15,5)\nplt.figure();",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "result = pd.merge(df_result_ensemble, df_dji, left_index=True, right_index=True)\nprint(\"result: \", result)\nresult.to_csv(\"result.csv\")\nresult.columns = ['ensemble', 'dji']\n# %matplotlib inline\nplt.rcParams[\"figure.figsize\"] = (15,5)\nplt.figure();\nresult.plot();",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "result.columns",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "result.columns = ['ensemble', 'dji']\n# %matplotlib inline\nplt.rcParams[\"figure.figsize\"] = (15,5)\nplt.figure();\nresult.plot();",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "documentation": {}
+    },
+    {
+        "label": "plt.rcParams[\"figure.figsize\"]",
+        "kind": 5,
+        "importPath": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "description": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
+        "peekOfCode": "plt.rcParams[\"figure.figsize\"] = (15,5)\nplt.figure();\nresult.plot();",
+        "detail": "docs.examples.PY.finrl_ensemble_stocktrading_icaif_2020",
         "documentation": {}
     },
     {
@@ -6986,12 +7146,327 @@
         "documentation": {}
     },
     {
-        "label": "animation_demo",
-        "kind": 2,
-        "importPath": "pages.0_Animation_Demo",
-        "description": "pages.0_Animation_Demo",
-        "peekOfCode": "def animation_demo() -> None:\n    # Interactive Streamlit elements, like these sliders, return their value.\n    # This gives you an extremely simple interaction model.\n    iterations = st.sidebar.slider(\"Level of detail\", 2, 20, 10, 1)\n    separation = st.sidebar.slider(\"Separation\", 0.7, 2.0, 0.7885)\n    # Non-interactive elements return a placeholder to their location\n    # in the app. Here we're storing progress_bar to update it later.\n    progress_bar = st.sidebar.progress(0)\n    # These two elements will be filled in later, so we create a placeholder\n    # for them using st.empty()",
-        "detail": "pages.0_Animation_Demo",
+        "label": "OrderSide",
+        "kind": 6,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "class OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"\n    STOP = \"stop\"\n    STOP_LIMIT = \"stop_limit\"\n    TRAILING_STOP = \"trailing_stop\"\nclass TimeInForce():",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "OrderType",
+        "kind": 6,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "class OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"\n    STOP = \"stop\"\n    STOP_LIMIT = \"stop_limit\"\n    TRAILING_STOP = \"trailing_stop\"\nclass TimeInForce():\n    DAY = \"day\"\n    GTC = \"gtc\"\n    OPG = \"opg\"",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "TimeInForce",
+        "kind": 6,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "class TimeInForce():\n    DAY = \"day\"\n    GTC = \"gtc\"\n    OPG = \"opg\"\n    CLS = \"cls\"\n    IOC = \"ioc\"\n    FOK = \"fok\"\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "TRAIN_START_DATE",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "TRAIN_START_DATE = '2009-04-01'\nTRAIN_END_DATE = '2021-01-01'\nTEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\nAPI_KEY      = \"PKEJH4W0URAU56SHKQW3\"\nAPI_SECRET   = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "TRAIN_END_DATE",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "TRAIN_END_DATE = '2021-01-01'\nTEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\nAPI_KEY      = \"PKEJH4W0URAU56SHKQW3\"\nAPI_SECRET   = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_START_DATE",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "TEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\nAPI_KEY      = \"PKEJH4W0URAU56SHKQW3\"\nAPI_SECRET   = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_END_DATE",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "TEST_END_DATE = '2022-06-01'\nAPI_KEY      = \"PKEJH4W0URAU56SHKQW3\"\nAPI_SECRET   = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "API_BASE_URL",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"\n    STOP = \"stop\"\n    STOP_LIMIT = \"stop_limit\"\n    TRAILING_STOP = \"trailing_stop\"",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "df = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nprint(len(df.tic.unique()))\nprint(df.tic.value_counts())\nprint(df.head())\nprint(df.tail())\nprint(df.shape)\nst.write(len(df.tic.unique()))",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "INDICATORS",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "INDICATORS = ['macd',\n               'rsi_30',\n               'cci_30',\n               'dx_30']\nfe = FeatureEngineer(use_technical_indicator=True,\n                     tech_indicator_list = INDICATORS,\n                     use_turbulence=True,\n                     user_defined_feature = False)\nprocessed = fe.preprocess_data(df)\nprocessed = processed.copy()",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "fe",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "fe = FeatureEngineer(use_technical_indicator=True,\n                     tech_indicator_list = INDICATORS,\n                     use_turbulence=True,\n                     user_defined_feature = False)\nprocessed = fe.preprocess_data(df)\nprocessed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprint(processed.sample(5))\nst.write(processed.sample(5))",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "processed",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "processed = fe.preprocess_data(df)\nprocessed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprint(processed.sample(5))\nst.write(processed.sample(5))\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nst.write(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "processed",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "processed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprint(processed.sample(5))\nst.write(processed.sample(5))\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nst.write(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "processed",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "processed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprint(processed.sample(5))\nst.write(processed.sample(5))\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nst.write(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, ",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "processed",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "processed = processed.replace(np.inf,0)\nprint(processed.sample(5))\nst.write(processed.sample(5))\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nst.write(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, ",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "stock_dimension",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "stock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nst.write(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, \n    \"buy_cost_pct\": 0.001, \n    \"sell_cost_pct\": 0.001, \n    \"state_space\": state_space, ",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "state_space",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "state_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nst.write(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, \n    \"buy_cost_pct\": 0.001, \n    \"sell_cost_pct\": 0.001, \n    \"state_space\": state_space, \n    \"stock_dim\": stock_dimension, ",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "env_kwargs",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "env_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, \n    \"buy_cost_pct\": 0.001, \n    \"sell_cost_pct\": 0.001, \n    \"state_space\": state_space, \n    \"stock_dim\": stock_dimension, \n    \"tech_indicator_list\": INDICATORS,\n    \"action_space\": stock_dimension, \n    \"reward_scaling\": 1e-4,",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "rebalance_window",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "rebalance_window = 63 #63 # rebalance_window is the number of days to retrain the model\nvalidation_window = 63 #63 # validation_window is the number of days to do validation and trading (e.g. if validation_window=63, then both validation and trading period will be 63 days)\nensemble_agent = DRLEnsembleAgent(df=processed,\n                 train_period=(TRAIN_START_DATE,TRAIN_END_DATE),\n                 val_test_period=(TEST_START_DATE,TEST_END_DATE),\n                 rebalance_window=rebalance_window, \n                 validation_window=validation_window, \n                 **env_kwargs)\nA2C_model_kwargs = {\n                    'n_steps': 5,",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "validation_window",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "validation_window = 63 #63 # validation_window is the number of days to do validation and trading (e.g. if validation_window=63, then both validation and trading period will be 63 days)\nensemble_agent = DRLEnsembleAgent(df=processed,\n                 train_period=(TRAIN_START_DATE,TRAIN_END_DATE),\n                 val_test_period=(TEST_START_DATE,TEST_END_DATE),\n                 rebalance_window=rebalance_window, \n                 validation_window=validation_window, \n                 **env_kwargs)\nA2C_model_kwargs = {\n                    'n_steps': 5,\n                    'ent_coef': 0.005,",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "ensemble_agent",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "ensemble_agent = DRLEnsembleAgent(df=processed,\n                 train_period=(TRAIN_START_DATE,TRAIN_END_DATE),\n                 val_test_period=(TEST_START_DATE,TEST_END_DATE),\n                 rebalance_window=rebalance_window, \n                 validation_window=validation_window, \n                 **env_kwargs)\nA2C_model_kwargs = {\n                    'n_steps': 5,\n                    'ent_coef': 0.005,\n                    'learning_rate': 0.0007",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "A2C_model_kwargs",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "A2C_model_kwargs = {\n                    'n_steps': 5,\n                    'ent_coef': 0.005,\n                    'learning_rate': 0.0007\n                    }\nPPO_model_kwargs = {\n                    \"ent_coef\":0.01,\n                    \"n_steps\": 2, #2048\n                    \"learning_rate\": 0.00025,\n                    \"batch_size\": 128",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "PPO_model_kwargs",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "PPO_model_kwargs = {\n                    \"ent_coef\":0.01,\n                    \"n_steps\": 2, #2048\n                    \"learning_rate\": 0.00025,\n                    \"batch_size\": 128\n                    }\nDDPG_model_kwargs = {\n                      #\"action_noise\":\"ornstein_uhlenbeck\",\n                      \"buffer_size\": 1, #10_000\n                      \"learning_rate\": 0.0005,",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "DDPG_model_kwargs",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "DDPG_model_kwargs = {\n                      #\"action_noise\":\"ornstein_uhlenbeck\",\n                      \"buffer_size\": 1, #10_000\n                      \"learning_rate\": 0.0005,\n                      \"batch_size\": 64\n                    }\nSAC_model_kwargs = {\n                      \"buffer_size\": 1, #10_000\n                      \"learning_rate\": 0.0005,\n                      \"batch_size\": 64}",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "SAC_model_kwargs",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "SAC_model_kwargs = {\n                      \"buffer_size\": 1, #10_000\n                      \"learning_rate\": 0.0005,\n                      \"batch_size\": 64}\nTD3_model_kwargs = {\n                      \"buffer_size\": 1, #10_000\n                      \"learning_rate\": 0.0005,\n                      \"batch_size\": 64,\n}\ntimesteps_dict = {",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "TD3_model_kwargs",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "TD3_model_kwargs = {\n                      \"buffer_size\": 1, #10_000\n                      \"learning_rate\": 0.0005,\n                      \"batch_size\": 64,\n}\ntimesteps_dict = {\n    'a2c': 1,  # Example value, adjust as needed\n    'ppo': 1,\n    'ddpg': 1,\n    'sac' : 1,",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "timesteps_dict",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "timesteps_dict = {\n    'a2c': 1,  # Example value, adjust as needed\n    'ppo': 1,\n    'ddpg': 1,\n    'sac' : 1,\n    'td3' : 1\n}\ndf_summary = ensemble_agent.run_ensemble_strategy(\n    A2C_model_kwargs,\n    PPO_model_kwargs,",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "df_summary",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "df_summary = ensemble_agent.run_ensemble_strategy(\n    A2C_model_kwargs,\n    PPO_model_kwargs,\n    DDPG_model_kwargs,\n    SAC_model_kwargs,\n    TD3_model_kwargs,\n    timesteps_dict\n)\nprint(df_summary)\nst.write(df_summary)",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "unique_trade_date",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "unique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()\ndf_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value=pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\nst.write('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "df_trade_date",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "df_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value=pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\nst.write('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "now",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "now = datetime.datetime.now().strftime('%Y%m%d-%Hh%M')\nperf_stats_all = backtest_stats(account_value=df_account_value)\nperf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nprint(\"==============Get Baseline Stats===========\")\nst.write(\"==============Get Baseline Stats===========\")\nbaseline_df = get_baseline(\n        ticker=\"^DJI\", \n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "perf_stats_all",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "perf_stats_all = backtest_stats(account_value=df_account_value)\nperf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nprint(\"==============Get Baseline Stats===========\")\nst.write(\"==============Get Baseline Stats===========\")\nbaseline_df = get_baseline(\n        ticker=\"^DJI\", \n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(baseline_df, value_col_name = 'close')",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "perf_stats_all",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "perf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nprint(\"==============Get Baseline Stats===========\")\nst.write(\"==============Get Baseline Stats===========\")\nbaseline_df = get_baseline(\n        ticker=\"^DJI\", \n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(baseline_df, value_col_name = 'close')\nprint(\"==============Compare to DJIA===========\")",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "baseline_df",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "baseline_df = get_baseline(\n        ticker=\"^DJI\", \n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(baseline_df, value_col_name = 'close')\nprint(\"==============Compare to DJIA===========\")\nst.write(\"==============Compare to DJIA===========\")\n# %matplotlib inline\n# S&P 500: ^GSPC\n# Dow Jones Index: ^DJI",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "stats",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "stats = backtest_stats(baseline_df, value_col_name = 'close')\nprint(\"==============Compare to DJIA===========\")\nst.write(\"==============Compare to DJIA===========\")\n# %matplotlib inline\n# S&P 500: ^GSPC\n# Dow Jones Index: ^DJI\n# NASDAQ 100: ^NDX\nbacktest_plot(df_account_value, \n              baseline_ticker = '^DJI', \n              baseline_start = df_account_value.loc[0,'date'],",
+        "detail": "pages.0_Stock_Testing",
+        "documentation": {}
+    },
+    {
+        "label": "api",
+        "kind": 5,
+        "importPath": "pages.0_Stock_Testing",
+        "description": "pages.0_Stock_Testing",
+        "peekOfCode": "api = tradeapi.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')\ntry:\n    account = api.get_account()\n    print(f\"Account status: {account.status}\")\n    st.write(f\"Account status: {account.status}\")\n    symbol = 'CAT'\n    qty = 1  # Quantity to buy\n    if (sharpe > - 94):\n        buy_order = api.submit_order(\n            symbol=symbol,",
+        "detail": "pages.0_Stock_Testing",
         "documentation": {}
     },
     {
@@ -7296,7 +7771,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "unique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()\ndf_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value=pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()",
+        "peekOfCode": "unique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()\ndf_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value = pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -7305,7 +7780,16 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "df_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value=pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()\ndf_account_value.account_value.plot()",
+        "peekOfCode": "df_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value = pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()\ndf_account_value.account_value.plot()",
+        "detail": "pages.5_Stock_Trading",
+        "documentation": {}
+    },
+    {
+        "label": "df_account_value",
+        "kind": 5,
+        "importPath": "pages.5_Stock_Trading",
+        "description": "pages.5_Stock_Trading",
+        "peekOfCode": "df_account_value = pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()\ndf_account_value.account_value.plot()\nprint(\"==============Get Backtest Results===========\")",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -7656,7 +8140,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "API_KEY = \"PKVD6WOSPEMKS0UI6A3K\"\nAPI_SECRET = \"BxT64PIQtDBb*tnW\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk",
+        "peekOfCode": "API_KEY = \"PKVD6WOSPEMKS0UI6A3K\"\nAPI_SECRET = \"BxT64PIQtDBb*tnW\"\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')",
         "detail": "app",
         "documentation": {}
     },
@@ -7665,16 +8149,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "API_SECRET = \"BxT64PIQtDBb*tnW\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')",
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "API_BASE_URL",
-        "kind": 5,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')\ncustom_css = \"\"\"",
+        "peekOfCode": "API_SECRET = \"BxT64PIQtDBb*tnW\"\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\nsys.path.append(\"../FinRL\")\nimport datetime\nimport nltk\nnltk.download('vader_lexicon')\ncustom_css = \"\"\"",
         "detail": "app",
         "documentation": {}
     },

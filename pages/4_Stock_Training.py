@@ -1,5 +1,7 @@
 # UNdata is a web-based data service for the global user community.
 # http://data.un.org/Explorer.aspx
+from __future__ import annotations
+import streamlit as st
 import nltk
 nltk.download('vader_lexicon')
 from urllib.request import urlopen, Request
@@ -7,7 +9,7 @@ from bs4 import BeautifulSoup
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import pandas as pd
 import matplotlib.pyplot as plt
-import streamlit as st
+# import streamlit as st
 import yfinance as yf
 import datetime
 import nltk

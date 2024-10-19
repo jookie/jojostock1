@@ -7,6 +7,23 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
+import sys
+import itertools
+import torch.nn as nn
+import numpy as np
+import matplotlib.pyplot as plt
+import datetime
+import os
+
+
+import warnings
+import os
+import time
+import gym
+import torch
+import numpy.random as rd
+# matplotlib.use('Agg')
+# import yfinance as yf
 
 from finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
 from finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
@@ -17,7 +34,7 @@ from finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_base
 from finrl.main import check_and_make_directories
 from finrl import config
 from finrl import config_tickers
-# import yfinance as yf
+
 from finrl.meta.preprocessor.yahoodownloader import yf
 
 from pprint import pprint
@@ -37,26 +54,11 @@ from finrl.config import (
       TRADE_START_DATE,
       TRADE_END_DATE,
 )
-import sys
-import itertools
-import torch.nn as nn
-import numpy as np
-import matplotlib.pyplot as plt
-# matplotlib.use('Agg')
-import datetime
-import os
-
-import warnings
-import os
-import time
-import gym
-import torch
-import numpy.random as rd
 
 warnings.filterwarnings("ignore")
 API_KEY = "PKVD6WOSPEMKS0UI6A3K"
 API_SECRET = "BxT64PIQtDBb*tnW"
-API_BASE_URL = 'https://paper-api.alpaca.markets'
+
 TRAIN_START_DATE = '2010-01-01'
 TRAIN_END_DATE = '2021-10-01'
 TRADE_START_DATE = '2021-10-01'
