@@ -1,4 +1,5 @@
 from __future__ import annotations
+from lib.utility.jprint import jprint
 import nltk
 nltk.download('vader_lexicon')
 from urllib.request import urlopen, Request
@@ -9,39 +10,23 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import sys
 import itertools
-import torch.nn as nn
-import numpy as np
 import matplotlib.pyplot as plt
-import datetime
-import os
-
-
-import warnings
-import os
-import time
-import gym
-import torch
 import numpy.random as rd
 # matplotlib.use('Agg')
 # import yfinance as yf
-
-from finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
-from finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
-from finrl.agents.stablebaselines3.models import DRLAgent
+from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
+from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
+from lib.rl.agents.stablebaselines3.models import DRLAgent
 from stable_baselines3.common.logger import configure
-from finrl.meta.data_processor import DataProcessor
-from finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
-from finrl.main import check_and_make_directories
-from finrl import config
-from finrl import config_tickers
-
-from finrl.meta.preprocessor.yahoodownloader import yf
-
+from lib.rl.meta.data_processor import DataProcessor
+from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
+from lib.rl.main import check_and_make_directories
+from lib.rl import config_tickers
+from lib.rl.meta.preprocessor.yahoodownloader import yf
 from pprint import pprint
 from copy import deepcopy
-from torch import Tensor
 from torch.distributions.normal import Normal
-from finrl.config import (
+from lib.rl.config import (
       DATA_SAVE_DIR,
       TRAINED_MODEL_DIR,
       TENSORBOARD_LOG_DIR,
@@ -54,22 +39,15 @@ from finrl.config import (
       TRADE_START_DATE,
       TRADE_END_DATE,
 )
-
+import warnings
 warnings.filterwarnings("ignore")
 API_KEY = "PKVD6WOSPEMKS0UI6A3K"
 API_SECRET = "BxT64PIQtDBb*tnW"
-
 TRAIN_START_DATE = '2010-01-01'
 TRAIN_END_DATE = '2021-10-01'
 TRADE_START_DATE = '2021-10-01'
 TRADE_END_DATE = '2023-03-01'
-
 sys.path.append("../FinRL")
-
-
-import datetime
-import nltk
-nltk.download('vader_lexicon')
 custom_css = """
 <style>
 body {
@@ -93,6 +71,7 @@ margin: 10px 0; /* Margin for paragraphs */
 
 </style>
 """
+
 # Representing an upward movement
 up_candle = "📈"  # \U0001F4C8
 down_candle = ""  # \U0001F4C9
@@ -109,7 +88,7 @@ st.markdown(custom_css, unsafe_allow_html=True)
 
 #page title and subtitle
 st.title(
-      "Stock Price Ptediction Training 📉"
+      " 📈 Stock Price Ptediction Training 📉"
     
 )
 
@@ -129,16 +108,18 @@ example_ticker_symbols = [
 ticker = st.selectbox("Select a stock ticker symbol or enter your own:", example_ticker_symbols)
 # if ticker:
       #Fetching stock price data
-      
+
 def main():
-  from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
+  from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
   import pandas as pd
-  check_and_make_directories([DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR])
-  """ Waiting data collection From Yahoo donloader ..."""
+  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]
+  check_and_make_directories( dir )
+  jprint("Directory Paths: ",  ", ".join(dir))
+  """ Waiting data collection From Yahoo downloader ..."""
   df = YahooDownloader(start_date = TRAIN_START_DATE,
                       end_date = TRADE_END_DATE,
                       ticker_list = config_tickers.DOW_30_TICKER).fetch_data()
-#  df.shape
+# df.shape
   df.sort_values(['date','tic'],ignore_index=True).head()
   fe = FeatureEngineer(
                       use_technical_indicator=True,
@@ -158,9 +139,9 @@ def main():
   processed_full.sort_values(['date','tic'],ignore_index=True).head(10)
   train = data_split(processed_full, TRAIN_START_DATE,TRAIN_END_DATE)
   trade = data_split(processed_full, TRADE_START_DATE,TRADE_END_DATE)
-  st.write(f"Train Length: {len(train)}, Trade Length: {len(trade)}")
-  
-  st.write(train.head()) ; st.write(train.tail())
+
+  st.write(train.head()) ; 
+  st.write(train.tail())
   
   mvo_df = processed_full.sort_values(['date','tic'],ignore_index=True)[['date','tic','close']]
   stock_dimension = len(train.tic.unique())
