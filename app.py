@@ -114,12 +114,12 @@ def main():
   import pandas as pd
   dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]
   check_and_make_directories( dir )
-  jprint("Directory Paths: ",  ", ".join(dir))
+  jprint("Directory Paths: ",  ", ".join(dir),  '')
   """ Waiting data collection From Yahoo downloader ..."""
   df = YahooDownloader(start_date = TRAIN_START_DATE,
                       end_date = TRADE_END_DATE,
                       ticker_list = config_tickers.DOW_30_TICKER).fetch_data()
-# df.shape
+#  df.shape
   df.sort_values(['date','tic'],ignore_index=True).head()
   fe = FeatureEngineer(
                       use_technical_indicator=True,
