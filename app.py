@@ -1,16 +1,12 @@
 from __future__ import annotations
 
-import nltk
-nltk.download('vader_lexicon')
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
-import matplotlib.pyplot as plt
 import streamlit as st
 import sys
 import itertools
 import matplotlib.pyplot as plt
 sys.path.append('../lib/rl')
 from lib.utility.jprint import jprint
-from torch.distributions.normal import Normal
+
 from lib.rl.config import (
       DATA_SAVE_DIR,
       TRAINED_MODEL_DIR,
@@ -24,6 +20,17 @@ from lib.rl.config import (
       TRADE_START_DATE,
       TRADE_END_DATE,
 )
+
+from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
+from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
+from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
+from lib.rl.agents.stablebaselines3.models import DRLAgent
+from stable_baselines3.common.logger import configure
+from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
+from lib.rl.main import check_and_make_directories
+from lib.rl import config_tickers
+
+
 import warnings
 warnings.filterwarnings("ignore")
 API_KEY = "PKVD6WOSPEMKS0UI6A3K"
@@ -66,22 +73,12 @@ st.set_page_config(
       layout="wide",
       page_icon= "📈"
       )
-
-
 # Apply the custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
-
 #page title and subtitle
-st.title(
-      " 📈 Stock Price Ptediction Training 📉"
-    
-)
-
+st.title(" 📈 Stock Price Ptediction Training 📉")
 st.markdown("Trainig to predict stock price movements for a given stock ticker symbol and its foundamental ratios")
-
 finviz_url = "https://finviz.com/quote.ashx?t="
-
-#Enter stock ticker symbol
 example_ticker_symbols = [
 "AAPL", "MSFT", "GOOGL", "AMZN", "TSLA",
 "JPM", "NFLX", "FB", "BRK.B", "V",
@@ -95,15 +92,6 @@ ticker = st.selectbox("Select a stock ticker symbol or enter your own:", example
       #Fetching stock price data
 
 def main():
-  from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
-  from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
-  from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
-  from lib.rl.agents.stablebaselines3.models import DRLAgent
-  from stable_baselines3.common.logger import configure
-  from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
-  from lib.rl.main import check_and_make_directories
-  from lib.rl import config_tickers
-  
   import pandas as pd
   dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]
   check_and_make_directories( dir )
