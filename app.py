@@ -1,30 +1,15 @@
 from __future__ import annotations
-from lib.utility.jprint import jprint
+
 import nltk
 nltk.download('vader_lexicon')
-from urllib.request import urlopen, Request
-from bs4 import BeautifulSoup
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 import sys
 import itertools
 import matplotlib.pyplot as plt
-import numpy.random as rd
-# matplotlib.use('Agg')
-# import yfinance as yf
-from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
-from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
-from lib.rl.agents.stablebaselines3.models import DRLAgent
-from stable_baselines3.common.logger import configure
-from lib.rl.meta.data_processor import DataProcessor
-from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
-from lib.rl.main import check_and_make_directories
-from lib.rl import config_tickers
-from lib.rl.meta.preprocessor.yahoodownloader import yf
-from pprint import pprint
-from copy import deepcopy
+sys.path.append('../lib/rl')
+from lib.utility.jprint import jprint
 from torch.distributions.normal import Normal
 from lib.rl.config import (
       DATA_SAVE_DIR,
@@ -47,7 +32,7 @@ TRAIN_START_DATE = '2010-01-01'
 TRAIN_END_DATE = '2021-10-01'
 TRADE_START_DATE = '2021-10-01'
 TRADE_END_DATE = '2023-03-01'
-sys.path.append("../FinRL")
+
 custom_css = """
 <style>
 body {
@@ -111,11 +96,19 @@ ticker = st.selectbox("Select a stock ticker symbol or enter your own:", example
 
 def main():
   from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
+  from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
+  from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
+  from lib.rl.agents.stablebaselines3.models import DRLAgent
+  from stable_baselines3.common.logger import configure
+  from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
+  from lib.rl.main import check_and_make_directories
+  from lib.rl import config_tickers
+  
   import pandas as pd
   dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]
   check_and_make_directories( dir )
-  jprint("Directory Paths: ",  ", ".join(dir),  '')
-  """ Waiting data collection From Yahoo downloader ..."""
+  jprint("app.py: Directory Paths:   ",  "   //".join(dir),  '##')
+  """app.py: Waiting data collection From Yahoo downloader ..."""
   df = YahooDownloader(start_date = TRAIN_START_DATE,
                       end_date = TRADE_END_DATE,
                       ticker_list = config_tickers.DOW_30_TICKER).fetch_data()

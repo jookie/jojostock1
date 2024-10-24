@@ -1,2 +1,2 @@
-time/total_timesteps,time/time_elapsed,time/fps,time/iterations,train/reward
-2048,6,331,1,1.0104079
+time/time_elapsed,time/iterations,train/reward,time/total_timesteps,time/fps
+6,1,0.75907403,2048,325
