@@ -23,23 +23,13 @@
  JojoFin with  the three layers: market environments, agents, and applications. For a trading task (on the top), an agent (in the middle) interacts with a market environment (at the bottom), making sequential decisions.
 <br>
 
-<div align="center">
-
-[Introduction](OVERVIEW) |
-[SnapShot](READMECodeSnapShot.md) | 
-[PaperTrading](READMExpAlpacaPaperTrading.md) | 
-[FAQ](READMEfaq.md)
-</div>
-
 ## Introduction
-
 If you're tired staring at charts all day, and doing trades manually while exploring daily market data
 just relax and let the bot do all the hard work.
 This Trading-bot operates 24/7, ensuring no trading opportunities are missed. An AI JOJO Trading Bot offers the benefits of automated trading without needing constant attention, giving regular investors a chance for higher returns. 
 The name of the AI trading bot is JojoFin. It is like having an automatic helper that trades for you 24/7 based on set rules, quickly making lots of small trades to profit from market changes, while traditional investing involves buying assets and holding them for a long time with less frequent trades and lower risk.
 
 ## Stock market sentiment analysis 
-
 Stock market sentiment analysis is one of the web scraping methods for gathering data to make informed business decisions. Research shows that stock market price movements correlate with public sentiments regarding the companies.
 Thus, sentiment about the company in the media, industry reports, social media reviews, or investors’ opinions can provide great insights into how the prices of stocks change
 
@@ -54,9 +44,7 @@ Jojobot is a library that will allow you to easily create trading robots that ar
 Check your trading strategies against historical data to make sure they are profitable before you invest in them. JojoBot makes it easy for you to do  (backtest) your trading strategies and easily convert them to algorithmic trading robots.
 <br>
 
-
 ## Library and Folders
-
 The Library folder has three subfolders:
 + applications: trading tasks,
 + agents: DRL algorithms, from ElegantRL, RLlib, or Stable Baselines 3 (SB3). Users can plug in any DRL lib and play.
@@ -104,10 +92,11 @@ Lib
 In order to have this to run automatically once a day, we can deploy it to a hosting platform like Vercel with a seperate file that repeatedly executes it. 
 
 ## Dependencies 
-
-- [Python 3  ](https://www.python.org/downloads/)
+- [Python 3  ](https://www.python.org)
 - [Alpaca SDK](https://alpaca.markets/)
 - [Vercel](https://vercel.com)
+- [Github](https://github.com/jookie/jojostock1/blob/main/docs/MD/README.TECH.md#citing)
+- [Streamlit](https://share.streamlit.io/user/jookie)
 
 #### from config file, TRAIN , TEST and TRADE days
 ```python
@@ -184,7 +173,6 @@ fe = FeatureEngineer(
 ## Tutorial
 
 ## Google Colab Notebooks
-
 Examples for Stocks, Options, and Crypto in the notebooks provided below. Open them in Google Colab to jumpstart your journey! 
 
 | Notebooks                                     |                                                                                    Open in Google Colab                                                                                    |
@@ -195,7 +183,6 @@ Examples for Stocks, Options, and Crypto in the notebooks provided below. Open t
 | [Stock Trading](api/tradingBot.ipynb)         |                                                 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](api/tradingBot.ipynb)                                                 |
 
 ## Features
-
 - 🤖 **Real-time AI Chatbot**: Engage with AI powered by Llama3 70b to request stock news, information, and charts through natural language conversation
 - 📊 **Interactive Stock Charts**: Receive near-instant, context-aware responses with interactive TradingView charts that host live data
 - 🔄 **Adaptive Interface**: Dynamically render TradingView UI components for financial interfaces tailored to your specific query
