@@ -1,14 +1,11 @@
-# http://localhost:8888/lab/tree/jojostock1/app.py
 from __future__ import annotations
 
-import pprint
 import streamlit as st
 import sys
 import itertools
 import matplotlib.pyplot as plt
 sys.path.append('../lib/rl')
-# from lib.utility.jprint import jprint
-from lib.rl.pprint import jprint
+from lib.utility.jprint import jprint
 
 from lib.rl.config import (
       DATA_SAVE_DIR,
