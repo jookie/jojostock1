@@ -89,9 +89,8 @@ example_ticker_symbols = [
 ]
 # Use a selectbox to allow users to choose from example ticker symbols
 ticker = st.selectbox("Select a stock ticker symbol or enter your own:", example_ticker_symbols)
-# if ticker:
-      #Fetching stock price data
-
+          # if ticker:
+                #Fetching stock price data
 def main():
   import pandas as pd
   dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]
