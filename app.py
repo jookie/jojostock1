@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 sys.path.append('../lib/rl')# from lib.utility.jprint import jprint
 # from lib.rl.pprint import jprint
 
-from lib2.rl.config import (
+from lib.rl.config import (
       DATA_SAVE_DIR,
       TRAINED_MODEL_DIR,
       TENSORBOARD_LOG_DIR,
@@ -22,14 +22,14 @@ from lib2.rl.config import (
       TRADE_END_DATE,
 )
 
-from lib2.rl.meta.preprocessor.yahoodownloader import YahooDownloader
-from lib2.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
-from lib2.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
-from lib2.rl.agents.stablebaselines3.models import DRLAgent
+from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
+from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
+from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
+from lib.rl.agents.stablebaselines3.models import DRLAgent
 from stable_baselines3.common.logger import configure
-from lib2.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
-from lib2.rl.main import check_and_make_directories
-from lib2.rl import config_tickers
+from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
+from lib.rl.main import check_and_make_directories
+from lib.rl import config_tickers
 
 
 import warnings
