@@ -40,3 +40,7 @@ local.env
 *.env
 tsconfig.tsbuildinfo
 venv
+
+#data
+data 
+.data

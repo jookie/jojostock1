@@ -1,14 +1,12 @@
 # http://localhost:8888/lab/tree/jojostock1/app.py
 from __future__ import annotations
-
-import pprint
+import os
 import streamlit as st
 import sys
 import itertools
 import matplotlib.pyplot as plt
-sys.path.append('../lib/rl')
-# from lib.utility.jprint import jprint
-from lib.rl.pprint import jprint
+sys.path.append('../lib/rl')# from lib.utility.jprint import jprint
+# from lib.rl.pprint import jprint
 
 from lib.rl.config import (
       DATA_SAVE_DIR,
@@ -98,6 +96,13 @@ def main():
   import pandas as pd
   dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]
   check_and_make_directories( dir )
+  
+  def jprint(s1 = '', s2 = '' , s3 = '', s4 = ""):
+    a1 = str(s1) + str(s2) + str(s3) +str(s4)
+    print   (a1)
+    st.write(a1)
+ 
+  
   jprint("app.py: Directory Paths:   ",  "   //".join(dir),  '##')
   """app.py: Waiting data collection From Yahoo downloader ..."""
   df = YahooDownloader(start_date = TRAIN_START_DATE,
@@ -415,7 +420,14 @@ def main():
   df_result_td3 = df_account_value_td3.set_index(df_account_value_td3.columns[0])
   df_result_ppo = df_account_value_ppo.set_index(df_account_value_ppo.columns[0])
   df_result_sac = df_account_value_sac.set_index(df_account_value_sac.columns[0])
-  df_account_value_a2c.to_csv("df_account_value_a2c.csv")
+  
+  def mkdirDataDf(fn):
+    folder_path = os.path.join("data", "df")
+    os.makedirs(folder_path, exist_ok=True)
+    file_path = os.path.join(folder_path, fn )
+    return file_path
+  
+  df_account_value_a2c.to_csv( mkdirDataDf( "df_account_value_a2c.csv"))
   #baseline stats
   st.write("==============Get Baseline Stats===========")
   df_dji_ = get_baseline(
@@ -426,9 +438,9 @@ def main():
   df_dji = pd.DataFrame()
   df_dji['date'] = df_account_value_a2c['date']
   df_dji['account_value'] = df_dji_['close'] / df_dji_['close'][0] * env_kwargs["initial_amount"]
-  df_dji.to_csv("df_dji.csv")
+  df_dji.to_csv(mkdirDataDf("df_dji.csv"))
   df_dji = df_dji.set_index(df_dji.columns[0])
-  df_dji.to_csv("df_dji+.csv")
+  df_dji.to_csv(mkdirDataDf("df_dji+.csv"))
 
 
   result = pd.merge(df_result_a2c, df_result_ddpg, left_index=True, right_index=True, suffixes=('_a2c', '_ddpg'))
@@ -440,7 +452,7 @@ def main():
   result.columns = ['a2c', 'ddpg', 'td3', 'ppo', 'sac', 'mean var', 'dji']
 
 #   st.write("result: ", result)
-  result.to_csv("result.csv")
+  result.to_csv(mkdirDataDf("result.csv"))
 
   plt.rcParams["figure.figsize"] = (15,5)
   fig, ax = plt.subplots()
