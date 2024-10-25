@@ -46,12 +46,53 @@ Thus, sentiment about the company in the media, industry reports, social media r
 web scraping methods for gathering 
 Stock market data including sentiment analysis to predict  stock market price movements and correlate with public sentiments regarding the companies.
 Thus, sentiment about the company in the media, industry reports, social media reviews, or investors’ opinions can provide great insights into how the prices of stocks change.
+
 ## Reinforcement Learning (RL)
 Reinforcement Learning (RL) techniques are considered convenient for this task : 
 In this experiment, we present an RL environment for the portfolio optimization based on state-of-the-art mathematical formulations. The environment aims to be easy-to-use, very customizable, and have integrations with modern RL frameworks.
 Jojobot is a library that will allow you to easily create trading robots that are profitable in many different asset classes, including Stocks, Options, Futures, FOREX, and more. 
 Check your trading strategies against historical data to make sure they are profitable before you invest in them. JojoBot makes it easy for you to do  (backtest) your trading strategies and easily convert them to algorithmic trading robots.
 <br>
+
+
+## Library and Folders
+
+The Library folder has three subfolders:
++ applications: trading tasks,
++ agents: DRL algorithms, from ElegantRL, RLlib, or Stable Baselines 3 (SB3). Users can plug in any DRL lib and play.
++ meta: market environments, we merge the stable ones from the active [JOOKIE repo](https://github.com/jookie/jojostock1/tree/main/lib).
+
+Then, we employ a train-test-trade pipeline by three files: train.py, test.py, and trade.py.
+
+```
+Lib
+├── rl 
+│   ├── JOJO applications
+│   	├── cryptocurrency_trading
+│   	├── high_frequency_trading
+│   	├── portfolio_allocation
+│   	└── stock_trading
+│   ├── agents
+│   	├── elegantrl
+│   	├── rllib
+│   	└── stablebaseline3
+│   ├── meta
+│   	├── data_processors
+│   	├── env_cryptocurrency_trading
+│   	├── env_portfolio_allocation
+│   	├── env_stock_trading
+│   	├── preprocessor
+│   	├── data_processor.py
+│   	└── finrl_meta_config.py
+│   ├── config.py
+│   ├── config_tickers.py
+│   ├── main.py
+│   ├── train.py
+│   ├── test.py
+│   ├── trade.py
+│   └── plot.py
+```
+
 
 ## Experiment Overview
 1. Pull 1 year of trading data for (Insert your stock, options or crypto) with Yahoo Finance Downloader API
