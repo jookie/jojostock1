@@ -2,19 +2,17 @@
 <h3>
 <br>
     
-[OverView](docs/MD/OverView.md) |
-[DOW Stable Base Line](docs/MD/StableBasdelineDowJones.md) |
-[Trading Experiments](docs/MD/READMExperiment.md) |
-[PaperTrading](docs/MD/READMExpAlpacaPaperTrading.md) | 
-[TECH](docs/MD/README.TECH.md) |
-[FAQ](docs/MD/READMEfaq.md) | 
-[SnapShot](docs/MD/READMECodeSnapShot.md) 
+[OverView](/docs/MD/OverView.md) |
+[DOW Stable Base Line](/docs/MD/StableBasdelineDowJones.md) |
+[Trading Experiments](/docs/MD/READMExperiment.md) |
+[PaperTrading](/docs/MD/READMExpAlpacaPaperTrading.md) | 
+[TECH](/docs/MD/README.TECH.md) |
+[FAQ](/docs/MD/READMEfaq.md) | 
+[SnapShot](/docs/MD/READMECodeSnapShot.md) 
 
 </h3>
 </div>
-
 # Renforced Learning Trading Bot
-
 <h2 align="center">
  <br>
  <img src="public/groqlabs-logo-black2.png" alt="AI StockBot" width="500">
@@ -37,8 +35,14 @@ If you're tired staring at charts all day, and doing trades manually while explo
 just relax and let the bot do all the hard work.
 This Trading-bot operates 24/7, ensuring no trading opportunities are missed. An AI JOJO Trading Bot offers the benefits of automated trading without needing constant attention, giving regular investors a chance for higher returns. 
 The name of the AI trading bot is JojoFin. It is like having an automatic helper that trades for you 24/7 based on set rules, quickly making lots of small trades to profit from market changes, while traditional investing involves buying assets and holding them for a long time with less frequent trades and lower risk.
+## Reinforcement Learning (RL)
+Reinforcement Learning (RL) techniques are considered convenient for this task : 
+In this experiment, we present an RL environment for the portfolio optimization based on state-of-the-art mathematical formulations. The environment aims to be easy-to-use, very customizable, and have integrations with modern RL frameworks.
+Jojobot is a library that will allow you to easily create trading robots that are profitable in many different asset classes, including Stocks, Options, Futures, FOREX, and more. 
+Check your trading strategies against historical data to make sure they are profitable before you invest in them. JojoBot makes it easy for you to do  (backtest) your trading strategies and easily convert them to algorithmic trading robots.
+<br>
 
-## Stock market sentiment analysis 
+## Stock market sentimen
 
 Stock market sentiment analysis is one of the web scraping methods for gathering data to make informed business decisions. Research shows that stock market price movements correlate with public sentiments regarding the companies.
 Thus, sentiment about the company in the media, industry reports, social media reviews, or investors’ opinions can provide great insights into how the prices of stocks change
@@ -46,12 +50,7 @@ Thus, sentiment about the company in the media, industry reports, social media r
 web scraping methods for gathering 
 Stock market data including sentiment analysis to predict  stock market price movements and correlate with public sentiments regarding the companies.
 Thus, sentiment about the company in the media, industry reports, social media reviews, or investors’ opinions can provide great insights into how the prices of stocks change.
-## Reinforcement Learning (RL)
-Reinforcement Learning (RL) techniques are considered convenient for this task : 
-In this experiment, we present an RL environment for the portfolio optimization based on state-of-the-art mathematical formulations. The environment aims to be easy-to-use, very customizable, and have integrations with modern RL frameworks.
-Jojobot is a library that will allow you to easily create trading robots that are profitable in many different asset classes, including Stocks, Options, Futures, FOREX, and more. 
-Check your trading strategies against historical data to make sure they are profitable before you invest in them. JojoBot makes it easy for you to do  (backtest) your trading strategies and easily convert them to algorithmic trading robots.
-<br>
+
 
 ## Experiment Overview
 1. Pull 1 year of trading data for (Insert your stock, options or crypto) with Yahoo Finance Downloader API
