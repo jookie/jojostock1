@@ -5,7 +5,8 @@ import streamlit as st
 import sys
 import itertools
 import matplotlib.pyplot as plt
-sys.path.append('../lib/rl')# from lib.utility.jprint import jprint
+sys.path.append('../lib/rl')
+# from lib.utility.jprint import jprint
 # from lib.rl.pprint import jprint
 
 from lib.rl.config import (
