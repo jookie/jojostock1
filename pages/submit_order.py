@@ -10,12 +10,12 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import datetime
-from lib.rl.config_tickers import DOW_30_TICKER
-from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
-from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
-from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
-from lib.rl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent
-from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
+from lib2.rl.config_tickers import DOW_30_TICKER
+from lib2.rl.meta.preprocessor.yahoodownloader import YahooDownloader
+from lib2.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
+from lib2.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
+from lib2.rl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent
+from lib2.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
 
 import sys
 from pprint import pprint
@@ -24,12 +24,12 @@ import sys
 sys.path.append("../lib")
 
 
-from lib.rl.config_tickers import DOW_30_TICKER
-from lib.rl.config import INDICATORS
-from lib.rl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
-from lib.rl.meta.env_stock_trading.env_stock_papertrading import AlpacaPaperTrading
-from lib.rl.meta.data_processor import DataProcessor
-from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
+from lib2.rl.config_tickers import DOW_30_TICKER
+from lib2.rl.config import INDICATORS
+from lib2.rl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
+from lib2.rl.meta.env_stock_trading.env_stock_papertrading import AlpacaPaperTrading
+from lib2.rl.meta.data_processor import DataProcessor
+from lib2.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
 
 import numpy as np
 import pandas as pd
@@ -571,14 +571,14 @@ class DRLAgent:
 # Train & Test Functions
 # from __future__ mport annotations
 
-from lib.rl.config import ERL_PARAMS
-from lib.rl.config import INDICATORS
-from lib.rl.config import RLlib_PARAMS
-from lib.rl.config import SAC_PARAMS
-from lib.rl.config import TRAIN_END_DATE
-from lib.rl.config import TRAIN_START_DATE
-from lib.rl.config_tickers import DOW_30_TICKER
-from lib.rl.meta.data_processor import DataProcessor
+from lib2.rl.config import ERL_PARAMS
+from lib2.rl.config import INDICATORS
+from lib2.rl.config import RLlib_PARAMS
+from lib2.rl.config import SAC_PARAMS
+from lib2.rl.config import TRAIN_END_DATE
+from lib2.rl.config import TRAIN_START_DATE
+from lib2.rl.config_tickers import DOW_30_TICKER
+from lib2.rl.meta.data_processor import DataProcessor
 
 # construct environment
 
@@ -633,11 +633,11 @@ def train(
         )
 # from __future__ mport annotations
 
-from lib.rl.config import INDICATORS
-from lib.rl.config import RLlib_PARAMS
-from lib.rl.config import TEST_END_DATE
-from lib.rl.config import TEST_START_DATE
-from lib.rl.config_tickers import DOW_30_TICKER
+from lib2.rl.config import INDICATORS
+from lib2.rl.config import RLlib_PARAMS
+from lib2.rl.config import TEST_END_DATE
+from lib2.rl.config import TEST_START_DATE
+from lib2.rl.config_tickers import DOW_30_TICKER
 
 def test(
     start_date,
@@ -654,7 +654,7 @@ def test(
 ):
 
     # import data processor
-    from lib.rl.meta.data_processor import DataProcessor
+    from lib2.rl.meta.data_processor import DataProcessor
 
     # fetch data
     dp = DataProcessor(data_source, **kwargs)
@@ -789,7 +789,7 @@ train(start_date = '2022-08-25',
 # Setup Alpaca Paper trading environment
 import datetime
 import threading
-from lib.rl.meta.data_processors.processor_alpaca import AlpacaProcessor
+from lib2.rl.meta.data_processors.processor_alpaca import AlpacaProcessor
 import alpaca_trade_api as tradeapi
 import time
 import pandas as pd
@@ -1141,7 +1141,7 @@ import yfinance as yf
 import matplotlib.ticker as ticker
 import matplotlib.dates as mdates
 from datetime import datetime as dt
-from lib.rl.plot import backtest_stats
+from lib2.rl.plot import backtest_stats
 import matplotlib.pyplot as plt
 def get_trading_days(start, end):
     nyse = tc.get_calendar('NYSE')

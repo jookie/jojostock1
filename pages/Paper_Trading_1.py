@@ -1,11 +1,11 @@
 from __future__ import annotations
 import streamlit as st
 import warnings ; warnings.filterwarnings("ignore")
-from lib.rl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
-from lib.rl.meta.paper_trading.alpaca import PaperTradingAlpaca
-from lib.rl.meta.paper_trading.common import train, test, alpaca_history, DIA_history
-from lib.rl.config import INDICATORS
-from lib.rl.config_tickers import DOW_30_TICKER
+from lib2.rl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
+from lib2.rl.meta.paper_trading.alpaca import PaperTradingAlpaca
+from lib2.rl.meta.paper_trading.common import train, test, alpaca_history, DIA_history
+from lib2.rl.config import INDICATORS
+from lib2.rl.config_tickers import DOW_30_TICKER
 
 
 DATA_API_KEY = "PKEJH4W0URAU56SHKQW3" #args.data_key

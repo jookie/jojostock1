@@ -2,7 +2,7 @@
 # /content/papertrading_erl_retrain/actor.pth
 
 from __future__ import annotations
-from lib.utility.jprint import jprint
+from lib2.utility.jprint import jprint
 # import alpaca.trading.enums
 import streamlit as st
 
@@ -11,20 +11,20 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import datetime
-from lib.rl.config_tickers import DOW_30_TICKER
-from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
-from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
-from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
-from lib.rl.agents.stablebaselines3.models import DRLAgent, DRLEnsembleAgent
-from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
+from lib2.rl.config_tickers import DOW_30_TICKER
+from lib2.rl.meta.preprocessor.yahoodownloader import YahooDownloader
+from lib2.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
+from lib2.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
+from lib2.rl.agents.stablebaselines3.models import DRLAgent, DRLEnsembleAgent
+from lib2.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
 
 import sys
 
 sys.path.append("../lib")
 
-from lib.rl.main import check_and_make_directories
+from lib2.rl.main import check_and_make_directories
 # /Users/dovpeles/jojobot1/jojostock1/lib.rl/lib.rl2/config.py
-from lib.rl.config import (
+from lib2.rl.config import (
     DATA_SAVE_DIR,
     TRAINED_MODEL_DIR,
     TENSORBOARD_LOG_DIR,
