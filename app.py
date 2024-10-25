@@ -101,7 +101,7 @@ def main():
     print   (a1)
     st.write(a1)
  
-  
+ 
   jprint("app.py: Directory Paths:   ",  "   //".join(dir),  '##')
   """app.py: Waiting data collection From Yahoo downloader ..."""
   df = YahooDownloader(start_date = TRAIN_START_DATE,
