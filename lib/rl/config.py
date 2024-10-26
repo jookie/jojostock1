@@ -1,15 +1,10 @@
-# Create a settings form page using Streamlit, read and save using date  the above config.py . use date widget, Parsing , formating . organize the form into two columns using Streamlit, we'll use the st.columns() method, which allows us to place widgets side by side. We'll arrange the form so that related settings are split across two columns.
-
-# you can use st.form to collect user input efficiently. Streamlit allows you to create interactive web applications with a simple Python script. Below is an example of how you might create a settings form page where users can configure options like user information, preferences, and application settings.  Each pair of start and end dates will be grouped into a single row, consisting of two columns, with the start date on the left and the end date on the right.
-
-# directory
 from __future__ import annotations
-dir = 'data'
+MAIN_RESULTS_DIR = 'saba_results'
 
-DATA_SAVE_DIR       = dir + "/datasets"
-TRAINED_MODEL_DIR   = dir + "/trained_models"
-TENSORBOARD_LOG_DIR = dir + "/tensorboard_log"
-RESULTS_DIR         = dir + "/results"
+DATA_SAVE_DIR       = MAIN_RESULTS_DIR + "/datasets"
+TRAINED_MODEL_DIR   = MAIN_RESULTS_DIR + "/trained_models"
+TENSORBOARD_LOG_DIR = MAIN_RESULTS_DIR + "/tensorboard_log"
+RESULTS_DIR         = MAIN_RESULTS_DIR + "/results"
 
 # date format: '%Y-%m-%d'
 TRAIN_START_DATE = "2014-01-06"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657

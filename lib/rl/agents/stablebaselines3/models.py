@@ -16,6 +16,7 @@ from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.noise import NormalActionNoise
 from stable_baselines3.common.noise import OrnsteinUhlenbeckActionNoise
 from stable_baselines3.common.vec_env import DummyVecEnv
+from lib.rl.config import RESULTS_DIR
 
 from lib.rl import config
 from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
@@ -238,11 +239,14 @@ class DRLEnsembleAgent:
         )
         return model
 
+    
+
+    
     @staticmethod
     def get_validation_sharpe(iteration, model_name):
         """Calculate Sharpe ratio based on validation results"""
         df_total_value = pd.read_csv(
-            f"results/account_value_validation_{model_name}_{iteration}.csv"
+            f"{RESULTS_DIR}/account_value_validation_{model_name}_{iteration}.csv"
         )
         # If the agent did not make any transaction
         if df_total_value["daily_return"].var() == 0:
@@ -349,7 +353,7 @@ class DRLEnsembleAgent:
                 last_state = trade_env.envs[0].render()
 
         df_last_state = pd.DataFrame({"last_state": last_state})
-        df_last_state.to_csv(f"results/last_state_{name}_{i}.csv", index=False)
+        df_last_state.to_csv(f"{RESULTS_DIR}/last_state_{name}_{i}.csv", index=False)
         return last_state
 
     def _train_window(

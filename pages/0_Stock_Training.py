@@ -40,8 +40,9 @@ from lib.rl.config import (
     TEST_END_DATE,
     OrderType,
     OrderSide,
-    TimeInForce
+    TimeInForce,
 )
+
 
 st.set_page_config(page_title="Stock Training", page_icon="📹")
 
@@ -67,8 +68,6 @@ TEST_END_DATE = '2022-06-01'
 API_KEY      = "PKEJH4W0URAU56SHKQW3"
 API_SECRET   = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"
 API_BASE_URL = 'https://paper-api.alpaca.markets'
-
-
 df = YahooDownloader(start_date = TRAIN_START_DATE,
                      end_date = TEST_END_DATE,
                      ticker_list = DOW_30_TICKER).fetch_data()
@@ -187,7 +186,8 @@ df_trade_date = pd.DataFrame({'datadate':unique_trade_date})
 
 df_account_value=pd.DataFrame()
 for i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):
-    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))
+    temp = pd.read_csv(RESULTS_DIR + '/account_value_trade_{}_{}.csv'.format('ensemble',i))
+    # temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))
     df_account_value = df_account_value._append(temp,ignore_index=True)
 sharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()
 print('Sharpe Ratio: ',sharpe)

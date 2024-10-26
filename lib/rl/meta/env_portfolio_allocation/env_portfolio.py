@@ -10,7 +10,7 @@ from gymnasium.utils import seeding
 from stable_baselines3.common.vec_env import DummyVecEnv
 
 matplotlib.use("Agg")
-
+from lib.rl.config import RESULTS_DIR
 
 class StockPortfolioEnv(gym.Env):
     """A single stock trading environment for OpenAI gym
@@ -131,11 +131,11 @@ class StockPortfolioEnv(gym.Env):
             df = pd.DataFrame(self.portfolio_return_memory)
             df.columns = ["daily_return"]
             plt.plot(df.daily_return.cumsum(), "r")
-            plt.savefig("results/cumulative_reward.png")
+            plt.savefig("{RESULTS_DIR}/cumulative_reward.png")
             plt.close()
 
             plt.plot(self.portfolio_return_memory, "r")
-            plt.savefig("results/rewards.png")
+            plt.savefig("{RESULTS_DIR}/rewards.png")
             plt.close()
 
             print("=================================")
