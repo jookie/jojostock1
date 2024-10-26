@@ -32,7 +32,6 @@ from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_bas
 from lib.rl.main import check_and_make_directories
 from lib.rl import config_tickers
 
-
 import warnings
 warnings.filterwarnings("ignore")
 API_KEY = "PKVD6WOSPEMKS0UI6A3K"

@@ -2,7 +2,10 @@
 # /content/papertrading_erl_retrain/actor.pth
 
 from __future__ import annotations
-from lib2.utility.jprint import jprint
+
+import sys
+sys.path.append("~/lib/rl")
+
 # import alpaca.trading.enums
 import streamlit as st
 
@@ -11,20 +14,21 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import datetime
-from lib2.rl.config_tickers import DOW_30_TICKER
-from lib2.rl.meta.preprocessor.yahoodownloader import YahooDownloader
-from lib2.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
-from lib2.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
-from lib2.rl.agents.stablebaselines3.models import DRLAgent, DRLEnsembleAgent
-from lib2.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
+from lib.rl.config_tickers import DOW_30_TICKER
+from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
+from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
+from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
+from lib.rl.agents.stablebaselines3.models import DRLAgent, DRLEnsembleAgent
+from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
 
-import sys
+from lib.utility.jprint import jprint
 
-sys.path.append("../lib")
 
-from lib2.rl.main import check_and_make_directories
+# sys.path.append("../lib")
+
+from lib.rl.main import check_and_make_directories
 # /Users/dovpeles/jojobot1/jojostock1/lib.rl/lib.rl2/config.py
-from lib2.rl.config import (
+from lib.rl.config import (
     DATA_SAVE_DIR,
     TRAINED_MODEL_DIR,
     TENSORBOARD_LOG_DIR,
@@ -179,6 +183,8 @@ st.write(df_summary)
 unique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()
 df_trade_date = pd.DataFrame({'datadate':unique_trade_date})
 
+
+
 df_account_value=pd.DataFrame()
 for i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):
     temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))
@@ -194,8 +200,7 @@ df_account_value.head()
 df_account_value.account_value.plot()
 st.line_chart(df_account_value['account_value'])
 
-print("==============Get Backtest Results===========")
-st.write("==============Get Backtest Results===========")
+jprint("==============Get Backtest Outcome===========")
 now = datetime.datetime.now().strftime('%Y%m%d-%Hh%M')
 
 perf_stats_all = backtest_stats(account_value=df_account_value)
