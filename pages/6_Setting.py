@@ -3,7 +3,7 @@ import ast
 from datetime import datetime
 
 # Path to the config file
-config_file_path = 'pages/config.py'
+config_file_path = 'lib/utility/config.py'
 
 def read_config(file_path):
     config = {}
@@ -140,7 +140,7 @@ def main():
         use_timezone_selfdefined = st.checkbox("Use Self-defined Timezone", value=config.get('USE_TIME_ZONE_SELFDEFINED', 0))
 
         # Submit button for the form
-        submit_button = st.form_submit_button(label='Save Settings')
+    submit_button = st.form_submit_button(label='Save Settings')
 
     # If the form is submitted, update and save the config
     if submit_button:

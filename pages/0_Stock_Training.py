@@ -2,13 +2,8 @@
 # /content/papertrading_erl_retrain/actor.pth
 
 from __future__ import annotations
-
-import sys
-sys.path.append("~/lib/rl")
-
-# import alpaca.trading.enums
+import sys ; sys.path.append("~/lib/rl")
 import streamlit as st
-
 import warnings ; warnings.filterwarnings("ignore")
 import pandas as pd
 import numpy as np
@@ -20,14 +15,9 @@ from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
 from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
 from lib.rl.agents.stablebaselines3.models import DRLAgent, DRLEnsembleAgent
 from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
-
 from lib.utility.jprint import jprint
-
-
-# sys.path.append("../lib")
-
+# import alpaca.trading.enums
 from lib.rl.main import check_and_make_directories
-# /Users/dovpeles/jojobot1/jojostock1/lib.rl/lib.rl2/config.py
 from lib.rl.config import (
     DATA_SAVE_DIR,
     TRAINED_MODEL_DIR,
@@ -43,9 +33,7 @@ from lib.rl.config import (
     TimeInForce,
 )
 
-
 st.set_page_config(page_title="Stock Training", page_icon="📹")
-
 st.button("Re-run")
 st.markdown("# Stock Training")
 st.sidebar.header("Stock Testing")
@@ -54,9 +42,7 @@ st.write(
 It displays an animated fractal based on the the Julia Set. Use the slider
 to tune different parameters."""
 )
-
 check_and_make_directories([DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR])
-
 print(DOW_30_TICKER)
 st.write(", ".join(str(ticker) for ticker in DOW_30_TICKER))
 
@@ -64,10 +50,10 @@ TRAIN_START_DATE = '2009-04-01'
 TRAIN_END_DATE = '2021-01-01'
 TEST_START_DATE = '2021-01-01'
 TEST_END_DATE = '2022-06-01'
-
 API_KEY      = "PKEJH4W0URAU56SHKQW3"
 API_SECRET   = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"
 API_BASE_URL = 'https://paper-api.alpaca.markets'
+
 df = YahooDownloader(start_date = TRAIN_START_DATE,
                      end_date = TEST_END_DATE,
                      ticker_list = DOW_30_TICKER).fetch_data()

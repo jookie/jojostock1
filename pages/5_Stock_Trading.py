@@ -1,7 +1,7 @@
-from __future__ import annotationsINDICATOR
-import streamlit as st
+from __future__ import annotations
 # /content/papertrading_erl/actor.pth
 # /content/papertrading_erl_retrain/actor.pth
+import streamlit as st
 import warnings
 warnings.filterwarnings("ignore")
 import pandas as pd
@@ -11,6 +11,14 @@ import datetime
 API_KEY      = "PKEJH4W0URAU56SHKQW3"
 API_SECRET   = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"
 API_BASE_URL = 'https://paper-api.alpaca.markets'
+
+from lib.rl.config import (
+    OrderType,
+    OrderSide,
+    TimeInForce,
+)
+
+# from alpaca.trading.enums import OrderSide, TimeInForce, OrderType
 from finrl.config_tickers import DOW_30_TICKER
 from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
 from finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
@@ -40,7 +48,7 @@ from finrl.config import (
 )
 
 check_and_make_directories([DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR])
-print(DOW_30_TICKER)
+st.write(DOW_30_TICKER)
 
 TRAIN_START_DATE = '2009-04-01'
 TRAIN_END_DATE = '2021-01-01'
@@ -51,11 +59,11 @@ df = YahooDownloader(start_date = TRAIN_START_DATE,
                      end_date = TEST_END_DATE,
                      ticker_list = DOW_30_TICKER).fetch_data()
 df.sort_values(['date','tic']).head()
-print(len(df.tic.unique()))
-print(df.tic.value_counts())
-print(df.head())
-print(df.tail())
-print(df.shape)
+st.write(len(df.tic.unique()))
+st.write(df.tic.value_counts())
+st.write(df.head())
+st.write(df.tail())
+st.write(df.shape)
 
 INDICATORS = ['macd',
                'rsi_30',
@@ -71,11 +79,11 @@ processed = processed.copy()
 processed = processed.fillna(0)
 processed = processed.replace(np.inf,0)
 
-print(processed.sample(5))
+st.write(processed.sample(5))
 
 stock_dimension = len(processed.tic.unique())
 state_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension
-print(f"Stock Dimension: {stock_dimension}, State Space: {state_space}")
+st.write(f"Stock Dimension: {stock_dimension}, State Space: {state_space}")
 env_kwargs = {
     "hmax": 100, 
     "initial_amount": 1000000, 
@@ -146,7 +154,7 @@ df_summary = ensemble_agent.run_ensemble_strategy(
     timesteps_dict
 )
 
-print(df_summary)
+st.write(df_summary)
 
 unique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()
 df_trade_date = pd.DataFrame({'datadate':unique_trade_date})
@@ -156,20 +164,20 @@ for i in range(rebalance_window+validation_window, len(unique_trade_date)+1,reba
     temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))
     df_account_value = df_account_value._append(temp,ignore_index=True)
 sharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()
-print('Sharpe Ratio: ',sharpe)
+st.write('Sharpe Ratio: ',sharpe)
 df_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))
 
 df_account_value.head()
 df_account_value.account_value.plot()
 
-print("==============Get Backtest Results===========")
+st.write("==============Get Backtest Results===========")
 now = datetime.datetime.now().strftime('%Y%m%d-%Hh%M')
 
 perf_stats_all = backtest_stats(account_value=df_account_value)
 perf_stats_all = pd.DataFrame(perf_stats_all)
 
 #baseline stats
-print("==============Get Baseline Stats===========")
+st.write("==============Get Baseline Stats===========")
 baseline_df = get_baseline(
         ticker="^DJI", 
         start = df_account_value.loc[0,'date'],
@@ -177,7 +185,7 @@ baseline_df = get_baseline(
 
 stats = backtest_stats(baseline_df, value_col_name = 'close')
 
-print("==============Compare to DJIA===========")
+st.write("==============Compare to DJIA===========")
 # %matplotlib inline
 # S&P 500: ^GSPC
 # Dow Jones Index: ^DJI
@@ -186,14 +194,12 @@ backtest_plot(df_account_value,
               baseline_ticker = '^DJI', 
               baseline_start = df_account_value.loc[0,'date'],
               baseline_end = df_account_value.loc[len(df_account_value)-1,'date'])
-
-# from alpaca.trading.enums import OrderSide, TimeInForce, OrderType
 import alpaca_trade_api as tradeapi
 
 api = tradeapi.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')
 try:
     account = api.get_account()
-    print(f"Account status: {account.status}")
+    st.write(f"Account status: {account.status}")
     symbol = 'CAT'
     qty = 1  # Quantity to buy
     if (sharpe > - 94):
@@ -203,9 +209,9 @@ try:
             side=OrderSide.BUY,
             time_in_force=TimeInForce.DAY,
             type= OrderType.MARKET)
-        print(f"Buy order submitted: {buy_order}")
+        st.write(f"Buy order submitted: {buy_order}")
     else:
-        print('no trades for today')
+        st.write('no trades for today')
 except Exception as e:
-    print(f"An error occurred: {e}")
+    st.write(f"An error occurred: {e}")
 

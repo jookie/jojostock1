@@ -464,7 +464,15 @@
         "documentation": {}
     },
     {
-        "label": "annotationsINDICATOR",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
         "importPath": "__future__",
         "description": "__future__",
         "isExtraImport": true,
@@ -1077,6 +1085,30 @@
     },
     {
         "label": "TEST_END_DATE",
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "isExtraImport": true,
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "OrderType",
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "isExtraImport": true,
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "OrderSide",
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "isExtraImport": true,
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TimeInForce",
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
         "isExtraImport": true,
@@ -4388,30 +4420,6 @@
         "documentation": {}
     },
     {
-        "label": "show_code",
-        "importPath": "streamlit.hello.utils",
-        "description": "streamlit.hello.utils",
-        "isExtraImport": true,
-        "detail": "streamlit.hello.utils",
-        "documentation": {}
-    },
-    {
-        "label": "show_code",
-        "importPath": "streamlit.hello.utils",
-        "description": "streamlit.hello.utils",
-        "isExtraImport": true,
-        "detail": "streamlit.hello.utils",
-        "documentation": {}
-    },
-    {
-        "label": "show_code",
-        "importPath": "streamlit.hello.utils",
-        "description": "streamlit.hello.utils",
-        "isExtraImport": true,
-        "detail": "streamlit.hello.utils",
-        "documentation": {}
-    },
-    {
         "label": "PPO",
         "importPath": "stable_baselines3",
         "description": "stable_baselines3",
@@ -5723,40 +5731,6 @@
         "description": "lib.rl.test",
         "isExtraImport": true,
         "detail": "lib.rl.test",
-        "documentation": {}
-    },
-    {
-        "label": "URLError",
-        "importPath": "urllib.error",
-        "description": "urllib.error",
-        "isExtraImport": true,
-        "detail": "urllib.error",
-        "documentation": {}
-    },
-    {
-        "label": "URLError",
-        "importPath": "urllib.error",
-        "description": "urllib.error",
-        "isExtraImport": true,
-        "detail": "urllib.error",
-        "documentation": {}
-    },
-    {
-        "label": "pydeck",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pydeck",
-        "description": "pydeck",
-        "detail": "pydeck",
-        "documentation": {}
-    },
-    {
-        "label": "altair",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "altair",
-        "description": "altair",
-        "detail": "altair",
         "documentation": {}
     },
     {
@@ -10850,6 +10824,294 @@
         "documentation": {}
     },
     {
+        "label": "OrderSide",
+        "kind": 6,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "class OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"\n    STOP = \"stop\"\n    STOP_LIMIT = \"stop_limit\"\n    TRAILING_STOP = \"trailing_stop\"\nclass TimeInForce():",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "OrderType",
+        "kind": 6,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "class OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"\n    STOP = \"stop\"\n    STOP_LIMIT = \"stop_limit\"\n    TRAILING_STOP = \"trailing_stop\"\nclass TimeInForce():\n    DAY = \"day\"\n    GTC = \"gtc\"\n    OPG = \"opg\"",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TimeInForce",
+        "kind": 6,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "class TimeInForce():\n    DAY = \"day\"\n    GTC = \"gtc\"\n    OPG = \"opg\"\n    CLS = \"cls\"\n    IOC = \"ioc\"\n    FOK = \"fok\"",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "DATA_SAVE_DIR",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "DATA_SAVE_DIR = \"datasets\"\nTRAINED_MODEL_DIR = \"trained_models\"\nTENSORBOARD_LOG_DIR = \"tensorboard_log\"\nRESULTS_DIR = \"results\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRAINED_MODEL_DIR",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TRAINED_MODEL_DIR = \"trained_models\"\nTENSORBOARD_LOG_DIR = \"tensorboard_log\"\nRESULTS_DIR = \"results\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TENSORBOARD_LOG_DIR",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TENSORBOARD_LOG_DIR = \"tensorboard_log\"\nRESULTS_DIR = \"results\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "RESULTS_DIR",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "RESULTS_DIR = \"results\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRAIN_START_DATE",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRAIN_END_DATE",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_START_DATE",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_END_DATE",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRADE_START_DATE",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",\n    \"cci_30\",",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRADE_END_DATE",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",\n    \"cci_30\",\n    \"dx_30\",",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "INDICATORS",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "INDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",\n    \"cci_30\",\n    \"dx_30\",\n    \"close_30_sma\",\n    \"close_60_sma\",\n]",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "A2C_PARAMS",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "A2C_PARAMS = {\"n_steps\": 5, \"ent_coef\": 0.01, \"learning_rate\": 0.0007}\nPPO_PARAMS = {\n    \"n_steps\": 2048,\n    \"ent_coef\": 0.01,\n    \"learning_rate\": 0.00025,\n    \"batch_size\": 64,\n}\nDDPG_PARAMS = {\"batch_size\": 128, \"buffer_size\": 50000, \"learning_rate\": 0.001}\nTD3_PARAMS = {\"batch_size\": 100, \"buffer_size\": 1000000, \"learning_rate\": 0.001}\nSAC_PARAMS = {",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "PPO_PARAMS",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "PPO_PARAMS = {\n    \"n_steps\": 2048,\n    \"ent_coef\": 0.01,\n    \"learning_rate\": 0.00025,\n    \"batch_size\": 64,\n}\nDDPG_PARAMS = {\"batch_size\": 128, \"buffer_size\": 50000, \"learning_rate\": 0.001}\nTD3_PARAMS = {\"batch_size\": 100, \"buffer_size\": 1000000, \"learning_rate\": 0.001}\nSAC_PARAMS = {\n    \"batch_size\": 64,",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "DDPG_PARAMS",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "DDPG_PARAMS = {\"batch_size\": 128, \"buffer_size\": 50000, \"learning_rate\": 0.001}\nTD3_PARAMS = {\"batch_size\": 100, \"buffer_size\": 1000000, \"learning_rate\": 0.001}\nSAC_PARAMS = {\n    \"batch_size\": 64,\n    \"buffer_size\": 100000,\n    \"learning_rate\": 0.0001,\n    \"learning_starts\": 100,\n    \"ent_coef\": \"auto_0.1\",\n}\nERL_PARAMS = {",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TD3_PARAMS",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TD3_PARAMS = {\"batch_size\": 100, \"buffer_size\": 1000000, \"learning_rate\": 0.001}\nSAC_PARAMS = {\n    \"batch_size\": 64,\n    \"buffer_size\": 100000,\n    \"learning_rate\": 0.0001,\n    \"learning_starts\": 100,\n    \"ent_coef\": \"auto_0.1\",\n}\nERL_PARAMS = {\n    \"learning_rate\": 3e-5,",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "SAC_PARAMS",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "SAC_PARAMS = {\n    \"batch_size\": 64,\n    \"buffer_size\": 100000,\n    \"learning_rate\": 0.0001,\n    \"learning_starts\": 100,\n    \"ent_coef\": \"auto_0.1\",\n}\nERL_PARAMS = {\n    \"learning_rate\": 3e-5,\n    \"batch_size\": 2048,",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "ERL_PARAMS",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "ERL_PARAMS = {\n    \"learning_rate\": 3e-5,\n    \"batch_size\": 2048,\n    \"gamma\": 0.985,\n    \"seed\": 312,\n    \"net_dimension\": 512,\n    \"target_step\": 5000,\n    \"eval_gap\": 30,\n    \"eval_times\": 64,  # bug fix:KeyError: 'eval_times' line 68, in get_model model.eval_times = model_kwargs[\"eval_times\"]\n}",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "RLlib_PARAMS",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "RLlib_PARAMS = {\"lr\": 5e-5, \"train_batch_size\": 500, \"gamma\": 0.99}\n# Possible time zones\nTIME_ZONE_SHANGHAI = \"Asia/Shanghai\"  # Hang Seng HSI, SSE, CSI\nTIME_ZONE_USEASTERN = \"US/Eastern\"  # Dow, Nasdaq, SP\nTIME_ZONE_PARIS = \"Europe/Paris\"  # CAC,\nTIME_ZONE_BERLIN = \"Europe/Berlin\"  # DAX, TECDAX, MDAX, SDAX\nTIME_ZONE_JAKARTA = \"Asia/Jakarta\"  # LQ45\nTIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE_SHANGHAI",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TIME_ZONE_SHANGHAI = \"Asia/Shanghai\"  # Hang Seng HSI, SSE, CSI\nTIME_ZONE_USEASTERN = \"US/Eastern\"  # Dow, Nasdaq, SP\nTIME_ZONE_PARIS = \"Europe/Paris\"  # CAC,\nTIME_ZONE_BERLIN = \"Europe/Berlin\"  # DAX, TECDAX, MDAX, SDAX\nTIME_ZONE_JAKARTA = \"Asia/Jakarta\"  # LQ45\nTIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE_USEASTERN",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TIME_ZONE_USEASTERN = \"US/Eastern\"  # Dow, Nasdaq, SP\nTIME_ZONE_PARIS = \"Europe/Paris\"  # CAC,\nTIME_ZONE_BERLIN = \"Europe/Berlin\"  # DAX, TECDAX, MDAX, SDAX\nTIME_ZONE_JAKARTA = \"Asia/Jakarta\"  # LQ45\nTIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE_PARIS",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TIME_ZONE_PARIS = \"Europe/Paris\"  # CAC,\nTIME_ZONE_BERLIN = \"Europe/Berlin\"  # DAX, TECDAX, MDAX, SDAX\nTIME_ZONE_JAKARTA = \"Asia/Jakarta\"  # LQ45\nTIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE_BERLIN",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TIME_ZONE_BERLIN = \"Europe/Berlin\"  # DAX, TECDAX, MDAX, SDAX\nTIME_ZONE_JAKARTA = \"Asia/Jakarta\"  # LQ45\nTIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE_JAKARTA",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TIME_ZONE_JAKARTA = \"Asia/Jakarta\"  # LQ45\nTIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE_SELFDEFINED",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "TIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():\n    BUY = \"buy\"",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TIME_ZONE_SELFDEFINED",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "USE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "ALPACA_API_KEY",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "ALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "ALPACA_API_SECRET",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "ALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "ALPACA_API_BASE_URL",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "ALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"\n    STOP = \"stop\"",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
+        "label": "BINANCE_BASE_URL",
+        "kind": 5,
+        "importPath": "lib.utility.config",
+        "description": "lib.utility.config",
+        "peekOfCode": "BINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"\n    STOP = \"stop\"\n    STOP_LIMIT = \"stop_limit\"",
+        "detail": "lib.utility.config",
+        "documentation": {}
+    },
+    {
         "label": "jprint",
         "kind": 2,
         "importPath": "lib.utility.jprint",
@@ -11147,33 +11409,6 @@
         "documentation": {}
     },
     {
-        "label": "plotting_demo",
-        "kind": 2,
-        "importPath": "pages.1_Plotting_Demo",
-        "description": "pages.1_Plotting_Demo",
-        "peekOfCode": "def plotting_demo():\n    progress_bar = st.sidebar.progress(0)\n    status_text = st.sidebar.empty()\n    last_rows = np.random.randn(1, 1)\n    chart = st.line_chart(last_rows)\n    for i in range(1, 101):\n        new_rows = last_rows[-1, :] + np.random.randn(5, 1).cumsum(axis=0)\n        status_text.text(\"%i%% Complete\" % i)\n        chart.add_rows(new_rows)\n        progress_bar.progress(i)",
-        "detail": "pages.1_Plotting_Demo",
-        "documentation": {}
-    },
-    {
-        "label": "mapping_demo",
-        "kind": 2,
-        "importPath": "pages.2_Mapping_Demo",
-        "description": "pages.2_Mapping_Demo",
-        "peekOfCode": "def mapping_demo():\n    @st.cache_data\n    def from_data_file(filename):\n        url = (\n            \"https://raw.githubusercontent.com/streamlit/\"\n            \"example-data/master/hello/v1/%s\" % filename\n        )\n        return pd.read_json(url)\n    try:\n        ALL_LAYERS = {",
-        "detail": "pages.2_Mapping_Demo",
-        "documentation": {}
-    },
-    {
-        "label": "data_frame_demo",
-        "kind": 2,
-        "importPath": "pages.3_DataFrame_Demo",
-        "description": "pages.3_DataFrame_Demo",
-        "peekOfCode": "def data_frame_demo():\n    @st.cache_data\n    def get_UN_data():\n        AWS_BUCKET_URL = \"https://streamlit-demo-data.s3-us-west-2.amazonaws.com\"\n        df = pd.read_csv(AWS_BUCKET_URL + \"/agri.csv.gz\")\n        return df.set_index(\"Region\")\n    try:\n        df = get_UN_data()\n        countries = st.multiselect(\n            \"Choose countries\", list(df.index), [\"China\", \"United States of America\"]",
-        "detail": "pages.3_DataFrame_Demo",
-        "documentation": {}
-    },
-    {
         "label": "custom_css",
         "kind": 5,
         "importPath": "pages.4_Stock_Sentiment",
@@ -11223,7 +11458,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split\nfrom finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv\nfrom finrl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline\nfrom pprint import pprint\nimport sys\nsys.path.append(\"../FinRL-Library\")",
+        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom lib.rl.config import (\n    OrderType,\n    OrderSide,\n    TimeInForce,\n)\n# from alpaca.trading.enums import OrderSide, TimeInForce, OrderType\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11232,7 +11467,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "TRAIN_START_DATE = '2009-04-01'\nTRAIN_END_DATE = '2021-01-01'\nTEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nprint(len(df.tic.unique()))\nprint(df.tic.value_counts())",
+        "peekOfCode": "TRAIN_START_DATE = '2009-04-01'\nTRAIN_END_DATE = '2021-01-01'\nTEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nst.write(len(df.tic.unique()))\nst.write(df.tic.value_counts())",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11241,7 +11476,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "TRAIN_END_DATE = '2021-01-01'\nTEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nprint(len(df.tic.unique()))\nprint(df.tic.value_counts())\nprint(df.head())",
+        "peekOfCode": "TRAIN_END_DATE = '2021-01-01'\nTEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nst.write(len(df.tic.unique()))\nst.write(df.tic.value_counts())\nst.write(df.head())",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11250,7 +11485,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "TEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nprint(len(df.tic.unique()))\nprint(df.tic.value_counts())\nprint(df.head())\nprint(df.tail())",
+        "peekOfCode": "TEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nst.write(len(df.tic.unique()))\nst.write(df.tic.value_counts())\nst.write(df.head())\nst.write(df.tail())",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11259,7 +11494,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "TEST_END_DATE = '2022-06-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nprint(len(df.tic.unique()))\nprint(df.tic.value_counts())\nprint(df.head())\nprint(df.tail())\nprint(df.shape)",
+        "peekOfCode": "TEST_END_DATE = '2022-06-01'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nst.write(len(df.tic.unique()))\nst.write(df.tic.value_counts())\nst.write(df.head())\nst.write(df.tail())\nst.write(df.shape)",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11268,7 +11503,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "df = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nprint(len(df.tic.unique()))\nprint(df.tic.value_counts())\nprint(df.head())\nprint(df.tail())\nprint(df.shape)\nINDICATORS = ['macd',",
+        "peekOfCode": "df = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nst.write(len(df.tic.unique()))\nst.write(df.tic.value_counts())\nst.write(df.head())\nst.write(df.tail())\nst.write(df.shape)\nINDICATORS = ['macd',",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11286,7 +11521,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "fe = FeatureEngineer(use_technical_indicator=True,\n                     tech_indicator_list = INDICATORS,\n                     use_turbulence=True,\n                     user_defined_feature = False)\nprocessed = fe.preprocess_data(df)\nprocessed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprint(processed.sample(5))\nstock_dimension = len(processed.tic.unique())",
+        "peekOfCode": "fe = FeatureEngineer(use_technical_indicator=True,\n                     tech_indicator_list = INDICATORS,\n                     use_turbulence=True,\n                     user_defined_feature = False)\nprocessed = fe.preprocess_data(df)\nprocessed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nst.write(processed.sample(5))\nstock_dimension = len(processed.tic.unique())",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11295,7 +11530,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "processed = fe.preprocess_data(df)\nprocessed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprint(processed.sample(5))\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, ",
+        "peekOfCode": "processed = fe.preprocess_data(df)\nprocessed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nst.write(processed.sample(5))\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nst.write(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, ",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11304,7 +11539,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "processed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprint(processed.sample(5))\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, ",
+        "peekOfCode": "processed = processed.copy()\nprocessed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nst.write(processed.sample(5))\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nst.write(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, ",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11313,7 +11548,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "processed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nprint(processed.sample(5))\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, \n    \"buy_cost_pct\": 0.001, ",
+        "peekOfCode": "processed = processed.fillna(0)\nprocessed = processed.replace(np.inf,0)\nst.write(processed.sample(5))\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nst.write(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, \n    \"buy_cost_pct\": 0.001, ",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11322,7 +11557,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "processed = processed.replace(np.inf,0)\nprint(processed.sample(5))\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, \n    \"buy_cost_pct\": 0.001, \n    \"sell_cost_pct\": 0.001, ",
+        "peekOfCode": "processed = processed.replace(np.inf,0)\nst.write(processed.sample(5))\nstock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nst.write(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, \n    \"buy_cost_pct\": 0.001, \n    \"sell_cost_pct\": 0.001, ",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11331,7 +11566,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "stock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, \n    \"buy_cost_pct\": 0.001, \n    \"sell_cost_pct\": 0.001, \n    \"state_space\": state_space, \n    \"stock_dim\": stock_dimension, ",
+        "peekOfCode": "stock_dimension = len(processed.tic.unique())\nstate_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nst.write(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, \n    \"buy_cost_pct\": 0.001, \n    \"sell_cost_pct\": 0.001, \n    \"state_space\": state_space, \n    \"stock_dim\": stock_dimension, ",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11340,7 +11575,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "state_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nprint(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, \n    \"buy_cost_pct\": 0.001, \n    \"sell_cost_pct\": 0.001, \n    \"state_space\": state_space, \n    \"stock_dim\": stock_dimension, \n    \"tech_indicator_list\": INDICATORS,",
+        "peekOfCode": "state_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension\nst.write(f\"Stock Dimension: {stock_dimension}, State Space: {state_space}\")\nenv_kwargs = {\n    \"hmax\": 100, \n    \"initial_amount\": 1000000, \n    \"buy_cost_pct\": 0.001, \n    \"sell_cost_pct\": 0.001, \n    \"state_space\": state_space, \n    \"stock_dim\": stock_dimension, \n    \"tech_indicator_list\": INDICATORS,",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11439,7 +11674,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "df_summary = ensemble_agent.run_ensemble_strategy(\n    A2C_model_kwargs,\n    PPO_model_kwargs,\n    DDPG_model_kwargs,\n    SAC_model_kwargs,\n    TD3_model_kwargs,\n    timesteps_dict\n)\nprint(df_summary)\nunique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()",
+        "peekOfCode": "df_summary = ensemble_agent.run_ensemble_strategy(\n    A2C_model_kwargs,\n    PPO_model_kwargs,\n    DDPG_model_kwargs,\n    SAC_model_kwargs,\n    TD3_model_kwargs,\n    timesteps_dict\n)\nst.write(df_summary)\nunique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11448,7 +11683,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "unique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()\ndf_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value = pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()",
+        "peekOfCode": "unique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()\ndf_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value = pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nst.write('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11457,7 +11692,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "df_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value = pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()\ndf_account_value.account_value.plot()",
+        "peekOfCode": "df_trade_date = pd.DataFrame({'datadate':unique_trade_date})\ndf_account_value = pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nst.write('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()\ndf_account_value.account_value.plot()",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11466,7 +11701,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "df_account_value = pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nprint('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()\ndf_account_value.account_value.plot()\nprint(\"==============Get Backtest Results===========\")",
+        "peekOfCode": "df_account_value = pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nst.write('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()\ndf_account_value.account_value.plot()\nst.write(\"==============Get Backtest Results===========\")",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11475,7 +11710,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "now = datetime.datetime.now().strftime('%Y%m%d-%Hh%M')\nperf_stats_all = backtest_stats(account_value=df_account_value)\nperf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nprint(\"==============Get Baseline Stats===========\")\nbaseline_df = get_baseline(\n        ticker=\"^DJI\", \n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(baseline_df, value_col_name = 'close')",
+        "peekOfCode": "now = datetime.datetime.now().strftime('%Y%m%d-%Hh%M')\nperf_stats_all = backtest_stats(account_value=df_account_value)\nperf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nst.write(\"==============Get Baseline Stats===========\")\nbaseline_df = get_baseline(\n        ticker=\"^DJI\", \n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(baseline_df, value_col_name = 'close')",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11484,7 +11719,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "perf_stats_all = backtest_stats(account_value=df_account_value)\nperf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nprint(\"==============Get Baseline Stats===========\")\nbaseline_df = get_baseline(\n        ticker=\"^DJI\", \n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(baseline_df, value_col_name = 'close')\nprint(\"==============Compare to DJIA===========\")",
+        "peekOfCode": "perf_stats_all = backtest_stats(account_value=df_account_value)\nperf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nst.write(\"==============Get Baseline Stats===========\")\nbaseline_df = get_baseline(\n        ticker=\"^DJI\", \n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(baseline_df, value_col_name = 'close')\nst.write(\"==============Compare to DJIA===========\")",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11493,7 +11728,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "perf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nprint(\"==============Get Baseline Stats===========\")\nbaseline_df = get_baseline(\n        ticker=\"^DJI\", \n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(baseline_df, value_col_name = 'close')\nprint(\"==============Compare to DJIA===========\")\n# %matplotlib inline",
+        "peekOfCode": "perf_stats_all = pd.DataFrame(perf_stats_all)\n#baseline stats\nst.write(\"==============Get Baseline Stats===========\")\nbaseline_df = get_baseline(\n        ticker=\"^DJI\", \n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(baseline_df, value_col_name = 'close')\nst.write(\"==============Compare to DJIA===========\")\n# %matplotlib inline",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11502,7 +11737,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "baseline_df = get_baseline(\n        ticker=\"^DJI\", \n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(baseline_df, value_col_name = 'close')\nprint(\"==============Compare to DJIA===========\")\n# %matplotlib inline\n# S&P 500: ^GSPC\n# Dow Jones Index: ^DJI\n# NASDAQ 100: ^NDX",
+        "peekOfCode": "baseline_df = get_baseline(\n        ticker=\"^DJI\", \n        start = df_account_value.loc[0,'date'],\n        end = df_account_value.loc[len(df_account_value)-1,'date'])\nstats = backtest_stats(baseline_df, value_col_name = 'close')\nst.write(\"==============Compare to DJIA===========\")\n# %matplotlib inline\n# S&P 500: ^GSPC\n# Dow Jones Index: ^DJI\n# NASDAQ 100: ^NDX",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11511,7 +11746,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "stats = backtest_stats(baseline_df, value_col_name = 'close')\nprint(\"==============Compare to DJIA===========\")\n# %matplotlib inline\n# S&P 500: ^GSPC\n# Dow Jones Index: ^DJI\n# NASDAQ 100: ^NDX\nbacktest_plot(df_account_value, \n              baseline_ticker = '^DJI', \n              baseline_start = df_account_value.loc[0,'date'],\n              baseline_end = df_account_value.loc[len(df_account_value)-1,'date'])",
+        "peekOfCode": "stats = backtest_stats(baseline_df, value_col_name = 'close')\nst.write(\"==============Compare to DJIA===========\")\n# %matplotlib inline\n# S&P 500: ^GSPC\n# Dow Jones Index: ^DJI\n# NASDAQ 100: ^NDX\nbacktest_plot(df_account_value, \n              baseline_ticker = '^DJI', \n              baseline_start = df_account_value.loc[0,'date'],\n              baseline_end = df_account_value.loc[len(df_account_value)-1,'date'])",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11520,7 +11755,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "api = tradeapi.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')\ntry:\n    account = api.get_account()\n    print(f\"Account status: {account.status}\")\n    symbol = 'CAT'\n    qty = 1  # Quantity to buy\n    if (sharpe > - 94):\n        buy_order = api.submit_order(\n            symbol=symbol,\n            qty=qty,",
+        "peekOfCode": "api = tradeapi.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')\ntry:\n    account = api.get_account()\n    st.write(f\"Account status: {account.status}\")\n    symbol = 'CAT'\n    qty = 1  # Quantity to buy\n    if (sharpe > - 94):\n        buy_order = api.submit_order(\n            symbol=symbol,\n            qty=qty,",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11556,7 +11791,7 @@
         "kind": 5,
         "importPath": "pages.6_Setting",
         "description": "pages.6_Setting",
-        "peekOfCode": "config_file_path = 'pages/config.py'\ndef read_config(file_path):\n    config = {}\n    with open(file_path, 'r') as file:\n        exec(file.read(), config)\n    return config\ndef write_config(file_path, config):\n    with open(file_path, 'w') as file:\n        file.write(\"# Configuration File\\n\\n\")\n        for key, value in config.items():",
+        "peekOfCode": "config_file_path = 'lib/utility/config.py'\ndef read_config(file_path):\n    config = {}\n    with open(file_path, 'r') as file:\n        exec(file.read(), config)\n    return config\ndef write_config(file_path, config):\n    with open(file_path, 'w') as file:\n        file.write(\"# Configuration File\\n\\n\")\n        for key, value in config.items():",
         "detail": "pages.6_Setting",
         "documentation": {}
     },
