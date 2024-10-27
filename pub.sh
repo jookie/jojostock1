@@ -7,7 +7,7 @@
 # git push --set-upstream origin main
 # git branch -M main
 git add .
-git commit -m "fix results folders"
+git commit -m "refactore"
 git push -u origin dov-refactoring
 # -----------Go to GitHub and log in.
 # 1. Click on the "New" button to create a new repository.

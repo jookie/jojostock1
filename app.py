@@ -6,14 +6,14 @@ import sys
 import itertools
 import matplotlib.pyplot as plt
 sys.path.append('../lib/rl')
-# from lib.utility.jprint import jprint
-# from lib.rl.pprint import jprint
+from lib.utility.jprint import jprint
 
 from lib.rl.config import (
       DATA_SAVE_DIR,
       TRAINED_MODEL_DIR,
       TENSORBOARD_LOG_DIR,
       RESULTS_DIR,
+      DF_RESULTS_DIR,
       INDICATORS,
       TRAIN_START_DATE,
       TRAIN_END_DATE,
@@ -96,12 +96,6 @@ def main():
   dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]
   check_and_make_directories( dir )
   
-  def jprint(s1 = '', s2 = '' , s3 = '', s4 = ""):
-    a1 = str(s1) + str(s2) + str(s3) +str(s4)
-    print   (a1)
-    st.write(a1)
- 
- 
   jprint("app.py: Directory Paths:   ",  "   //".join(dir),  '##')
   """app.py: Waiting data collection From Yahoo downloader ..."""
   df = YahooDownloader(start_date = TRAIN_START_DATE,
@@ -134,7 +128,7 @@ def main():
   mvo_df = processed_full.sort_values(['date','tic'],ignore_index=True)[['date','tic','close']]
   stock_dimension = len(train.tic.unique())
   state_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension
-#   st.write(f"Trained num of Symboles: {stock_dimension}, State Total Space: {state_space}")
+  print(f"Trained num of Symboles: {stock_dimension}, State Total Space: {state_space}")
   buy_cost_list = sell_cost_list = [0.001] * stock_dimension
   num_stock_shares = [0] * stock_dimension
   env_kwargs = {
@@ -152,7 +146,7 @@ def main():
   e_train_gym = StockTradingEnv(df = train, **env_kwargs)
   env_train, _ = e_train_gym.get_sb_env()
   
-  # st.write(type(env_train))
+  print(type(env_train))
   
   agent = DRLAgent(env = env_train)
   if_using_a2c = True
@@ -214,16 +208,16 @@ def main():
   data_risk_indicator = processed_full[(processed_full.date<TRAIN_END_DATE) & (processed_full.date>=TRAIN_START_DATE)]
   insample_risk_indicator = data_risk_indicator.drop_duplicates(subset=['date'])
   
-#   st.write(f"Vix Indicator: {insample_risk_indicator.vix.quantile(0.996)}")
-#   st.write(insample_risk_indicator.vix.describe())
-#   st.write(insample_risk_indicator.turbulence.describe())
-#   st.write(insample_risk_indicator.turbulence.quantile(0.996))
+  jprint(f"Vix Indicator: {insample_risk_indicator.vix.quantile(0.996)}")
+  jprint(insample_risk_indicator.vix.describe())
+  jprint(insample_risk_indicator.turbulence.describe())
+  jprint(insample_risk_indicator.turbulence.quantile(0.996))
 
   e_trade_gym = StockTradingEnv(df = trade, turbulence_threshold =70,  risk_indicator_col='vix', **env_kwargs)
   env_trade, obs_trade = e_trade_gym.get_sb_env()
 
-#   st.write(trade.head())
-#   st.write(trade.tail())
+  st.write(trade.head())
+  st.write(trade.tail())
   # Example usage:
   models = {
       "a2c": trained_a2c,
@@ -250,12 +244,12 @@ def main():
   df_actions_sac = results["sac"]["actions"]
 
 
-#   df_account_value_a2c.shape
-#   st.write(df_account_value_a2c.shape)
-#   st.write(df_account_value_a2c.head())
-#   st.write(df_account_value_a2c.tail())
+  jprint(df_account_value_a2c.shape)
+  st.write(df_account_value_a2c.shape)
+  st.write(df_account_value_a2c.head())
+  st.write(df_account_value_a2c.tail())
 
-#   st.write(mvo_df.head)
+  # st.write(mvo_df.head)
   fst = mvo_df
   fst = fst.iloc[0*29:0*29+29, :]
   tic = fst['tic'].tolist()
@@ -375,12 +369,12 @@ def main():
   # assetLabels = df.columns[1:Columns+1].tolist()
   # st.write(assetLabels)
 
-  #extract asset prices
-  # StockData = df.iloc[0:, 1:]
+  # #extract asset prices
+  StockData = df.iloc[0:, 1:]
   StockData = mvo.head(mvo.shape[0]-336)
-#   st.write(StockData)
+  # st.write(StockData)
   TradeData = mvo.tail(336)
-  # df.head()
+  # st.write.head()
   TradeData.to_numpy()
 
   #compute asset returns
@@ -397,8 +391,8 @@ def main():
   np.set_printoptions(precision=3, suppress = True)
 
   #display mean returns and variance-covariance matrix of returns
-#   st.write('Mean returns of assets in k-portfolio 1\n', meanReturns)
-#   st.write('Variance-Covariance matrix of returns\n', covReturns)
+  st.write('Mean returns of assets in k-portfolio 1\n', meanReturns)
+  st.write('Variance-Covariance matrix of returns\n', covReturns)
 
   from pypfopt.efficient_frontier import EfficientFrontier
 
@@ -406,7 +400,7 @@ def main():
   raw_weights_mean = ef_mean.max_sharpe()
   cleaned_weights_mean = ef_mean.clean_weights()
   mvo_weights = np.array([1000000 * cleaned_weights_mean[i] for i in range(29)])
-#   st.write(mvo_weights)
+  #   st.write(mvo_weights)
 
 #   StockData.tail(1)
 
@@ -421,14 +415,13 @@ def main():
   df_result_sac = df_account_value_sac.set_index(df_account_value_sac.columns[0])
   
   def mkdirDataDf(fn):
-    folder_path = os.path.join("data", "df")
-    os.makedirs(folder_path, exist_ok=True)
-    file_path = os.path.join(folder_path, fn )
+    os.makedirs(DF_RESULTS_DIR, exist_ok=True)
+    file_path = os.path.join(DF_RESULTS_DIR, fn )
     return file_path
   
   df_account_value_a2c.to_csv( mkdirDataDf( "df_account_value_a2c.csv"))
   #baseline stats
-  st.write("==============Get Baseline Stats===========")
+  jprint("==============Get Baseline Stats===========")
   df_dji_ = get_baseline(
           ticker="^DJI", 
           start = TRADE_START_DATE,
@@ -450,7 +443,7 @@ def main():
   result = pd.merge(result, df_dji, left_index=True, right_index=True, suffixes=('', '_dji'))
   result.columns = ['a2c', 'ddpg', 'td3', 'ppo', 'sac', 'mean var', 'dji']
 
-#   st.write("result: ", result)
+  st.write("result: ", result)
   result.to_csv(mkdirDataDf("result.csv"))
 
   plt.rcParams["figure.figsize"] = (15,5)
