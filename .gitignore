@@ -44,3 +44,7 @@ venv
 #data
 data 
 .data
+
+train_results
+train_results.*
+train_results.**.*

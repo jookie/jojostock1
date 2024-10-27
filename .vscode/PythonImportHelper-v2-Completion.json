@@ -10269,7 +10269,7 @@
         "kind": 5,
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
-        "peekOfCode": "MAIN_RESULTS_DIR = 'saba_results'\nDATA_SAVE_DIR       = MAIN_RESULTS_DIR + \"/datasets\"\nTRAINED_MODEL_DIR   = MAIN_RESULTS_DIR + \"/trained_models\"\nTENSORBOARD_LOG_DIR = MAIN_RESULTS_DIR + \"/tensorboard_log\"\nRESULTS_DIR         = MAIN_RESULTS_DIR + \"/results\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"",
+        "peekOfCode": "MAIN_RESULTS_DIR = 'train_results'\nDATA_SAVE_DIR       = MAIN_RESULTS_DIR + \"/datasets\"\nTRAINED_MODEL_DIR   = MAIN_RESULTS_DIR + \"/trained_models\"\nTENSORBOARD_LOG_DIR = MAIN_RESULTS_DIR + \"/tensorboard_log\"\nRESULTS_DIR         = MAIN_RESULTS_DIR + \"/results\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"",
         "detail": "lib.rl.config",
         "documentation": {}
     },

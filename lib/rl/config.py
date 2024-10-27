@@ -1,5 +1,5 @@
 from __future__ import annotations
-MAIN_RESULTS_DIR = 'saba_results'
+MAIN_RESULTS_DIR = 'train_results'
 
 DATA_SAVE_DIR       = MAIN_RESULTS_DIR + "/datasets"
 TRAINED_MODEL_DIR   = MAIN_RESULTS_DIR + "/trained_models"
