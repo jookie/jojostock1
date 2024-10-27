@@ -128,7 +128,7 @@ def main():
   mvo_df = processed_full.sort_values(['date','tic'],ignore_index=True)[['date','tic','close']]
   stock_dimension = len(train.tic.unique())
   state_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension
-#   st.write(f"Trained num of Symboles: {stock_dimension}, State Total Space: {state_space}")
+  st.write(f"Trained num of Symboles: {stock_dimension}, State Total Space: {state_space}")
   buy_cost_list = sell_cost_list = [0.001] * stock_dimension
   num_stock_shares = [0] * stock_dimension
   env_kwargs = {
@@ -146,7 +146,7 @@ def main():
   e_train_gym = StockTradingEnv(df = train, **env_kwargs)
   env_train, _ = e_train_gym.get_sb_env()
   
-  # st.write(type(env_train))
+  st.write(type(env_train))
   
   agent = DRLAgent(env = env_train)
   if_using_a2c = True
@@ -208,16 +208,16 @@ def main():
   data_risk_indicator = processed_full[(processed_full.date<TRAIN_END_DATE) & (processed_full.date>=TRAIN_START_DATE)]
   insample_risk_indicator = data_risk_indicator.drop_duplicates(subset=['date'])
   
-#   st.write(f"Vix Indicator: {insample_risk_indicator.vix.quantile(0.996)}")
-#   st.write(insample_risk_indicator.vix.describe())
-#   st.write(insample_risk_indicator.turbulence.describe())
-#   st.write(insample_risk_indicator.turbulence.quantile(0.996))
+  st.write(f"Vix Indicator: {insample_risk_indicator.vix.quantile(0.996)}")
+  st.write(insample_risk_indicator.vix.describe())
+  st.write(insample_risk_indicator.turbulence.describe())
+  st.write(insample_risk_indicator.turbulence.quantile(0.996))
 
   e_trade_gym = StockTradingEnv(df = trade, turbulence_threshold =70,  risk_indicator_col='vix', **env_kwargs)
   env_trade, obs_trade = e_trade_gym.get_sb_env()
 
-#   st.write(trade.head())
-#   st.write(trade.tail())
+  st.write(trade.head())
+  st.write(trade.tail())
   # Example usage:
   models = {
       "a2c": trained_a2c,
@@ -244,12 +244,12 @@ def main():
   df_actions_sac = results["sac"]["actions"]
 
 
-#   df_account_value_a2c.shape
-#   st.write(df_account_value_a2c.shape)
-#   st.write(df_account_value_a2c.head())
-#   st.write(df_account_value_a2c.tail())
+  df_account_value_a2c.shape
+  st.write(df_account_value_a2c.shape)
+  st.write(df_account_value_a2c.head())
+  st.write(df_account_value_a2c.tail())
 
-#   st.write(mvo_df.head)
+  st.write(mvo_df.head)
   fst = mvo_df
   fst = fst.iloc[0*29:0*29+29, :]
   tic = fst['tic'].tolist()
@@ -372,9 +372,9 @@ def main():
   #extract asset prices
   # StockData = df.iloc[0:, 1:]
   StockData = mvo.head(mvo.shape[0]-336)
-#   st.write(StockData)
+  st.write(StockData)
   TradeData = mvo.tail(336)
-  # df.head()
+  st.df.head()
   TradeData.to_numpy()
 
   #compute asset returns
@@ -391,8 +391,8 @@ def main():
   np.set_printoptions(precision=3, suppress = True)
 
   #display mean returns and variance-covariance matrix of returns
-#   st.write('Mean returns of assets in k-portfolio 1\n', meanReturns)
-#   st.write('Variance-Covariance matrix of returns\n', covReturns)
+  st.write('Mean returns of assets in k-portfolio 1\n', meanReturns)
+  st.write('Variance-Covariance matrix of returns\n', covReturns)
 
   from pypfopt.efficient_frontier import EfficientFrontier
 
@@ -400,9 +400,9 @@ def main():
   raw_weights_mean = ef_mean.max_sharpe()
   cleaned_weights_mean = ef_mean.clean_weights()
   mvo_weights = np.array([1000000 * cleaned_weights_mean[i] for i in range(29)])
-#   st.write(mvo_weights)
+  st.write(mvo_weights)
 
-#   StockData.tail(1)
+  st.StockData.tail(1)
 
   Portfolio_Assets = TradeData # Initial_Portfolio
   MVO_result = pd.DataFrame(Portfolio_Assets, columns=["Mean Var"])
@@ -444,7 +444,7 @@ def main():
   result = pd.merge(result, df_dji, left_index=True, right_index=True, suffixes=('', '_dji'))
   result.columns = ['a2c', 'ddpg', 'td3', 'ppo', 'sac', 'mean var', 'dji']
 
-#   st.write("result: ", result)
+  st.write("result: ", result)
   result.to_csv(mkdirDataDf("result.csv"))
 
   plt.rcParams["figure.figsize"] = (15,5)
