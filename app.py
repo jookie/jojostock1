@@ -146,7 +146,7 @@ def main():
   e_train_gym = StockTradingEnv(df = train, **env_kwargs)
   env_train, _ = e_train_gym.get_sb_env()
   
-  st.write(type(env_train))
+  # st.write(type(env_train))
   
   agent = DRLAgent(env = env_train)
   if_using_a2c = True
@@ -244,12 +244,10 @@ def main():
   df_actions_sac = results["sac"]["actions"]
 
 
-  df_account_value_a2c.shape
   st.write(df_account_value_a2c.shape)
   st.write(df_account_value_a2c.head())
   st.write(df_account_value_a2c.tail())
 
-  st.write(mvo_df.head)
   fst = mvo_df
   fst = fst.iloc[0*29:0*29+29, :]
   tic = fst['tic'].tolist()
@@ -374,7 +372,7 @@ def main():
   StockData = mvo.head(mvo.shape[0]-336)
   st.write(StockData)
   TradeData = mvo.tail(336)
-  st.df.head()
+  st.write(df.head())
   TradeData.to_numpy()
 
   #compute asset returns
@@ -402,7 +400,7 @@ def main():
   mvo_weights = np.array([1000000 * cleaned_weights_mean[i] for i in range(29)])
   st.write(mvo_weights)
 
-  st.StockData.tail(1)
+  st.write(StockData.tail(1))
 
   Portfolio_Assets = TradeData # Initial_Portfolio
   MVO_result = pd.DataFrame(Portfolio_Assets, columns=["Mean Var"])
