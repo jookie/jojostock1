@@ -1212,6 +1212,78 @@
         "documentation": {}
     },
     {
+        "label": "DATA_SAVE_DIR",
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "isExtraImport": true,
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRAINED_MODEL_DIR",
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "isExtraImport": true,
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TENSORBOARD_LOG_DIR",
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "isExtraImport": true,
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "RESULTS_DIR",
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "isExtraImport": true,
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "INDICATORS",
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "isExtraImport": true,
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRAIN_START_DATE",
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "isExtraImport": true,
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRAIN_END_DATE",
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "isExtraImport": true,
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_START_DATE",
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "isExtraImport": true,
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_END_DATE",
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "isExtraImport": true,
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
         "label": "TRADE_START_DATE",
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
@@ -1268,27 +1340,11 @@
         "documentation": {}
     },
     {
-        "label": "FeatureEngineer",
-        "importPath": "lib.rl.meta.preprocessor.preprocessors",
-        "description": "lib.rl.meta.preprocessor.preprocessors",
+        "label": "YahooDownloader",
+        "importPath": "lib.rl.meta.preprocessor.yahoodownloader",
+        "description": "lib.rl.meta.preprocessor.yahoodownloader",
         "isExtraImport": true,
-        "detail": "lib.rl.meta.preprocessor.preprocessors",
-        "documentation": {}
-    },
-    {
-        "label": "data_split",
-        "importPath": "lib.rl.meta.preprocessor.preprocessors",
-        "description": "lib.rl.meta.preprocessor.preprocessors",
-        "isExtraImport": true,
-        "detail": "lib.rl.meta.preprocessor.preprocessors",
-        "documentation": {}
-    },
-    {
-        "label": "data_split",
-        "importPath": "lib.rl.meta.preprocessor.preprocessors",
-        "description": "lib.rl.meta.preprocessor.preprocessors",
-        "isExtraImport": true,
-        "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "detail": "lib.rl.meta.preprocessor.yahoodownloader",
         "documentation": {}
     },
     {
@@ -1308,6 +1364,14 @@
         "documentation": {}
     },
     {
+        "label": "data_split",
+        "importPath": "lib.rl.meta.preprocessor.preprocessors",
+        "description": "lib.rl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
         "label": "FeatureEngineer",
         "importPath": "lib.rl.meta.preprocessor.preprocessors",
         "description": "lib.rl.meta.preprocessor.preprocessors",
@@ -1321,6 +1385,46 @@
         "description": "lib.rl.meta.preprocessor.preprocessors",
         "isExtraImport": true,
         "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "FeatureEngineer",
+        "importPath": "lib.rl.meta.preprocessor.preprocessors",
+        "description": "lib.rl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "data_split",
+        "importPath": "lib.rl.meta.preprocessor.preprocessors",
+        "description": "lib.rl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "FeatureEngineer",
+        "importPath": "lib.rl.meta.preprocessor.preprocessors",
+        "description": "lib.rl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "data_split",
+        "importPath": "lib.rl.meta.preprocessor.preprocessors",
+        "description": "lib.rl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "StockTradingEnv",
+        "importPath": "lib.rl.meta.env_stock_trading.env_stocktrading",
+        "description": "lib.rl.meta.env_stock_trading.env_stocktrading",
+        "isExtraImport": true,
+        "detail": "lib.rl.meta.env_stock_trading.env_stocktrading",
         "documentation": {}
     },
     {
@@ -1365,6 +1469,22 @@
     },
     {
         "label": "DRLAgent",
+        "importPath": "lib.rl.agents.stablebaselines3.models",
+        "description": "lib.rl.agents.stablebaselines3.models",
+        "isExtraImport": true,
+        "detail": "lib.rl.agents.stablebaselines3.models",
+        "documentation": {}
+    },
+    {
+        "label": "DRLAgent",
+        "importPath": "lib.rl.agents.stablebaselines3.models",
+        "description": "lib.rl.agents.stablebaselines3.models",
+        "isExtraImport": true,
+        "detail": "lib.rl.agents.stablebaselines3.models",
+        "documentation": {}
+    },
+    {
+        "label": "DRLEnsembleAgent",
         "importPath": "lib.rl.agents.stablebaselines3.models",
         "description": "lib.rl.agents.stablebaselines3.models",
         "isExtraImport": true,
@@ -1585,6 +1705,46 @@
         "description": "lib.rl.plot",
         "isExtraImport": true,
         "detail": "lib.rl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "backtest_stats",
+        "importPath": "lib.rl.plot",
+        "description": "lib.rl.plot",
+        "isExtraImport": true,
+        "detail": "lib.rl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "backtest_plot",
+        "importPath": "lib.rl.plot",
+        "description": "lib.rl.plot",
+        "isExtraImport": true,
+        "detail": "lib.rl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "get_daily_return",
+        "importPath": "lib.rl.plot",
+        "description": "lib.rl.plot",
+        "isExtraImport": true,
+        "detail": "lib.rl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "get_baseline",
+        "importPath": "lib.rl.plot",
+        "description": "lib.rl.plot",
+        "isExtraImport": true,
+        "detail": "lib.rl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "check_and_make_directories",
+        "importPath": "lib.rl.main",
+        "description": "lib.rl.main",
+        "isExtraImport": true,
+        "detail": "lib.rl.main",
         "documentation": {}
     },
     {
@@ -2061,22 +2221,6 @@
     },
     {
         "label": "DRLAgent",
-        "importPath": "finrl.agents.stablebaselines3.models",
-        "description": "finrl.agents.stablebaselines3.models",
-        "isExtraImport": true,
-        "detail": "finrl.agents.stablebaselines3.models",
-        "documentation": {}
-    },
-    {
-        "label": "DRLAgent",
-        "importPath": "finrl.agents.stablebaselines3.models",
-        "description": "finrl.agents.stablebaselines3.models",
-        "isExtraImport": true,
-        "detail": "finrl.agents.stablebaselines3.models",
-        "documentation": {}
-    },
-    {
-        "label": "DRLEnsembleAgent",
         "importPath": "finrl.agents.stablebaselines3.models",
         "description": "finrl.agents.stablebaselines3.models",
         "isExtraImport": true,
@@ -2716,78 +2860,6 @@
         "documentation": {}
     },
     {
-        "label": "DATA_SAVE_DIR",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
-        "label": "TRAINED_MODEL_DIR",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
-        "label": "TENSORBOARD_LOG_DIR",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
-        "label": "RESULTS_DIR",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
-        "label": "INDICATORS",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
-        "label": "TRAIN_START_DATE",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
-        "label": "TRAIN_END_DATE",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
-        "label": "TEST_START_DATE",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
-        "label": "TEST_END_DATE",
-        "importPath": "finrl.config",
-        "description": "finrl.config",
-        "isExtraImport": true,
-        "detail": "finrl.config",
-        "documentation": {}
-    },
-    {
         "label": "DOW_30_TICKER",
         "importPath": "finrl.config_tickers",
         "description": "finrl.config_tickers",
@@ -2889,22 +2961,6 @@
         "description": "finrl.config_tickers",
         "isExtraImport": true,
         "detail": "finrl.config_tickers",
-        "documentation": {}
-    },
-    {
-        "label": "DOW_30_TICKER",
-        "importPath": "finrl.config_tickers",
-        "description": "finrl.config_tickers",
-        "isExtraImport": true,
-        "detail": "finrl.config_tickers",
-        "documentation": {}
-    },
-    {
-        "label": "check_and_make_directories",
-        "importPath": "finrl.main",
-        "description": "finrl.main",
-        "isExtraImport": true,
-        "detail": "finrl.main",
         "documentation": {}
     },
     {
@@ -3236,14 +3292,6 @@
         "documentation": {}
     },
     {
-        "label": "StockTradingEnv",
-        "importPath": "finrl.meta.env_stock_trading.env_stocktrading",
-        "description": "finrl.meta.env_stock_trading.env_stocktrading",
-        "isExtraImport": true,
-        "detail": "finrl.meta.env_stock_trading.env_stocktrading",
-        "documentation": {}
-    },
-    {
         "label": "data_split",
         "importPath": "finrl.meta.preprocessor.preprocessors",
         "description": "finrl.meta.preprocessor.preprocessors",
@@ -3385,30 +3433,6 @@
         "description": "finrl.meta.preprocessor.preprocessors",
         "isExtraImport": true,
         "detail": "finrl.meta.preprocessor.preprocessors",
-        "documentation": {}
-    },
-    {
-        "label": "FeatureEngineer",
-        "importPath": "finrl.meta.preprocessor.preprocessors",
-        "description": "finrl.meta.preprocessor.preprocessors",
-        "isExtraImport": true,
-        "detail": "finrl.meta.preprocessor.preprocessors",
-        "documentation": {}
-    },
-    {
-        "label": "data_split",
-        "importPath": "finrl.meta.preprocessor.preprocessors",
-        "description": "finrl.meta.preprocessor.preprocessors",
-        "isExtraImport": true,
-        "detail": "finrl.meta.preprocessor.preprocessors",
-        "documentation": {}
-    },
-    {
-        "label": "YahooDownloader",
-        "importPath": "finrl.meta.preprocessor.yahoodownloader",
-        "description": "finrl.meta.preprocessor.yahoodownloader",
-        "isExtraImport": true,
-        "detail": "finrl.meta.preprocessor.yahoodownloader",
         "documentation": {}
     },
     {
@@ -3829,38 +3853,6 @@
     },
     {
         "label": "backtest_stats",
-        "importPath": "finrl.plot",
-        "description": "finrl.plot",
-        "isExtraImport": true,
-        "detail": "finrl.plot",
-        "documentation": {}
-    },
-    {
-        "label": "backtest_stats",
-        "importPath": "finrl.plot",
-        "description": "finrl.plot",
-        "isExtraImport": true,
-        "detail": "finrl.plot",
-        "documentation": {}
-    },
-    {
-        "label": "backtest_plot",
-        "importPath": "finrl.plot",
-        "description": "finrl.plot",
-        "isExtraImport": true,
-        "detail": "finrl.plot",
-        "documentation": {}
-    },
-    {
-        "label": "get_daily_return",
-        "importPath": "finrl.plot",
-        "description": "finrl.plot",
-        "isExtraImport": true,
-        "detail": "finrl.plot",
-        "documentation": {}
-    },
-    {
-        "label": "get_baseline",
         "importPath": "finrl.plot",
         "description": "finrl.plot",
         "isExtraImport": true,
@@ -5513,6 +5505,14 @@
         "description": "lib.rl.meta.paper_trading.common",
         "isExtraImport": true,
         "detail": "lib.rl.meta.paper_trading.common",
+        "documentation": {}
+    },
+    {
+        "label": "DOW_30_TICKER",
+        "importPath": "lib.rl.config_tickers",
+        "description": "lib.rl.config_tickers",
+        "isExtraImport": true,
+        "detail": "lib.rl.config_tickers",
         "documentation": {}
     },
     {
@@ -11458,7 +11458,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom lib.rl.config import (\n    OrderType,\n    OrderSide,\n    TimeInForce,\n)\n# from alpaca.trading.enums import OrderSide, TimeInForce, OrderType\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split",
+        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom lib.rl.config import (\n    OrderType,\n    OrderSide,\n    TimeInForce,\n)\n# from alpaca.trading.enums import OrderSide, TimeInForce, OrderType\nfrom lib.rl.config_tickers import DOW_30_TICKER\nfrom lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },
@@ -11701,7 +11701,7 @@
         "kind": 5,
         "importPath": "pages.5_Stock_Trading",
         "description": "pages.5_Stock_Trading",
-        "peekOfCode": "df_account_value = pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nst.write('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()\ndf_account_value.account_value.plot()\nst.write(\"==============Get Backtest Results===========\")",
+        "peekOfCode": "df_account_value = pd.DataFrame()\nfor i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):\n    temp = pd.read_csv('results/account_value_trade_{}_{}.csv'.format('ensemble',i))\n    df_account_value = df_account_value._append(temp,ignore_index=True)\nsharpe=(252**0.5)*df_account_value.account_value.pct_change(1).mean()/df_account_value.account_value.pct_change(1).std()\nst.write('Sharpe Ratio: ',sharpe)\ndf_account_value=df_account_value.join(df_trade_date[validation_window:].reset_index(drop=True))\ndf_account_value.head()\ndf_account_value.account_value.plot()\nst.line_chart(df_account_value['account_value'])",
         "detail": "pages.5_Stock_Trading",
         "documentation": {}
     },

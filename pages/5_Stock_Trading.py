@@ -19,12 +19,12 @@ from lib.rl.config import (
 )
 
 # from alpaca.trading.enums import OrderSide, TimeInForce, OrderType
-from finrl.config_tickers import DOW_30_TICKER
-from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
-from finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
-from finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
-from finrl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent
-from finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
+from lib.rl.config_tickers import DOW_30_TICKER
+from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
+from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
+from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
+from lib.rl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent
+from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
 
 from pprint import pprint
 
@@ -34,8 +34,8 @@ sys.path.append("../FinRL-Library")
 import itertools
 
 import os
-from finrl.main import check_and_make_directories
-from finrl.config import (
+from lib.rl.main import check_and_make_directories
+from lib.rl.config import (
     DATA_SAVE_DIR,
     TRAINED_MODEL_DIR,
     TENSORBOARD_LOG_DIR,
@@ -169,6 +169,7 @@ df_account_value=df_account_value.join(df_trade_date[validation_window:].reset_i
 
 df_account_value.head()
 df_account_value.account_value.plot()
+st.line_chart(df_account_value['account_value'])
 
 st.write("==============Get Backtest Results===========")
 now = datetime.datetime.now().strftime('%Y%m%d-%Hh%M')
@@ -194,6 +195,7 @@ backtest_plot(df_account_value,
               baseline_ticker = '^DJI', 
               baseline_start = df_account_value.loc[0,'date'],
               baseline_end = df_account_value.loc[len(df_account_value)-1,'date'])
+st.line_chart(df_account_value['account_value'])    
 import alpaca_trade_api as tradeapi
 
 api = tradeapi.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')
