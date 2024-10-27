@@ -11535,37 +11535,37 @@
     {
         "label": "read_config",
         "kind": 2,
-        "importPath": "pages.6_setting",
-        "description": "pages.6_setting",
+        "importPath": "pages.6_Setting",
+        "description": "pages.6_Setting",
         "peekOfCode": "def read_config(file_path):\n    config = {}\n    with open(file_path, 'r') as file:\n        exec(file.read(), config)\n    return config\ndef write_config(file_path, config):\n    with open(file_path, 'w') as file:\n        file.write(\"# Configuration File\\n\\n\")\n        for key, value in config.items():\n            if not key.startswith('__'):",
-        "detail": "pages.6_setting",
+        "detail": "pages.6_Setting",
         "documentation": {}
     },
     {
         "label": "write_config",
         "kind": 2,
-        "importPath": "pages.6_setting",
-        "description": "pages.6_setting",
+        "importPath": "pages.6_Setting",
+        "description": "pages.6_Setting",
         "peekOfCode": "def write_config(file_path, config):\n    with open(file_path, 'w') as file:\n        file.write(\"# Configuration File\\n\\n\")\n        for key, value in config.items():\n            if not key.startswith('__'):\n                if isinstance(value, str):\n                    file.write(f'{key} = \"{value}\"\\n')\n                elif isinstance(value, list):\n                    file.write(f'{key} = {value}\\n')\n                elif isinstance(value, dict):",
-        "detail": "pages.6_setting",
+        "detail": "pages.6_Setting",
         "documentation": {}
     },
     {
         "label": "main",
         "kind": 2,
-        "importPath": "pages.6_setting",
-        "description": "pages.6_setting",
+        "importPath": "pages.6_Setting",
+        "description": "pages.6_Setting",
         "peekOfCode": "def main():\n    st.title(\"Settings Page\")\n    # Read the configuration\n    config = read_config(config_file_path)\n    # Convert date strings to date objects\n    def parse_date(date_str):\n        try:\n            return datetime.strptime(date_str, \"%Y-%m-%d\").date()\n        except ValueError:\n            return None",
-        "detail": "pages.6_setting",
+        "detail": "pages.6_Setting",
         "documentation": {}
     },
     {
         "label": "config_file_path",
         "kind": 5,
-        "importPath": "pages.6_setting",
-        "description": "pages.6_setting",
+        "importPath": "pages.6_Setting",
+        "description": "pages.6_Setting",
         "peekOfCode": "config_file_path = 'pages/config.py'\ndef read_config(file_path):\n    config = {}\n    with open(file_path, 'r') as file:\n        exec(file.read(), config)\n    return config\ndef write_config(file_path, config):\n    with open(file_path, 'w') as file:\n        file.write(\"# Configuration File\\n\\n\")\n        for key, value in config.items():",
-        "detail": "pages.6_setting",
+        "detail": "pages.6_Setting",
         "documentation": {}
     },
     {
