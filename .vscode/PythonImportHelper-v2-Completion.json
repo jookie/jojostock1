@@ -1140,14 +1140,6 @@
         "documentation": {}
     },
     {
-        "label": "DF_RESULTS_DIR",
-        "importPath": "lib.rl.config",
-        "description": "lib.rl.config",
-        "isExtraImport": true,
-        "detail": "lib.rl.config",
-        "documentation": {}
-    },
-    {
         "label": "INDICATORS",
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",

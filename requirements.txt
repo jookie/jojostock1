@@ -39,4 +39,3 @@ swig==4.2.1
 tensorboard==2.17.0
 wheel==0.44.0
 wrds==3.2.0
-yfinance==0.2.41
