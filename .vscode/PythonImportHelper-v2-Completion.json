@@ -5460,6 +5460,14 @@
         "documentation": {}
     },
     {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
         "label": "AlpacaProcessor",
         "importPath": "lib.rl.meta.data_processors.processor_alpaca",
         "description": "lib.rl.meta.data_processors.processor_alpaca",
@@ -11853,6 +11861,96 @@
         "documentation": {}
     },
     {
+        "label": "get_gdp_data",
+        "kind": 2,
+        "importPath": "pages.GDP_dashboard",
+        "description": "pages.GDP_dashboard",
+        "peekOfCode": "def get_gdp_data():\n    \"\"\"Grab GDP data from a CSV file.\n    This uses caching to avoid having to read the file every time. If we were\n    reading from an HTTP endpoint instead of a file, it's a good idea to set\n    a maximum age to the cache with the TTL argument: @st.cache_data(ttl='1d')\n    \"\"\"\n    # Instead of a CSV on disk, you could read from an HTTP endpoint here too.\n    DATA_FILENAME = Path(__file__).parent/'data/gdp_data.csv'\n    raw_gdp_df = pd.read_csv(DATA_FILENAME)\n    MIN_YEAR = 1960",
+        "detail": "pages.GDP_dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "gdp_df",
+        "kind": 5,
+        "importPath": "pages.GDP_dashboard",
+        "description": "pages.GDP_dashboard",
+        "peekOfCode": "gdp_df = get_gdp_data()\n# -----------------------------------------------------------------------------\n# Draw the actual page\n# Set the title that appears at the top of the page.\n'''\n# :earth_americas: GDP dashboard\nBrowse GDP data from the [World Bank Open Data](https://data.worldbank.org/) website. As you'll\nnotice, the data only goes to 2022 right now, and datapoints for certain years are often missing.\nBut it's otherwise a great (and did I mention _free_?) source of data.\n'''",
+        "detail": "pages.GDP_dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "min_value",
+        "kind": 5,
+        "importPath": "pages.GDP_dashboard",
+        "description": "pages.GDP_dashboard",
+        "peekOfCode": "min_value = gdp_df['Year'].min()\nmax_value = gdp_df['Year'].max()\nfrom_year, to_year = st.slider(\n    'Which years are you interested in?',\n    min_value=min_value,\n    max_value=max_value,\n    value=[min_value, max_value])\ncountries = gdp_df['Country Code'].unique()\nif not len(countries):\n    st.warning(\"Select at least one country\")",
+        "detail": "pages.GDP_dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "max_value",
+        "kind": 5,
+        "importPath": "pages.GDP_dashboard",
+        "description": "pages.GDP_dashboard",
+        "peekOfCode": "max_value = gdp_df['Year'].max()\nfrom_year, to_year = st.slider(\n    'Which years are you interested in?',\n    min_value=min_value,\n    max_value=max_value,\n    value=[min_value, max_value])\ncountries = gdp_df['Country Code'].unique()\nif not len(countries):\n    st.warning(\"Select at least one country\")\nselected_countries = st.multiselect(",
+        "detail": "pages.GDP_dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "countries",
+        "kind": 5,
+        "importPath": "pages.GDP_dashboard",
+        "description": "pages.GDP_dashboard",
+        "peekOfCode": "countries = gdp_df['Country Code'].unique()\nif not len(countries):\n    st.warning(\"Select at least one country\")\nselected_countries = st.multiselect(\n    'Which countries would you like to view?',\n    countries,\n    ['DEU', 'FRA', 'GBR', 'BRA', 'MEX', 'JPN'])\n''\n''\n''",
+        "detail": "pages.GDP_dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "selected_countries",
+        "kind": 5,
+        "importPath": "pages.GDP_dashboard",
+        "description": "pages.GDP_dashboard",
+        "peekOfCode": "selected_countries = st.multiselect(\n    'Which countries would you like to view?',\n    countries,\n    ['DEU', 'FRA', 'GBR', 'BRA', 'MEX', 'JPN'])\n''\n''\n''\n# Filter the data\nfiltered_gdp_df = gdp_df[\n    (gdp_df['Country Code'].isin(selected_countries))",
+        "detail": "pages.GDP_dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "filtered_gdp_df",
+        "kind": 5,
+        "importPath": "pages.GDP_dashboard",
+        "description": "pages.GDP_dashboard",
+        "peekOfCode": "filtered_gdp_df = gdp_df[\n    (gdp_df['Country Code'].isin(selected_countries))\n    & (gdp_df['Year'] <= to_year)\n    & (from_year <= gdp_df['Year'])\n]\nst.header('GDP over time', divider='gray')\n''\nst.line_chart(\n    filtered_gdp_df,\n    x='Year',",
+        "detail": "pages.GDP_dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "first_year",
+        "kind": 5,
+        "importPath": "pages.GDP_dashboard",
+        "description": "pages.GDP_dashboard",
+        "peekOfCode": "first_year = gdp_df[gdp_df['Year'] == from_year]\nlast_year = gdp_df[gdp_df['Year'] == to_year]\nst.header(f'GDP in {to_year}', divider='gray')\n''\ncols = st.columns(4)\nfor i, country in enumerate(selected_countries):\n    col = cols[i % len(cols)]\n    with col:\n        first_gdp = first_year[first_year['Country Code'] == country]['GDP'].iat[0] / 1000000000\n        last_gdp = last_year[last_year['Country Code'] == country]['GDP'].iat[0] / 1000000000",
+        "detail": "pages.GDP_dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "last_year",
+        "kind": 5,
+        "importPath": "pages.GDP_dashboard",
+        "description": "pages.GDP_dashboard",
+        "peekOfCode": "last_year = gdp_df[gdp_df['Year'] == to_year]\nst.header(f'GDP in {to_year}', divider='gray')\n''\ncols = st.columns(4)\nfor i, country in enumerate(selected_countries):\n    col = cols[i % len(cols)]\n    with col:\n        first_gdp = first_year[first_year['Country Code'] == country]['GDP'].iat[0] / 1000000000\n        last_gdp = last_year[last_year['Country Code'] == country]['GDP'].iat[0] / 1000000000\n        if math.isnan(first_gdp):",
+        "detail": "pages.GDP_dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "cols",
+        "kind": 5,
+        "importPath": "pages.GDP_dashboard",
+        "description": "pages.GDP_dashboard",
+        "peekOfCode": "cols = st.columns(4)\nfor i, country in enumerate(selected_countries):\n    col = cols[i % len(cols)]\n    with col:\n        first_gdp = first_year[first_year['Country Code'] == country]['GDP'].iat[0] / 1000000000\n        last_gdp = last_year[last_year['Country Code'] == country]['GDP'].iat[0] / 1000000000\n        if math.isnan(first_gdp):\n            growth = 'n/a'\n            delta_color = 'off'\n        else:",
+        "detail": "pages.GDP_dashboard",
+        "documentation": {}
+    },
+    {
         "label": "Alpaca",
         "kind": 6,
         "importPath": "venv.bin.alpaca",
@@ -12116,118 +12214,118 @@
     {
         "label": "main",
         "kind": 2,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
         "peekOfCode": "def main():\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  def mkdirDataDf(fn):\n    # folder_path = os.path.join(\"data\", \"df\")\n    os.makedirs(DATA_FRAME_DIR, exist_ok=True)\n    file_path = os.path.join(DATA_FRAME_DIR, fn )\n    return file_path\n  jprint(\"app.py: Directory Paths:   \",  \"   //\".join(dir),  '##')",
-        "detail": "app",
+        "detail": "Stock_Market_prediction",
         "documentation": {}
     },
     {
         "label": "API_KEY",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
         "peekOfCode": "API_KEY = \"PKVD6WOSPEMKS0UI6A3K\"\nAPI_SECRET = \"BxT64PIQtDBb*tnW\"\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */",
-        "detail": "app",
+        "detail": "Stock_Market_prediction",
         "documentation": {}
     },
     {
         "label": "API_SECRET",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
         "peekOfCode": "API_SECRET = \"BxT64PIQtDBb*tnW\"\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */",
-        "detail": "app",
+        "detail": "Stock_Market_prediction",
         "documentation": {}
     },
     {
         "label": "TRAIN_START_DATE",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
         "peekOfCode": "TRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */",
-        "detail": "app",
+        "detail": "Stock_Market_prediction",
         "documentation": {}
     },
     {
         "label": "TRAIN_END_DATE",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
         "peekOfCode": "TRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */",
-        "detail": "app",
+        "detail": "Stock_Market_prediction",
         "documentation": {}
     },
     {
         "label": "TRADE_START_DATE",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
         "peekOfCode": "TRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}",
-        "detail": "app",
+        "detail": "Stock_Market_prediction",
         "documentation": {}
     },
     {
         "label": "TRADE_END_DATE",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
         "peekOfCode": "TRADE_END_DATE = '2023-03-01'\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}\nh1 {",
-        "detail": "app",
+        "detail": "Stock_Market_prediction",
         "documentation": {}
     },
     {
         "label": "custom_css",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
         "peekOfCode": "custom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}\nh1 {\ncolor: #3498db; /* Heading color (light blue) */",
-        "detail": "app",
+        "detail": "Stock_Market_prediction",
         "documentation": {}
     },
     {
         "label": "up_candle",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
         "peekOfCode": "up_candle = \"📈\"  # \\U0001F4C8\ndown_candle = \"\"  # \\U0001F4C9\n# Set page title and configure layout\nst.set_page_config(\n      page_title=\"Stock prediction Trainig\", \n      layout=\"wide\",\n      page_icon= \"📈\"\n      )\n# Apply the custom CSS\nst.markdown(custom_css, unsafe_allow_html=True)",
-        "detail": "app",
+        "detail": "Stock_Market_prediction",
         "documentation": {}
     },
     {
         "label": "down_candle",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
         "peekOfCode": "down_candle = \"\"  # \\U0001F4C9\n# Set page title and configure layout\nst.set_page_config(\n      page_title=\"Stock prediction Trainig\", \n      layout=\"wide\",\n      page_icon= \"📈\"\n      )\n# Apply the custom CSS\nst.markdown(custom_css, unsafe_allow_html=True)\n#page title and subtitle",
-        "detail": "app",
+        "detail": "Stock_Market_prediction",
         "documentation": {}
     },
     {
         "label": "finviz_url",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
         "peekOfCode": "finviz_url = \"https://finviz.com/quote.ashx?t=\"\nexample_ticker_symbols = [\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",\n\"ADBE\", \"CRM\", \"INTC\", \"ORCL\", \"HD\"\n]\n# Use a selectbox to allow users to choose from example ticker symbols\nticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)",
-        "detail": "app",
+        "detail": "Stock_Market_prediction",
         "documentation": {}
     },
     {
         "label": "example_ticker_symbols",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
         "peekOfCode": "example_ticker_symbols = [\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",\n\"ADBE\", \"CRM\", \"INTC\", \"ORCL\", \"HD\"\n]\n# Use a selectbox to allow users to choose from example ticker symbols\nticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# if ticker:",
-        "detail": "app",
+        "detail": "Stock_Market_prediction",
         "documentation": {}
     },
     {
         "label": "ticker",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
         "peekOfCode": "ticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# if ticker:\n      #Fetching stock price data\ndef main():\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  def mkdirDataDf(fn):\n    # folder_path = os.path.join(\"data\", \"df\")\n    os.makedirs(DATA_FRAME_DIR, exist_ok=True)",
-        "detail": "app",
+        "detail": "Stock_Market_prediction",
         "documentation": {}
     }
 ]
