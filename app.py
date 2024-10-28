@@ -14,6 +14,7 @@ from lib.rl.config import (
       TRAINED_MODEL_DIR,
       TENSORBOARD_LOG_DIR,
       RESULTS_DIR,
+      DATA_FRAME_DIR,
       INDICATORS,
       TRAIN_START_DATE,
       TRAIN_END_DATE,
@@ -95,6 +96,12 @@ def main():
   import pandas as pd
   dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]
   check_and_make_directories( dir )
+  def mkdirDataDf(fn):
+    # folder_path = os.path.join("data", "df")
+    os.makedirs(DATA_FRAME_DIR, exist_ok=True)
+    file_path = os.path.join(DATA_FRAME_DIR, fn )
+    return file_path
+  
   
   jprint("app.py: Directory Paths:   ",  "   //".join(dir),  '##')
   """app.py: Waiting data collection From Yahoo downloader ..."""
@@ -243,7 +250,6 @@ def main():
   df_account_value_sac = results["sac"]["account_value"]
   df_actions_sac = results["sac"]["actions"]
 
-
   st.write(df_account_value_a2c.shape)
   st.write(df_account_value_a2c.head())
   st.write(df_account_value_a2c.tail())
@@ -273,8 +279,6 @@ def main():
   def MaximizeReturns(MeanReturns, PortfolioSize):
       
     #dependencies
-    
-      
     c = (np.multiply(-1, MeanReturns))
     A = np.ones([PortfolioSize,1]).T
     b=[1]
@@ -411,12 +415,6 @@ def main():
   df_result_td3 = df_account_value_td3.set_index(df_account_value_td3.columns[0])
   df_result_ppo = df_account_value_ppo.set_index(df_account_value_ppo.columns[0])
   df_result_sac = df_account_value_sac.set_index(df_account_value_sac.columns[0])
-  
-  def mkdirDataDf(fn):
-    folder_path = os.path.join("data", "df")
-    os.makedirs(folder_path, exist_ok=True)
-    file_path = os.path.join(folder_path, fn )
-    return file_path
   
   df_account_value_a2c.to_csv( mkdirDataDf( "df_account_value_a2c.csv"))
   #baseline stats

@@ -488,14 +488,6 @@
         "documentation": {}
     },
     {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
         "label": "streamlit",
         "kind": 6,
         "isExtraImport": true,
@@ -1237,6 +1229,14 @@
     },
     {
         "label": "RESULTS_DIR",
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "isExtraImport": true,
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "DATA_FRAME_DIR",
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
         "isExtraImport": true,
@@ -5775,6 +5775,351 @@
         "documentation": {}
     },
     {
+        "label": "Regex",
+        "importPath": "alpacalib.regex",
+        "description": "alpacalib.regex",
+        "isExtraImport": true,
+        "detail": "alpacalib.regex",
+        "documentation": {}
+    },
+    {
+        "label": "RegexError",
+        "importPath": "alpacalib.regex",
+        "description": "alpacalib.regex",
+        "isExtraImport": true,
+        "detail": "alpacalib.regex",
+        "documentation": {}
+    },
+    {
+        "label": "NFA",
+        "importPath": "alpacalib.nfa",
+        "description": "alpacalib.nfa",
+        "isExtraImport": true,
+        "detail": "alpacalib.nfa",
+        "documentation": {}
+    },
+    {
+        "label": "DFA",
+        "importPath": "alpacalib.dfa",
+        "description": "alpacalib.dfa",
+        "isExtraImport": true,
+        "detail": "alpacalib.dfa",
+        "documentation": {}
+    },
+    {
+        "label": "Dot",
+        "importPath": "alpacalib.dot",
+        "description": "alpacalib.dot",
+        "isExtraImport": true,
+        "detail": "alpacalib.dot",
+        "documentation": {}
+    },
+    {
+        "label": "Options",
+        "importPath": "alpacalib.options",
+        "description": "alpacalib.options",
+        "isExtraImport": true,
+        "detail": "alpacalib.options",
+        "documentation": {}
+    },
+    {
+        "label": "OptionsError",
+        "importPath": "alpacalib.options",
+        "description": "alpacalib.options",
+        "isExtraImport": true,
+        "detail": "alpacalib.options",
+        "documentation": {}
+    },
+    {
+        "label": "Input",
+        "importPath": "alpacalib.input",
+        "description": "alpacalib.input",
+        "isExtraImport": true,
+        "detail": "alpacalib.input",
+        "documentation": {}
+    },
+    {
+        "label": "InputError",
+        "importPath": "alpacalib.input",
+        "description": "alpacalib.input",
+        "isExtraImport": true,
+        "detail": "alpacalib.input",
+        "documentation": {}
+    },
+    {
+        "label": "Output",
+        "importPath": "alpacalib.output",
+        "description": "alpacalib.output",
+        "isExtraImport": true,
+        "detail": "alpacalib.output",
+        "documentation": {}
+    },
+    {
+        "label": "OutputError",
+        "importPath": "alpacalib.output",
+        "description": "alpacalib.output",
+        "isExtraImport": true,
+        "detail": "alpacalib.output",
+        "documentation": {}
+    },
+    {
+        "label": "getpass",
+        "importPath": "getpass",
+        "description": "getpass",
+        "isExtraImport": true,
+        "detail": "getpass",
+        "documentation": {}
+    },
+    {
+        "label": "OptionParser",
+        "importPath": "optparse",
+        "description": "optparse",
+        "isExtraImport": true,
+        "detail": "optparse",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "print_",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "__version__",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "CockroachDatabase",
+        "importPath": "playhouse.cockroachdb",
+        "description": "playhouse.cockroachdb",
+        "isExtraImport": true,
+        "detail": "playhouse.cockroachdb",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "playhouse.reflection",
+        "description": "playhouse.reflection",
+        "isExtraImport": true,
+        "detail": "playhouse.reflection",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline_to_binary",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "locale",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "locale",
+        "description": "locale",
+        "detail": "locale",
+        "documentation": {}
+    },
+    {
+        "label": "manpage",
+        "importPath": "docutils.writers",
+        "description": "docutils.writers",
+        "isExtraImport": true,
+        "detail": "docutils.writers",
+        "documentation": {}
+    },
+    {
+        "label": "Writer",
+        "importPath": "docutils.writers.odf_odt",
+        "description": "docutils.writers.odf_odt",
+        "isExtraImport": true,
+        "detail": "docutils.writers.odf_odt",
+        "documentation": {}
+    },
+    {
+        "label": "Reader",
+        "importPath": "docutils.writers.odf_odt",
+        "description": "docutils.writers.odf_odt",
+        "isExtraImport": true,
+        "detail": "docutils.writers.odf_odt",
+        "documentation": {}
+    },
+    {
+        "label": "prepstyles",
+        "importPath": "docutils.writers.odf_odt",
+        "description": "docutils.writers.odf_odt",
+        "isExtraImport": true,
+        "detail": "docutils.writers.odf_odt",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": ".ipynb_checkpoints.app-checkpoint",
@@ -10243,7 +10588,7 @@
         "kind": 5,
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
-        "peekOfCode": "MAIN_RESULTS_DIR = 'train_results'\nDATA_SAVE_DIR       = MAIN_RESULTS_DIR + \"/datasets\"\nTRAINED_MODEL_DIR   = MAIN_RESULTS_DIR + \"/trained_models\"\nTENSORBOARD_LOG_DIR = MAIN_RESULTS_DIR + \"/tensorboard_log\"\nRESULTS_DIR         = MAIN_RESULTS_DIR + \"/results\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"",
+        "peekOfCode": "MAIN_RESULTS_DIR = 'train_results'\nDATA_SAVE_DIR       = MAIN_RESULTS_DIR + \"/datasets\"\nTRAINED_MODEL_DIR   = MAIN_RESULTS_DIR + \"/trained_models\"\nTENSORBOARD_LOG_DIR = MAIN_RESULTS_DIR + \"/tensorboard_log\"\nRESULTS_DIR         = MAIN_RESULTS_DIR + \"/results\"\nDATA_FRAME_DIR      = MAIN_RESULTS_DIR + \"/data_frame\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"",
         "detail": "lib.rl.config",
         "documentation": {}
     },
@@ -10252,7 +10597,7 @@
         "kind": 5,
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
-        "peekOfCode": "TENSORBOARD_LOG_DIR = MAIN_RESULTS_DIR + \"/tensorboard_log\"\nRESULTS_DIR         = MAIN_RESULTS_DIR + \"/results\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names",
+        "peekOfCode": "TENSORBOARD_LOG_DIR = MAIN_RESULTS_DIR + \"/tensorboard_log\"\nRESULTS_DIR         = MAIN_RESULTS_DIR + \"/results\"\nDATA_FRAME_DIR      = MAIN_RESULTS_DIR + \"/data_frame\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"",
         "detail": "lib.rl.config",
         "documentation": {}
     },
@@ -10821,294 +11166,6 @@
         "description": "lib.rl.train",
         "peekOfCode": "def train(\n    start_date,\n    end_date,\n    ticker_list,\n    data_source,\n    time_interval,\n    technical_indicator_list,\n    drl_lib,\n    env,\n    model_name,",
         "detail": "lib.rl.train",
-        "documentation": {}
-    },
-    {
-        "label": "OrderSide",
-        "kind": 6,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "class OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"\n    STOP = \"stop\"\n    STOP_LIMIT = \"stop_limit\"\n    TRAILING_STOP = \"trailing_stop\"\nclass TimeInForce():",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "OrderType",
-        "kind": 6,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "class OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"\n    STOP = \"stop\"\n    STOP_LIMIT = \"stop_limit\"\n    TRAILING_STOP = \"trailing_stop\"\nclass TimeInForce():\n    DAY = \"day\"\n    GTC = \"gtc\"\n    OPG = \"opg\"",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TimeInForce",
-        "kind": 6,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "class TimeInForce():\n    DAY = \"day\"\n    GTC = \"gtc\"\n    OPG = \"opg\"\n    CLS = \"cls\"\n    IOC = \"ioc\"\n    FOK = \"fok\"",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "DATA_SAVE_DIR",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "DATA_SAVE_DIR = \"datasets\"\nTRAINED_MODEL_DIR = \"trained_models\"\nTENSORBOARD_LOG_DIR = \"tensorboard_log\"\nRESULTS_DIR = \"results\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TRAINED_MODEL_DIR",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TRAINED_MODEL_DIR = \"trained_models\"\nTENSORBOARD_LOG_DIR = \"tensorboard_log\"\nRESULTS_DIR = \"results\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TENSORBOARD_LOG_DIR",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TENSORBOARD_LOG_DIR = \"tensorboard_log\"\nRESULTS_DIR = \"results\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "RESULTS_DIR",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "RESULTS_DIR = \"results\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TRAIN_START_DATE",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TRAIN_END_DATE",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TEST_START_DATE",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TEST_END_DATE",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TRADE_START_DATE",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",\n    \"cci_30\",",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TRADE_END_DATE",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",\n    \"cci_30\",\n    \"dx_30\",",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "INDICATORS",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "INDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",\n    \"cci_30\",\n    \"dx_30\",\n    \"close_30_sma\",\n    \"close_60_sma\",\n]",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "A2C_PARAMS",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "A2C_PARAMS = {\"n_steps\": 5, \"ent_coef\": 0.01, \"learning_rate\": 0.0007}\nPPO_PARAMS = {\n    \"n_steps\": 2048,\n    \"ent_coef\": 0.01,\n    \"learning_rate\": 0.00025,\n    \"batch_size\": 64,\n}\nDDPG_PARAMS = {\"batch_size\": 128, \"buffer_size\": 50000, \"learning_rate\": 0.001}\nTD3_PARAMS = {\"batch_size\": 100, \"buffer_size\": 1000000, \"learning_rate\": 0.001}\nSAC_PARAMS = {",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "PPO_PARAMS",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "PPO_PARAMS = {\n    \"n_steps\": 2048,\n    \"ent_coef\": 0.01,\n    \"learning_rate\": 0.00025,\n    \"batch_size\": 64,\n}\nDDPG_PARAMS = {\"batch_size\": 128, \"buffer_size\": 50000, \"learning_rate\": 0.001}\nTD3_PARAMS = {\"batch_size\": 100, \"buffer_size\": 1000000, \"learning_rate\": 0.001}\nSAC_PARAMS = {\n    \"batch_size\": 64,",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "DDPG_PARAMS",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "DDPG_PARAMS = {\"batch_size\": 128, \"buffer_size\": 50000, \"learning_rate\": 0.001}\nTD3_PARAMS = {\"batch_size\": 100, \"buffer_size\": 1000000, \"learning_rate\": 0.001}\nSAC_PARAMS = {\n    \"batch_size\": 64,\n    \"buffer_size\": 100000,\n    \"learning_rate\": 0.0001,\n    \"learning_starts\": 100,\n    \"ent_coef\": \"auto_0.1\",\n}\nERL_PARAMS = {",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TD3_PARAMS",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TD3_PARAMS = {\"batch_size\": 100, \"buffer_size\": 1000000, \"learning_rate\": 0.001}\nSAC_PARAMS = {\n    \"batch_size\": 64,\n    \"buffer_size\": 100000,\n    \"learning_rate\": 0.0001,\n    \"learning_starts\": 100,\n    \"ent_coef\": \"auto_0.1\",\n}\nERL_PARAMS = {\n    \"learning_rate\": 3e-5,",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "SAC_PARAMS",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "SAC_PARAMS = {\n    \"batch_size\": 64,\n    \"buffer_size\": 100000,\n    \"learning_rate\": 0.0001,\n    \"learning_starts\": 100,\n    \"ent_coef\": \"auto_0.1\",\n}\nERL_PARAMS = {\n    \"learning_rate\": 3e-5,\n    \"batch_size\": 2048,",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "ERL_PARAMS",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "ERL_PARAMS = {\n    \"learning_rate\": 3e-5,\n    \"batch_size\": 2048,\n    \"gamma\": 0.985,\n    \"seed\": 312,\n    \"net_dimension\": 512,\n    \"target_step\": 5000,\n    \"eval_gap\": 30,\n    \"eval_times\": 64,  # bug fix:KeyError: 'eval_times' line 68, in get_model model.eval_times = model_kwargs[\"eval_times\"]\n}",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "RLlib_PARAMS",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "RLlib_PARAMS = {\"lr\": 5e-5, \"train_batch_size\": 500, \"gamma\": 0.99}\n# Possible time zones\nTIME_ZONE_SHANGHAI = \"Asia/Shanghai\"  # Hang Seng HSI, SSE, CSI\nTIME_ZONE_USEASTERN = \"US/Eastern\"  # Dow, Nasdaq, SP\nTIME_ZONE_PARIS = \"Europe/Paris\"  # CAC,\nTIME_ZONE_BERLIN = \"Europe/Berlin\"  # DAX, TECDAX, MDAX, SDAX\nTIME_ZONE_JAKARTA = \"Asia/Jakarta\"  # LQ45\nTIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TIME_ZONE_SHANGHAI",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TIME_ZONE_SHANGHAI = \"Asia/Shanghai\"  # Hang Seng HSI, SSE, CSI\nTIME_ZONE_USEASTERN = \"US/Eastern\"  # Dow, Nasdaq, SP\nTIME_ZONE_PARIS = \"Europe/Paris\"  # CAC,\nTIME_ZONE_BERLIN = \"Europe/Berlin\"  # DAX, TECDAX, MDAX, SDAX\nTIME_ZONE_JAKARTA = \"Asia/Jakarta\"  # LQ45\nTIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TIME_ZONE_USEASTERN",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TIME_ZONE_USEASTERN = \"US/Eastern\"  # Dow, Nasdaq, SP\nTIME_ZONE_PARIS = \"Europe/Paris\"  # CAC,\nTIME_ZONE_BERLIN = \"Europe/Berlin\"  # DAX, TECDAX, MDAX, SDAX\nTIME_ZONE_JAKARTA = \"Asia/Jakarta\"  # LQ45\nTIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TIME_ZONE_PARIS",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TIME_ZONE_PARIS = \"Europe/Paris\"  # CAC,\nTIME_ZONE_BERLIN = \"Europe/Berlin\"  # DAX, TECDAX, MDAX, SDAX\nTIME_ZONE_JAKARTA = \"Asia/Jakarta\"  # LQ45\nTIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TIME_ZONE_BERLIN",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TIME_ZONE_BERLIN = \"Europe/Berlin\"  # DAX, TECDAX, MDAX, SDAX\nTIME_ZONE_JAKARTA = \"Asia/Jakarta\"  # LQ45\nTIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TIME_ZONE_JAKARTA",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TIME_ZONE_JAKARTA = \"Asia/Jakarta\"  # LQ45\nTIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "TIME_ZONE_SELFDEFINED",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "TIME_ZONE_SELFDEFINED = \"xxx\"  # If neither of the above is your time zone, you should define it, and set USE_TIME_ZONE_SELFDEFINED 1.\nUSE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():\n    BUY = \"buy\"",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "USE_TIME_ZONE_SELFDEFINED",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "USE_TIME_ZONE_SELFDEFINED = 0  # 0 (default) or 1 (use the self defined)\n# parameters for data sources\nALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "ALPACA_API_KEY",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "ALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "ALPACA_API_SECRET",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "ALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "ALPACA_API_BASE_URL",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "ALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"\n    STOP = \"stop\"",
-        "detail": "lib.utility.config",
-        "documentation": {}
-    },
-    {
-        "label": "BINANCE_BASE_URL",
-        "kind": 5,
-        "importPath": "lib.utility.config",
-        "description": "lib.utility.config",
-        "peekOfCode": "BINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\n# parameters for data sources\nclass OrderSide():\n    BUY = \"buy\"\n    SELL = \"sell\"\nclass OrderType():\n    MARKET = \"market\"\n    LIMIT = \"limit\"\n    STOP = \"stop\"\n    STOP_LIMIT = \"stop_limit\"",
-        "detail": "lib.utility.config",
         "documentation": {}
     },
     {
@@ -11796,11 +11853,272 @@
         "documentation": {}
     },
     {
+        "label": "Alpaca",
+        "kind": 6,
+        "importPath": "venv.bin.alpaca",
+        "description": "venv.bin.alpaca",
+        "peekOfCode": "class Alpaca:\n    def main():\n        try:\n            Options.parse(sys.argv[1:])\n        except OptionsError as err:\n            print(err.args[0])\n            print()\n            Alpaca.show_help()\n            return\n        if Options.is_show_help():",
+        "detail": "venv.bin.alpaca",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "kind": 6,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "class BaseModel(Model):\n    class Meta:\n        database = database\n\"\"\"\nUNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):\n    def __init__(self, *_, **__): pass\n\"\"\"\nDATABASE_ALIASES = {\n    CockroachDatabase: ['cockroach', 'cockroachdb', 'crdb'],",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "UnknownField",
+        "kind": 6,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "class UnknownField(object):\n    def __init__(self, *_, **__): pass\n\"\"\"\nDATABASE_ALIASES = {\n    CockroachDatabase: ['cockroach', 'cockroachdb', 'crdb'],\n    MySQLDatabase: ['mysql', 'mysqldb'],\n    PostgresqlDatabase: ['postgres', 'postgresql'],\n    SqliteDatabase: ['sqlite', 'sqlite3'],\n}\nDATABASE_MAP = dict((value, key)",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "make_introspector",
+        "kind": 2,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "def make_introspector(database_type, database_name, **kwargs):\n    if database_type not in DATABASE_MAP:\n        err('Unrecognized database, must be one of: %s' %\n            ', '.join(DATABASE_MAP.keys()))\n        sys.exit(1)\n    schema = kwargs.pop('schema', None)\n    DatabaseClass = DATABASE_MAP[database_type]\n    db = DatabaseClass(database_name, **kwargs)\n    return Introspector.from_database(db, schema=schema)\ndef print_models(introspector, tables=None, preserve_order=False,",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "print_models",
+        "kind": 2,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "def print_models(introspector, tables=None, preserve_order=False,\n                 include_views=False, ignore_unknown=False, snake_case=True):\n    database = introspector.introspect(table_names=tables,\n                                       include_views=include_views,\n                                       snake_case=snake_case)\n    db_kwargs = introspector.get_database_kwargs()\n    header = HEADER % (\n        introspector.get_additional_imports(),\n        introspector.get_database_class().__name__,\n        introspector.get_database_name(),",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "print_header",
+        "kind": 2,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "def print_header(cmd_line, introspector):\n    timestamp = datetime.datetime.now()\n    print_('# Code generated by:')\n    print_('# python -m pwiz %s' % cmd_line)\n    print_('# Date: %s' % timestamp.strftime('%B %d, %Y %I:%M%p'))\n    print_('# Database: %s' % introspector.get_database_name())\n    print_('# Peewee version: %s' % peewee_version)\n    print_('')\ndef err(msg):\n    sys.stderr.write('\\033[91m%s\\033[0m\\n' % msg)",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "err",
+        "kind": 2,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "def err(msg):\n    sys.stderr.write('\\033[91m%s\\033[0m\\n' % msg)\n    sys.stderr.flush()\ndef get_option_parser():\n    parser = OptionParser(usage='usage: %prog [options] database_name')\n    ao = parser.add_option\n    ao('-H', '--host', dest='host')\n    ao('-p', '--port', dest='port', type='int')\n    ao('-u', '--user', dest='user')\n    ao('-P', '--password', dest='password', action='store_true')",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "get_option_parser",
+        "kind": 2,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "def get_option_parser():\n    parser = OptionParser(usage='usage: %prog [options] database_name')\n    ao = parser.add_option\n    ao('-H', '--host', dest='host')\n    ao('-p', '--port', dest='port', type='int')\n    ao('-u', '--user', dest='user')\n    ao('-P', '--password', dest='password', action='store_true')\n    engines = sorted(DATABASE_MAP)\n    ao('-e', '--engine', dest='engine', choices=engines,\n       help=('Database type, e.g. sqlite, mysql, postgresql or cockroachdb. '",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "get_connect_kwargs",
+        "kind": 2,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "def get_connect_kwargs(options):\n    ops = ('host', 'port', 'user', 'schema')\n    kwargs = dict((o, getattr(options, o)) for o in ops if getattr(options, o))\n    if options.password:\n        kwargs['password'] = getpass()\n    return kwargs\nif __name__ == '__main__':\n    raw_argv = sys.argv\n    parser = get_option_parser()\n    options, args = parser.parse_args()",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "HEADER",
+        "kind": 5,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "HEADER = \"\"\"from peewee import *%s\ndatabase = %s('%s'%s)\n\"\"\"\nBASE_MODEL = \"\"\"\\\nclass BaseModel(Model):\n    class Meta:\n        database = database\n\"\"\"\nUNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "kind": 5,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "database = %s('%s'%s)\n\"\"\"\nBASE_MODEL = \"\"\"\\\nclass BaseModel(Model):\n    class Meta:\n        database = database\n\"\"\"\nUNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):\n    def __init__(self, *_, **__): pass",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_MODEL",
+        "kind": 5,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "BASE_MODEL = \"\"\"\\\nclass BaseModel(Model):\n    class Meta:\n        database = database\n\"\"\"\nUNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):\n    def __init__(self, *_, **__): pass\n\"\"\"\nDATABASE_ALIASES = {",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "UNKNOWN_FIELD",
+        "kind": 5,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "UNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):\n    def __init__(self, *_, **__): pass\n\"\"\"\nDATABASE_ALIASES = {\n    CockroachDatabase: ['cockroach', 'cockroachdb', 'crdb'],\n    MySQLDatabase: ['mysql', 'mysqldb'],\n    PostgresqlDatabase: ['postgres', 'postgresql'],\n    SqliteDatabase: ['sqlite', 'sqlite3'],\n}",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_ALIASES",
+        "kind": 5,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "DATABASE_ALIASES = {\n    CockroachDatabase: ['cockroach', 'cockroachdb', 'crdb'],\n    MySQLDatabase: ['mysql', 'mysqldb'],\n    PostgresqlDatabase: ['postgres', 'postgresql'],\n    SqliteDatabase: ['sqlite', 'sqlite3'],\n}\nDATABASE_MAP = dict((value, key)\n                    for key in DATABASE_ALIASES\n                    for value in DATABASE_ALIASES[key])\ndef make_introspector(database_type, database_name, **kwargs):",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_MAP",
+        "kind": 5,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "DATABASE_MAP = dict((value, key)\n                    for key in DATABASE_ALIASES\n                    for value in DATABASE_ALIASES[key])\ndef make_introspector(database_type, database_name, **kwargs):\n    if database_type not in DATABASE_MAP:\n        err('Unrecognized database, must be one of: %s' %\n            ', '.join(DATABASE_MAP.keys()))\n        sys.exit(1)\n    schema = kwargs.pop('schema', None)\n    DatabaseClass = DATABASE_MAP[database_type]",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2html",
+        "description": "venv.bin.rst2html",
+        "peekOfCode": "description = ('Generates (X)HTML documents from standalone reStructuredText '\n               'sources.  ' + default_description)\npublish_cmdline(writer_name='html', description=description)",
+        "detail": "venv.bin.rst2html",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2html4",
+        "description": "venv.bin.rst2html4",
+        "peekOfCode": "description = ('Generates (X)HTML documents from standalone reStructuredText '\n               'sources.  ' + default_description)\npublish_cmdline(writer_name='html4', description=description)",
+        "detail": "venv.bin.rst2html4",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2html5",
+        "description": "venv.bin.rst2html5",
+        "peekOfCode": "description = ('Generates HTML5 documents from standalone '\n               'reStructuredText sources.\\n'\n               + default_description)\npublish_cmdline(writer_name='html5', description=description)",
+        "detail": "venv.bin.rst2html5",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2latex",
+        "description": "venv.bin.rst2latex",
+        "peekOfCode": "description = ('Generates LaTeX documents from standalone reStructuredText '\n               'sources. '\n               'Reads from <source> (default is stdin) and writes to '\n               '<destination> (default is stdout).  See '\n               '<https://docutils.sourceforge.io/docs/user/latex.html> for '\n               'the full reference.')\npublish_cmdline(writer_name='latex', description=description)",
+        "detail": "venv.bin.rst2latex",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2man",
+        "description": "venv.bin.rst2man",
+        "peekOfCode": "description = (\"Generates plain unix manual documents.  \"\n               + default_description)\npublish_cmdline(writer=manpage.Writer(), description=description)",
+        "detail": "venv.bin.rst2man",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2odt",
+        "description": "venv.bin.rst2odt",
+        "peekOfCode": "description = ('Generates OpenDocument/OpenOffice/ODF documents from '\n               'standalone reStructuredText sources.  ' + default_description)\nwriter = Writer()\nreader = Reader()\noutput = publish_cmdline_to_binary(reader=reader, writer=writer,\n                                   description=description)",
+        "detail": "venv.bin.rst2odt",
+        "documentation": {}
+    },
+    {
+        "label": "writer",
+        "kind": 5,
+        "importPath": "venv.bin.rst2odt",
+        "description": "venv.bin.rst2odt",
+        "peekOfCode": "writer = Writer()\nreader = Reader()\noutput = publish_cmdline_to_binary(reader=reader, writer=writer,\n                                   description=description)",
+        "detail": "venv.bin.rst2odt",
+        "documentation": {}
+    },
+    {
+        "label": "reader",
+        "kind": 5,
+        "importPath": "venv.bin.rst2odt",
+        "description": "venv.bin.rst2odt",
+        "peekOfCode": "reader = Reader()\noutput = publish_cmdline_to_binary(reader=reader, writer=writer,\n                                   description=description)",
+        "detail": "venv.bin.rst2odt",
+        "documentation": {}
+    },
+    {
+        "label": "output",
+        "kind": 5,
+        "importPath": "venv.bin.rst2odt",
+        "description": "venv.bin.rst2odt",
+        "peekOfCode": "output = publish_cmdline_to_binary(reader=reader, writer=writer,\n                                   description=description)",
+        "detail": "venv.bin.rst2odt",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2pseudoxml",
+        "description": "venv.bin.rst2pseudoxml",
+        "peekOfCode": "description = ('Generates pseudo-XML from standalone reStructuredText '\n               'sources (for testing purposes).  ' + default_description)\npublish_cmdline(description=description)",
+        "detail": "venv.bin.rst2pseudoxml",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2s5",
+        "description": "venv.bin.rst2s5",
+        "peekOfCode": "description = ('Generates S5 (X)HTML slideshow documents from standalone '\n               'reStructuredText sources.  ' + default_description)\npublish_cmdline(writer_name='s5', description=description)",
+        "detail": "venv.bin.rst2s5",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2xetex",
+        "description": "venv.bin.rst2xetex",
+        "peekOfCode": "description = ('Generates LaTeX documents from standalone reStructuredText '\n               'sources for compilation with the Unicode-aware TeX variants '\n               'XeLaTeX or LuaLaTeX. '\n               'Reads from <source> (default is stdin) and writes to '\n               '<destination> (default is stdout).  See '\n               '<https://docutils.sourceforge.io/docs/user/latex.html> for '\n               'the full reference.')\npublish_cmdline(writer_name='xetex', description=description)",
+        "detail": "venv.bin.rst2xetex",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2xml",
+        "description": "venv.bin.rst2xml",
+        "peekOfCode": "description = ('Generates Docutils-native XML from standalone '\n               'reStructuredText sources.  ' + default_description)\npublish_cmdline(writer_name='xml', description=description)",
+        "detail": "venv.bin.rst2xml",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rstpep2html",
+        "description": "venv.bin.rstpep2html",
+        "peekOfCode": "description = ('Generates (X)HTML from reStructuredText-format PEP files.  '\n               + default_description)\npublish_cmdline(reader_name='pep', writer_name='pep_html',\n                description=description)",
+        "detail": "venv.bin.rstpep2html",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def main():\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  jprint(\"app.py: Directory Paths:   \",  \"   //\".join(dir),  '##')\n  \"\"\"app.py: Waiting data collection From Yahoo downloader ...\"\"\"\n  df = YahooDownloader(start_date = TRAIN_START_DATE,\n                      end_date = TRADE_END_DATE,\n                      ticker_list = config_tickers.DOW_30_TICKER).fetch_data()\n#  df.shape",
+        "peekOfCode": "def main():\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  def mkdirDataDf(fn):\n    # folder_path = os.path.join(\"data\", \"df\")\n    os.makedirs(DATA_FRAME_DIR, exist_ok=True)\n    file_path = os.path.join(DATA_FRAME_DIR, fn )\n    return file_path\n  jprint(\"app.py: Directory Paths:   \",  \"   //\".join(dir),  '##')",
         "detail": "app",
         "documentation": {}
     },
@@ -11908,7 +12226,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "ticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# if ticker:\n      #Fetching stock price data\ndef main():\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  jprint(\"app.py: Directory Paths:   \",  \"   //\".join(dir),  '##')\n  \"\"\"app.py: Waiting data collection From Yahoo downloader ...\"\"\"\n  df = YahooDownloader(start_date = TRAIN_START_DATE,",
+        "peekOfCode": "ticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# if ticker:\n      #Fetching stock price data\ndef main():\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  def mkdirDataDf(fn):\n    # folder_path = os.path.join(\"data\", \"df\")\n    os.makedirs(DATA_FRAME_DIR, exist_ok=True)",
         "detail": "app",
         "documentation": {}
     }
