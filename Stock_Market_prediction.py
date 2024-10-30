@@ -4,7 +4,6 @@ import streamlit as st
 import sys
 import itertools
 import matplotlib.pyplot as plt
-
 from lib.utility.jprint import jprint
 from pages.StockMarketApp import styles ; styles.set()
 from lib.rl.config import (
@@ -26,51 +25,51 @@ from lib.rl.agents.stablebaselines3.models import DRLAgent
 from stable_baselines3.common.logger import configure
 from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
 from lib.rl.main import check_and_make_directories
-from lib.rl.config_tickers import DOW_30_TICKER
+from lib.rl.config_tickers import index_dict
 import warnings ; warnings.filterwarnings("ignore")
 
-# 
-
-# Representing an upward movement
-up_candle = "📈"  # \U0001F4C8
-down_candle = ""  # \U0001F4C9
-# Set page title and configure layout
-# st.set_page_config(
-#       page_title="Stock prediction Trainig", 
-#       layout="wide",
-#       page_icon=':bar_chart:',
-#       )
-st.title(" 📈 Stock Price Ptediction Training")
-st.markdown("Trainig to predict stock price movements for a given stock ticker symbol and its foundamental ratios")
-
 # finviz_url = "https://finviz.com/quote.ashx?t="
-example_ticker_symbols = ["DOW_30_TICKER","NAS_100_TICKER","SP_500_TICKER"
-"AAPL", "MSFT", "GOOGL", "AMZN", "TSLA",
-"JPM", "NFLX", "FB", "BRK.B", "V",
-"NVDA", "DIS", "BA", "IBM", "GE",
-"PG", "JNJ", "KO", "MCD", "T",
-"ADBE", "CRM", "INTC", "ORCL", "HD"
-]
-# Use a selectbox to allow users to choose from example ticker symbols
-ticker = st.selectbox("Select a stock ticker symbol or enter your own:", example_ticker_symbols)
-# if ticker:
-      #Fetching stock price data
-def main():
-  import pandas as pd
-  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]
-  check_and_make_directories( dir )
-  def mkdirDataDf(fn):
+def mkdirDataDf(fn):
     os.makedirs(DATA_FRAME_DIR, exist_ok=True)
     file_path = os.path.join(DATA_FRAME_DIR, fn )
     return file_path
   
+def DataDownLoader() :
+  # Placeholder for previous selection to retain index when tickers are empty
+  if "previous_index" not in st.session_state:
+      st.session_state.previous_index = list(index_dict.keys())[0]
+  st.title("Index and Ticker Selector")
+  # Dropdown to select an index (updated with new prompt and variable name)
+  selected_index = st.selectbox("Choose an Index", options=list(index_dict.keys()))
+  # Multi-select for tickers based on selected index
+  selected_tickers = st.multiselect(
+      "Select Tickers",
+      options=index_dict[selected_index],
+      default=index_dict[selected_index]  # Optional: default selects all tickers
+  )
+  # Update the session state only if the tickers are not empty
+  if selected_tickers:
+      st.session_state.previous_index = selected_index
+  # Placeholder for the list of tickers passed to YahooDownloader
+  final_ticker_list = selected_tickers if selected_tickers else index_dict[st.session_state.previous_index]
   
+  return final_ticker_list
+
+up_candle = "📈"  # \U0001F4C8
+down_candle = ""  # \U0001F4C9
+# Set page title and configure layout
+
+      
+def main(ticker_list):
+  import pandas as pd
+  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]
+  check_and_make_directories( dir )
   jprint("app.py: Directory Paths:   ",  "   //".join(dir),  '##')
   """app.py: Waiting data collection From Yahoo downloader ..."""
   df = YahooDownloader(start_date = TRAIN_START_DATE,
                       end_date = TRADE_END_DATE,
-                      ticker_list = DOW_30_TICKER).fetch_data()
-#  df.shape
+                      ticker_list = ticker_list).fetch_data()
+  st.write(df.shape)
   df.sort_values(['date','tic'],ignore_index=True).head()
   fe = FeatureEngineer(
                       use_technical_indicator=True,
@@ -415,4 +414,13 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+  # st.set_page_config(
+  #     page_title="Stock prediction Trainig", 
+  #     layout="wide",
+  #     page_icon=':bar_chart:',
+  #     )
+  st.title(" 📈 Stock Price Ptediction Training")
+  st.markdown("Trainig to predict stock price movements for a given stock ticker symbol and its foundamental ratios")
+  ticker_list = DataDownLoader()
+  if st.button("Download Data by Ticket"):
+    main(ticker_list)

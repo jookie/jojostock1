@@ -5532,7 +5532,7 @@
         "documentation": {}
     },
     {
-        "label": "DOW_30_TICKER",
+        "label": "index_dict",
         "importPath": "lib.rl.config_tickers",
         "description": "lib.rl.config_tickers",
         "isExtraImport": true,
@@ -10997,11 +10997,20 @@
         "documentation": {}
     },
     {
+        "label": "custom_index",
+        "kind": 5,
+        "importPath": "lib.rl.config_tickers",
+        "description": "lib.rl.config_tickers",
+        "peekOfCode": "custom_index = [\"MMM\", \"AXP\", \"BA\", \"CAT\", \"CSCO\"]\nindex_dict = {\n    \"Dow 30\": DOW_30_TICKER,\n    \"Nasdaq 100\": NAS_100_TICKER,\n    \"S&P 500\": SP_500_TICKER,\n    # Show me an example of streamlit select box with a  select of a singl index and a multi select of some tickers belon to the selected index\n    \"Hang Seng Index\" : HSI_50_TICKER, \n    \"SSE 50\" :SSE_50_TICKER, \n    \"CSI 300\" : CSI_300_TICKER, \n    \"CAC 40\" : CAC_40_TICKER, ",
+        "detail": "lib.rl.config_tickers",
+        "documentation": {}
+    },
+    {
         "label": "index_dict",
         "kind": 5,
         "importPath": "lib.rl.config_tickers",
         "description": "lib.rl.config_tickers",
-        "peekOfCode": "index_dict = {\n    \"Dow 30\": DOW_30_TICKER,\n    \"Nasdaq 100\": NAS_100_TICKER,\n    \"S&P 500\": SP_500_TICKER,\n    \"Hang Seng Index\" : HSI_50_TICKER, \n    \"SSE 50\" :SSE_50_TICKER, \n    \"CSI 300\" : CSI_300_TICKER, \n    \"CAC 40\" : CAC_40_TICKER, \n    \"DAX 30\" : DAX_30_TICKER, \n    \"TecDAX\" : TECDAX_TICKER, ",
+        "peekOfCode": "index_dict = {\n    \"Dow 30\": DOW_30_TICKER,\n    \"Nasdaq 100\": NAS_100_TICKER,\n    \"S&P 500\": SP_500_TICKER,\n    # Show me an example of streamlit select box with a  select of a singl index and a multi select of some tickers belon to the selected index\n    \"Hang Seng Index\" : HSI_50_TICKER, \n    \"SSE 50\" :SSE_50_TICKER, \n    \"CSI 300\" : CSI_300_TICKER, \n    \"CAC 40\" : CAC_40_TICKER, \n    \"DAX 30\" : DAX_30_TICKER, ",
         "detail": "lib.rl.config_tickers",
         "documentation": {}
     },
@@ -12230,11 +12239,29 @@
         "documentation": {}
     },
     {
+        "label": "mkdirDataDf",
+        "kind": 2,
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
+        "peekOfCode": "def mkdirDataDf(fn):\n    os.makedirs(DATA_FRAME_DIR, exist_ok=True)\n    file_path = os.path.join(DATA_FRAME_DIR, fn )\n    return file_path\ndef DataDownLoader() :\n  # Placeholder for previous selection to retain index when tickers are empty\n  if \"previous_index\" not in st.session_state:\n      st.session_state.previous_index = list(index_dict.keys())[0]\n  st.title(\"Index and Ticker Selector\")\n  # Dropdown to select an index (updated with new prompt and variable name)",
+        "detail": "Stock_Market_prediction",
+        "documentation": {}
+    },
+    {
+        "label": "DataDownLoader",
+        "kind": 2,
+        "importPath": "Stock_Market_prediction",
+        "description": "Stock_Market_prediction",
+        "peekOfCode": "def DataDownLoader() :\n  # Placeholder for previous selection to retain index when tickers are empty\n  if \"previous_index\" not in st.session_state:\n      st.session_state.previous_index = list(index_dict.keys())[0]\n  st.title(\"Index and Ticker Selector\")\n  # Dropdown to select an index (updated with new prompt and variable name)\n  selected_index = st.selectbox(\"Choose an Index\", options=list(index_dict.keys()))\n  # Multi-select for tickers based on selected index\n  selected_tickers = st.multiselect(\n      \"Select Tickers\",",
+        "detail": "Stock_Market_prediction",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "Stock_Market_prediction",
         "description": "Stock_Market_prediction",
-        "peekOfCode": "def main():\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  def mkdirDataDf(fn):\n    os.makedirs(DATA_FRAME_DIR, exist_ok=True)\n    file_path = os.path.join(DATA_FRAME_DIR, fn )\n    return file_path\n  jprint(\"app.py: Directory Paths:   \",  \"   //\".join(dir),  '##')\n  \"\"\"app.py: Waiting data collection From Yahoo downloader ...\"\"\"",
+        "peekOfCode": "def main(ticker_list):\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  jprint(\"app.py: Directory Paths:   \",  \"   //\".join(dir),  '##')\n  \"\"\"app.py: Waiting data collection From Yahoo downloader ...\"\"\"\n  df = YahooDownloader(start_date = TRAIN_START_DATE,\n                      end_date = TRADE_END_DATE,\n                      ticker_list = ticker_list).fetch_data()\n  st.write(df.shape)",
         "detail": "Stock_Market_prediction",
         "documentation": {}
     },
@@ -12243,7 +12270,7 @@
         "kind": 5,
         "importPath": "Stock_Market_prediction",
         "description": "Stock_Market_prediction",
-        "peekOfCode": "up_candle = \"📈\"  # \\U0001F4C8\ndown_candle = \"\"  # \\U0001F4C9\n# Set page title and configure layout\n# st.set_page_config(\n#       page_title=\"Stock prediction Trainig\", \n#       layout=\"wide\",\n#       page_icon=':bar_chart:',\n#       )\nst.title(\" 📈 Stock Price Ptediction Training\")\nst.markdown(\"Trainig to predict stock price movements for a given stock ticker symbol and its foundamental ratios\")",
+        "peekOfCode": "up_candle = \"📈\"  # \\U0001F4C8\ndown_candle = \"\"  # \\U0001F4C9\n# Set page title and configure layout\ndef main(ticker_list):\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  jprint(\"app.py: Directory Paths:   \",  \"   //\".join(dir),  '##')\n  \"\"\"app.py: Waiting data collection From Yahoo downloader ...\"\"\"\n  df = YahooDownloader(start_date = TRAIN_START_DATE,",
         "detail": "Stock_Market_prediction",
         "documentation": {}
     },
@@ -12252,25 +12279,7 @@
         "kind": 5,
         "importPath": "Stock_Market_prediction",
         "description": "Stock_Market_prediction",
-        "peekOfCode": "down_candle = \"\"  # \\U0001F4C9\n# Set page title and configure layout\n# st.set_page_config(\n#       page_title=\"Stock prediction Trainig\", \n#       layout=\"wide\",\n#       page_icon=':bar_chart:',\n#       )\nst.title(\" 📈 Stock Price Ptediction Training\")\nst.markdown(\"Trainig to predict stock price movements for a given stock ticker symbol and its foundamental ratios\")\n# finviz_url = \"https://finviz.com/quote.ashx?t=\"",
-        "detail": "Stock_Market_prediction",
-        "documentation": {}
-    },
-    {
-        "label": "example_ticker_symbols",
-        "kind": 5,
-        "importPath": "Stock_Market_prediction",
-        "description": "Stock_Market_prediction",
-        "peekOfCode": "example_ticker_symbols = [\"DOW_30_TICKER\",\"NAS_100_TICKER\",\"SP_500_TICKER\"\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",\n\"ADBE\", \"CRM\", \"INTC\", \"ORCL\", \"HD\"\n]\n# Use a selectbox to allow users to choose from example ticker symbols\nticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# if ticker:",
-        "detail": "Stock_Market_prediction",
-        "documentation": {}
-    },
-    {
-        "label": "ticker",
-        "kind": 5,
-        "importPath": "Stock_Market_prediction",
-        "description": "Stock_Market_prediction",
-        "peekOfCode": "ticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# if ticker:\n      #Fetching stock price data\ndef main():\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  def mkdirDataDf(fn):\n    os.makedirs(DATA_FRAME_DIR, exist_ok=True)\n    file_path = os.path.join(DATA_FRAME_DIR, fn )",
+        "peekOfCode": "down_candle = \"\"  # \\U0001F4C9\n# Set page title and configure layout\ndef main(ticker_list):\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  jprint(\"app.py: Directory Paths:   \",  \"   //\".join(dir),  '##')\n  \"\"\"app.py: Waiting data collection From Yahoo downloader ...\"\"\"\n  df = YahooDownloader(start_date = TRAIN_START_DATE,\n                      end_date = TRADE_END_DATE,",
         "detail": "Stock_Market_prediction",
         "documentation": {}
     }

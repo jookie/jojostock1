@@ -1431,11 +1431,21 @@ FX_TICKER = [
     "EURDKK=X",
 ]
 
-# Creating the dictionary
+
+# Here's the example using Streamlit:
+
+# To create an example using Streamlit with the following requirements:
+
+# A selectbox to select a single index from index_dict.
+# A multiselect to choose some tickers belonging to the selected index.
+# We'll assume that DOW_30_TICKER, NAS_100_TICKER, and SP_500_TICKER are predefined lists containing the tickers for each respective index.
+custom_index = ["MMM", "AXP", "BA", "CAT", "CSCO"]
+
 index_dict = {
     "Dow 30": DOW_30_TICKER,
     "Nasdaq 100": NAS_100_TICKER,
     "S&P 500": SP_500_TICKER,
+    # Show me an example of streamlit select box with a  select of a singl index and a multi select of some tickers belon to the selected index
     "Hang Seng Index" : HSI_50_TICKER, 
     "SSE 50" :SSE_50_TICKER, 
     "CSI 300" : CSI_300_TICKER, 
@@ -1447,5 +1457,5 @@ index_dict = {
     "LQ45" : LQ45_TICKER, 
     "SRI-KEHATI.JK" : SRI_KEHATI_TICKER , 
     "FX Ticker":FX_TICKER, 
-    "Custom" : FX_TICKER
+    "Custom" : custom_index
     }
