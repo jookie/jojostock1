@@ -480,14 +480,6 @@
         "documentation": {}
     },
     {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
         "label": "streamlit",
         "kind": 6,
         "isExtraImport": true,
@@ -1268,22 +1260,6 @@
         "documentation": {}
     },
     {
-        "label": "TEST_START_DATE",
-        "importPath": "lib.rl.config",
-        "description": "lib.rl.config",
-        "isExtraImport": true,
-        "detail": "lib.rl.config",
-        "documentation": {}
-    },
-    {
-        "label": "TEST_END_DATE",
-        "importPath": "lib.rl.config",
-        "description": "lib.rl.config",
-        "isExtraImport": true,
-        "detail": "lib.rl.config",
-        "documentation": {}
-    },
-    {
         "label": "TRADE_START_DATE",
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
@@ -1797,14 +1773,6 @@
     },
     {
         "label": "config",
-        "importPath": "lib.rl",
-        "description": "lib.rl",
-        "isExtraImport": true,
-        "detail": "lib.rl",
-        "documentation": {}
-    },
-    {
-        "label": "config_tickers",
         "importPath": "lib.rl",
         "description": "lib.rl",
         "isExtraImport": true,
@@ -4864,14 +4832,6 @@
         "documentation": {}
     },
     {
-        "label": "get_logger",
-        "importPath": "streamlit.logger",
-        "description": "streamlit.logger",
-        "isExtraImport": true,
-        "detail": "streamlit.logger",
-        "documentation": {}
-    },
-    {
         "label": "*",
         "importPath": "lib.rl.agents.elegantrl",
         "description": "lib.rl.agents.elegantrl",
@@ -5580,6 +5540,14 @@
         "documentation": {}
     },
     {
+        "label": "DOW_30_TICKER",
+        "importPath": "lib.rl.config_tickers",
+        "description": "lib.rl.config_tickers",
+        "isExtraImport": true,
+        "detail": "lib.rl.config_tickers",
+        "documentation": {}
+    },
+    {
         "label": "DataProcessor",
         "importPath": "lib.rl.meta.data_processor",
         "description": "lib.rl.meta.data_processor",
@@ -5742,12 +5710,98 @@
         "documentation": {}
     },
     {
+        "label": "plotly.graph_objects",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly.graph_objects",
+        "description": "plotly.graph_objects",
+        "detail": "plotly.graph_objects",
+        "documentation": {}
+    },
+    {
+        "label": "investpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "investpy",
+        "description": "investpy",
+        "detail": "investpy",
+        "documentation": {}
+    },
+    {
+        "label": "history",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "history",
+        "description": "history",
+        "detail": "history",
+        "documentation": {}
+    },
+    {
+        "label": "bollinger_bands",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "bollinger_bands",
+        "description": "bollinger_bands",
+        "detail": "bollinger_bands",
+        "documentation": {}
+    },
+    {
+        "label": "styles",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "styles",
+        "description": "styles",
+        "detail": "styles",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit_toggle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit_toggle",
+        "description": "streamlit_toggle",
+        "detail": "streamlit_toggle",
+        "documentation": {}
+    },
+    {
+        "label": "ALPACA_API_KEY",
+        "importPath": "lib.rl.config_private",
+        "description": "lib.rl.config_private",
+        "isExtraImport": true,
+        "detail": "lib.rl.config_private",
+        "documentation": {}
+    },
+    {
+        "label": "ALPACA_API_SECRET",
+        "importPath": "lib.rl.config_private",
+        "description": "lib.rl.config_private",
+        "isExtraImport": true,
+        "detail": "lib.rl.config_private",
+        "documentation": {}
+    },
+    {
+        "label": "ALPACA_API_BASE_URL",
+        "importPath": "lib.rl.config_private",
+        "description": "lib.rl.config_private",
+        "isExtraImport": true,
+        "detail": "lib.rl.config_private",
+        "documentation": {}
+    },
+    {
         "label": "nltk",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "nltk",
         "description": "nltk",
         "detail": "nltk",
+        "documentation": {}
+    },
+    {
+        "label": "SentimentIntensityAnalyzer",
+        "importPath": "nltk.sentiment.vader",
+        "description": "nltk.sentiment.vader",
+        "isExtraImport": true,
+        "detail": "nltk.sentiment.vader",
         "documentation": {}
     },
     {
@@ -5775,11 +5829,19 @@
         "documentation": {}
     },
     {
-        "label": "SentimentIntensityAnalyzer",
-        "importPath": "nltk.sentiment.vader",
-        "description": "nltk.sentiment.vader",
+        "label": "styles ; styles.set",
+        "importPath": "pages.StockMarketApp",
+        "description": "pages.StockMarketApp",
         "isExtraImport": true,
-        "detail": "nltk.sentiment.vader",
+        "detail": "pages.StockMarketApp",
+        "documentation": {}
+    },
+    {
+        "label": "styles ; styles.set",
+        "importPath": "pages.StockMarketApp",
+        "description": "pages.StockMarketApp",
+        "isExtraImport": true,
+        "detail": "pages.StockMarketApp",
         "documentation": {}
     },
     {
@@ -7248,7 +7310,7 @@
         "kind": 6,
         "importPath": "docs.examples.PY.AlpacPaperTrading",
         "description": "docs.examples.PY.AlpacPaperTrading",
-        "peekOfCode": "class AlpacaPaperTrading:\n    def __init__(self, ticker_list, time_interval, drl_lib, agent, cwd, net_dim, \n                 state_dim, action_dim, API_KEY, API_SECRET, \n                 API_BASE_URL, tech_indicator_list, turbulence_thresh=30, \n                 max_stock=1e2, latency=None):\n        self.ticker_list = ticker_list\n        self.time_interval = time_interval\n        self.drl_lib = drl_lib\n        self.agent = agent\n        self.cwd = cwd",
+        "peekOfCode": "class AlpacaPaperTrading:\n    def __init__(self, ticker_list, time_interval, drl_lib, agent, cwd, net_dim, \n                 state_dim, action_dim, ALPACA_API_KEY, ALPACA_API_SECRET , \n                 ALPACA_API_BASE_URL, tech_indicator_list, turbulence_thresh=30, \n                 max_stock=1e2, latency=None):\n        self.ticker_list = ticker_list\n        self.time_interval = time_interval\n        self.drl_lib = drl_lib\n        self.agent = agent\n        self.cwd = cwd",
         "detail": "docs.examples.PY.AlpacPaperTrading",
         "documentation": {}
     },
@@ -7482,7 +7544,7 @@
         "kind": 5,
         "importPath": "docs.examples.PY.FinRL_PaperTrading_Demo_refactored",
         "description": "docs.examples.PY.FinRL_PaperTrading_Demo_refactored",
-        "peekOfCode": "paper_trading_erl = PaperTradingAlpaca(\n    ticker_list=DOW_30_TICKER,\n    time_interval=\"1Min\",\n    drl_lib=\"elegantrl\",\n    agent=\"ppo\",\n    cwd=\"./papertrading_erl_retrain\",\n    net_dim=ERL_PARAMS[\"net_dimension\"],\n    state_dim=state_dim,\n    action_dim=action_dim,\n    API_KEY=TRADING_API_KEY,",
+        "peekOfCode": "paper_trading_erl = PaperTradingAlpaca(\n    ticker_list=DOW_30_TICKER,\n    time_interval=\"1Min\",\n    drl_lib=\"elegantrl\",\n    agent=\"ppo\",\n    cwd=\"./papertrading_erl_retrain\",\n    net_dim=ERL_PARAMS[\"net_dimension\"],\n    state_dim=state_dim,\n    action_dim=action_dim,\n    ALPACA_API_KEY=TRADING_API_KEY,",
         "detail": "docs.examples.PY.FinRL_PaperTrading_Demo_refactored",
         "documentation": {}
     },
@@ -7932,34 +7994,25 @@
         "kind": 2,
         "importPath": "docs.examples.PY.greet",
         "description": "docs.examples.PY.greet",
-        "peekOfCode": "def main():\n    script_dir = os.path.dirname(os.path.abspath(__file__))\n    lib_path = os.path.join(script_dir, 'lib', 'alpaca_trade_api')\n    print(lib_path)\n    sys.path.append(lib_path)\n    import lib.alpaca_trade_api as tradeapi\n    now = datetime.now()\n    formatted_time = now.strftime(\"%Y-%m-%d %H:%M:%S\")\n    print(f\"Time from greet.py at {formatted_time}\")\n    api = tradeapi.rest.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')",
+        "peekOfCode": "def main():\n    script_dir = os.path.dirname(os.path.abspath(__file__))\n    lib_path = os.path.join(script_dir, 'lib', 'alpaca_trade_api')\n    print(lib_path)\n    sys.path.append(lib_path)\n    import lib.alpaca_trade_api as tradeapi\n    now = datetime.now()\n    formatted_time = now.strftime(\"%Y-%m-%d %H:%M:%S\")\n    print(f\"Time from greet.py at {formatted_time}\")\n    api = tradeapi.rest.REST(ALPACA_API_KEY, ALPACA_API_SECRET , ALPACA_API_BASE_URL, api_version='v2')",
         "detail": "docs.examples.PY.greet",
         "documentation": {}
     },
     {
-        "label": "API_KEY",
+        "label": "ALPACA_API_KEY",
         "kind": 5,
         "importPath": "docs.examples.PY.greet",
         "description": "docs.examples.PY.greet",
-        "peekOfCode": "API_KEY = \"PKEJH4W0URAU56SHKQW3\"\nAPI_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\n# Description: This is a simple python script that prints a greeting message along with the current date and time.\nfrom datetime import datetime\nimport sys\nimport os\n# import alpaca_trade_api as tradeapi\ndef main():\n    script_dir = os.path.dirname(os.path.abspath(__file__))",
+        "peekOfCode": "ALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"\nALPACA_API_SECRET  = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\n# Description: This is a simple python script that prints a greeting message along with the current date and time.\nfrom datetime import datetime\nimport sys\nimport os\n# import alpaca_trade_api as tradeapi\ndef main():\n    script_dir = os.path.dirname(os.path.abspath(__file__))",
         "detail": "docs.examples.PY.greet",
         "documentation": {}
     },
     {
-        "label": "API_SECRET",
+        "label": "ALPACA_API_BASE_URL",
         "kind": 5,
         "importPath": "docs.examples.PY.greet",
         "description": "docs.examples.PY.greet",
-        "peekOfCode": "API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\n# Description: This is a simple python script that prints a greeting message along with the current date and time.\nfrom datetime import datetime\nimport sys\nimport os\n# import alpaca_trade_api as tradeapi\ndef main():\n    script_dir = os.path.dirname(os.path.abspath(__file__))\n    lib_path = os.path.join(script_dir, 'lib', 'alpaca_trade_api')",
-        "detail": "docs.examples.PY.greet",
-        "documentation": {}
-    },
-    {
-        "label": "API_BASE_URL",
-        "kind": 5,
-        "importPath": "docs.examples.PY.greet",
-        "description": "docs.examples.PY.greet",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\n# Description: This is a simple python script that prints a greeting message along with the current date and time.\nfrom datetime import datetime\nimport sys\nimport os\n# import alpaca_trade_api as tradeapi\ndef main():\n    script_dir = os.path.dirname(os.path.abspath(__file__))\n    lib_path = os.path.join(script_dir, 'lib', 'alpaca_trade_api')\n    print(lib_path)",
+        "peekOfCode": "ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\n# Description: This is a simple python script that prints a greeting message along with the current date and time.\nfrom datetime import datetime\nimport sys\nimport os\n# import alpaca_trade_api as tradeapi\ndef main():\n    script_dir = os.path.dirname(os.path.abspath(__file__))\n    lib_path = os.path.join(script_dir, 'lib', 'alpaca_trade_api')\n    print(lib_path)",
         "detail": "docs.examples.PY.greet",
         "documentation": {}
     },
@@ -8103,7 +8156,7 @@
         "kind": 6,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "class AlpacaPaperTrading():\n    def __init__(self,ticker_list, time_interval, drl_lib, agent, cwd, net_dim, \n                 state_dim, action_dim, API_KEY, API_SECRET, \n                 API_BASE_URL, tech_indicator_list, turbulence_thresh=30, \n                 max_stock=1e2, latency = None):\n        #load agent\n        self.drl_lib = drl_lib\n        if agent =='ppo':\n            if drl_lib == 'elegantrl':              \n                agent_class = AgentPPO",
+        "peekOfCode": "class AlpacaPaperTrading():\n    def __init__(self,ticker_list, time_interval, drl_lib, agent, cwd, net_dim, \n                 state_dim, action_dim, ALPACA_API_KEY, ALPACA_API_SECRET , \n                 ALPACA_API_BASE_URL, tech_indicator_list, turbulence_thresh=30, \n                 max_stock=1e2, latency = None):\n        #load agent\n        self.drl_lib = drl_lib\n        if agent =='ppo':\n            if drl_lib == 'elegantrl':              \n                agent_class = AgentPPO",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
@@ -8220,34 +8273,25 @@
         "kind": 2,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "def DIA_history(start):\n    data_df = yf.download(['^DJI'],start=start, interval=\"5m\")\n    data_df = data_df.iloc[:]\n    baseline_returns = data_df['Adj Close'].values/data_df['Adj Close'].values[0]\n    return data_df, baseline_returns\n# Get cumulative return\nAPI_KEY = \"\"\nAPI_SECRET = \"\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\ndata_url = 'wss://data.alpaca.markets'",
+        "peekOfCode": "def DIA_history(start):\n    data_df = yf.download(['^DJI'],start=start, interval=\"5m\")\n    data_df = data_df.iloc[:]\n    baseline_returns = data_df['Adj Close'].values/data_df['Adj Close'].values[0]\n    return data_df, baseline_returns\n# Get cumulative return\nALPACA_API_KEY = \"\"\nALPACA_API_SECRET  = \"\"\nALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\ndata_url = 'wss://data.alpaca.markets'",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
     {
-        "label": "API_KEY",
+        "label": "ALPACA_API_KEY",
         "kind": 5,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "API_KEY = \"PKA2OY3YK7Y4M6Q7LCLR\"\nAPI_SECRET = \"BxT64PIQtDBb*tnW\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.config import INDICATORS\nfrom finrl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv\nfrom finrl.meta.env_stock_trading.env_stock_papertrading import AlpacaPaperTrading\nfrom finrl.meta.data_processor import DataProcessor\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline\nimport numpy as np",
+        "peekOfCode": "ALPACA_API_KEY = \"PKA2OY3YK7Y4M6Q7LCLR\"\nALPACA_API_SECRET  = \"BxT64PIQtDBb*tnW\"\nALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.config import INDICATORS\nfrom finrl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv\nfrom finrl.meta.env_stock_trading.env_stock_papertrading import AlpacaPaperTrading\nfrom finrl.meta.data_processor import DataProcessor\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline\nimport numpy as np",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
     {
-        "label": "API_SECRET",
+        "label": "ALPACA_API_BASE_URL",
         "kind": 5,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "API_SECRET = \"BxT64PIQtDBb*tnW\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.config import INDICATORS\nfrom finrl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv\nfrom finrl.meta.env_stock_trading.env_stock_papertrading import AlpacaPaperTrading\nfrom finrl.meta.data_processor import DataProcessor\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline\nimport numpy as np\nimport pandas as pd",
-        "detail": "docs.examples.PY.submit_order",
-        "documentation": {}
-    },
-    {
-        "label": "API_BASE_URL",
-        "kind": 5,
-        "importPath": "docs.examples.PY.submit_order",
-        "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.config import INDICATORS\nfrom finrl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv\nfrom finrl.meta.env_stock_trading.env_stock_papertrading import AlpacaPaperTrading\nfrom finrl.meta.data_processor import DataProcessor\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline\nimport numpy as np\nimport pandas as pd\n# PPO",
+        "peekOfCode": "ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.config import INDICATORS\nfrom finrl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv\nfrom finrl.meta.env_stock_trading.env_stock_papertrading import AlpacaPaperTrading\nfrom finrl.meta.data_processor import DataProcessor\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline\nimport numpy as np\nimport pandas as pd\n# PPO",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
@@ -8283,7 +8327,7 @@
         "kind": 5,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "ticker_list = DOW_30_TICKER\naction_dim = len(DOW_30_TICKER)\nprint(ticker_list)\nprint(INDICATORS)\n# Calculate the DRL state dimension manually for paper trading\n# amount + (turbulence, turbulence_bool) + (price, shares, cd (holding time)) * stock_dim + tech_dim\nstate_dim = 1 + 2 + 3 * action_dim + len(INDICATORS) * action_dim\nstate_dim\n# Get the API Keys Ready\n# API_KEY = \"\"",
+        "peekOfCode": "ticker_list = DOW_30_TICKER\naction_dim = len(DOW_30_TICKER)\nprint(ticker_list)\nprint(INDICATORS)\n# Calculate the DRL state dimension manually for paper trading\n# amount + (turbulence, turbulence_bool) + (price, shares, cd (holding time)) * stock_dim + tech_dim\nstate_dim = 1 + 2 + 3 * action_dim + len(INDICATORS) * action_dim\nstate_dim\n# Get the API Keys Ready\n# ALPACA_API_KEY = \"\"",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
@@ -8292,7 +8336,7 @@
         "kind": 5,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "action_dim = len(DOW_30_TICKER)\nprint(ticker_list)\nprint(INDICATORS)\n# Calculate the DRL state dimension manually for paper trading\n# amount + (turbulence, turbulence_bool) + (price, shares, cd (holding time)) * stock_dim + tech_dim\nstate_dim = 1 + 2 + 3 * action_dim + len(INDICATORS) * action_dim\nstate_dim\n# Get the API Keys Ready\n# API_KEY = \"\"\n# API_SECRET = \"\"",
+        "peekOfCode": "action_dim = len(DOW_30_TICKER)\nprint(ticker_list)\nprint(INDICATORS)\n# Calculate the DRL state dimension manually for paper trading\n# amount + (turbulence, turbulence_bool) + (price, shares, cd (holding time)) * stock_dim + tech_dim\nstate_dim = 1 + 2 + 3 * action_dim + len(INDICATORS) * action_dim\nstate_dim\n# Get the API Keys Ready\n# ALPACA_API_KEY = \"\"\n# ALPACA_API_SECRET  = \"\"",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
@@ -8301,16 +8345,16 @@
         "kind": 5,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "state_dim = 1 + 2 + 3 * action_dim + len(INDICATORS) * action_dim\nstate_dim\n# Get the API Keys Ready\n# API_KEY = \"\"\n# API_SECRET = \"\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\ndata_url = 'wss://data.alpaca.markets'\nenv = StockTradingEnv\n# Show the data\n# Step 1. Pick a data source",
+        "peekOfCode": "state_dim = 1 + 2 + 3 * action_dim + len(INDICATORS) * action_dim\nstate_dim\n# Get the API Keys Ready\n# ALPACA_API_KEY = \"\"\n# ALPACA_API_SECRET  = \"\"\nALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\ndata_url = 'wss://data.alpaca.markets'\nenv = StockTradingEnv\n# Show the data\n# Step 1. Pick a data source",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
     {
-        "label": "API_BASE_URL",
+        "label": "ALPACA_API_BASE_URL",
         "kind": 5,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\ndata_url = 'wss://data.alpaca.markets'\nenv = StockTradingEnv\n# Show the data\n# Step 1. Pick a data source\n#DP = DataProcessor(data_source = 'alpaca',\n#                  API_KEY = API_KEY, \n#                  API_SECRET = API_SECRET, \n#                  API_BASE_URL = API_BASE_URL\n#                  )",
+        "peekOfCode": "ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\ndata_url = 'wss://data.alpaca.markets'\nenv = StockTradingEnv\n# Show the data\n# Step 1. Pick a data source\n#DP = DataProcessor(data_source = 'alpaca',\n#                  ALPACA_API_KEY = ALPACA_API_KEY, \n#                  ALPACA_API_SECRET  = ALPACA_API_SECRET , \n#                  ALPACA_API_BASE_URL = ALPACA_API_BASE_URL\n#                  )",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
@@ -8319,7 +8363,7 @@
         "kind": 5,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "data_url = 'wss://data.alpaca.markets'\nenv = StockTradingEnv\n# Show the data\n# Step 1. Pick a data source\n#DP = DataProcessor(data_source = 'alpaca',\n#                  API_KEY = API_KEY, \n#                  API_SECRET = API_SECRET, \n#                  API_BASE_URL = API_BASE_URL\n#                  )\n# Step 2. Get ticker list, Set start date and end date, specify the data frequency",
+        "peekOfCode": "data_url = 'wss://data.alpaca.markets'\nenv = StockTradingEnv\n# Show the data\n# Step 1. Pick a data source\n#DP = DataProcessor(data_source = 'alpaca',\n#                  ALPACA_API_KEY = ALPACA_API_KEY, \n#                  ALPACA_API_SECRET  = ALPACA_API_SECRET , \n#                  ALPACA_API_BASE_URL = ALPACA_API_BASE_URL\n#                  )\n# Step 2. Get ticker list, Set start date and end date, specify the data frequency",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
@@ -8328,7 +8372,7 @@
         "kind": 5,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "env = StockTradingEnv\n# Show the data\n# Step 1. Pick a data source\n#DP = DataProcessor(data_source = 'alpaca',\n#                  API_KEY = API_KEY, \n#                  API_SECRET = API_SECRET, \n#                  API_BASE_URL = API_BASE_URL\n#                  )\n# Step 2. Get ticker list, Set start date and end date, specify the data frequency\n#data = DP.download_data(start_date = '2021-10-04', ",
+        "peekOfCode": "env = StockTradingEnv\n# Show the data\n# Step 1. Pick a data source\n#DP = DataProcessor(data_source = 'alpaca',\n#                  ALPACA_API_KEY = ALPACA_API_KEY, \n#                  ALPACA_API_SECRET  = ALPACA_API_SECRET , \n#                  ALPACA_API_BASE_URL = ALPACA_API_BASE_URL\n#                  )\n# Step 2. Get ticker list, Set start date and end date, specify the data frequency\n#data = DP.download_data(start_date = '2021-10-04', ",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
@@ -8337,7 +8381,7 @@
         "kind": 5,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "#DP = DataProcessor(data_source = 'alpaca',\n#                  API_KEY = API_KEY, \n#                  API_SECRET = API_SECRET, \n#                  API_BASE_URL = API_BASE_URL\n#                  )\n# Step 2. Get ticker list, Set start date and end date, specify the data frequency\n#data = DP.download_data(start_date = '2021-10-04', \n#                        end_date = '2021-10-08',\n#                        ticker_list = ticker_list, \n#                        time_interval= '1Min')",
+        "peekOfCode": "#DP = DataProcessor(data_source = 'alpaca',\n#                  ALPACA_API_KEY = ALPACA_API_KEY, \n#                  ALPACA_API_SECRET  = ALPACA_API_SECRET , \n#                  ALPACA_API_BASE_URL = ALPACA_API_BASE_URL\n#                  )\n# Step 2. Get ticker list, Set start date and end date, specify the data frequency\n#data = DP.download_data(start_date = '2021-10-04', \n#                        end_date = '2021-10-08',\n#                        ticker_list = ticker_list, \n#                        time_interval= '1Min')",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
@@ -8427,34 +8471,25 @@
         "kind": 5,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "paper_trading_erl = AlpacaPaperTrading(ticker_list = DOW_30_TICKER, \n                                       time_interval = '1Min', \n                                       drl_lib = 'elegantrl', \n                                       agent = 'ppo', \n                                       cwd = './papertrading_erl_retrain', \n                                       net_dim = ERL_PARAMS['net_dimension'], \n                                       state_dim = state_dim, \n                                       action_dim= action_dim, \n                                       API_KEY = API_KEY, \n                                       API_SECRET = API_SECRET, ",
+        "peekOfCode": "paper_trading_erl = AlpacaPaperTrading(ticker_list = DOW_30_TICKER, \n                                       time_interval = '1Min', \n                                       drl_lib = 'elegantrl', \n                                       agent = 'ppo', \n                                       cwd = './papertrading_erl_retrain', \n                                       net_dim = ERL_PARAMS['net_dimension'], \n                                       state_dim = state_dim, \n                                       action_dim= action_dim, \n                                       ALPACA_API_KEY = ALPACA_API_KEY, \n                                       ALPACA_API_SECRET  = ALPACA_API_SECRET , ",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
     {
-        "label": "API_KEY",
+        "label": "ALPACA_API_KEY",
         "kind": 5,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "API_KEY = \"\"\nAPI_SECRET = \"\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\ndata_url = 'wss://data.alpaca.markets'\ndf_erl, cumu_erl = alpaca_history(key=API_KEY, \n                                  secret=API_SECRET, \n                                  url=API_BASE_URL, \n                                  start='2022-09-01', #must be within 1 month\n                                  end='2022-09-12') #change the date if error occurs\ndf_djia, cumu_djia = DIA_history(start='2022-09-01')",
+        "peekOfCode": "ALPACA_API_KEY = \"\"\nALPACA_API_SECRET  = \"\"\nALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\ndata_url = 'wss://data.alpaca.markets'\ndf_erl, cumu_erl = alpaca_history(key=ALPACA_API_KEY, \n                                  secret=ALPACA_API_SECRET , \n                                  url=ALPACA_API_BASE_URL, \n                                  start='2022-09-01', #must be within 1 month\n                                  end='2022-09-12') #change the date if error occurs\ndf_djia, cumu_djia = DIA_history(start='2022-09-01')",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
     {
-        "label": "API_SECRET",
+        "label": "ALPACA_API_BASE_URL",
         "kind": 5,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "API_SECRET = \"\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\ndata_url = 'wss://data.alpaca.markets'\ndf_erl, cumu_erl = alpaca_history(key=API_KEY, \n                                  secret=API_SECRET, \n                                  url=API_BASE_URL, \n                                  start='2022-09-01', #must be within 1 month\n                                  end='2022-09-12') #change the date if error occurs\ndf_djia, cumu_djia = DIA_history(start='2022-09-01')\ndf_erl.tail()",
-        "detail": "docs.examples.PY.submit_order",
-        "documentation": {}
-    },
-    {
-        "label": "API_BASE_URL",
-        "kind": 5,
-        "importPath": "docs.examples.PY.submit_order",
-        "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\ndata_url = 'wss://data.alpaca.markets'\ndf_erl, cumu_erl = alpaca_history(key=API_KEY, \n                                  secret=API_SECRET, \n                                  url=API_BASE_URL, \n                                  start='2022-09-01', #must be within 1 month\n                                  end='2022-09-12') #change the date if error occurs\ndf_djia, cumu_djia = DIA_history(start='2022-09-01')\ndf_erl.tail()\nreturns_erl = cumu_erl -1 ",
+        "peekOfCode": "ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\ndata_url = 'wss://data.alpaca.markets'\ndf_erl, cumu_erl = alpaca_history(key=ALPACA_API_KEY, \n                                  secret=ALPACA_API_SECRET , \n                                  url=ALPACA_API_BASE_URL, \n                                  start='2022-09-01', #must be within 1 month\n                                  end='2022-09-12') #change the date if error occurs\ndf_djia, cumu_djia = DIA_history(start='2022-09-01')\ndf_erl.tail()\nreturns_erl = cumu_erl -1 ",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
@@ -8463,7 +8498,7 @@
         "kind": 5,
         "importPath": "docs.examples.PY.submit_order",
         "description": "docs.examples.PY.submit_order",
-        "peekOfCode": "data_url = 'wss://data.alpaca.markets'\ndf_erl, cumu_erl = alpaca_history(key=API_KEY, \n                                  secret=API_SECRET, \n                                  url=API_BASE_URL, \n                                  start='2022-09-01', #must be within 1 month\n                                  end='2022-09-12') #change the date if error occurs\ndf_djia, cumu_djia = DIA_history(start='2022-09-01')\ndf_erl.tail()\nreturns_erl = cumu_erl -1 \nreturns_dia = cumu_djia - 1",
+        "peekOfCode": "data_url = 'wss://data.alpaca.markets'\ndf_erl, cumu_erl = alpaca_history(key=ALPACA_API_KEY, \n                                  secret=ALPACA_API_SECRET , \n                                  url=ALPACA_API_BASE_URL, \n                                  start='2022-09-01', #must be within 1 month\n                                  end='2022-09-12') #change the date if error occurs\ndf_djia, cumu_djia = DIA_history(start='2022-09-01')\ndf_erl.tail()\nreturns_erl = cumu_erl -1 \nreturns_dia = cumu_djia - 1",
         "detail": "docs.examples.PY.submit_order",
         "documentation": {}
     },
@@ -8526,16 +8561,16 @@
         "kind": 2,
         "importPath": "docs.examples.PY.t6",
         "description": "docs.examples.PY.t6",
-        "peekOfCode": "def main():\n  API_KEY = \"PKVD6WOSPEMKS0UI6A3K\"\n  API_SECRET = \"BxT64PIQtDBb*tnW\"\n  API_BASE_URL = 'https://paper-api.alpaca.markets'\n  import warnings\n  warnings.filterwarnings(\"ignore\")\n  import os\n  import time\n  import gym\n  import torch",
+        "peekOfCode": "def main():\n  ALPACA_API_KEY = \"PKVD6WOSPEMKS0UI6A3K\"\n  ALPACA_API_SECRET  = \"BxT64PIQtDBb*tnW\"\n  ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\n  import warnings\n  warnings.filterwarnings(\"ignore\")\n  import os\n  import time\n  import gym\n  import torch",
         "detail": "docs.examples.PY.t6",
         "documentation": {}
     },
     {
-        "label": "API_BASE_URL",
+        "label": "ALPACA_API_BASE_URL",
         "kind": 5,
         "importPath": "docs.examples.PY.t7",
         "description": "docs.examples.PY.t7",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split\nfrom finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv\nfrom finrl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline\nfrom pprint import pprint\nimport sys\nsys.path.append(\"../FinRL-Library\")",
+        "peekOfCode": "ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split\nfrom finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv\nfrom finrl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline\nfrom pprint import pprint\nimport sys\nsys.path.append(\"../FinRL-Library\")",
         "detail": "docs.examples.PY.t7",
         "documentation": {}
     },
@@ -8823,34 +8858,25 @@
         "kind": 5,
         "importPath": "docs.examples.PY.t7",
         "description": "docs.examples.PY.t7",
-        "peekOfCode": "api = tradeapi.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')\ntry:\n    account = api.get_account()\n    print(f\"Account status: {account.status}\")\n    symbol = 'CAT'\n    qty = 1  # Quantity to buy\n    if (sharpe > - 94):\n        buy_order = api.submit_order(\n            symbol=symbol,\n            qty=qty,",
+        "peekOfCode": "api = tradeapi.REST(ALPACA_API_KEY, ALPACA_API_SECRET , ALPACA_API_BASE_URL, api_version='v2')\ntry:\n    account = api.get_account()\n    print(f\"Account status: {account.status}\")\n    symbol = 'CAT'\n    qty = 1  # Quantity to buy\n    if (sharpe > - 94):\n        buy_order = api.submit_order(\n            symbol=symbol,\n            qty=qty,",
         "detail": "docs.examples.PY.t7",
         "documentation": {}
     },
     {
-        "label": "API_KEY",
+        "label": "ALPACA_API_KEY",
         "kind": 5,
         "importPath": "docs.examples.PY.trade_bot",
         "description": "docs.examples.PY.trade_bot",
-        "peekOfCode": "API_KEY = \"PKEJH4W0URAU56SHKQW3\"\nAPI_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split\nfrom finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv\nfrom finrl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline\nfrom pprint import pprint",
+        "peekOfCode": "ALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"\nALPACA_API_SECRET  = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split\nfrom finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv\nfrom finrl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline\nfrom pprint import pprint",
         "detail": "docs.examples.PY.trade_bot",
         "documentation": {}
     },
     {
-        "label": "API_SECRET",
+        "label": "ALPACA_API_BASE_URL",
         "kind": 5,
         "importPath": "docs.examples.PY.trade_bot",
         "description": "docs.examples.PY.trade_bot",
-        "peekOfCode": "API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split\nfrom finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv\nfrom finrl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline\nfrom pprint import pprint\nimport sys",
-        "detail": "docs.examples.PY.trade_bot",
-        "documentation": {}
-    },
-    {
-        "label": "API_BASE_URL",
-        "kind": 5,
-        "importPath": "docs.examples.PY.trade_bot",
-        "description": "docs.examples.PY.trade_bot",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split\nfrom finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv\nfrom finrl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline\nfrom pprint import pprint\nimport sys\nsys.path.append(\"../FinRL-Library\")",
+        "peekOfCode": "ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom finrl.config_tickers import DOW_30_TICKER\nfrom finrl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split\nfrom finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv\nfrom finrl.agents.stablebaselines3.models import DRLAgent,DRLEnsembleAgent\nfrom finrl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline\nfrom pprint import pprint\nimport sys\nsys.path.append(\"../FinRL-Library\")",
         "detail": "docs.examples.PY.trade_bot",
         "documentation": {}
     },
@@ -9138,7 +9164,7 @@
         "kind": 5,
         "importPath": "docs.examples.PY.trade_bot",
         "description": "docs.examples.PY.trade_bot",
-        "peekOfCode": "api = tradeapi.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')\ntry:\n    account = api.get_account()\n    print(f\"Account status: {account.status}\")\n    symbol = 'CAT'\n    qty = 1  # Quantity to buy\n    if (sharpe > - 94):\n        buy_order = api.submit_order(\n            symbol=symbol,\n            qty=qty,",
+        "peekOfCode": "api = tradeapi.REST(ALPACA_API_KEY, ALPACA_API_SECRET , ALPACA_API_BASE_URL, api_version='v2')\ntry:\n    account = api.get_account()\n    print(f\"Account status: {account.status}\")\n    symbol = 'CAT'\n    qty = 1  # Quantity to buy\n    if (sharpe > - 94):\n        buy_order = api.submit_order(\n            symbol=symbol,\n            qty=qty,",
         "detail": "docs.examples.PY.trade_bot",
         "documentation": {}
     },
@@ -9156,7 +9182,7 @@
         "kind": 5,
         "importPath": "docs.examples.PY.train2",
         "description": "docs.examples.PY.train2",
-        "peekOfCode": "model = train(data, 'ppo')\n# Save output text\noutput_text = \"Training completed with PPO agent.\"\nwith open('public/results/output.txt', 'w') as f:\n    f.write(output_text)\n# Save a plot\nplt.plot(data['price'])\nplt.savefig('public/results/plot.png')\n# Alpaca API for trading\napi = tradeapi.REST('<API_KEY>', '<SECRET_KEY>', base_url='https://paper-api.alpaca.markets')",
+        "peekOfCode": "model = train(data, 'ppo')\n# Save output text\noutput_text = \"Training completed with PPO agent.\"\nwith open('public/results/output.txt', 'w') as f:\n    f.write(output_text)\n# Save a plot\nplt.plot(data['price'])\nplt.savefig('public/results/plot.png')\n# Alpaca API for trading\napi = tradeapi.REST('<ALPACA_API_KEY>', '<SECRET_KEY>', base_url='https://paper-api.alpaca.markets')",
         "detail": "docs.examples.PY.train2",
         "documentation": {}
     },
@@ -9165,7 +9191,7 @@
         "kind": 5,
         "importPath": "docs.examples.PY.train2",
         "description": "docs.examples.PY.train2",
-        "peekOfCode": "output_text = \"Training completed with PPO agent.\"\nwith open('public/results/output.txt', 'w') as f:\n    f.write(output_text)\n# Save a plot\nplt.plot(data['price'])\nplt.savefig('public/results/plot.png')\n# Alpaca API for trading\napi = tradeapi.REST('<API_KEY>', '<SECRET_KEY>', base_url='https://paper-api.alpaca.markets')\naction = 'buy'  # Example action based on model\nsymbol = 'AAPL'",
+        "peekOfCode": "output_text = \"Training completed with PPO agent.\"\nwith open('public/results/output.txt', 'w') as f:\n    f.write(output_text)\n# Save a plot\nplt.plot(data['price'])\nplt.savefig('public/results/plot.png')\n# Alpaca API for trading\napi = tradeapi.REST('<ALPACA_API_KEY>', '<SECRET_KEY>', base_url='https://paper-api.alpaca.markets')\naction = 'buy'  # Example action based on model\nsymbol = 'AAPL'",
         "detail": "docs.examples.PY.train2",
         "documentation": {}
     },
@@ -9174,7 +9200,7 @@
         "kind": 5,
         "importPath": "docs.examples.PY.train2",
         "description": "docs.examples.PY.train2",
-        "peekOfCode": "api = tradeapi.REST('<API_KEY>', '<SECRET_KEY>', base_url='https://paper-api.alpaca.markets')\naction = 'buy'  # Example action based on model\nsymbol = 'AAPL'\nqty = 1\nif action == 'buy':\n    api.submit_order(symbol=symbol, qty=qty, side='buy', type='market', time_in_force='gtc')",
+        "peekOfCode": "api = tradeapi.REST('<ALPACA_API_KEY>', '<SECRET_KEY>', base_url='https://paper-api.alpaca.markets')\naction = 'buy'  # Example action based on model\nsymbol = 'AAPL'\nqty = 1\nif action == 'buy':\n    api.submit_order(symbol=symbol, qty=qty, side='buy', type='market', time_in_force='gtc')",
         "detail": "docs.examples.PY.train2",
         "documentation": {}
     },
@@ -9251,29 +9277,20 @@
         "documentation": {}
     },
     {
-        "label": "API_KEY",
+        "label": "ALPACA_API_KEY",
         "kind": 5,
         "importPath": "docs.examples.cron_job.setup",
         "description": "docs.examples.cron_job.setup",
-        "peekOfCode": "API_KEY = \"PKEJH4W0URAU56SHKQW3\"\nAPI_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'",
+        "peekOfCode": "ALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"\nALPACA_API_SECRET  = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'",
         "detail": "docs.examples.cron_job.setup",
         "documentation": {}
     },
     {
-        "label": "API_SECRET",
+        "label": "ALPACA_API_BASE_URL",
         "kind": 5,
         "importPath": "docs.examples.cron_job.setup",
         "description": "docs.examples.cron_job.setup",
-        "peekOfCode": "API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'",
-        "detail": "docs.examples.cron_job.setup",
-        "documentation": {}
-    },
-    {
-        "label": "API_BASE_URL",
-        "kind": 5,
-        "importPath": "docs.examples.cron_job.setup",
-        "description": "docs.examples.cron_job.setup",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'",
+        "peekOfCode": "ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'",
         "detail": "docs.examples.cron_job.setup",
         "documentation": {}
     },
@@ -9512,47 +9529,20 @@
         "documentation": {}
     },
     {
-        "label": "run",
-        "kind": 2,
-        "importPath": "docs.JojoHell",
-        "description": "docs.JojoHell",
-        "peekOfCode": "def run():\n    st.set_page_config(\n        page_title=\"Hello\",\n        page_icon=\"👋\",\n    )\n    st.write(\"# Jojo Welcome to Streamlit! 👋\")\n    st.sidebar.success(\"Select a demo above.\")\n    st.markdown(\n        \"\"\"\n        Streamlit is an open-source app framework built specifically for",
-        "detail": "docs.JojoHell",
-        "documentation": {}
-    },
-    {
-        "label": "LOGGER",
-        "kind": 5,
-        "importPath": "docs.JojoHell",
-        "description": "docs.JojoHell",
-        "peekOfCode": "LOGGER = get_logger(__name__)\ndef run():\n    st.set_page_config(\n        page_title=\"Hello\",\n        page_icon=\"👋\",\n    )\n    st.write(\"# Jojo Welcome to Streamlit! 👋\")\n    st.sidebar.success(\"Select a demo above.\")\n    st.markdown(\n        \"\"\"",
-        "detail": "docs.JojoHell",
-        "documentation": {}
-    },
-    {
-        "label": "API_KEY",
+        "label": "ALPACA_API_KEY",
         "kind": 5,
         "importPath": "docs.utils",
         "description": "docs.utils",
-        "peekOfCode": "API_KEY = \"PKVD6WOSPEMKS0UI6A3K\"\nAPI_SECRET = \"BxT64PIQtDBb*tnW\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'",
+        "peekOfCode": "ALPACA_API_KEY = \"PKVD6WOSPEMKS0UI6A3K\"\nALPACA_API_SECRET  = \"BxT64PIQtDBb*tnW\"\nALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'",
         "detail": "docs.utils",
         "documentation": {}
     },
     {
-        "label": "API_SECRET",
+        "label": "ALPACA_API_BASE_URL",
         "kind": 5,
         "importPath": "docs.utils",
         "description": "docs.utils",
-        "peekOfCode": "API_SECRET = \"BxT64PIQtDBb*tnW\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'",
-        "detail": "docs.utils",
-        "documentation": {}
-    },
-    {
-        "label": "API_BASE_URL",
-        "kind": 5,
-        "importPath": "docs.utils",
-        "description": "docs.utils",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'",
+        "peekOfCode": "ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'",
         "detail": "docs.utils",
         "documentation": {}
     },
@@ -10596,7 +10586,7 @@
         "kind": 5,
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
-        "peekOfCode": "MAIN_RESULTS_DIR = 'train_results'\nDATA_SAVE_DIR       = MAIN_RESULTS_DIR + \"/datasets\"\nTRAINED_MODEL_DIR   = MAIN_RESULTS_DIR + \"/trained_models\"\nTENSORBOARD_LOG_DIR = MAIN_RESULTS_DIR + \"/tensorboard_log\"\nRESULTS_DIR         = MAIN_RESULTS_DIR + \"/results\"\nDATA_FRAME_DIR      = MAIN_RESULTS_DIR + \"/data_frame\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"",
+        "peekOfCode": "MAIN_RESULTS_DIR = 'train_results'\nDATA_SAVE_DIR       = MAIN_RESULTS_DIR + \"/datasets\"\nTRAINED_MODEL_DIR   = MAIN_RESULTS_DIR + \"/trained_models\"\nTENSORBOARD_LOG_DIR = MAIN_RESULTS_DIR + \"/tensorboard_log\"\nRESULTS_DIR         = MAIN_RESULTS_DIR + \"/results\"\nDATA_FRAME_DIR      = MAIN_RESULTS_DIR + \"/data_frame\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\n# TRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"",
         "detail": "lib.rl.config",
         "documentation": {}
     },
@@ -10605,7 +10595,7 @@
         "kind": 5,
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
-        "peekOfCode": "TENSORBOARD_LOG_DIR = MAIN_RESULTS_DIR + \"/tensorboard_log\"\nRESULTS_DIR         = MAIN_RESULTS_DIR + \"/results\"\nDATA_FRAME_DIR      = MAIN_RESULTS_DIR + \"/data_frame\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"",
+        "peekOfCode": "TENSORBOARD_LOG_DIR = MAIN_RESULTS_DIR + \"/tensorboard_log\"\nRESULTS_DIR         = MAIN_RESULTS_DIR + \"/results\"\nDATA_FRAME_DIR      = MAIN_RESULTS_DIR + \"/data_frame\"\n# date format: '%Y-%m-%d'\nTRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\n# TRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\n# TRADE_START_DATE = \"2021-11-01\"\n# TRADE_END_DATE = \"2021-12-01\"",
         "detail": "lib.rl.config",
         "documentation": {}
     },
@@ -10614,16 +10604,7 @@
         "kind": 5,
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
-        "peekOfCode": "TRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\nTRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",",
-        "detail": "lib.rl.config",
-        "documentation": {}
-    },
-    {
-        "label": "TRAIN_END_DATE",
-        "kind": 5,
-        "importPath": "lib.rl.config",
-        "description": "lib.rl.config",
-        "peekOfCode": "TRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",",
+        "peekOfCode": "TRAIN_START_DATE = \"2014-01-06\"  # bug fix: set Monday right, start date set 2014-01-01 ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 1658 and the array at index 1 has size 1657\n# TRAIN_END_DATE = \"2020-07-31\"\nTEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\n# TRADE_START_DATE = \"2021-11-01\"\n# TRADE_END_DATE = \"2021-12-01\"\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'",
         "detail": "lib.rl.config",
         "documentation": {}
     },
@@ -10632,7 +10613,7 @@
         "kind": 5,
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
-        "peekOfCode": "TEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",",
+        "peekOfCode": "TEST_START_DATE = \"2020-08-01\"\nTEST_END_DATE = \"2021-10-01\"\n# TRADE_START_DATE = \"2021-11-01\"\n# TRADE_END_DATE = \"2021-12-01\"\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names",
         "detail": "lib.rl.config",
         "documentation": {}
     },
@@ -10641,7 +10622,25 @@
         "kind": 5,
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
-        "peekOfCode": "TEST_END_DATE = \"2021-10-01\"\nTRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",",
+        "peekOfCode": "TEST_END_DATE = \"2021-10-01\"\n# TRADE_START_DATE = \"2021-11-01\"\n# TRADE_END_DATE = \"2021-12-01\"\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [",
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRAIN_START_DATE",
+        "kind": 5,
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "peekOfCode": "TRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",",
+        "detail": "lib.rl.config",
+        "documentation": {}
+    },
+    {
+        "label": "TRAIN_END_DATE",
+        "kind": 5,
+        "importPath": "lib.rl.config",
+        "description": "lib.rl.config",
+        "peekOfCode": "TRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",",
         "detail": "lib.rl.config",
         "documentation": {}
     },
@@ -10650,7 +10649,7 @@
         "kind": 5,
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
-        "peekOfCode": "TRADE_START_DATE = \"2021-11-01\"\nTRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",\n    \"cci_30\",",
+        "peekOfCode": "TRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",\n    \"cci_30\",",
         "detail": "lib.rl.config",
         "documentation": {}
     },
@@ -10659,7 +10658,7 @@
         "kind": 5,
         "importPath": "lib.rl.config",
         "description": "lib.rl.config",
-        "peekOfCode": "TRADE_END_DATE = \"2021-12-01\"\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",\n    \"cci_30\",\n    \"dx_30\",",
+        "peekOfCode": "TRADE_END_DATE = '2023-03-01'\n# stockstats technical indicator column names\n# check https://pypi.org/project/stockstats/ for different names\nINDICATORS = [\n    \"macd\",\n    \"boll_ub\",\n    \"boll_lb\",\n    \"rsi_30\",\n    \"cci_30\",\n    \"dx_30\",",
         "detail": "lib.rl.config",
         "documentation": {}
     },
@@ -10839,7 +10838,7 @@
         "kind": 5,
         "importPath": "lib.rl.config_private",
         "description": "lib.rl.config_private",
-        "peekOfCode": "ALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\nGROQ_API_KEY= \"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\"",
+        "peekOfCode": "ALPACA_API_KEY = \"PKEJH4W0URAU56SHKQW3\"  # your ALPACA_API_KEY\nALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\n# ALPACA_API_KEY = \"PKVD6WOSPEMKS0UI6A3K\"\n# ALPACA_API_SECRET = \"BxT64PIQtDBb*tnW\"\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\nGROQ_API_KEY= \"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\"",
         "detail": "lib.rl.config_private",
         "documentation": {}
     },
@@ -10848,7 +10847,7 @@
         "kind": 5,
         "importPath": "lib.rl.config_private",
         "description": "lib.rl.config_private",
-        "peekOfCode": "ALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\nGROQ_API_KEY= \"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\"",
+        "peekOfCode": "ALPACA_API_SECRET = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"  # your ALPACA_API_SECRET\nALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\n# ALPACA_API_KEY = \"PKVD6WOSPEMKS0UI6A3K\"\n# ALPACA_API_SECRET = \"BxT64PIQtDBb*tnW\"\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\nGROQ_API_KEY= \"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\"",
         "detail": "lib.rl.config_private",
         "documentation": {}
     },
@@ -10857,7 +10856,7 @@
         "kind": 5,
         "importPath": "lib.rl.config_private",
         "description": "lib.rl.config_private",
-        "peekOfCode": "ALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\nGROQ_API_KEY= \"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\"",
+        "peekOfCode": "ALPACA_API_BASE_URL = \"https://paper-api.alpaca.markets\"  # alpaca url\n# ALPACA_API_KEY = \"PKVD6WOSPEMKS0UI6A3K\"\n# ALPACA_API_SECRET = \"BxT64PIQtDBb*tnW\"\nBINANCE_BASE_URL = \"https://data.binance.vision/\"  # binance url\nGROQ_API_KEY= \"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\"",
         "detail": "lib.rl.config_private",
         "documentation": {}
     },
@@ -11002,6 +11001,15 @@
         "importPath": "lib.rl.config_tickers",
         "description": "lib.rl.config_tickers",
         "peekOfCode": "FX_TICKER = [\n    \"AUDCAD=X\",\n    \"AUDCHF=X\",\n    \"AUDJPY=X\",\n    \"AUDNZD=X\",\n    \"AUDSGD=X\",\n    \"AUDUSD=X\",\n    \"AUDUSD=X\",\n    \"AUDUSD=X\",\n    \"AUDUSD=X\",",
+        "detail": "lib.rl.config_tickers",
+        "documentation": {}
+    },
+    {
+        "label": "index_dict",
+        "kind": 5,
+        "importPath": "lib.rl.config_tickers",
+        "description": "lib.rl.config_tickers",
+        "peekOfCode": "index_dict = {\n    \"Dow 30\": DOW_30_TICKER,\n    \"Nasdaq 100\": NAS_100_TICKER,\n    \"S&P 500\": SP_500_TICKER,\n    \"Hang Seng Index\" : HSI_50_TICKER, \n    \"SSE 50\" :SSE_50_TICKER, \n    \"CSI 300\" : CSI_300_TICKER, \n    \"CAC 40\" : CAC_40_TICKER, \n    \"DAX 30\" : DAX_30_TICKER, \n    \"TecDAX\" : TECDAX_TICKER, ",
         "detail": "lib.rl.config_tickers",
         "documentation": {}
     },
@@ -11186,11 +11194,56 @@
         "documentation": {}
     },
     {
+        "label": "get",
+        "kind": 2,
+        "importPath": "pages.StockMarketApp.bollinger_bands",
+        "description": "pages.StockMarketApp.bollinger_bands",
+        "peekOfCode": "def get(ticker, df):\n    fig = go.Figure()\n    fig.add_trace(go.Scatter(\n        x=df.index, \n        y=df['Lower Band'], \n        name='Low Band',\n        line_color='rgba(0, 184, 148,0.3)'\n    ))\n    fig.add_trace(go.Scatter(\n        x=df.index,",
+        "detail": "pages.StockMarketApp.bollinger_bands",
+        "documentation": {}
+    },
+    {
+        "label": "get",
+        "kind": 2,
+        "importPath": "pages.StockMarketApp.history",
+        "description": "pages.StockMarketApp.history",
+        "peekOfCode": "def get(ticker: str, init_date: datetime = None, end_date: datetime = None):\n    stock = yf.Ticker(ticker + \".SA\")\n    hist = stock.history(period=\"max\")\n    init_date = str(init_date) + \" 00:00:00-03:00\"\n    end_date = str(end_date) + \" 00:00:00-03:00\"\n    hist = hist.loc[(hist.index >= init_date) & (hist.index <= end_date)]\n    df = hist[['Open','Close','High','Low']]\n    df.insert(4, 'Moving Average', df['Close'].rolling(window=20).mean(), allow_duplicates=False)\n    df.insert(5, 'Standard Deviation', df['Close'].rolling(window=20).std(), allow_duplicates=False)\n    df = df.dropna(axis=0, inplace=False)",
+        "detail": "pages.StockMarketApp.history",
+        "documentation": {}
+    },
+    {
+        "label": "prepare_history_visualization",
+        "kind": 2,
+        "importPath": "pages.StockMarketApp.index",
+        "description": "pages.StockMarketApp.index",
+        "peekOfCode": "def prepare_history_visualization():\n    history, instance = hist.get(ticker, init_date=init_date, end_date=end_date) if init_date else hist.get(ticker)\n    if not history.empty:\n        print(\"CURRENT PRICE ->\", history[\"Close\"].iat[-1])\n    else:\n        print('insuficient analisys')\n    bollinger_figure = bollinger.get(ticker, history)\n    if 'Close' in history.columns and len(history) > 0:\n        current_close = history['Close'].iloc[-1]\n        previous_close = history['Close'].iloc[-2] if len(history) > 1 else None",
+        "detail": "pages.StockMarketApp.index",
+        "documentation": {}
+    },
+    {
+        "label": "tickers",
+        "kind": 5,
+        "importPath": "pages.StockMarketApp.index",
+        "description": "pages.StockMarketApp.index",
+        "peekOfCode": "tickers = inv.get_stocks_list(\"brazil\")\n# st.set_page_config(\n#     page_title='Stock Exchange',\n#     page_icon=':bar_chart:',\n#     layout='wide')\nstyles.set()\nwith st.sidebar:\n    ticker = st.selectbox(\n        'Select the Action or Real Estate Fund',\n        tickers,",
+        "detail": "pages.StockMarketApp.index",
+        "documentation": {}
+    },
+    {
+        "label": "set",
+        "kind": 2,
+        "importPath": "pages.StockMarketApp.styles",
+        "description": "pages.StockMarketApp.styles",
+        "peekOfCode": "def set():\n    with open('pages/StockMarketApp/styles.css') as f:\n        st.markdown(\n            f'<style>{f.read()}</style>',\n            unsafe_allow_html=True\n            )",
+        "detail": "pages.StockMarketApp.styles",
+        "documentation": {}
+    },
+    {
         "label": "TRAIN_START_DATE",
         "kind": 5,
         "importPath": "pages.0_Stock_Training",
         "description": "pages.0_Stock_Training",
-        "peekOfCode": "TRAIN_START_DATE = '2009-04-01'\nTRAIN_END_DATE = '2021-01-01'\nTEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\nAPI_KEY      = \"PKEJH4W0URAU56SHKQW3\"\nAPI_SECRET   = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()",
+        "peekOfCode": "TRAIN_START_DATE = '2009-04-01'\nTRAIN_END_DATE = '2021-01-01'\nTEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\nfrom lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET, ALPACA_API_BASE_URL\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nprint(len(df.tic.unique()))",
         "detail": "pages.0_Stock_Training",
         "documentation": {}
     },
@@ -11199,7 +11252,7 @@
         "kind": 5,
         "importPath": "pages.0_Stock_Training",
         "description": "pages.0_Stock_Training",
-        "peekOfCode": "TRAIN_END_DATE = '2021-01-01'\nTEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\nAPI_KEY      = \"PKEJH4W0URAU56SHKQW3\"\nAPI_SECRET   = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()",
+        "peekOfCode": "TRAIN_END_DATE = '2021-01-01'\nTEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\nfrom lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET, ALPACA_API_BASE_URL\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nprint(len(df.tic.unique()))\nprint(df.tic.value_counts())",
         "detail": "pages.0_Stock_Training",
         "documentation": {}
     },
@@ -11208,7 +11261,7 @@
         "kind": 5,
         "importPath": "pages.0_Stock_Training",
         "description": "pages.0_Stock_Training",
-        "peekOfCode": "TEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\nAPI_KEY      = \"PKEJH4W0URAU56SHKQW3\"\nAPI_SECRET   = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nprint(len(df.tic.unique()))",
+        "peekOfCode": "TEST_START_DATE = '2021-01-01'\nTEST_END_DATE = '2022-06-01'\nfrom lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET, ALPACA_API_BASE_URL\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nprint(len(df.tic.unique()))\nprint(df.tic.value_counts())\nprint(df.head())",
         "detail": "pages.0_Stock_Training",
         "documentation": {}
     },
@@ -11217,16 +11270,7 @@
         "kind": 5,
         "importPath": "pages.0_Stock_Training",
         "description": "pages.0_Stock_Training",
-        "peekOfCode": "TEST_END_DATE = '2022-06-01'\nAPI_KEY      = \"PKEJH4W0URAU56SHKQW3\"\nAPI_SECRET   = \"9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow\"\nAPI_BASE_URL = 'https://paper-api.alpaca.markets'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nprint(len(df.tic.unique()))\nprint(df.tic.value_counts())",
-        "detail": "pages.0_Stock_Training",
-        "documentation": {}
-    },
-    {
-        "label": "API_BASE_URL",
-        "kind": 5,
-        "importPath": "pages.0_Stock_Training",
-        "description": "pages.0_Stock_Training",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nprint(len(df.tic.unique()))\nprint(df.tic.value_counts())\nprint(df.head())\nprint(df.tail())\nprint(df.shape)",
+        "peekOfCode": "TEST_END_DATE = '2022-06-01'\nfrom lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET, ALPACA_API_BASE_URL\ndf = YahooDownloader(start_date = TRAIN_START_DATE,\n                     end_date = TEST_END_DATE,\n                     ticker_list = DOW_30_TICKER).fetch_data()\ndf.sort_values(['date','tic']).head()\nprint(len(df.tic.unique()))\nprint(df.tic.value_counts())\nprint(df.head())\nprint(df.tail())",
         "detail": "pages.0_Stock_Training",
         "documentation": {}
     },
@@ -11469,17 +11513,8 @@
         "kind": 5,
         "importPath": "pages.0_Stock_Training",
         "description": "pages.0_Stock_Training",
-        "peekOfCode": "api = tradeapi.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')\ntry:\n    account = api.get_account()\n    print(f\"Account status: {account.status}\")\n    st.write(f\"Account status: {account.status}\")\n    symbol = 'CAT'\n    qty = 1  # Quantity to buy\n    if (sharpe > - 94):\n        buy_order = api.submit_order(\n            symbol=symbol,",
+        "peekOfCode": "api = tradeapi.REST(ALPACA_API_KEY, ALPACA_API_SECRET , ALPACA_API_BASE_URL, api_version='v2')\ntry:\n    account = api.get_account()\n    print(f\"Account status: {account.status}\")\n    st.write(f\"Account status: {account.status}\")\n    symbol = 'CAT'\n    qty = 1  # Quantity to buy\n    if (sharpe > - 94):\n        buy_order = api.submit_order(\n            symbol=symbol,",
         "detail": "pages.0_Stock_Training",
-        "documentation": {}
-    },
-    {
-        "label": "custom_css",
-        "kind": 5,
-        "importPath": "pages.1_Stock_Sentiment",
-        "description": "pages.1_Stock_Sentiment",
-        "peekOfCode": "custom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}\nh1 {\ncolor: #3498db; /* Heading color (light blue) */",
-        "detail": "pages.1_Stock_Sentiment",
         "documentation": {}
     },
     {
@@ -11487,7 +11522,7 @@
         "kind": 5,
         "importPath": "pages.1_Stock_Sentiment",
         "description": "pages.1_Stock_Sentiment",
-        "peekOfCode": "finviz_url = \"https://finviz.com/quote.ashx?t=\"\n#Enter stock ticker symbol\nexample_ticker_symbols = [\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",\n\"ADBE\", \"CRM\", \"INTC\", \"ORCL\", \"HD\"\n]\n# Use a selectbox to allow users to choose from example ticker symbols",
+        "peekOfCode": "finviz_url = \"https://finviz.com/quote.ashx?t=\"\nexample_ticker_symbols = [\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",\n\"ADBE\", \"CRM\", \"INTC\", \"ORCL\", \"HD\"\n]\n# Use a selectbox to allow users to choose from example ticker symbols\nticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)",
         "detail": "pages.1_Stock_Sentiment",
         "documentation": {}
     },
@@ -11519,11 +11554,11 @@
         "documentation": {}
     },
     {
-        "label": "API_BASE_URL",
+        "label": "ALPACA_API_BASE_URL",
         "kind": 5,
         "importPath": "pages.2_Stock_Trading",
         "description": "pages.2_Stock_Trading",
-        "peekOfCode": "API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom lib.rl.config import (\n    OrderType,\n    OrderSide,\n    TimeInForce,\n)\n# from alpaca.trading.enums import OrderSide, TimeInForce, OrderType\nfrom lib.rl.config_tickers import DOW_30_TICKER\nfrom lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split",
+        "peekOfCode": "ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'\nfrom lib.rl.config import (\n    OrderType,\n    OrderSide,\n    TimeInForce,\n)\n# from alpaca.trading.enums import OrderSide, TimeInForce, OrderType\nfrom lib.rl.config_tickers import DOW_30_TICKER\nfrom lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader\nfrom lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split",
         "detail": "pages.2_Stock_Trading",
         "documentation": {}
     },
@@ -11820,7 +11855,7 @@
         "kind": 5,
         "importPath": "pages.2_Stock_Trading",
         "description": "pages.2_Stock_Trading",
-        "peekOfCode": "api = tradeapi.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')\ntry:\n    account = api.get_account()\n    st.write(f\"Account status: {account.status}\")\n    symbol = 'CAT'\n    qty = 1  # Quantity to buy\n    if (sharpe > - 94):\n        buy_order = api.submit_order(\n            symbol=symbol,\n            qty=qty,",
+        "peekOfCode": "api = tradeapi.REST(ALPACA_API_KEY, ALPACA_API_SECRET , ALPACA_API_BASE_URL, api_version='v2')\ntry:\n    account = api.get_account()\n    st.write(f\"Account status: {account.status}\")\n    symbol = 'CAT'\n    qty = 1  # Quantity to buy\n    if (sharpe > - 94):\n        buy_order = api.submit_order(\n            symbol=symbol,\n            qty=qty,",
         "detail": "pages.2_Stock_Trading",
         "documentation": {}
     },
@@ -12216,70 +12251,7 @@
         "kind": 2,
         "importPath": "Stock_Market_prediction",
         "description": "Stock_Market_prediction",
-        "peekOfCode": "def main():\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  def mkdirDataDf(fn):\n    # folder_path = os.path.join(\"data\", \"df\")\n    os.makedirs(DATA_FRAME_DIR, exist_ok=True)\n    file_path = os.path.join(DATA_FRAME_DIR, fn )\n    return file_path\n  jprint(\"app.py: Directory Paths:   \",  \"   //\".join(dir),  '##')",
-        "detail": "Stock_Market_prediction",
-        "documentation": {}
-    },
-    {
-        "label": "API_KEY",
-        "kind": 5,
-        "importPath": "Stock_Market_prediction",
-        "description": "Stock_Market_prediction",
-        "peekOfCode": "API_KEY = \"PKVD6WOSPEMKS0UI6A3K\"\nAPI_SECRET = \"BxT64PIQtDBb*tnW\"\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */",
-        "detail": "Stock_Market_prediction",
-        "documentation": {}
-    },
-    {
-        "label": "API_SECRET",
-        "kind": 5,
-        "importPath": "Stock_Market_prediction",
-        "description": "Stock_Market_prediction",
-        "peekOfCode": "API_SECRET = \"BxT64PIQtDBb*tnW\"\nTRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */",
-        "detail": "Stock_Market_prediction",
-        "documentation": {}
-    },
-    {
-        "label": "TRAIN_START_DATE",
-        "kind": 5,
-        "importPath": "Stock_Market_prediction",
-        "description": "Stock_Market_prediction",
-        "peekOfCode": "TRAIN_START_DATE = '2010-01-01'\nTRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */",
-        "detail": "Stock_Market_prediction",
-        "documentation": {}
-    },
-    {
-        "label": "TRAIN_END_DATE",
-        "kind": 5,
-        "importPath": "Stock_Market_prediction",
-        "description": "Stock_Market_prediction",
-        "peekOfCode": "TRAIN_END_DATE = '2021-10-01'\nTRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */",
-        "detail": "Stock_Market_prediction",
-        "documentation": {}
-    },
-    {
-        "label": "TRADE_START_DATE",
-        "kind": 5,
-        "importPath": "Stock_Market_prediction",
-        "description": "Stock_Market_prediction",
-        "peekOfCode": "TRADE_START_DATE = '2021-10-01'\nTRADE_END_DATE = '2023-03-01'\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}",
-        "detail": "Stock_Market_prediction",
-        "documentation": {}
-    },
-    {
-        "label": "TRADE_END_DATE",
-        "kind": 5,
-        "importPath": "Stock_Market_prediction",
-        "description": "Stock_Market_prediction",
-        "peekOfCode": "TRADE_END_DATE = '2023-03-01'\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}\nh1 {",
-        "detail": "Stock_Market_prediction",
-        "documentation": {}
-    },
-    {
-        "label": "custom_css",
-        "kind": 5,
-        "importPath": "Stock_Market_prediction",
-        "description": "Stock_Market_prediction",
-        "peekOfCode": "custom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}\nh1 {\ncolor: #3498db; /* Heading color (light blue) */",
+        "peekOfCode": "def main():\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  def mkdirDataDf(fn):\n    os.makedirs(DATA_FRAME_DIR, exist_ok=True)\n    file_path = os.path.join(DATA_FRAME_DIR, fn )\n    return file_path\n  jprint(\"app.py: Directory Paths:   \",  \"   //\".join(dir),  '##')\n  \"\"\"app.py: Waiting data collection From Yahoo downloader ...\"\"\"",
         "detail": "Stock_Market_prediction",
         "documentation": {}
     },
@@ -12288,7 +12260,7 @@
         "kind": 5,
         "importPath": "Stock_Market_prediction",
         "description": "Stock_Market_prediction",
-        "peekOfCode": "up_candle = \"📈\"  # \\U0001F4C8\ndown_candle = \"\"  # \\U0001F4C9\n# Set page title and configure layout\nst.set_page_config(\n      page_title=\"Stock prediction Trainig\", \n      layout=\"wide\",\n      page_icon= \"📈\"\n      )\n# Apply the custom CSS\nst.markdown(custom_css, unsafe_allow_html=True)",
+        "peekOfCode": "up_candle = \"📈\"  # \\U0001F4C8\ndown_candle = \"\"  # \\U0001F4C9\n# Set page title and configure layout\n# st.set_page_config(\n#       page_title=\"Stock prediction Trainig\", \n#       layout=\"wide\",\n#       page_icon=':bar_chart:',\n#       )\nst.title(\" 📈 Stock Price Ptediction Training\")\nst.markdown(\"Trainig to predict stock price movements for a given stock ticker symbol and its foundamental ratios\")",
         "detail": "Stock_Market_prediction",
         "documentation": {}
     },
@@ -12297,16 +12269,7 @@
         "kind": 5,
         "importPath": "Stock_Market_prediction",
         "description": "Stock_Market_prediction",
-        "peekOfCode": "down_candle = \"\"  # \\U0001F4C9\n# Set page title and configure layout\nst.set_page_config(\n      page_title=\"Stock prediction Trainig\", \n      layout=\"wide\",\n      page_icon= \"📈\"\n      )\n# Apply the custom CSS\nst.markdown(custom_css, unsafe_allow_html=True)\n#page title and subtitle",
-        "detail": "Stock_Market_prediction",
-        "documentation": {}
-    },
-    {
-        "label": "finviz_url",
-        "kind": 5,
-        "importPath": "Stock_Market_prediction",
-        "description": "Stock_Market_prediction",
-        "peekOfCode": "finviz_url = \"https://finviz.com/quote.ashx?t=\"\nexample_ticker_symbols = [\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",\n\"ADBE\", \"CRM\", \"INTC\", \"ORCL\", \"HD\"\n]\n# Use a selectbox to allow users to choose from example ticker symbols\nticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)",
+        "peekOfCode": "down_candle = \"\"  # \\U0001F4C9\n# Set page title and configure layout\n# st.set_page_config(\n#       page_title=\"Stock prediction Trainig\", \n#       layout=\"wide\",\n#       page_icon=':bar_chart:',\n#       )\nst.title(\" 📈 Stock Price Ptediction Training\")\nst.markdown(\"Trainig to predict stock price movements for a given stock ticker symbol and its foundamental ratios\")\n# finviz_url = \"https://finviz.com/quote.ashx?t=\"",
         "detail": "Stock_Market_prediction",
         "documentation": {}
     },
@@ -12315,7 +12278,7 @@
         "kind": 5,
         "importPath": "Stock_Market_prediction",
         "description": "Stock_Market_prediction",
-        "peekOfCode": "example_ticker_symbols = [\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",\n\"ADBE\", \"CRM\", \"INTC\", \"ORCL\", \"HD\"\n]\n# Use a selectbox to allow users to choose from example ticker symbols\nticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# if ticker:",
+        "peekOfCode": "example_ticker_symbols = [\"DOW_30_TICKER\",\"NAS_100_TICKER\",\"SP_500_TICKER\"\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",\n\"ADBE\", \"CRM\", \"INTC\", \"ORCL\", \"HD\"\n]\n# Use a selectbox to allow users to choose from example ticker symbols\nticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# if ticker:",
         "detail": "Stock_Market_prediction",
         "documentation": {}
     },
@@ -12324,7 +12287,7 @@
         "kind": 5,
         "importPath": "Stock_Market_prediction",
         "description": "Stock_Market_prediction",
-        "peekOfCode": "ticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# if ticker:\n      #Fetching stock price data\ndef main():\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  def mkdirDataDf(fn):\n    # folder_path = os.path.join(\"data\", \"df\")\n    os.makedirs(DATA_FRAME_DIR, exist_ok=True)",
+        "peekOfCode": "ticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# if ticker:\n      #Fetching stock price data\ndef main():\n  import pandas as pd\n  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]\n  check_and_make_directories( dir )\n  def mkdirDataDf(fn):\n    os.makedirs(DATA_FRAME_DIR, exist_ok=True)\n    file_path = os.path.join(DATA_FRAME_DIR, fn )",
         "detail": "Stock_Market_prediction",
         "documentation": {}
     }

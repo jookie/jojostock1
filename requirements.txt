@@ -35,7 +35,12 @@ sseclient-py==1.8.0
 stable_baselines3==2.3.2
 stockstats==0.6.2
 streamlit==1.39.0
+streamlit_option_menu
 swig==4.2.1
 tensorboard==2.17.0
 wheel==0.44.0
 wrds==3.2.0
+beautifulsoup4
+nltk
+joblib
+

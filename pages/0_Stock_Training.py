@@ -33,10 +33,10 @@ from lib.rl.config import (
     TimeInForce,
 )
 
-st.set_page_config(page_title="Stock Training", page_icon="📹")
+# st.set_page_config(page_title="Stock Training", page_icon="📹")
 st.button("Re-run")
-st.markdown("# Stock Training")
-st.sidebar.header("Stock Testing")
+# st.markdown("# Stock Training")
+# st.sidebar.header("Stock Testing")
 st.write(
     """This app shows how you can use Streamlit to build cool animations.
 It displays an animated fractal based on the the Julia Set. Use the slider
@@ -50,9 +50,7 @@ TRAIN_START_DATE = '2009-04-01'
 TRAIN_END_DATE = '2021-01-01'
 TEST_START_DATE = '2021-01-01'
 TEST_END_DATE = '2022-06-01'
-API_KEY      = "PKEJH4W0URAU56SHKQW3"
-API_SECRET   = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"
-API_BASE_URL = 'https://paper-api.alpaca.markets'
+from lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET, ALPACA_API_BASE_URL
 
 df = YahooDownloader(start_date = TRAIN_START_DATE,
                      end_date = TEST_END_DATE,
@@ -219,7 +217,7 @@ st.line_chart(df_account_value['account_value'])
 # from alpaca_py.alpaca.trading.enums import OrderSide, TimeInForce, OrderType
 import alpaca_trade_api as tradeapi
 
-api = tradeapi.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')
+api = tradeapi.REST(ALPACA_API_KEY, ALPACA_API_SECRET , ALPACA_API_BASE_URL, api_version='v2')
 try:
     account = api.get_account()
     print(f"Account status: {account.status}")

@@ -18,7 +18,7 @@ plt.plot(data['price'])
 plt.savefig('public/results/plot.png')
 
 # Alpaca API for trading
-api = tradeapi.REST('<API_KEY>', '<SECRET_KEY>', base_url='https://paper-api.alpaca.markets')
+api = tradeapi.REST('<ALPACA_API_KEY>', '<SECRET_KEY>', base_url='https://paper-api.alpaca.markets')
 action = 'buy'  # Example action based on model
 symbol = 'AAPL'
 qty = 1

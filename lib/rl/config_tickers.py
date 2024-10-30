@@ -1430,3 +1430,22 @@ FX_TICKER = [
     "ZARJPY=X",
     "EURDKK=X",
 ]
+
+# Creating the dictionary
+index_dict = {
+    "Dow 30": DOW_30_TICKER,
+    "Nasdaq 100": NAS_100_TICKER,
+    "S&P 500": SP_500_TICKER,
+    "Hang Seng Index" : HSI_50_TICKER, 
+    "SSE 50" :SSE_50_TICKER, 
+    "CSI 300" : CSI_300_TICKER, 
+    "CAC 40" : CAC_40_TICKER, 
+    "DAX 30" : DAX_30_TICKER, 
+    "TecDAX" : TECDAX_TICKER, 
+    "MDAX_50" : MDAX_50_TICKER, 
+    "SDAX 50" : SDAX_50_TICKER, 
+    "LQ45" : LQ45_TICKER, 
+    "SRI-KEHATI.JK" : SRI_KEHATI_TICKER , 
+    "FX Ticker":FX_TICKER, 
+    "Custom" : FX_TICKER
+    }

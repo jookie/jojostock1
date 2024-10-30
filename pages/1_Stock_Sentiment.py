@@ -1,57 +1,21 @@
-# UNdata is a web-based data service for the global user community.
-# http://data.un.org/Explorer.aspx
-from __future__ import annotations
-import streamlit as st
-import nltk
+import nltk ; nltk.download('vader_lexicon')
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 nltk.download('vader_lexicon')
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import pandas as pd
 import matplotlib.pyplot as plt
-# import streamlit as st
+import streamlit as st
 import yfinance as yf
 import datetime
-import nltk
-nltk.download('vader_lexicon')
+from pages.StockMarketApp import styles ; styles.set()
 
 # Set page title and configure layout
-st.set_page_config(page_title="Stock Sentiment Analysis", layout="wide")
-
-custom_css = """
-<style>
-body {
-background-color: black; /* Background color (black) */
-font-family: "Times New Roman", Times, serif; /* Font family (Times New Roman) */
-color: white; /* Text color (white) */
-line-height: 1.6; /* Line height for readability */
-}
-
-h1 {
-color: #3498db; /* Heading color (light blue) */
-}
-
-h2 {
-color: #e74c3c; /* Subheading color (red) */
-}
-
-p {
-margin: 10px 0; /* Margin for paragraphs */
-}
-
-</style>
-"""
-
-# Apply the custom CSS
-st.markdown(custom_css, unsafe_allow_html=True)
-
-#page title and subtitle
-st.title("Stock Sentiment Analysis")
-st.markdown("Analyze the sentiment of news headlines and stock price movements for a given stock ticker symbol.")
-
+# st.set_page_config(page_title="Stock Sentiment Analysis", layout="wide")
+# #page title and subtitle
+# st.title("Stock Sentiment Analysis - Jojo")
+# st.markdown("Analyze the sentiment of news headlines and stock price movements for a given stock ticker symbol.")
 finviz_url = "https://finviz.com/quote.ashx?t="
-
-#Enter stock ticker symbol
 example_ticker_symbols = [
 "AAPL", "MSFT", "GOOGL", "AMZN", "TSLA",
 "JPM", "NFLX", "FB", "BRK.B", "V",
@@ -114,7 +78,8 @@ if news_table:
             st.write(sentiment_summary)
             
             plt.figure(figsize=(10, 8))
-            plt.plot(stock_data.index, stock_data["Close"])
+            # plt.plot(stock_data.index.to_numpy(), stock_data["Close"])
+            plt.plot(stock_data.index[:, None], stock_data["Close"])
             plt.xlabel("Date")
             plt.ylabel("Stock Price")
             plt.title("Stock Price Movements - Line Chart")
@@ -124,4 +89,3 @@ if news_table:
 
 else:
       st.write("No news found for the entered stock ticker symbol.")
-

@@ -7,9 +7,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import datetime
-API_KEY      = "PKEJH4W0URAU56SHKQW3"
-API_SECRET   = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"
-API_BASE_URL = 'https://paper-api.alpaca.markets'
+ALPACA_API_KEY      = "PKEJH4W0URAU56SHKQW3"
+ALPACA_API_SECRET    = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"
+ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'
 from finrl.config_tickers import DOW_30_TICKER
 from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
 from finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
@@ -190,7 +190,7 @@ backtest_plot(df_account_value,
 import alpaca_trade_api as tradeapi
 from alpaca.trading.enums import OrderSide, TimeInForce, OrderType
 
-api = tradeapi.REST(API_KEY, API_SECRET, API_BASE_URL, api_version='v2')
+api = tradeapi.REST(ALPACA_API_KEY, ALPACA_API_SECRET , ALPACA_API_BASE_URL, api_version='v2')
 try:
     account = api.get_account()
     print(f"Account status: {account.status}")

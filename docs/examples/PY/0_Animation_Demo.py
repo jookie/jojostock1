@@ -54,17 +54,17 @@ def animation_demo() -> None:
     # Streamlit widgets automatically run the script from top to bottom. Since
     # this button is not connected to any other logic, it just causes a plain
     # rerun.
-    st.button("Re-run")
+#     st.button("Re-run")
 
 
-st.set_page_config(page_title="Animation Demo", page_icon="📹")
-st.markdown("# Animation Demo")
-st.sidebar.header("Animation Demo")
-st.write(
-    """This app shows how you can use Streamlit to build cool animations.
-It displays an animated fractal based on the the Julia Set. Use the slider
-to tune different parameters."""
-)
+# st.set_page_config(page_title="Animation Demo", page_icon="📹")
+# st.markdown("# Animation Demo")
+# st.sidebar.header("Animation Demo")
+# st.write(
+#     """This app shows how you can use Streamlit to build cool animations.
+# It displays an animated fractal based on the the Julia Set. Use the slider
+# to tune different parameters."""
+# )
 
 animation_demo()
 

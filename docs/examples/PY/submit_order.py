@@ -2,9 +2,9 @@
 from __future__ import annotations
 
 
-API_KEY = "PKA2OY3YK7Y4M6Q7LCLR"
-API_SECRET = "BxT64PIQtDBb*tnW"
-API_BASE_URL = 'https://paper-api.alpaca.markets'
+ALPACA_API_KEY = "PKA2OY3YK7Y4M6Q7LCLR"
+ALPACA_API_SECRET  = "BxT64PIQtDBb*tnW"
+ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'
 
 
 from finrl.config_tickers import DOW_30_TICKER
@@ -680,17 +680,17 @@ print(INDICATORS)
 state_dim = 1 + 2 + 3 * action_dim + len(INDICATORS) * action_dim
 state_dim
 # Get the API Keys Ready
-# API_KEY = ""
-# API_SECRET = ""
-API_BASE_URL = 'https://paper-api.alpaca.markets'
+# ALPACA_API_KEY = ""
+# ALPACA_API_SECRET  = ""
+ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'
 data_url = 'wss://data.alpaca.markets'
 env = StockTradingEnv
 # Show the data
 # Step 1. Pick a data source
 #DP = DataProcessor(data_source = 'alpaca',
-#                  API_KEY = API_KEY, 
-#                  API_SECRET = API_SECRET, 
-#                  API_BASE_URL = API_BASE_URL
+#                  ALPACA_API_KEY = ALPACA_API_KEY, 
+#                  ALPACA_API_SECRET  = ALPACA_API_SECRET , 
+#                  ALPACA_API_BASE_URL = ALPACA_API_BASE_URL
 #                  )
 # Step 2. Get ticker list, Set start date and end date, specify the data frequency
 #data = DP.download_data(start_date = '2021-10-04', 
@@ -724,9 +724,9 @@ train(start_date = '2022-08-25',
       env=env,
       model_name='ppo',
       if_vix=True, 
-      API_KEY = API_KEY, 
-      API_SECRET = API_SECRET, 
-      API_BASE_URL = API_BASE_URL,
+      ALPACA_API_KEY = ALPACA_API_KEY, 
+      ALPACA_API_SECRET  = ALPACA_API_SECRET , 
+      ALPACA_API_BASE_URL = ALPACA_API_BASE_URL,
       erl_params=ERL_PARAMS,
       cwd='./papertrading_erl', #current_working_dir
       break_step=1e5)
@@ -741,9 +741,9 @@ account_value_erl=test(start_date = '2022-09-01',
                       env=env, 
                       model_name='ppo',
                       if_vix=True, 
-                      API_KEY = API_KEY, 
-                      API_SECRET = API_SECRET, 
-                      API_BASE_URL = API_BASE_URL,
+                      ALPACA_API_KEY = ALPACA_API_KEY, 
+                      ALPACA_API_SECRET  = ALPACA_API_SECRET , 
+                      ALPACA_API_BASE_URL = ALPACA_API_BASE_URL,
                       cwd='./papertrading_erl',
                       net_dimension = ERL_PARAMS['net_dimension'])
 # Use full data to train
@@ -759,9 +759,9 @@ train(start_date = '2022-08-25',
       env=env, 
       model_name='ppo',
       if_vix=True, 
-      API_KEY = API_KEY, 
-      API_SECRET = API_SECRET, 
-      API_BASE_URL = API_BASE_URL,
+      ALPACA_API_KEY = ALPACA_API_KEY, 
+      ALPACA_API_SECRET  = ALPACA_API_SECRET , 
+      ALPACA_API_BASE_URL = ALPACA_API_BASE_URL,
       erl_params=ERL_PARAMS,
       cwd='./papertrading_erl_retrain',
       break_step=2e5)
@@ -780,8 +780,8 @@ import gym
 class AlpacaPaperTrading():
 
     def __init__(self,ticker_list, time_interval, drl_lib, agent, cwd, net_dim, 
-                 state_dim, action_dim, API_KEY, API_SECRET, 
-                 API_BASE_URL, tech_indicator_list, turbulence_thresh=30, 
+                 state_dim, action_dim, ALPACA_API_KEY, ALPACA_API_SECRET , 
+                 ALPACA_API_BASE_URL, tech_indicator_list, turbulence_thresh=30, 
                  max_stock=1e2, latency = None):
         #load agent
         self.drl_lib = drl_lib
@@ -838,7 +838,7 @@ class AlpacaPaperTrading():
             
         #connect to Alpaca trading API
         try:
-            self.alpaca = tradeapi.REST(API_KEY,API_SECRET,API_BASE_URL, 'v2')
+            self.alpaca = tradeapi.REST(ALPACA_API_KEY,ALPACA_API_SECRET ,ALPACA_API_BASE_URL, 'v2')
         except:
             raise ValueError('Fail to connect Alpaca. Please check account info and internet connection.')
         
@@ -1104,9 +1104,9 @@ paper_trading_erl = AlpacaPaperTrading(ticker_list = DOW_30_TICKER,
                                        net_dim = ERL_PARAMS['net_dimension'], 
                                        state_dim = state_dim, 
                                        action_dim= action_dim, 
-                                       API_KEY = API_KEY, 
-                                       API_SECRET = API_SECRET, 
-                                       API_BASE_URL = API_BASE_URL, 
+                                       ALPACA_API_KEY = ALPACA_API_KEY, 
+                                       ALPACA_API_SECRET  = ALPACA_API_SECRET , 
+                                       ALPACA_API_BASE_URL = ALPACA_API_BASE_URL, 
                                        tech_indicator_list = INDICATORS, 
                                        turbulence_thresh=30, 
                                        max_stock=1e2)
@@ -1151,13 +1151,13 @@ def DIA_history(start):
     baseline_returns = data_df['Adj Close'].values/data_df['Adj Close'].values[0]
     return data_df, baseline_returns
 # Get cumulative return
-API_KEY = ""
-API_SECRET = ""
-API_BASE_URL = 'https://paper-api.alpaca.markets'
+ALPACA_API_KEY = ""
+ALPACA_API_SECRET  = ""
+ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'
 data_url = 'wss://data.alpaca.markets'
-df_erl, cumu_erl = alpaca_history(key=API_KEY, 
-                                  secret=API_SECRET, 
-                                  url=API_BASE_URL, 
+df_erl, cumu_erl = alpaca_history(key=ALPACA_API_KEY, 
+                                  secret=ALPACA_API_SECRET , 
+                                  url=ALPACA_API_BASE_URL, 
                                   start='2022-09-01', #must be within 1 month
                                   end='2022-09-12') #change the date if error occurs
 df_djia, cumu_djia = DIA_history(start='2022-09-01')

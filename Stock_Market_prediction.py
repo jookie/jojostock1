@@ -1,14 +1,12 @@
-# http://localhost:8888/lab/tree/jojostock1/app.py
 from __future__ import annotations
 import os
 import streamlit as st
 import sys
 import itertools
 import matplotlib.pyplot as plt
-sys.path.append('../lib/rl')
+
 from lib.utility.jprint import jprint
-
-
+from pages.StockMarketApp import styles ; styles.set()
 from lib.rl.config import (
       DATA_SAVE_DIR,
       TRAINED_MODEL_DIR,
@@ -17,13 +15,10 @@ from lib.rl.config import (
       DATA_FRAME_DIR,
       INDICATORS,
       TRAIN_START_DATE,
-      TRAIN_END_DATE,
-      TEST_START_DATE,
-      TEST_END_DATE,
+      TRAIN_END_DATE ,
       TRADE_START_DATE,
       TRADE_END_DATE,
 )
-
 from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
 from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
 from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
@@ -31,57 +26,25 @@ from lib.rl.agents.stablebaselines3.models import DRLAgent
 from stable_baselines3.common.logger import configure
 from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
 from lib.rl.main import check_and_make_directories
-from lib.rl import config_tickers
+from lib.rl.config_tickers import DOW_30_TICKER
+import warnings ; warnings.filterwarnings("ignore")
 
-import warnings
-warnings.filterwarnings("ignore")
-API_KEY = "PKVD6WOSPEMKS0UI6A3K"
-API_SECRET = "BxT64PIQtDBb*tnW"
-TRAIN_START_DATE = '2010-01-01'
-TRAIN_END_DATE = '2021-10-01'
-TRADE_START_DATE = '2021-10-01'
-TRADE_END_DATE = '2023-03-01'
-
-custom_css = """
-<style>
-body {
-background-color: black; /* Background color (black) */
-font-family: "Times New Roman", Times, serif; /* Font family (Times New Roman) */
-color: white; /* Text color (white) */
-line-height: 1.6; /* Line height for readability */
-}
-
-h1 {
-color: #3498db; /* Heading color (light blue) */
-}
-
-h2 {
-color: #e74c3c; /* Subheading color (red) */
-}
-
-p {
-margin: 10px 0; /* Margin for paragraphs */
-}
-
-</style>
-"""
+# 
 
 # Representing an upward movement
 up_candle = "📈"  # \U0001F4C8
 down_candle = ""  # \U0001F4C9
 # Set page title and configure layout
-st.set_page_config(
-      page_title="Stock prediction Trainig", 
-      layout="wide",
-      page_icon= "📈"
-      )
-# Apply the custom CSS
-st.markdown(custom_css, unsafe_allow_html=True)
-#page title and subtitle
-st.title(" 📈 Stock Price Ptediction Training 📉")
+# st.set_page_config(
+#       page_title="Stock prediction Trainig", 
+#       layout="wide",
+#       page_icon=':bar_chart:',
+#       )
+st.title(" 📈 Stock Price Ptediction Training")
 st.markdown("Trainig to predict stock price movements for a given stock ticker symbol and its foundamental ratios")
-finviz_url = "https://finviz.com/quote.ashx?t="
-example_ticker_symbols = [
+
+# finviz_url = "https://finviz.com/quote.ashx?t="
+example_ticker_symbols = ["DOW_30_TICKER","NAS_100_TICKER","SP_500_TICKER"
 "AAPL", "MSFT", "GOOGL", "AMZN", "TSLA",
 "JPM", "NFLX", "FB", "BRK.B", "V",
 "NVDA", "DIS", "BA", "IBM", "GE",
@@ -97,7 +60,6 @@ def main():
   dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]
   check_and_make_directories( dir )
   def mkdirDataDf(fn):
-    # folder_path = os.path.join("data", "df")
     os.makedirs(DATA_FRAME_DIR, exist_ok=True)
     file_path = os.path.join(DATA_FRAME_DIR, fn )
     return file_path
@@ -107,7 +69,7 @@ def main():
   """app.py: Waiting data collection From Yahoo downloader ..."""
   df = YahooDownloader(start_date = TRAIN_START_DATE,
                       end_date = TRADE_END_DATE,
-                      ticker_list = config_tickers.DOW_30_TICKER).fetch_data()
+                      ticker_list = DOW_30_TICKER).fetch_data()
 #  df.shape
   df.sort_values(['date','tic'],ignore_index=True).head()
   fe = FeatureEngineer(

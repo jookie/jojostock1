@@ -7,8 +7,8 @@ from stable_baselines3 import PPO  # Replace PPO with your algorithm if differen
 import os
 class AlpacaPaperTrading:
     def __init__(self, ticker_list, time_interval, drl_lib, agent, cwd, net_dim, 
-                 state_dim, action_dim, API_KEY, API_SECRET, 
-                 API_BASE_URL, tech_indicator_list, turbulence_thresh=30, 
+                 state_dim, action_dim, ALPACA_API_KEY, ALPACA_API_SECRET , 
+                 ALPACA_API_BASE_URL, tech_indicator_list, turbulence_thresh=30, 
                  max_stock=1e2, latency=None):
         
         self.ticker_list = ticker_list
@@ -19,9 +19,9 @@ class AlpacaPaperTrading:
         self.net_dim = net_dim
         self.state_dim = state_dim
         self.action_dim = action_dim
-        self.api_key = API_KEY
-        self.api_secret = API_SECRET
-        self.api_base_url = API_BASE_URL
+        self.api_key = ALPACA_API_KEY
+        self.api_secret = ALPACA_API_SECRET 
+        self.api_base_url = ALPACA_API_BASE_URL
         self.tech_indicator_list = tech_indicator_list
         self.turbulence_thresh = turbulence_thresh
         self.max_stock = max_stock
@@ -114,14 +114,14 @@ if __name__ == "__main__":
     net_dim = 256
     state_dim = 30
     action_dim = len(ticker_list)
-    API_KEY = "PKEJH4W0URAU56SHKQW3"
-    API_SECRET = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"
-    API_BASE_URL = 'https://paper-api.alpaca.markets'
+    ALPACA_API_KEY = "PKEJH4W0URAU56SHKQW3"
+    ALPACA_API_SECRET  = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"
+    ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'
     tech_indicator_list = ["macd", "rsi", "cci", "dx"]
     alpaca_trader = AlpacaPaperTrading(
         ticker_list, time_interval, drl_lib, agent, cwd, net_dim, 
-        state_dim, action_dim, API_KEY, API_SECRET, 
-        API_BASE_URL, tech_indicator_list, turbulence_thresh=30, 
+        state_dim, action_dim, ALPACA_API_KEY, ALPACA_API_SECRET , 
+        ALPACA_API_BASE_URL, tech_indicator_list, turbulence_thresh=30, 
         max_stock=1e2, latency=60
     )
     alpaca_trader.run()
