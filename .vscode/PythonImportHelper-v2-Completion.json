@@ -472,14 +472,6 @@
         "documentation": {}
     },
     {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
         "label": "streamlit",
         "kind": 6,
         "isExtraImport": true,
@@ -11146,15 +11138,6 @@
         "description": "lib.rl.plot",
         "peekOfCode": "def plot_return_from_csv(\n    csv_file: str,\n    column_as_x: str,\n    if_need_calc_return: bool,\n    savefig_filename: str = \"fig/result.png\",\n    xlabel: str = \"Date\",\n    ylabel: str = \"Return\",\n    if_transfer_date: bool = True,\n    select_start_date: str = None,\n    select_end_date: str = None,",
         "detail": "lib.rl.plot",
-        "documentation": {}
-    },
-    {
-        "label": "jprint",
-        "kind": 2,
-        "importPath": "lib.rl.pprint",
-        "description": "lib.rl.pprint",
-        "peekOfCode": "def jprint(s1 = '', s2 = '' , s3 = '', s4 = \"\"):\n  a1 = str(s1) + str(s2) + str(s3) +str(s4)\n  print   (a1)\n  st.write(a1)",
-        "detail": "lib.rl.pprint",
         "documentation": {}
     },
     {
