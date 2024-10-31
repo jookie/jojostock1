@@ -1,7 +1,9 @@
+# Welcome to my Git repo! I specialize in machine learning (ML), deep learning (DL), and natural language processing (NLP). Here, you'll find projects showcasing.
+# https://share.streamlit.io/explore?search=finviz&sort=most+viewed
+# finviz_url = "https://finviz.com/quote.ashx?t="
 from __future__ import annotations
 import os
 import streamlit as st
-import sys
 import itertools
 import matplotlib.pyplot as plt
 from lib.utility.jprint import jprint
@@ -10,7 +12,6 @@ from lib.rl.config import (
       DATA_SAVE_DIR,
       TRAINED_MODEL_DIR,
       TENSORBOARD_LOG_DIR,
-      RESULTS_DIR,
       DATA_FRAME_DIR,
       INDICATORS,
       TRAIN_START_DATE,
@@ -27,8 +28,6 @@ from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_bas
 from lib.rl.main import check_and_make_directories
 from lib.rl.config_tickers import index_dict
 import warnings ; warnings.filterwarnings("ignore")
-
-# finviz_url = "https://finviz.com/quote.ashx?t="
 def mkdirDataDf(fn):
     os.makedirs(DATA_FRAME_DIR, exist_ok=True)
     file_path = os.path.join(DATA_FRAME_DIR, fn )
