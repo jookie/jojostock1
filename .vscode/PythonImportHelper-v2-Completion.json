@@ -1935,6 +1935,30 @@
         "documentation": {}
     },
     {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -5800,6 +5824,14 @@
         "documentation": {}
     },
     {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
         "label": "RandomForestRegressor",
         "importPath": "sklearn.ensemble",
         "description": "sklearn.ensemble",
@@ -5838,6 +5870,14 @@
         "description": "sklearn.metrics",
         "isExtraImport": true,
         "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "StableDiffusionPipeline",
+        "importPath": "diffusers",
+        "description": "diffusers",
+        "isExtraImport": true,
+        "detail": "diffusers",
         "documentation": {}
     },
     {
@@ -5993,6 +6033,14 @@
         "documentation": {}
     },
     {
+        "label": "option_menu",
+        "importPath": "streamlit_option_menu",
+        "description": "streamlit_option_menu",
+        "isExtraImport": true,
+        "detail": "streamlit_option_menu",
+        "documentation": {}
+    },
+    {
         "label": "Sequential",
         "importPath": "tensorflow.keras.models",
         "description": "tensorflow.keras.models",
@@ -6022,6 +6070,22 @@
         "description": "tensorflow.keras.callbacks",
         "isExtraImport": true,
         "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "graph_objs",
+        "importPath": "plotly",
+        "description": "plotly",
+        "isExtraImport": true,
+        "detail": "plotly",
+        "documentation": {}
+    },
+    {
+        "label": "Prophet",
+        "importPath": "prophet",
+        "description": "prophet",
+        "isExtraImport": true,
+        "detail": "prophet",
         "documentation": {}
     },
     {
@@ -11881,6 +11945,42 @@
         "documentation": {}
     },
     {
+        "label": "pipe",
+        "kind": 5,
+        "importPath": "pages.Interior_Design.app",
+        "description": "pages.Interior_Design.app",
+        "peekOfCode": "pipe = StableDiffusionPipeline.from_pretrained(\"CompVis/stable-diffusion-v1-4\", torch_dtype=torch.float16).to(\"cpu\")\n# Streamlit interface\nst.title(\"Interior Design Concept Generator\")\nst.write(\"Generate interior design concepts for homes or office spaces based on text prompts.\")\n# User input: design description\ndesign_prompt = st.text_area(\"Describe the design you'd like to see\", \"A modern living room with white walls and wooden furniture\")\n# User input: design style\nstyle = st.selectbox(\"Choose a design style\", [\"Modern\", \"Minimalist\", \"Industrial\", \"Scandinavian\", \"Bohemian\", \"Rustic\", \"Eclectic\"])\n# Generate Button\nif st.button(\"Generate Design\"):",
+        "detail": "pages.Interior_Design.app",
+        "documentation": {}
+    },
+    {
+        "label": "design_prompt",
+        "kind": 5,
+        "importPath": "pages.Interior_Design.app",
+        "description": "pages.Interior_Design.app",
+        "peekOfCode": "design_prompt = st.text_area(\"Describe the design you'd like to see\", \"A modern living room with white walls and wooden furniture\")\n# User input: design style\nstyle = st.selectbox(\"Choose a design style\", [\"Modern\", \"Minimalist\", \"Industrial\", \"Scandinavian\", \"Bohemian\", \"Rustic\", \"Eclectic\"])\n# Generate Button\nif st.button(\"Generate Design\"):\n    with st.spinner(\"Generating design...\"):\n        # Combine user inputs into a full prompt\n        full_prompt = f\"{style} style {design_prompt}\"\n        # Generate the image from the model\n        generated_image = pipe(full_prompt).images[0]",
+        "detail": "pages.Interior_Design.app",
+        "documentation": {}
+    },
+    {
+        "label": "style",
+        "kind": 5,
+        "importPath": "pages.Interior_Design.app",
+        "description": "pages.Interior_Design.app",
+        "peekOfCode": "style = st.selectbox(\"Choose a design style\", [\"Modern\", \"Minimalist\", \"Industrial\", \"Scandinavian\", \"Bohemian\", \"Rustic\", \"Eclectic\"])\n# Generate Button\nif st.button(\"Generate Design\"):\n    with st.spinner(\"Generating design...\"):\n        # Combine user inputs into a full prompt\n        full_prompt = f\"{style} style {design_prompt}\"\n        # Generate the image from the model\n        generated_image = pipe(full_prompt).images[0]\n        # Display the generated image in Streamlit\n        st.image(generated_image, caption=\"Generated Interior Design\", use_column_width=True)",
+        "detail": "pages.Interior_Design.app",
+        "documentation": {}
+    },
+    {
+        "label": "download_option",
+        "kind": 5,
+        "importPath": "pages.Interior_Design.app",
+        "description": "pages.Interior_Design.app",
+        "peekOfCode": "download_option = st.radio(\"Export Design as:\", [\"Mood Board\", \"Blueprint\"])\nif st.button(\"Export Design\"):\n    if download_option == \"Mood Board\":\n        st.write(\"Mood Board export is coming soon...\")\n    elif download_option == \"Blueprint\":\n        st.write(\"Blueprint export is coming soon...\")",
+        "detail": "pages.Interior_Design.app",
+        "documentation": {}
+    },
+    {
         "label": "create_dataset",
         "kind": 2,
         "importPath": "pages.LSTM-Stock-Trend-Prediction.StockMarketPredictor1",
@@ -12220,6 +12320,168 @@
         "description": "pages.Time-Series.time_series_analysis",
         "peekOfCode": "forecast_dates = pd.date_range(start=data.index[-1] + pd.Timedelta(days=1), periods=forecast_periods, freq='B')\nfig.add_trace(go.Scatter(\n    x=forecast_dates,\n    y=forecast.flatten(),\n    mode='markers+lines',  # Scatter and lines\n    name='Predicted'\n))\nfig.update_layout(\n    title='Actual vs Predicted Prices',\n    xaxis_title='Date',",
         "detail": "pages.Time-Series.time_series_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "company",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "company = (\"\", \"Nifty Index\", \"Sensex Index\",\"20 Microns Limited (NSE)\",\n\"21st Century Management Services Limited (NSE)\",\n\"360 ONE WAM LIMITED (NSE)\",\n\"3i Infotech Limited (NSE)\",\n\"3M India Limited (NSE)\",\n\"3P Land Holdings Limited (NSE)\",\n\"3rd Rock Multimedia Limited (NSE)\",\n\"5Paisa Capital Limited (NSE)\",\n\"63 moons technologies limited (NSE)\",\n\"A And M Jumbo Bags Limited (NSE)\",",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "code",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "code = (\"\", \"^NSEI\",\"^BSESN\",\"20MICRONS.NS\",\n\"21STCENMGM.NS\",\n\"360ONE.NS\",\n\"3IINFOLTD.NS\",\n\"3MINDIA.NS\",\n\"3PLAND.NS\",\n\"3RDROCK.NS\",\n\"5PAISA.NS\",\n\"63MOONS.NS\",\n\"AMJUMBO.NS\",",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "nifty",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "nifty = yf.Ticker('^NSEI')\ncurrentN = nifty.history(period='5d')['Close'].iloc[-1]\nlastN = nifty.history(period='5d')['Close'].iloc[-2]\nchangeN = currentN - lastN\npercentage_changeN = (changeN / lastN) * 100\ncurrent_formattedN = f\"₹{currentN:.2f}\"\nchange_formattedN = f\"{changeN:.2f}\"\npercentage_change_formattedN = f\"{percentage_changeN:.2f}%\"\nsensex = yf.Ticker('^BSESN')\ncurrentS = sensex.history(period='5d')['Close'].iloc[-1]",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "currentN",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "currentN = nifty.history(period='5d')['Close'].iloc[-1]\nlastN = nifty.history(period='5d')['Close'].iloc[-2]\nchangeN = currentN - lastN\npercentage_changeN = (changeN / lastN) * 100\ncurrent_formattedN = f\"₹{currentN:.2f}\"\nchange_formattedN = f\"{changeN:.2f}\"\npercentage_change_formattedN = f\"{percentage_changeN:.2f}%\"\nsensex = yf.Ticker('^BSESN')\ncurrentS = sensex.history(period='5d')['Close'].iloc[-1]\nlastS = sensex.history(period='5d')['Close'].iloc[-2]",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "lastN",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "lastN = nifty.history(period='5d')['Close'].iloc[-2]\nchangeN = currentN - lastN\npercentage_changeN = (changeN / lastN) * 100\ncurrent_formattedN = f\"₹{currentN:.2f}\"\nchange_formattedN = f\"{changeN:.2f}\"\npercentage_change_formattedN = f\"{percentage_changeN:.2f}%\"\nsensex = yf.Ticker('^BSESN')\ncurrentS = sensex.history(period='5d')['Close'].iloc[-1]\nlastS = sensex.history(period='5d')['Close'].iloc[-2]\nchangeS = currentS - lastS",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "changeN",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "changeN = currentN - lastN\npercentage_changeN = (changeN / lastN) * 100\ncurrent_formattedN = f\"₹{currentN:.2f}\"\nchange_formattedN = f\"{changeN:.2f}\"\npercentage_change_formattedN = f\"{percentage_changeN:.2f}%\"\nsensex = yf.Ticker('^BSESN')\ncurrentS = sensex.history(period='5d')['Close'].iloc[-1]\nlastS = sensex.history(period='5d')['Close'].iloc[-2]\nchangeS = currentS - lastS\npercentage_changeS = (changeS / lastS) * 100",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "percentage_changeN",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "percentage_changeN = (changeN / lastN) * 100\ncurrent_formattedN = f\"₹{currentN:.2f}\"\nchange_formattedN = f\"{changeN:.2f}\"\npercentage_change_formattedN = f\"{percentage_changeN:.2f}%\"\nsensex = yf.Ticker('^BSESN')\ncurrentS = sensex.history(period='5d')['Close'].iloc[-1]\nlastS = sensex.history(period='5d')['Close'].iloc[-2]\nchangeS = currentS - lastS\npercentage_changeS = (changeS / lastS) * 100\ncurrent_formattedS = f\"₹{currentS:.2f}\"",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "current_formattedN",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "current_formattedN = f\"₹{currentN:.2f}\"\nchange_formattedN = f\"{changeN:.2f}\"\npercentage_change_formattedN = f\"{percentage_changeN:.2f}%\"\nsensex = yf.Ticker('^BSESN')\ncurrentS = sensex.history(period='5d')['Close'].iloc[-1]\nlastS = sensex.history(period='5d')['Close'].iloc[-2]\nchangeS = currentS - lastS\npercentage_changeS = (changeS / lastS) * 100\ncurrent_formattedS = f\"₹{currentS:.2f}\"\nchange_formattedS = f\"{changeS:.2f}\"",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "change_formattedN",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "change_formattedN = f\"{changeN:.2f}\"\npercentage_change_formattedN = f\"{percentage_changeN:.2f}%\"\nsensex = yf.Ticker('^BSESN')\ncurrentS = sensex.history(period='5d')['Close'].iloc[-1]\nlastS = sensex.history(period='5d')['Close'].iloc[-2]\nchangeS = currentS - lastS\npercentage_changeS = (changeS / lastS) * 100\ncurrent_formattedS = f\"₹{currentS:.2f}\"\nchange_formattedS = f\"{changeS:.2f}\"\npercentage_change_formattedS = f\"{percentage_changeS:.2f}%\"",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "percentage_change_formattedN",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "percentage_change_formattedN = f\"{percentage_changeN:.2f}%\"\nsensex = yf.Ticker('^BSESN')\ncurrentS = sensex.history(period='5d')['Close'].iloc[-1]\nlastS = sensex.history(period='5d')['Close'].iloc[-2]\nchangeS = currentS - lastS\npercentage_changeS = (changeS / lastS) * 100\ncurrent_formattedS = f\"₹{currentS:.2f}\"\nchange_formattedS = f\"{changeS:.2f}\"\npercentage_change_formattedS = f\"{percentage_changeS:.2f}%\"\nif not selected == \"HELP\":",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "sensex",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "sensex = yf.Ticker('^BSESN')\ncurrentS = sensex.history(period='5d')['Close'].iloc[-1]\nlastS = sensex.history(period='5d')['Close'].iloc[-2]\nchangeS = currentS - lastS\npercentage_changeS = (changeS / lastS) * 100\ncurrent_formattedS = f\"₹{currentS:.2f}\"\nchange_formattedS = f\"{changeS:.2f}\"\npercentage_change_formattedS = f\"{percentage_changeS:.2f}%\"\nif not selected == \"HELP\":\n    selected_company = st.selectbox(\"\\n\\nSearch for a Company\", company)",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "currentS",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "currentS = sensex.history(period='5d')['Close'].iloc[-1]\nlastS = sensex.history(period='5d')['Close'].iloc[-2]\nchangeS = currentS - lastS\npercentage_changeS = (changeS / lastS) * 100\ncurrent_formattedS = f\"₹{currentS:.2f}\"\nchange_formattedS = f\"{changeS:.2f}\"\npercentage_change_formattedS = f\"{percentage_changeS:.2f}%\"\nif not selected == \"HELP\":\n    selected_company = st.selectbox(\"\\n\\nSearch for a Company\", company)\n    st.write(\"---\")",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "lastS",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "lastS = sensex.history(period='5d')['Close'].iloc[-2]\nchangeS = currentS - lastS\npercentage_changeS = (changeS / lastS) * 100\ncurrent_formattedS = f\"₹{currentS:.2f}\"\nchange_formattedS = f\"{changeS:.2f}\"\npercentage_change_formattedS = f\"{percentage_changeS:.2f}%\"\nif not selected == \"HELP\":\n    selected_company = st.selectbox(\"\\n\\nSearch for a Company\", company)\n    st.write(\"---\")\n    n = company.index(selected_company)",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "changeS",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "changeS = currentS - lastS\npercentage_changeS = (changeS / lastS) * 100\ncurrent_formattedS = f\"₹{currentS:.2f}\"\nchange_formattedS = f\"{changeS:.2f}\"\npercentage_change_formattedS = f\"{percentage_changeS:.2f}%\"\nif not selected == \"HELP\":\n    selected_company = st.selectbox(\"\\n\\nSearch for a Company\", company)\n    st.write(\"---\")\n    n = company.index(selected_company)\n    selected_stocks = code[n]",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "percentage_changeS",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "percentage_changeS = (changeS / lastS) * 100\ncurrent_formattedS = f\"₹{currentS:.2f}\"\nchange_formattedS = f\"{changeS:.2f}\"\npercentage_change_formattedS = f\"{percentage_changeS:.2f}%\"\nif not selected == \"HELP\":\n    selected_company = st.selectbox(\"\\n\\nSearch for a Company\", company)\n    st.write(\"---\")\n    n = company.index(selected_company)\n    selected_stocks = code[n]\n    if selected == \"HOME\":",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "current_formattedS",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "current_formattedS = f\"₹{currentS:.2f}\"\nchange_formattedS = f\"{changeS:.2f}\"\npercentage_change_formattedS = f\"{percentage_changeS:.2f}%\"\nif not selected == \"HELP\":\n    selected_company = st.selectbox(\"\\n\\nSearch for a Company\", company)\n    st.write(\"---\")\n    n = company.index(selected_company)\n    selected_stocks = code[n]\n    if selected == \"HOME\":\n            col1,col2,col3=st.columns(3)",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "change_formattedS",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "change_formattedS = f\"{changeS:.2f}\"\npercentage_change_formattedS = f\"{percentage_changeS:.2f}%\"\nif not selected == \"HELP\":\n    selected_company = st.selectbox(\"\\n\\nSearch for a Company\", company)\n    st.write(\"---\")\n    n = company.index(selected_company)\n    selected_stocks = code[n]\n    if selected == \"HOME\":\n            col1,col2,col3=st.columns(3)\n            with col1:",
+        "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "percentage_change_formattedS",
+        "kind": 5,
+        "importPath": "pages.gamingzolvenix-repo.app",
+        "description": "pages.gamingzolvenix-repo.app",
+        "peekOfCode": "percentage_change_formattedS = f\"{percentage_changeS:.2f}%\"\nif not selected == \"HELP\":\n    selected_company = st.selectbox(\"\\n\\nSearch for a Company\", company)\n    st.write(\"---\")\n    n = company.index(selected_company)\n    selected_stocks = code[n]\n    if selected == \"HOME\":\n            col1,col2,col3=st.columns(3)\n            with col1:\n                st.subheader(\"Nifty\")",
+        "detail": "pages.gamingzolvenix-repo.app",
         "documentation": {}
     },
     {
