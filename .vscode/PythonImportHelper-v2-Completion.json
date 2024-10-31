@@ -1935,6 +1935,54 @@
         "documentation": {}
     },
     {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -4108,6 +4156,14 @@
         "documentation": {}
     },
     {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "dateutil.parser",
         "kind": 6,
         "isExtraImport": true,
@@ -4314,6 +4370,15 @@
         "description": "alpaca_trade_api.common",
         "isExtraImport": true,
         "detail": "alpaca_trade_api.common",
+        "documentation": {}
+    },
+    {
+        "label": "collections",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "collections",
+        "description": "collections",
+        "detail": "collections",
         "documentation": {}
     },
     {
@@ -5798,12 +5863,116 @@
         "documentation": {}
     },
     {
+        "label": "cvxpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cvxpy",
+        "description": "cvxpy",
+        "detail": "cvxpy",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "scipy.optimize",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "scipy.optimize",
+        "description": "scipy.optimize",
+        "detail": "scipy.optimize",
+        "documentation": {}
+    },
+    {
+        "label": "scipy.cluster.hierarchy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "scipy.cluster.hierarchy",
+        "description": "scipy.cluster.hierarchy",
+        "detail": "scipy.cluster.hierarchy",
+        "documentation": {}
+    },
+    {
+        "label": "scipy.spatial.distance",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "scipy.spatial.distance",
+        "description": "scipy.spatial.distance",
+        "detail": "scipy.spatial.distance",
+        "documentation": {}
+    },
+    {
+        "label": "scipy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "scipy",
+        "description": "scipy",
+        "detail": "scipy",
+        "documentation": {}
+    },
+    {
         "label": "plotly.graph_objects",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "plotly.graph_objects",
         "description": "plotly.graph_objects",
         "detail": "plotly.graph_objects",
+        "documentation": {}
+    },
+    {
+        "label": "pypfopt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pypfopt",
+        "description": "pypfopt",
+        "detail": "pypfopt",
+        "documentation": {}
+    },
+    {
+        "label": "risk_models",
+        "importPath": "pypfopt",
+        "description": "pypfopt",
+        "isExtraImport": true,
+        "detail": "pypfopt",
+        "documentation": {}
+    },
+    {
+        "label": "EfficientFrontier",
+        "importPath": "pypfopt",
+        "description": "pypfopt",
+        "isExtraImport": true,
+        "detail": "pypfopt",
+        "documentation": {}
+    },
+    {
+        "label": "DiscreteAllocation",
+        "importPath": "pypfopt",
+        "description": "pypfopt",
+        "isExtraImport": true,
+        "detail": "pypfopt",
+        "documentation": {}
+    },
+    {
+        "label": "plotly_express",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly_express",
+        "description": "plotly_express",
+        "detail": "plotly_express",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
         "documentation": {}
     },
     {
@@ -5979,6 +6148,30 @@
         "documentation": {}
     },
     {
+        "label": "Groq",
+        "importPath": "groq",
+        "description": "groq",
+        "isExtraImport": true,
+        "detail": "groq",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "tabulate",
+        "importPath": "tabulate",
+        "description": "tabulate",
+        "isExtraImport": true,
+        "detail": "tabulate",
+        "documentation": {}
+    },
+    {
         "label": "investpy",
         "kind": 6,
         "isExtraImport": true,
@@ -6078,6 +6271,40 @@
         "description": "tensorflow.keras.callbacks",
         "isExtraImport": true,
         "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "replicate",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "replicate",
+        "description": "replicate",
+        "detail": "replicate",
+        "documentation": {}
+    },
+    {
+        "label": "Llama",
+        "importPath": "llama_cpp",
+        "description": "llama_cpp",
+        "isExtraImport": true,
+        "detail": "llama_cpp",
+        "documentation": {}
+    },
+    {
+        "label": "Llama",
+        "importPath": "llama_cpp",
+        "description": "llama_cpp",
+        "isExtraImport": true,
+        "detail": "llama_cpp",
+        "documentation": {}
+    },
+    {
+        "label": "timeit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "timeit",
+        "description": "timeit",
+        "detail": "timeit",
         "documentation": {}
     },
     {
@@ -11494,6 +11721,816 @@
         "documentation": {}
     },
     {
+        "label": "EfficientCDaR",
+        "kind": 6,
+        "importPath": "pages.861_project.pypfopt.efficient_frontier.efficient_cdar",
+        "description": "pages.861_project.pypfopt.efficient_frontier.efficient_cdar",
+        "peekOfCode": "class EfficientCDaR(EfficientFrontier):\n    \"\"\"\n    The EfficientCDaR class allows for optimisation along the mean-CDaR frontier, using the\n    formulation of Chekhlov, Ursayev and Zabarankin (2005).\n    Instance variables:\n    - Inputs:\n        - ``n_assets`` - int\n        - ``tickers`` - str list\n        - ``bounds`` - float tuple OR (float tuple) list\n        - ``returns`` - pd.DataFrame",
+        "detail": "pages.861_project.pypfopt.efficient_frontier.efficient_cdar",
+        "documentation": {}
+    },
+    {
+        "label": "EfficientCVaR",
+        "kind": 6,
+        "importPath": "pages.861_project.pypfopt.efficient_frontier.efficient_cvar",
+        "description": "pages.861_project.pypfopt.efficient_frontier.efficient_cvar",
+        "peekOfCode": "class EfficientCVaR(EfficientFrontier):\n    \"\"\"\n    The EfficientCVaR class allows for optimization along the mean-CVaR frontier, using the\n    formulation of Rockafellar and Ursayev (2001).\n    Instance variables:\n    - Inputs:\n        - ``n_assets`` - int\n        - ``tickers`` - str list\n        - ``bounds`` - float tuple OR (float tuple) list\n        - ``returns`` - pd.DataFrame",
+        "detail": "pages.861_project.pypfopt.efficient_frontier.efficient_cvar",
+        "documentation": {}
+    },
+    {
+        "label": "EfficientFrontier",
+        "kind": 6,
+        "importPath": "pages.861_project.pypfopt.efficient_frontier.efficient_frontier",
+        "description": "pages.861_project.pypfopt.efficient_frontier.efficient_frontier",
+        "peekOfCode": "class EfficientFrontier(base_optimizer.BaseConvexOptimizer):\n    \"\"\"\n    An EfficientFrontier object (inheriting from BaseConvexOptimizer) contains multiple\n    optimization methods that can be called (corresponding to different objective\n    functions) with various parameters. Note: a new EfficientFrontier object should\n    be instantiated if you want to make any change to objectives/constraints/bounds/parameters.\n    Instance variables:\n    - Inputs:\n        - ``n_assets`` - int\n        - ``tickers`` - str list",
+        "detail": "pages.861_project.pypfopt.efficient_frontier.efficient_frontier",
+        "documentation": {}
+    },
+    {
+        "label": "EfficientSemivariance",
+        "kind": 6,
+        "importPath": "pages.861_project.pypfopt.efficient_frontier.efficient_semivariance",
+        "description": "pages.861_project.pypfopt.efficient_frontier.efficient_semivariance",
+        "peekOfCode": "class EfficientSemivariance(EfficientFrontier):\n    \"\"\"\n    EfficientSemivariance objects allow for optimization along the mean-semivariance frontier.\n    This may be relevant for users who are more concerned about downside deviation.\n    Instance variables:\n    - Inputs:\n        - ``n_assets`` - int\n        - ``tickers`` - str list\n        - ``bounds`` - float tuple OR (float tuple) list\n        - ``returns`` - pd.DataFrame",
+        "detail": "pages.861_project.pypfopt.efficient_frontier.efficient_semivariance",
+        "documentation": {}
+    },
+    {
+        "label": "BaseOptimizer",
+        "kind": 6,
+        "importPath": "pages.861_project.pypfopt.base_optimizer",
+        "description": "pages.861_project.pypfopt.base_optimizer",
+        "peekOfCode": "class BaseOptimizer:\n    \"\"\"\n    Instance variables:\n    - ``n_assets`` - int\n    - ``tickers`` - str list\n    - ``weights`` - np.ndarray\n    Public methods:\n    - ``set_weights()`` creates self.weights (np.ndarray) from a weights dict\n    - ``clean_weights()`` rounds the weights and clips near-zeros.\n    - ``save_weights_to_file()`` saves the weights to csv, json, or txt.",
+        "detail": "pages.861_project.pypfopt.base_optimizer",
+        "documentation": {}
+    },
+    {
+        "label": "BaseConvexOptimizer",
+        "kind": 6,
+        "importPath": "pages.861_project.pypfopt.base_optimizer",
+        "description": "pages.861_project.pypfopt.base_optimizer",
+        "peekOfCode": "class BaseConvexOptimizer(BaseOptimizer):\n    \"\"\"\n    The BaseConvexOptimizer contains many private variables for use by\n    ``cvxpy``. For example, the immutable optimization variable for weights\n    is stored as self._w. Interacting directly with these variables directly\n    is discouraged.\n    Instance variables:\n    - ``n_assets`` - int\n    - ``tickers`` - str list\n    - ``weights`` - np.ndarray",
+        "detail": "pages.861_project.pypfopt.base_optimizer",
+        "documentation": {}
+    },
+    {
+        "label": "portfolio_performance",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.base_optimizer",
+        "description": "pages.861_project.pypfopt.base_optimizer",
+        "peekOfCode": "def portfolio_performance(\n    weights, expected_returns, cov_matrix, verbose=False, risk_free_rate=0.02\n):\n    \"\"\"\n    After optimising, calculate (and optionally print) the performance of the optimal\n    portfolio. Currently calculates expected return, volatility, and the Sharpe ratio.\n    :param expected_returns: expected returns for each asset. Can be None if\n                             optimising for volatility only (but not recommended).\n    :type expected_returns: np.ndarray or pd.Series\n    :param cov_matrix: covariance of returns for each asset",
+        "detail": "pages.861_project.pypfopt.base_optimizer",
+        "documentation": {}
+    },
+    {
+        "label": "BlackLittermanModel",
+        "kind": 6,
+        "importPath": "pages.861_project.pypfopt.black_litterman",
+        "description": "pages.861_project.pypfopt.black_litterman",
+        "peekOfCode": "class BlackLittermanModel(base_optimizer.BaseOptimizer):\n    \"\"\"\n    A BlackLittermanModel object (inheriting from BaseOptimizer) contains requires\n    a specific input format, specifying the prior, the views, the uncertainty in views,\n    and a picking matrix to map views to the asset universe. We can then compute\n    posterior estimates of returns and covariance. Helper methods have been provided\n    to supply defaults where possible.\n    Instance variables:\n    - Inputs:\n        - ``cov_matrix`` - np.ndarray",
+        "detail": "pages.861_project.pypfopt.black_litterman",
+        "documentation": {}
+    },
+    {
+        "label": "market_implied_prior_returns",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.black_litterman",
+        "description": "pages.861_project.pypfopt.black_litterman",
+        "peekOfCode": "def market_implied_prior_returns(\n    market_caps, risk_aversion, cov_matrix, risk_free_rate=0.02\n):\n    r\"\"\"\n    Compute the prior estimate of returns implied by the market weights.\n    In other words, given each asset's contribution to the risk of the market\n    portfolio, how much are we expecting to be compensated?\n    .. math::\n        \\Pi = \\delta \\Sigma w_{mkt}\n    :param market_caps: market capitalisations of all assets",
+        "detail": "pages.861_project.pypfopt.black_litterman",
+        "documentation": {}
+    },
+    {
+        "label": "market_implied_risk_aversion",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.black_litterman",
+        "description": "pages.861_project.pypfopt.black_litterman",
+        "peekOfCode": "def market_implied_risk_aversion(market_prices, frequency=252, risk_free_rate=0.02):\n    r\"\"\"\n    Calculate the market-implied risk-aversion parameter (i.e market price of risk)\n    based on market prices. For example, if the market has excess returns of 10% a year\n    with 5% variance, the risk-aversion parameter is 2, i.e you have to be compensated 2x\n    the variance.\n    .. math::\n        \\delta = \\frac{R - R_f}{\\sigma^2}\n    :param market_prices: the (daily) prices of the market portfolio, e.g SPY.\n    :type market_prices: pd.Series with DatetimeIndex.",
+        "detail": "pages.861_project.pypfopt.black_litterman",
+        "documentation": {}
+    },
+    {
+        "label": "CLA",
+        "kind": 6,
+        "importPath": "pages.861_project.pypfopt.cla",
+        "description": "pages.861_project.pypfopt.cla",
+        "peekOfCode": "class CLA(base_optimizer.BaseOptimizer):\n    \"\"\"\n    Instance variables:\n    - Inputs:\n        - ``n_assets`` - int\n        - ``tickers`` - str list\n        - ``mean`` - np.ndarray\n        - ``cov_matrix`` - np.ndarray\n        - ``expected_returns`` - np.ndarray\n        - ``lb`` - np.ndarray",
+        "detail": "pages.861_project.pypfopt.cla",
+        "documentation": {}
+    },
+    {
+        "label": "DiscreteAllocation",
+        "kind": 6,
+        "importPath": "pages.861_project.pypfopt.discrete_allocation",
+        "description": "pages.861_project.pypfopt.discrete_allocation",
+        "peekOfCode": "class DiscreteAllocation:\n    \"\"\"\n    Generate a discrete portfolio allocation from continuous weights\n    Instance variables:\n    - Inputs:\n        - ``weights`` - dict\n        - ``latest_prices`` - pd.Series or dict\n        - ``total_portfolio_value`` - int/float\n        - ``short_ratio``- float\n    - Output: ``allocation`` - dict",
+        "detail": "pages.861_project.pypfopt.discrete_allocation",
+        "documentation": {}
+    },
+    {
+        "label": "get_latest_prices",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.discrete_allocation",
+        "description": "pages.861_project.pypfopt.discrete_allocation",
+        "peekOfCode": "def get_latest_prices(prices):\n    \"\"\"\n    A helper tool which retrieves the most recent asset prices from a dataframe of\n    asset prices, required in order to generate a discrete allocation.\n    :param prices: historical asset prices\n    :type prices: pd.DataFrame\n    :raises TypeError: if prices are not in a dataframe\n    :return: the most recent price of each asset\n    :rtype: pd.Series\n    \"\"\"",
+        "detail": "pages.861_project.pypfopt.discrete_allocation",
+        "documentation": {}
+    },
+    {
+        "label": "OptimizationError",
+        "kind": 6,
+        "importPath": "pages.861_project.pypfopt.exceptions",
+        "description": "pages.861_project.pypfopt.exceptions",
+        "peekOfCode": "class OptimizationError(Exception):\n    \"\"\"\n    When an optimization routine fails – usually, this means\n    that cvxpy has not returned the \"optimal\" flag.\n    \"\"\"\n    def __init__(self, *args, **kwargs):\n        default_message = (\n            \"Please check your objectives/constraints or use a different solver.\"\n        )\n        super().__init__(default_message, *args, **kwargs)",
+        "detail": "pages.861_project.pypfopt.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "InstantiationError",
+        "kind": 6,
+        "importPath": "pages.861_project.pypfopt.exceptions",
+        "description": "pages.861_project.pypfopt.exceptions",
+        "peekOfCode": "class InstantiationError(Exception):\n    \"\"\"\n    Errors related to the instantiation of pypfopt objects, e.g adding constraints to an\n    already-solved problem\n    \"\"\"\n    pass",
+        "detail": "pages.861_project.pypfopt.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "returns_from_prices",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.expected_returns",
+        "description": "pages.861_project.pypfopt.expected_returns",
+        "peekOfCode": "def returns_from_prices(prices, log_returns=False):\n    \"\"\"\n    Calculate the returns given prices.\n    :param prices: adjusted (daily) closing prices of the asset, each row is a\n                   date and each column is a ticker/id.\n    :type prices: pd.DataFrame\n    :param log_returns: whether to compute using log returns\n    :type log_returns: bool, defaults to False\n    :return: (daily) returns\n    :rtype: pd.DataFrame",
+        "detail": "pages.861_project.pypfopt.expected_returns",
+        "documentation": {}
+    },
+    {
+        "label": "prices_from_returns",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.expected_returns",
+        "description": "pages.861_project.pypfopt.expected_returns",
+        "peekOfCode": "def prices_from_returns(returns, log_returns=False):\n    \"\"\"\n    Calculate the pseudo-prices given returns. These are not true prices because\n    the initial prices are all set to 1, but it behaves as intended when passed\n    to any PyPortfolioOpt method.\n    :param returns: (daily) percentage returns of the assets\n    :type returns: pd.DataFrame\n    :param log_returns: whether to compute using log returns\n    :type log_returns: bool, defaults to False\n    :return: (daily) pseudo-prices.",
+        "detail": "pages.861_project.pypfopt.expected_returns",
+        "documentation": {}
+    },
+    {
+        "label": "return_model",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.expected_returns",
+        "description": "pages.861_project.pypfopt.expected_returns",
+        "peekOfCode": "def return_model(prices, method=\"mean_historical_return\", **kwargs):\n    \"\"\"\n    Compute an estimate of future returns, using the return model specified in ``method``.\n    :param prices: adjusted closing prices of the asset, each row is a date\n                   and each column is a ticker/id.\n    :type prices: pd.DataFrame\n    :param returns_data: if true, the first argument is returns instead of prices.\n    :type returns_data: bool, defaults to False.\n    :param method: the return model to use. Should be one of:\n        - ``mean_historical_return``",
+        "detail": "pages.861_project.pypfopt.expected_returns",
+        "documentation": {}
+    },
+    {
+        "label": "mean_historical_return",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.expected_returns",
+        "description": "pages.861_project.pypfopt.expected_returns",
+        "peekOfCode": "def mean_historical_return(\n    prices, returns_data=False, compounding=True, frequency=252, log_returns=False\n):\n    \"\"\"\n    Calculate annualised mean (daily) historical return from input (daily) asset prices.\n    Use ``compounding`` to toggle between the default geometric mean (CAGR) and the\n    arithmetic mean.\n    :param prices: adjusted closing prices of the asset, each row is a date\n                   and each column is a ticker/id.\n    :type prices: pd.DataFrame",
+        "detail": "pages.861_project.pypfopt.expected_returns",
+        "documentation": {}
+    },
+    {
+        "label": "ema_historical_return",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.expected_returns",
+        "description": "pages.861_project.pypfopt.expected_returns",
+        "peekOfCode": "def ema_historical_return(\n    prices,\n    returns_data=False,\n    compounding=True,\n    span=500,\n    frequency=252,\n    log_returns=False,\n):\n    \"\"\"\n    Calculate the exponentially-weighted mean of (daily) historical returns, giving",
+        "detail": "pages.861_project.pypfopt.expected_returns",
+        "documentation": {}
+    },
+    {
+        "label": "capm_return",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.expected_returns",
+        "description": "pages.861_project.pypfopt.expected_returns",
+        "peekOfCode": "def capm_return(\n    prices,\n    market_prices=None,\n    returns_data=False,\n    risk_free_rate=0.02,\n    compounding=True,\n    frequency=252,\n    log_returns=False,\n):\n    \"\"\"",
+        "detail": "pages.861_project.pypfopt.expected_returns",
+        "documentation": {}
+    },
+    {
+        "label": "HRPOpt",
+        "kind": 6,
+        "importPath": "pages.861_project.pypfopt.hierarchical_portfolio",
+        "description": "pages.861_project.pypfopt.hierarchical_portfolio",
+        "peekOfCode": "class HRPOpt(base_optimizer.BaseOptimizer):\n    \"\"\"\n    A HRPOpt object (inheriting from BaseOptimizer) constructs a hierarchical\n    risk parity portfolio.\n    Instance variables:\n    - Inputs\n        - ``n_assets`` - int\n        - ``tickers`` - str list\n        - ``returns`` - pd.DataFrame\n    - Output:",
+        "detail": "pages.861_project.pypfopt.hierarchical_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "portfolio_variance",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.objective_functions",
+        "description": "pages.861_project.pypfopt.objective_functions",
+        "peekOfCode": "def portfolio_variance(w, cov_matrix):\n    \"\"\"\n    Calculate the total portfolio variance (i.e square volatility).\n    :param w: asset weights in the portfolio\n    :type w: np.ndarray OR cp.Variable\n    :param cov_matrix: covariance matrix\n    :type cov_matrix: np.ndarray\n    :return: value of the objective function OR objective function expression\n    :rtype: float OR cp.Expression\n    \"\"\"",
+        "detail": "pages.861_project.pypfopt.objective_functions",
+        "documentation": {}
+    },
+    {
+        "label": "portfolio_return",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.objective_functions",
+        "description": "pages.861_project.pypfopt.objective_functions",
+        "peekOfCode": "def portfolio_return(w, expected_returns, negative=True):\n    \"\"\"\n    Calculate the (negative) mean return of a portfolio\n    :param w: asset weights in the portfolio\n    :type w: np.ndarray OR cp.Variable\n    :param expected_returns: expected return of each asset\n    :type expected_returns: np.ndarray\n    :param negative: whether quantity should be made negative (so we can minimise)\n    :type negative: boolean\n    :return: negative mean return",
+        "detail": "pages.861_project.pypfopt.objective_functions",
+        "documentation": {}
+    },
+    {
+        "label": "sharpe_ratio",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.objective_functions",
+        "description": "pages.861_project.pypfopt.objective_functions",
+        "peekOfCode": "def sharpe_ratio(w, expected_returns, cov_matrix, risk_free_rate=0.02, negative=True):\n    \"\"\"\n    Calculate the (negative) Sharpe ratio of a portfolio\n    :param w: asset weights in the portfolio\n    :type w: np.ndarray OR cp.Variable\n    :param expected_returns: expected return of each asset\n    :type expected_returns: np.ndarray\n    :param cov_matrix: covariance matrix\n    :type cov_matrix: np.ndarray\n    :param risk_free_rate: risk-free rate of borrowing/lending, defaults to 0.02.",
+        "detail": "pages.861_project.pypfopt.objective_functions",
+        "documentation": {}
+    },
+    {
+        "label": "L2_reg",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.objective_functions",
+        "description": "pages.861_project.pypfopt.objective_functions",
+        "peekOfCode": "def L2_reg(w, gamma=1):\n    r\"\"\"\n    L2 regularisation, i.e :math:`\\gamma ||w||^2`, to increase the number of nonzero weights.\n    Example::\n        ef = EfficientFrontier(mu, S)\n        ef.add_objective(objective_functions.L2_reg, gamma=2)\n        ef.min_volatility()\n    :param w: asset weights in the portfolio\n    :type w: np.ndarray OR cp.Variable\n    :param gamma: L2 regularisation parameter, defaults to 1. Increase if you want more",
+        "detail": "pages.861_project.pypfopt.objective_functions",
+        "documentation": {}
+    },
+    {
+        "label": "quadratic_utility",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.objective_functions",
+        "description": "pages.861_project.pypfopt.objective_functions",
+        "peekOfCode": "def quadratic_utility(w, expected_returns, cov_matrix, risk_aversion, negative=True):\n    r\"\"\"\n    Quadratic utility function, i.e :math:`\\mu - \\frac 1 2 \\delta  w^T \\Sigma w`.\n    :param w: asset weights in the portfolio\n    :type w: np.ndarray OR cp.Variable\n    :param expected_returns: expected return of each asset\n    :type expected_returns: np.ndarray\n    :param cov_matrix: covariance matrix\n    :type cov_matrix: np.ndarray\n    :param risk_aversion: risk aversion coefficient. Increase to reduce risk.",
+        "detail": "pages.861_project.pypfopt.objective_functions",
+        "documentation": {}
+    },
+    {
+        "label": "transaction_cost",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.objective_functions",
+        "description": "pages.861_project.pypfopt.objective_functions",
+        "peekOfCode": "def transaction_cost(w, w_prev, k=0.001):\n    \"\"\"\n    A very simple transaction cost model: sum all the weight changes\n    and multiply by a given fraction (default to 10bps). This simulates\n    a fixed percentage commission from your broker.\n    :param w: asset weights in the portfolio\n    :type w: np.ndarray OR cp.Variable\n    :param w_prev: previous weights\n    :type w_prev: np.ndarray\n    :param k: fractional cost per unit weight exchanged",
+        "detail": "pages.861_project.pypfopt.objective_functions",
+        "documentation": {}
+    },
+    {
+        "label": "ex_ante_tracking_error",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.objective_functions",
+        "description": "pages.861_project.pypfopt.objective_functions",
+        "peekOfCode": "def ex_ante_tracking_error(w, cov_matrix, benchmark_weights):\n    \"\"\"\n    Calculate the (square of) the ex-ante Tracking Error, i.e\n    :math:`(w - w_b)^T \\\\Sigma (w-w_b)`.\n    :param w: asset weights in the portfolio\n    :type w: np.ndarray OR cp.Variable\n    :param cov_matrix: covariance matrix\n    :type cov_matrix: np.ndarray\n    :param benchmark_weights: asset weights in the benchmark\n    :type benchmark_weights: np.ndarray",
+        "detail": "pages.861_project.pypfopt.objective_functions",
+        "documentation": {}
+    },
+    {
+        "label": "ex_post_tracking_error",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.objective_functions",
+        "description": "pages.861_project.pypfopt.objective_functions",
+        "peekOfCode": "def ex_post_tracking_error(w, historic_returns, benchmark_returns):\n    \"\"\"\n    Calculate the (square of) the ex-post Tracking Error, i.e :math:`Var(r - r_b)`.\n    :param w: asset weights in the portfolio\n    :type w: np.ndarray OR cp.Variable\n    :param historic_returns: historic asset returns\n    :type historic_returns: np.ndarray\n    :param benchmark_returns: historic benchmark returns\n    :type benchmark_returns: pd.Series or np.ndarray\n    :return: value of the objective function OR objective function expression",
+        "detail": "pages.861_project.pypfopt.objective_functions",
+        "documentation": {}
+    },
+    {
+        "label": "plot_covariance",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.plotting",
+        "description": "pages.861_project.pypfopt.plotting",
+        "peekOfCode": "def plot_covariance(cov_matrix, plot_correlation=False, show_tickers=True, **kwargs):\n    \"\"\"\n    Generate a basic plot of the covariance (or correlation) matrix, given a\n    covariance matrix.\n    :param cov_matrix: covariance matrix\n    :type cov_matrix: pd.DataFrame or np.ndarray\n    :param plot_correlation: whether to plot the correlation matrix instead, defaults to False.\n    :type plot_correlation: bool, optional\n    :param show_tickers: whether to use tickers as labels (not recommended for large portfolios),\n                        defaults to True",
+        "detail": "pages.861_project.pypfopt.plotting",
+        "documentation": {}
+    },
+    {
+        "label": "plot_dendrogram",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.plotting",
+        "description": "pages.861_project.pypfopt.plotting",
+        "peekOfCode": "def plot_dendrogram(hrp, ax=None, show_tickers=True, **kwargs):\n    \"\"\"\n    Plot the clusters in the form of a dendrogram.\n    :param hrp: HRPpt object that has already been optimized.\n    :type hrp: object\n    :param show_tickers: whether to use tickers as labels (not recommended for large portfolios),\n                        defaults to True\n    :type show_tickers: bool, optional\n    :param filename: name of the file to save to, defaults to None (doesn't save)\n    :type filename: str, optional",
+        "detail": "pages.861_project.pypfopt.plotting",
+        "documentation": {}
+    },
+    {
+        "label": "plot_efficient_frontier",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.plotting",
+        "description": "pages.861_project.pypfopt.plotting",
+        "peekOfCode": "def plot_efficient_frontier(\n    opt,\n    ef_param=\"return\",\n    ef_param_range=None,\n    points=100,\n    ax=None,\n    show_assets=True,\n    show_tickers=False,\n    **kwargs\n):",
+        "detail": "pages.861_project.pypfopt.plotting",
+        "documentation": {}
+    },
+    {
+        "label": "plot_weights",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.plotting",
+        "description": "pages.861_project.pypfopt.plotting",
+        "peekOfCode": "def plot_weights(weights, ax=None, **kwargs):\n    \"\"\"\n    Plot the portfolio weights as a horizontal bar chart\n    :param weights: the weights outputted by any PyPortfolioOpt optimizer\n    :type weights: {ticker: weight} dict\n    :param ax: ax to plot to, optional\n    :type ax: matplotlib.axes\n    :return: matplotlib axis\n    :rtype: matplotlib.axes\n    \"\"\"",
+        "detail": "pages.861_project.pypfopt.plotting",
+        "documentation": {}
+    },
+    {
+        "label": "CovarianceShrinkage",
+        "kind": 6,
+        "importPath": "pages.861_project.pypfopt.risk_models",
+        "description": "pages.861_project.pypfopt.risk_models",
+        "peekOfCode": "class CovarianceShrinkage:\n    \"\"\"\n    Provide methods for computing shrinkage estimates of the covariance matrix, using the\n    sample covariance matrix and choosing the structured estimator to be an identity matrix\n    multiplied by the average sample variance. The shrinkage constant can be input manually,\n    though there exist methods (notably Ledoit Wolf) to estimate the optimal value.\n    Instance variables:\n    - ``X`` - pd.DataFrame (returns)\n    - ``S`` - np.ndarray (sample covariance matrix)\n    - ``delta`` - float (shrinkage constant)",
+        "detail": "pages.861_project.pypfopt.risk_models",
+        "documentation": {}
+    },
+    {
+        "label": "fix_nonpositive_semidefinite",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.risk_models",
+        "description": "pages.861_project.pypfopt.risk_models",
+        "peekOfCode": "def fix_nonpositive_semidefinite(matrix, fix_method=\"spectral\"):\n    \"\"\"\n    Check if a covariance matrix is positive semidefinite, and if not, fix it\n    with the chosen method.\n    The ``spectral`` method sets negative eigenvalues to zero then rebuilds the matrix,\n    while the ``diag`` method adds a small positive value to the diagonal.\n    :param matrix: raw covariance matrix (may not be PSD)\n    :type matrix: pd.DataFrame\n    :param fix_method: {\"spectral\", \"diag\"}, defaults to \"spectral\"\n    :type fix_method: str, optional",
+        "detail": "pages.861_project.pypfopt.risk_models",
+        "documentation": {}
+    },
+    {
+        "label": "risk_matrix",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.risk_models",
+        "description": "pages.861_project.pypfopt.risk_models",
+        "peekOfCode": "def risk_matrix(prices, method=\"sample_cov\", **kwargs):\n    \"\"\"\n    Compute a covariance matrix, using the risk model supplied in the ``method``\n    parameter.\n    :param prices: adjusted closing prices of the asset, each row is a date\n                   and each column is a ticker/id.\n    :type prices: pd.DataFrame\n    :param returns_data: if true, the first argument is returns instead of prices.\n    :type returns_data: bool, defaults to False.\n    :param method: the risk model to use. Should be one of:",
+        "detail": "pages.861_project.pypfopt.risk_models",
+        "documentation": {}
+    },
+    {
+        "label": "sample_cov",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.risk_models",
+        "description": "pages.861_project.pypfopt.risk_models",
+        "peekOfCode": "def sample_cov(prices, returns_data=False, frequency=252, log_returns=False, **kwargs):\n    \"\"\"\n    Calculate the annualised sample covariance matrix of (daily) asset returns.\n    :param prices: adjusted closing prices of the asset, each row is a date\n                   and each column is a ticker/id.\n    :type prices: pd.DataFrame\n    :param returns_data: if true, the first argument is returns instead of prices.\n    :type returns_data: bool, defaults to False.\n    :param frequency: number of time periods in a year, defaults to 252 (the number\n                      of trading days in a year)",
+        "detail": "pages.861_project.pypfopt.risk_models",
+        "documentation": {}
+    },
+    {
+        "label": "semicovariance",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.risk_models",
+        "description": "pages.861_project.pypfopt.risk_models",
+        "peekOfCode": "def semicovariance(\n    prices,\n    returns_data=False,\n    benchmark=0.000079,\n    frequency=252,\n    log_returns=False,\n    **kwargs\n):\n    \"\"\"\n    Estimate the semicovariance matrix, i.e the covariance given that",
+        "detail": "pages.861_project.pypfopt.risk_models",
+        "documentation": {}
+    },
+    {
+        "label": "exp_cov",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.risk_models",
+        "description": "pages.861_project.pypfopt.risk_models",
+        "peekOfCode": "def exp_cov(\n    prices, returns_data=False, span=180, frequency=252, log_returns=False, **kwargs\n):\n    \"\"\"\n    Estimate the exponentially-weighted covariance matrix, which gives\n    greater weight to more recent data.\n    :param prices: adjusted closing prices of the asset, each row is a date\n                   and each column is a ticker/id.\n    :type prices: pd.DataFrame\n    :param returns_data: if true, the first argument is returns instead of prices.",
+        "detail": "pages.861_project.pypfopt.risk_models",
+        "documentation": {}
+    },
+    {
+        "label": "min_cov_determinant",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.risk_models",
+        "description": "pages.861_project.pypfopt.risk_models",
+        "peekOfCode": "def min_cov_determinant(\n    prices,\n    returns_data=False,\n    frequency=252,\n    random_state=None,\n    log_returns=False,\n    **kwargs\n):  # pragma: no cover\n    warnings.warn(\"min_cov_determinant is deprecated and will be removed in v1.5\")\n    if not isinstance(prices, pd.DataFrame):",
+        "detail": "pages.861_project.pypfopt.risk_models",
+        "documentation": {}
+    },
+    {
+        "label": "cov_to_corr",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.risk_models",
+        "description": "pages.861_project.pypfopt.risk_models",
+        "peekOfCode": "def cov_to_corr(cov_matrix):\n    \"\"\"\n    Convert a covariance matrix to a correlation matrix.\n    :param cov_matrix: covariance matrix\n    :type cov_matrix: pd.DataFrame\n    :return: correlation matrix\n    :rtype: pd.DataFrame\n    \"\"\"\n    if not isinstance(cov_matrix, pd.DataFrame):\n        warnings.warn(\"cov_matrix is not a dataframe\", RuntimeWarning)",
+        "detail": "pages.861_project.pypfopt.risk_models",
+        "documentation": {}
+    },
+    {
+        "label": "corr_to_cov",
+        "kind": 2,
+        "importPath": "pages.861_project.pypfopt.risk_models",
+        "description": "pages.861_project.pypfopt.risk_models",
+        "peekOfCode": "def corr_to_cov(corr_matrix, stdevs):\n    \"\"\"\n    Convert a correlation matrix to a covariance matrix\n    :param corr_matrix: correlation matrix\n    :type corr_matrix: pd.DataFrame\n    :param stdevs: vector of standard deviations\n    :type stdevs: array-like\n    :return: covariance matrix\n    :rtype: pd.DataFrame\n    \"\"\"",
+        "detail": "pages.861_project.pypfopt.risk_models",
+        "documentation": {}
+    },
+    {
+        "label": "standard_deviation",
+        "kind": 2,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "def standard_deviation(weights, cov_matrix):\n    variance = weights.T @ cov_matrix @ weights\n    return np.sqrt(variance)\ndef expected_return(weights, log_returns):\n    return np.sum(log_returns.mean()*weights)*252\ndef sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate):\n    return (expected_return(weights, log_returns) - risk_free_rate) / standard_deviation(weights, cov_matrix)\nrisk_free_rate = .02\ndef neg_sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate):\n    return -sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate)",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "expected_return",
+        "kind": 2,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "def expected_return(weights, log_returns):\n    return np.sum(log_returns.mean()*weights)*252\ndef sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate):\n    return (expected_return(weights, log_returns) - risk_free_rate) / standard_deviation(weights, cov_matrix)\nrisk_free_rate = .02\ndef neg_sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate):\n    return -sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate)\nconstraints = {'type': 'eq', 'fun': lambda weights: np.sum(weights) - 1}\nbounds = [(0, 0.5) for _ in range(len(tickers))]\n# if len(tickers)==0:",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "sharpe_ratio",
+        "kind": 2,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "def sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate):\n    return (expected_return(weights, log_returns) - risk_free_rate) / standard_deviation(weights, cov_matrix)\nrisk_free_rate = .02\ndef neg_sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate):\n    return -sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate)\nconstraints = {'type': 'eq', 'fun': lambda weights: np.sum(weights) - 1}\nbounds = [(0, 0.5) for _ in range(len(tickers))]\n# if len(tickers)==0:\n#     st.write('select atleast one ticker')\n# else:",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "neg_sharpe_ratio",
+        "kind": 2,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "def neg_sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate):\n    return -sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate)\nconstraints = {'type': 'eq', 'fun': lambda weights: np.sum(weights) - 1}\nbounds = [(0, 0.5) for _ in range(len(tickers))]\n# if len(tickers)==0:\n#     st.write('select atleast one ticker')\n# else:\n#     \ninitial_weights= np.array([1/len(tickers)]*len(tickers))\noptimized_results = scipy.optimize.minimize(neg_sharpe_ratio, initial_weights, args=(log_returns, cov_matrix, risk_free_rate), method='SLSQP', constraints=constraints, bounds=bounds)",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "tickers",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "tickers = st.multiselect('Choose Tickers you want in your portfolio',['SPY','BND','GLD','^BSESN','^N225',\"MSFT\", \"AMZN\", \"KO\", \"MA\", \"COST\", \n           \"LUV\", \"XOM\", \"PFE\", \"JPM\", \"UNH\", \n           \"ACN\", \"DIS\", \"GILD\", \"F\", \"TSLA\"],default=['SPY','BND'])\nend_date = st.date_input(label='Pick end date')\nstart_date = end_date - timedelta(days =5*365)\nadj_close_df = pd.DataFrame()\nfor ticker in tickers:\n    data = yf.download(ticker, start = start_date,end = end_date)\n    adj_close_df[ticker] = data['Adj Close']\nlog_returns = np.log(1+adj_close_df.pct_change()).dropna()",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "end_date",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "end_date = st.date_input(label='Pick end date')\nstart_date = end_date - timedelta(days =5*365)\nadj_close_df = pd.DataFrame()\nfor ticker in tickers:\n    data = yf.download(ticker, start = start_date,end = end_date)\n    adj_close_df[ticker] = data['Adj Close']\nlog_returns = np.log(1+adj_close_df.pct_change()).dropna()\ncov_matrix = log_returns.cov()*252\ndef standard_deviation(weights, cov_matrix):\n    variance = weights.T @ cov_matrix @ weights",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "start_date",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "start_date = end_date - timedelta(days =5*365)\nadj_close_df = pd.DataFrame()\nfor ticker in tickers:\n    data = yf.download(ticker, start = start_date,end = end_date)\n    adj_close_df[ticker] = data['Adj Close']\nlog_returns = np.log(1+adj_close_df.pct_change()).dropna()\ncov_matrix = log_returns.cov()*252\ndef standard_deviation(weights, cov_matrix):\n    variance = weights.T @ cov_matrix @ weights\n    return np.sqrt(variance)",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "adj_close_df",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "adj_close_df = pd.DataFrame()\nfor ticker in tickers:\n    data = yf.download(ticker, start = start_date,end = end_date)\n    adj_close_df[ticker] = data['Adj Close']\nlog_returns = np.log(1+adj_close_df.pct_change()).dropna()\ncov_matrix = log_returns.cov()*252\ndef standard_deviation(weights, cov_matrix):\n    variance = weights.T @ cov_matrix @ weights\n    return np.sqrt(variance)\ndef expected_return(weights, log_returns):",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "log_returns",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "log_returns = np.log(1+adj_close_df.pct_change()).dropna()\ncov_matrix = log_returns.cov()*252\ndef standard_deviation(weights, cov_matrix):\n    variance = weights.T @ cov_matrix @ weights\n    return np.sqrt(variance)\ndef expected_return(weights, log_returns):\n    return np.sum(log_returns.mean()*weights)*252\ndef sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate):\n    return (expected_return(weights, log_returns) - risk_free_rate) / standard_deviation(weights, cov_matrix)\nrisk_free_rate = .02",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "cov_matrix",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "cov_matrix = log_returns.cov()*252\ndef standard_deviation(weights, cov_matrix):\n    variance = weights.T @ cov_matrix @ weights\n    return np.sqrt(variance)\ndef expected_return(weights, log_returns):\n    return np.sum(log_returns.mean()*weights)*252\ndef sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate):\n    return (expected_return(weights, log_returns) - risk_free_rate) / standard_deviation(weights, cov_matrix)\nrisk_free_rate = .02\ndef neg_sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate):",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "risk_free_rate",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "risk_free_rate = .02\ndef neg_sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate):\n    return -sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate)\nconstraints = {'type': 'eq', 'fun': lambda weights: np.sum(weights) - 1}\nbounds = [(0, 0.5) for _ in range(len(tickers))]\n# if len(tickers)==0:\n#     st.write('select atleast one ticker')\n# else:\n#     \ninitial_weights= np.array([1/len(tickers)]*len(tickers))",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "constraints",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "constraints = {'type': 'eq', 'fun': lambda weights: np.sum(weights) - 1}\nbounds = [(0, 0.5) for _ in range(len(tickers))]\n# if len(tickers)==0:\n#     st.write('select atleast one ticker')\n# else:\n#     \ninitial_weights= np.array([1/len(tickers)]*len(tickers))\noptimized_results = scipy.optimize.minimize(neg_sharpe_ratio, initial_weights, args=(log_returns, cov_matrix, risk_free_rate), method='SLSQP', constraints=constraints, bounds=bounds)\noptimal_weights = optimized_results.x\n# print(\"Optimal Weights:\")",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "bounds",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "bounds = [(0, 0.5) for _ in range(len(tickers))]\n# if len(tickers)==0:\n#     st.write('select atleast one ticker')\n# else:\n#     \ninitial_weights= np.array([1/len(tickers)]*len(tickers))\noptimized_results = scipy.optimize.minimize(neg_sharpe_ratio, initial_weights, args=(log_returns, cov_matrix, risk_free_rate), method='SLSQP', constraints=constraints, bounds=bounds)\noptimal_weights = optimized_results.x\n# print(\"Optimal Weights:\")\n# for ticker, weight in zip(tickers, optimal_weights):",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "optimized_results",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "optimized_results = scipy.optimize.minimize(neg_sharpe_ratio, initial_weights, args=(log_returns, cov_matrix, risk_free_rate), method='SLSQP', constraints=constraints, bounds=bounds)\noptimal_weights = optimized_results.x\n# print(\"Optimal Weights:\")\n# for ticker, weight in zip(tickers, optimal_weights):\n#     print(f\"{ticker}: {weight:.4f}\")\n    # f\"Column name is **{columnName}**\")\noptimal_portfolio_return = expected_return(optimal_weights, log_returns)\noptimal_portfolio_volatility = standard_deviation(optimal_weights, cov_matrix)\noptimal_sharpe_ratio = sharpe_ratio(optimal_weights, log_returns, cov_matrix, risk_free_rate)    \n# fig,ax = plt.subplots()",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "optimal_weights",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "optimal_weights = optimized_results.x\n# print(\"Optimal Weights:\")\n# for ticker, weight in zip(tickers, optimal_weights):\n#     print(f\"{ticker}: {weight:.4f}\")\n    # f\"Column name is **{columnName}**\")\noptimal_portfolio_return = expected_return(optimal_weights, log_returns)\noptimal_portfolio_volatility = standard_deviation(optimal_weights, cov_matrix)\noptimal_sharpe_ratio = sharpe_ratio(optimal_weights, log_returns, cov_matrix, risk_free_rate)    \n# fig,ax = plt.subplots()\n# plt.figure(figsize=(10, 6))",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "optimal_portfolio_return",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "optimal_portfolio_return = expected_return(optimal_weights, log_returns)\noptimal_portfolio_volatility = standard_deviation(optimal_weights, cov_matrix)\noptimal_sharpe_ratio = sharpe_ratio(optimal_weights, log_returns, cov_matrix, risk_free_rate)    \n# fig,ax = plt.subplots()\n# plt.figure(figsize=(10, 6))\n# ax.plot(tickers, optimal_weights)\nfig = go.Figure([go.Bar(x=tickers, y=optimal_weights)])\nfig.update_layout(xaxis_title=\"Assets\", yaxis_title=\"Weights\",yaxis_tickformat='.2%')\nst.plotly_chart(fig)\n# plt.show()",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "optimal_portfolio_volatility",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "optimal_portfolio_volatility = standard_deviation(optimal_weights, cov_matrix)\noptimal_sharpe_ratio = sharpe_ratio(optimal_weights, log_returns, cov_matrix, risk_free_rate)    \n# fig,ax = plt.subplots()\n# plt.figure(figsize=(10, 6))\n# ax.plot(tickers, optimal_weights)\nfig = go.Figure([go.Bar(x=tickers, y=optimal_weights)])\nfig.update_layout(xaxis_title=\"Assets\", yaxis_title=\"Weights\",yaxis_tickformat='.2%')\nst.plotly_chart(fig)\n# plt.show()\nfor ticker, weight in zip(tickers, optimal_weights):",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "optimal_sharpe_ratio",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "optimal_sharpe_ratio = sharpe_ratio(optimal_weights, log_returns, cov_matrix, risk_free_rate)    \n# fig,ax = plt.subplots()\n# plt.figure(figsize=(10, 6))\n# ax.plot(tickers, optimal_weights)\nfig = go.Figure([go.Bar(x=tickers, y=optimal_weights)])\nfig.update_layout(xaxis_title=\"Assets\", yaxis_title=\"Weights\",yaxis_tickformat='.2%')\nst.plotly_chart(fig)\n# plt.show()\nfor ticker, weight in zip(tickers, optimal_weights):\n    st.write(f'Optimal weights for **{ticker}**:**{\"{:.2%}\".format(weight)}**')",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "fig",
+        "kind": 5,
+        "importPath": "pages.861_project.app_portfolio",
+        "description": "pages.861_project.app_portfolio",
+        "peekOfCode": "fig = go.Figure([go.Bar(x=tickers, y=optimal_weights)])\nfig.update_layout(xaxis_title=\"Assets\", yaxis_title=\"Weights\",yaxis_tickformat='.2%')\nst.plotly_chart(fig)\n# plt.show()\nfor ticker, weight in zip(tickers, optimal_weights):\n    st.write(f'Optimal weights for **{ticker}**:**{\"{:.2%}\".format(weight)}**')",
+        "detail": "pages.861_project.app_portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "tf",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "tf = pd.read_csv(r'nasdaq_screener_1711720558551.csv')\nstock_shown = tf['Symbol']\n# APP HEADINGS\nst.header('TEAM HARBOUR')\nst.subheader('PORTFOLIO OPTIMIZER')\n# USER INPUT AREAS\ntickers = st.multiselect('Choose Tickers you want in your portfolio',stock_shown,help=\"Select at least 4\",\n  default=['AAPL','AMZN','MSFT','JPM','BAC'])\n# datefunctionalities\ndefault_start_date = datetime(2019, 1, 1)",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "stock_shown",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "stock_shown = tf['Symbol']\n# APP HEADINGS\nst.header('TEAM HARBOUR')\nst.subheader('PORTFOLIO OPTIMIZER')\n# USER INPUT AREAS\ntickers = st.multiselect('Choose Tickers you want in your portfolio',stock_shown,help=\"Select at least 4\",\n  default=['AAPL','AMZN','MSFT','JPM','BAC'])\n# datefunctionalities\ndefault_start_date = datetime(2019, 1, 1)\ntoday = datetime.today() ",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "tickers",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "tickers = st.multiselect('Choose Tickers you want in your portfolio',stock_shown,help=\"Select at least 4\",\n  default=['AAPL','AMZN','MSFT','JPM','BAC'])\n# datefunctionalities\ndefault_start_date = datetime(2019, 1, 1)\ntoday = datetime.today() \ndaybefore_yesterday = today - timedelta(days=2)\ncol1,col2 = st.columns(2)\nwith col1:\n    start_date = st.date_input(label='Pick start date',value=default_start_date)\nwith col2:",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "default_start_date",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "default_start_date = datetime(2019, 1, 1)\ntoday = datetime.today() \ndaybefore_yesterday = today - timedelta(days=2)\ncol1,col2 = st.columns(2)\nwith col1:\n    start_date = st.date_input(label='Pick start date',value=default_start_date)\nwith col2:\n    end_date = st.date_input(label='Pick end date',value=today)\n# col1,col2 = st.columns(2)\n# with col1:",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "today",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "today = datetime.today() \ndaybefore_yesterday = today - timedelta(days=2)\ncol1,col2 = st.columns(2)\nwith col1:\n    start_date = st.date_input(label='Pick start date',value=default_start_date)\nwith col2:\n    end_date = st.date_input(label='Pick end date',value=today)\n# col1,col2 = st.columns(2)\n# with col1:\n#     minimum_weight = st.slider(label='Select min weight',min_value=(0,1))",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "daybefore_yesterday",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "daybefore_yesterday = today - timedelta(days=2)\ncol1,col2 = st.columns(2)\nwith col1:\n    start_date = st.date_input(label='Pick start date',value=default_start_date)\nwith col2:\n    end_date = st.date_input(label='Pick end date',value=today)\n# col1,col2 = st.columns(2)\n# with col1:\n#     minimum_weight = st.slider(label='Select min weight',min_value=(0,1))\n# with col2:",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "col1,col2",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "col1,col2 = st.columns(2)\nwith col1:\n    start_date = st.date_input(label='Pick start date',value=default_start_date)\nwith col2:\n    end_date = st.date_input(label='Pick end date',value=today)\n# col1,col2 = st.columns(2)\n# with col1:\n#     minimum_weight = st.slider(label='Select min weight',min_value=(0,1))\n# with col2:\n#     max_weight = st.slider(label='Select max weight',max_value=(0,1))",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "max_weight",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "max_weight = st.number_input('Insert max weight you want to assign to an asset',min_value=0.01,max_value=1.00,value=0.25,help='Maximum exposure to each asset')\ninvestment_amount = st.number_input('Investment amount in $ Millions',min_value=1,value=10,help='Min investment is $ 1M')\nohlc = yf.download(tickers, start = start_date,end = end_date)\nprices = ohlc[\"Adj Close\"].dropna(how=\"all\") \nS = risk_models.CovarianceShrinkage(prices).ledoit_wolf()\nef = EfficientFrontier(None, S, weight_bounds=(0,max_weight))\nef.min_volatility()\nweights = ef.clean_weights()\nweights_df = pd.DataFrame( weights ,index=['Optimal Weights']).melt()\nweights_df = weights_df.rename(columns={'variable':'Ticker','value':'Weight'})",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "investment_amount",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "investment_amount = st.number_input('Investment amount in $ Millions',min_value=1,value=10,help='Min investment is $ 1M')\nohlc = yf.download(tickers, start = start_date,end = end_date)\nprices = ohlc[\"Adj Close\"].dropna(how=\"all\") \nS = risk_models.CovarianceShrinkage(prices).ledoit_wolf()\nef = EfficientFrontier(None, S, weight_bounds=(0,max_weight))\nef.min_volatility()\nweights = ef.clean_weights()\nweights_df = pd.DataFrame( weights ,index=['Optimal Weights']).melt()\nweights_df = weights_df.rename(columns={'variable':'Ticker','value':'Weight'})\n# st.write(weights_df)",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "ohlc",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "ohlc = yf.download(tickers, start = start_date,end = end_date)\nprices = ohlc[\"Adj Close\"].dropna(how=\"all\") \nS = risk_models.CovarianceShrinkage(prices).ledoit_wolf()\nef = EfficientFrontier(None, S, weight_bounds=(0,max_weight))\nef.min_volatility()\nweights = ef.clean_weights()\nweights_df = pd.DataFrame( weights ,index=['Optimal Weights']).melt()\nweights_df = weights_df.rename(columns={'variable':'Ticker','value':'Weight'})\n# st.write(weights_df)\npalette = sns.color_palette('Paired')",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "prices",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "prices = ohlc[\"Adj Close\"].dropna(how=\"all\") \nS = risk_models.CovarianceShrinkage(prices).ledoit_wolf()\nef = EfficientFrontier(None, S, weight_bounds=(0,max_weight))\nef.min_volatility()\nweights = ef.clean_weights()\nweights_df = pd.DataFrame( weights ,index=['Optimal Weights']).melt()\nweights_df = weights_df.rename(columns={'variable':'Ticker','value':'Weight'})\n# st.write(weights_df)\npalette = sns.color_palette('Paired')\ncolors_hex = [f'#{int(color[0]*255):02x}{int(color[1]*255):02x}{int(color[2]*255):02x}' for color in palette]",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "S",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "S = risk_models.CovarianceShrinkage(prices).ledoit_wolf()\nef = EfficientFrontier(None, S, weight_bounds=(0,max_weight))\nef.min_volatility()\nweights = ef.clean_weights()\nweights_df = pd.DataFrame( weights ,index=['Optimal Weights']).melt()\nweights_df = weights_df.rename(columns={'variable':'Ticker','value':'Weight'})\n# st.write(weights_df)\npalette = sns.color_palette('Paired')\ncolors_hex = [f'#{int(color[0]*255):02x}{int(color[1]*255):02x}{int(color[2]*255):02x}' for color in palette]\nfig = px.pie(weights_df ,values='Weight', names='Ticker', color_discrete_sequence =colors_hex, title='Optimal Allocation of Selected Assets')",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "ef",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "ef = EfficientFrontier(None, S, weight_bounds=(0,max_weight))\nef.min_volatility()\nweights = ef.clean_weights()\nweights_df = pd.DataFrame( weights ,index=['Optimal Weights']).melt()\nweights_df = weights_df.rename(columns={'variable':'Ticker','value':'Weight'})\n# st.write(weights_df)\npalette = sns.color_palette('Paired')\ncolors_hex = [f'#{int(color[0]*255):02x}{int(color[1]*255):02x}{int(color[2]*255):02x}' for color in palette]\nfig = px.pie(weights_df ,values='Weight', names='Ticker', color_discrete_sequence =colors_hex, title='Optimal Allocation of Selected Assets')\npie_chart = st.plotly_chart(fig)",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "weights",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "weights = ef.clean_weights()\nweights_df = pd.DataFrame( weights ,index=['Optimal Weights']).melt()\nweights_df = weights_df.rename(columns={'variable':'Ticker','value':'Weight'})\n# st.write(weights_df)\npalette = sns.color_palette('Paired')\ncolors_hex = [f'#{int(color[0]*255):02x}{int(color[1]*255):02x}{int(color[2]*255):02x}' for color in palette]\nfig = px.pie(weights_df ,values='Weight', names='Ticker', color_discrete_sequence =colors_hex, title='Optimal Allocation of Selected Assets')\npie_chart = st.plotly_chart(fig)\nannual_volatility = ef.portfolio_performance(verbose=True)[1]\n# Volaitily lune",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "weights_df",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "weights_df = pd.DataFrame( weights ,index=['Optimal Weights']).melt()\nweights_df = weights_df.rename(columns={'variable':'Ticker','value':'Weight'})\n# st.write(weights_df)\npalette = sns.color_palette('Paired')\ncolors_hex = [f'#{int(color[0]*255):02x}{int(color[1]*255):02x}{int(color[2]*255):02x}' for color in palette]\nfig = px.pie(weights_df ,values='Weight', names='Ticker', color_discrete_sequence =colors_hex, title='Optimal Allocation of Selected Assets')\npie_chart = st.plotly_chart(fig)\nannual_volatility = ef.portfolio_performance(verbose=True)[1]\n# Volaitily lune\nst.markdown(f'## :blue[Annual volatility is minimized at **{\"{:.2%}\".format(annual_volatility)}**]')",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "weights_df",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "weights_df = weights_df.rename(columns={'variable':'Ticker','value':'Weight'})\n# st.write(weights_df)\npalette = sns.color_palette('Paired')\ncolors_hex = [f'#{int(color[0]*255):02x}{int(color[1]*255):02x}{int(color[2]*255):02x}' for color in palette]\nfig = px.pie(weights_df ,values='Weight', names='Ticker', color_discrete_sequence =colors_hex, title='Optimal Allocation of Selected Assets')\npie_chart = st.plotly_chart(fig)\nannual_volatility = ef.portfolio_performance(verbose=True)[1]\n# Volaitily lune\nst.markdown(f'## :blue[Annual volatility is minimized at **{\"{:.2%}\".format(annual_volatility)}**]')\n# pie_chart",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "palette",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "palette = sns.color_palette('Paired')\ncolors_hex = [f'#{int(color[0]*255):02x}{int(color[1]*255):02x}{int(color[2]*255):02x}' for color in palette]\nfig = px.pie(weights_df ,values='Weight', names='Ticker', color_discrete_sequence =colors_hex, title='Optimal Allocation of Selected Assets')\npie_chart = st.plotly_chart(fig)\nannual_volatility = ef.portfolio_performance(verbose=True)[1]\n# Volaitily lune\nst.markdown(f'## :blue[Annual volatility is minimized at **{\"{:.2%}\".format(annual_volatility)}**]')\n# pie_chart\n# plt.show()\n# st.write(pd.DataFrame(weights,index=['Optimum weights']))",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "colors_hex",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "colors_hex = [f'#{int(color[0]*255):02x}{int(color[1]*255):02x}{int(color[2]*255):02x}' for color in palette]\nfig = px.pie(weights_df ,values='Weight', names='Ticker', color_discrete_sequence =colors_hex, title='Optimal Allocation of Selected Assets')\npie_chart = st.plotly_chart(fig)\nannual_volatility = ef.portfolio_performance(verbose=True)[1]\n# Volaitily lune\nst.markdown(f'## :blue[Annual volatility is minimized at **{\"{:.2%}\".format(annual_volatility)}**]')\n# pie_chart\n# plt.show()\n# st.write(pd.DataFrame(weights,index=['Optimum weights']))\n# st.write(ef.portfolio_performance(verbose=True))",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "fig",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "fig = px.pie(weights_df ,values='Weight', names='Ticker', color_discrete_sequence =colors_hex, title='Optimal Allocation of Selected Assets')\npie_chart = st.plotly_chart(fig)\nannual_volatility = ef.portfolio_performance(verbose=True)[1]\n# Volaitily lune\nst.markdown(f'## :blue[Annual volatility is minimized at **{\"{:.2%}\".format(annual_volatility)}**]')\n# pie_chart\n# plt.show()\n# st.write(pd.DataFrame(weights,index=['Optimum weights']))\n# st.write(ef.portfolio_performance(verbose=True))\nlatest_prices = prices.iloc[-1].fillna(0) ",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "pie_chart",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "pie_chart = st.plotly_chart(fig)\nannual_volatility = ef.portfolio_performance(verbose=True)[1]\n# Volaitily lune\nst.markdown(f'## :blue[Annual volatility is minimized at **{\"{:.2%}\".format(annual_volatility)}**]')\n# pie_chart\n# plt.show()\n# st.write(pd.DataFrame(weights,index=['Optimum weights']))\n# st.write(ef.portfolio_performance(verbose=True))\nlatest_prices = prices.iloc[-1].fillna(0) \n # prices as of the day you are allocating",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "annual_volatility",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "annual_volatility = ef.portfolio_performance(verbose=True)[1]\n# Volaitily lune\nst.markdown(f'## :blue[Annual volatility is minimized at **{\"{:.2%}\".format(annual_volatility)}**]')\n# pie_chart\n# plt.show()\n# st.write(pd.DataFrame(weights,index=['Optimum weights']))\n# st.write(ef.portfolio_performance(verbose=True))\nlatest_prices = prices.iloc[-1].fillna(0) \n # prices as of the day you are allocating\nda = DiscreteAllocation(weights, latest_prices, total_portfolio_value=investment_amount*1_000_000, short_ratio=0)",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "latest_prices",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "latest_prices = prices.iloc[-1].fillna(0) \n # prices as of the day you are allocating\nda = DiscreteAllocation(weights, latest_prices, total_portfolio_value=investment_amount*1_000_000, short_ratio=0)\nalloc, leftover = da.lp_portfolio()\nallocation_left = leftover/(investment_amount*1_000_000)\nallocation_left = '{:.2%}'.format(allocation_left)\nst.write(f\":blue[Discrete allocation performed with] :green[__$**{leftover:.2f}**__ leftover]:blue[ which is] :green[{allocation_left} ]:blue[ of invested amount.]\")\nfinal_allocation = pd.DataFrame(alloc,index=['Units']).T\nallocation_table = final_allocation.join(pd.DataFrame(latest_prices))\nallocation_table_explained = \"\"\"### :blue[Buy these amount of stocks at the latest prices.]\"\"\"",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "da",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "da = DiscreteAllocation(weights, latest_prices, total_portfolio_value=investment_amount*1_000_000, short_ratio=0)\nalloc, leftover = da.lp_portfolio()\nallocation_left = leftover/(investment_amount*1_000_000)\nallocation_left = '{:.2%}'.format(allocation_left)\nst.write(f\":blue[Discrete allocation performed with] :green[__$**{leftover:.2f}**__ leftover]:blue[ which is] :green[{allocation_left} ]:blue[ of invested amount.]\")\nfinal_allocation = pd.DataFrame(alloc,index=['Units']).T\nallocation_table = final_allocation.join(pd.DataFrame(latest_prices))\nallocation_table_explained = \"\"\"### :blue[Buy these amount of stocks at the latest prices.]\"\"\"\nst.markdown(allocation_table_explained)\nst.dataframe(allocation_table)",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "allocation_left",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "allocation_left = leftover/(investment_amount*1_000_000)\nallocation_left = '{:.2%}'.format(allocation_left)\nst.write(f\":blue[Discrete allocation performed with] :green[__$**{leftover:.2f}**__ leftover]:blue[ which is] :green[{allocation_left} ]:blue[ of invested amount.]\")\nfinal_allocation = pd.DataFrame(alloc,index=['Units']).T\nallocation_table = final_allocation.join(pd.DataFrame(latest_prices))\nallocation_table_explained = \"\"\"### :blue[Buy these amount of stocks at the latest prices.]\"\"\"\nst.markdown(allocation_table_explained)\nst.dataframe(allocation_table)",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "allocation_left",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "allocation_left = '{:.2%}'.format(allocation_left)\nst.write(f\":blue[Discrete allocation performed with] :green[__$**{leftover:.2f}**__ leftover]:blue[ which is] :green[{allocation_left} ]:blue[ of invested amount.]\")\nfinal_allocation = pd.DataFrame(alloc,index=['Units']).T\nallocation_table = final_allocation.join(pd.DataFrame(latest_prices))\nallocation_table_explained = \"\"\"### :blue[Buy these amount of stocks at the latest prices.]\"\"\"\nst.markdown(allocation_table_explained)\nst.dataframe(allocation_table)",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "final_allocation",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "final_allocation = pd.DataFrame(alloc,index=['Units']).T\nallocation_table = final_allocation.join(pd.DataFrame(latest_prices))\nallocation_table_explained = \"\"\"### :blue[Buy these amount of stocks at the latest prices.]\"\"\"\nst.markdown(allocation_table_explained)\nst.dataframe(allocation_table)",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "allocation_table",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "allocation_table = final_allocation.join(pd.DataFrame(latest_prices))\nallocation_table_explained = \"\"\"### :blue[Buy these amount of stocks at the latest prices.]\"\"\"\nst.markdown(allocation_table_explained)\nst.dataframe(allocation_table)",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
+        "label": "allocation_table_explained",
+        "kind": 5,
+        "importPath": "pages.861_project.harbor_optimizer_app",
+        "description": "pages.861_project.harbor_optimizer_app",
+        "peekOfCode": "allocation_table_explained = \"\"\"### :blue[Buy these amount of stocks at the latest prices.]\"\"\"\nst.markdown(allocation_table_explained)\nst.dataframe(allocation_table)",
+        "detail": "pages.861_project.harbor_optimizer_app",
+        "documentation": {}
+    },
+    {
         "label": "ticker_symbol",
         "kind": 5,
         "importPath": "pages.FinancialDashboard.pages.a. Stock Profiling",
@@ -12079,6 +13116,114 @@
         "documentation": {}
     },
     {
+        "label": "get_top_sp500_stocks",
+        "kind": 2,
+        "importPath": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "description": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "peekOfCode": "def get_top_sp500_stocks(n=20):\n    tickers = ['AAPL', 'MSFT', 'AMZN', 'GOOGL', 'GOOG', 'META', 'TSLA', 'BRK.B', 'JPM', 'V']\n    market_caps = {ticker: yf.Ticker(ticker).info.get('marketCap', 0) for ticker in tickers}\n    top_stocks = sorted(market_caps.items(), key=lambda x: x[1], reverse=True)[:n]\n    return [stock[0] for stock in top_stocks]\ndef get_financial_data(ticker, start_date, end_date):\n    stock = yf.Ticker(ticker)\n    price_data = stock.history(start=start_date, end=end_date)\n    income_statement = stock.financials\n    return {\"price_data\": price_data, \"income_statement\": income_statement}",
+        "detail": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "documentation": {}
+    },
+    {
+        "label": "get_financial_data",
+        "kind": 2,
+        "importPath": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "description": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "peekOfCode": "def get_financial_data(ticker, start_date, end_date):\n    stock = yf.Ticker(ticker)\n    price_data = stock.history(start=start_date, end=end_date)\n    income_statement = stock.financials\n    return {\"price_data\": price_data, \"income_statement\": income_statement}\ndef format_income_statement_for_llm(income_statement_column):\n    return \"\\n\".join(f\"{index}: {value:,.2f}\" for index, value in income_statement_column.items())\ndef create_prompt_for_income_statement(current_year_income_statement, previous_year_income_statement):\n    return f\"\"\"\nEvaluate the following income statements for the current year and the previous year. Provide a score between 0 and 10 for each criterion. ",
+        "detail": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "documentation": {}
+    },
+    {
+        "label": "format_income_statement_for_llm",
+        "kind": 2,
+        "importPath": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "description": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "peekOfCode": "def format_income_statement_for_llm(income_statement_column):\n    return \"\\n\".join(f\"{index}: {value:,.2f}\" for index, value in income_statement_column.items())\ndef create_prompt_for_income_statement(current_year_income_statement, previous_year_income_statement):\n    return f\"\"\"\nEvaluate the following income statements for the current year and the previous year. Provide a score between 0 and 10 for each criterion. \nIncome Statement for the Current Year:\n{current_year_income_statement}\nIncome Statement for the Previous Year:\n{previous_year_income_statement}\nCriteria for Evaluation:",
+        "detail": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "documentation": {}
+    },
+    {
+        "label": "create_prompt_for_income_statement",
+        "kind": 2,
+        "importPath": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "description": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "peekOfCode": "def create_prompt_for_income_statement(current_year_income_statement, previous_year_income_statement):\n    return f\"\"\"\nEvaluate the following income statements for the current year and the previous year. Provide a score between 0 and 10 for each criterion. \nIncome Statement for the Current Year:\n{current_year_income_statement}\nIncome Statement for the Previous Year:\n{previous_year_income_statement}\nCriteria for Evaluation:\n1. Revenue Growth\n2. Gross Profit Margin",
+        "detail": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_income_statements_llm",
+        "kind": 2,
+        "importPath": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "description": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "peekOfCode": "def evaluate_income_statements_llm(current_year_income_statement, previous_year_income_statement):\n    prompt = create_prompt_for_income_statement(current_year_income_statement, previous_year_income_statement)\n    response = groq_client.chat.completions.create(\n        messages=[{\"role\": \"user\", \"content\": prompt}],\n        model=\"gemma-7b-it\",\n        temperature=0.2,\n        max_tokens=1000\n    )\n    analysis = response.choices[0].message.content.strip()\n    score = re.search(r\"Overall Score: (\\d+\\.\\d+)\", analysis)",
+        "detail": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_stock",
+        "kind": 2,
+        "importPath": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "description": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "peekOfCode": "def evaluate_stock(ticker, start_date, end_date):\n    data = get_financial_data(ticker, start_date, end_date)\n    income_statement = data['income_statement']\n    scores = []\n    for i in range(len(income_statement.columns) - 1):\n        current_year = format_income_statement_for_llm(income_statement.iloc[:, i])\n        previous_year = format_income_statement_for_llm(income_statement.iloc[:, i + 1])\n        score = evaluate_income_statements_llm(current_year, previous_year)\n        scores.append((income_statement.columns[i].year, score))\n    return pd.DataFrame(scores, columns=['Year', 'Score'])",
+        "detail": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "documentation": {}
+    },
+    {
+        "label": "backtest_strategy",
+        "kind": 2,
+        "importPath": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "description": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "peekOfCode": "def backtest_strategy(all_scores, price_data):\n    portfolio_returns = []\n    executed_trades = []\n    for year in range(min(all_scores['Year']), max(all_scores['Year']) + 1):\n        top_stocks = all_scores[(all_scores['Year'] == year) & (all_scores['Score'] > 7)]\n        # Add logging for debug purposes\n        st.write(f\"Year {year}: Found {len(top_stocks)} top-performing stocks.\")\n        if top_stocks.empty:\n            st.write(f\"No top-performing stocks found for the year {year}. Skipping to next year.\")\n            continue",
+        "detail": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "documentation": {}
+    },
+    {
+        "label": "plot_cumulative_returns",
+        "kind": 2,
+        "importPath": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "description": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "peekOfCode": "def plot_cumulative_returns(cumulative_returns):\n    plt.figure(figsize=(10, 6))\n    plt.plot(cumulative_returns['Year'], cumulative_returns['Cumulative Return'], marker='o')\n    plt.title('Cumulative Returns Over Time')\n    plt.xlabel('Year')\n    plt.ylabel('Cumulative Return')\n    st.pyplot(plt)\ndef calculate_sharpe_ratio(returns, risk_free_rate=0.01):\n    mean_return = np.mean(returns)\n    std_dev = np.std(returns)",
+        "detail": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_sharpe_ratio",
+        "kind": 2,
+        "importPath": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "description": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "peekOfCode": "def calculate_sharpe_ratio(returns, risk_free_rate=0.01):\n    mean_return = np.mean(returns)\n    std_dev = np.std(returns)\n    sharpe_ratio = (mean_return - risk_free_rate) / std_dev\n    return sharpe_ratio\ndef moving_average(prices, window):\n    return prices['Close'].rolling(window).mean()\nst.title(\"LLM-Enhanced Stock analysis for Algorithmic Trading\")\nif st.button(\"Get Top Stocks\"):\n    top_stocks = get_top_sp500_stocks(20)",
+        "detail": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "documentation": {}
+    },
+    {
+        "label": "moving_average",
+        "kind": 2,
+        "importPath": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "description": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "peekOfCode": "def moving_average(prices, window):\n    return prices['Close'].rolling(window).mean()\nst.title(\"LLM-Enhanced Stock analysis for Algorithmic Trading\")\nif st.button(\"Get Top Stocks\"):\n    top_stocks = get_top_sp500_stocks(20)\n    st.session_state.top_stocks = top_stocks\n    st.write(\"Top 20 Stocks:\", top_stocks)\nif st.button(\"Evaluate Stocks\"):\n    if 'top_stocks' not in st.session_state or not st.session_state.top_stocks:\n        st.error(\"Please fetch the top stocks first by clicking 'Get Top Stocks'.\")",
+        "detail": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "documentation": {}
+    },
+    {
+        "label": "api_key",
+        "kind": 5,
+        "importPath": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "description": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "peekOfCode": "api_key = os.getenv(\"GROQ_API_KEY\")\ngroq_client = Groq(api_key=api_key)\ndef get_top_sp500_stocks(n=20):\n    tickers = ['AAPL', 'MSFT', 'AMZN', 'GOOGL', 'GOOG', 'META', 'TSLA', 'BRK.B', 'JPM', 'V']\n    market_caps = {ticker: yf.Ticker(ticker).info.get('marketCap', 0) for ticker in tickers}\n    top_stocks = sorted(market_caps.items(), key=lambda x: x[1], reverse=True)[:n]\n    return [stock[0] for stock in top_stocks]\ndef get_financial_data(ticker, start_date, end_date):\n    stock = yf.Ticker(ticker)\n    price_data = stock.history(start=start_date, end=end_date)",
+        "detail": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "documentation": {}
+    },
+    {
+        "label": "groq_client",
+        "kind": 5,
+        "importPath": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "description": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "peekOfCode": "groq_client = Groq(api_key=api_key)\ndef get_top_sp500_stocks(n=20):\n    tickers = ['AAPL', 'MSFT', 'AMZN', 'GOOGL', 'GOOG', 'META', 'TSLA', 'BRK.B', 'JPM', 'V']\n    market_caps = {ticker: yf.Ticker(ticker).info.get('marketCap', 0) for ticker in tickers}\n    top_stocks = sorted(market_caps.items(), key=lambda x: x[1], reverse=True)[:n]\n    return [stock[0] for stock in top_stocks]\ndef get_financial_data(ticker, start_date, end_date):\n    stock = yf.Ticker(ticker)\n    price_data = stock.history(start=start_date, end=end_date)\n    income_statement = stock.financials",
+        "detail": "pages.MarketIQ-Enhanced-Stock-Analysis.app",
+        "documentation": {}
+    },
+    {
         "label": "get",
         "kind": 2,
         "importPath": "pages.StockMarketApp.bollinger_bands",
@@ -12331,6 +13476,132 @@
         "documentation": {}
     },
     {
+        "label": "clear_chat_history",
+        "kind": 2,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.app_v1",
+        "description": "pages.chatbot-with-streamlit-using-replicate.app_v1",
+        "peekOfCode": "def clear_chat_history():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]\nst.sidebar.button('Clear Chat History', on_click=clear_chat_history)\n# Function for generating LLaMA2 response\n# Refactored from https://github.com/a16z-infra/llama2-chatbot\ndef generate_llama2_response(prompt_input):\n    string_dialogue = \"You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'.\"\n    for dict_message in st.session_state.messages:\n        if dict_message[\"role\"] == \"user\":\n            string_dialogue += \"User: \" + dict_message[\"content\"] + \"\\n\\n\"",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.app_v1",
+        "documentation": {}
+    },
+    {
+        "label": "generate_llama2_response",
+        "kind": 2,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.app_v1",
+        "description": "pages.chatbot-with-streamlit-using-replicate.app_v1",
+        "peekOfCode": "def generate_llama2_response(prompt_input):\n    string_dialogue = \"You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'.\"\n    for dict_message in st.session_state.messages:\n        if dict_message[\"role\"] == \"user\":\n            string_dialogue += \"User: \" + dict_message[\"content\"] + \"\\n\\n\"\n        else:\n            string_dialogue += \"Assistant: \" + dict_message[\"content\"] + \"\\n\\n\"\n    output = replicate.run('a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5', \n                           input={\"prompt\": f\"{string_dialogue} {prompt_input} Assistant: \",\n                                  \"temperature\":0.1, \"top_p\":0.9, \"max_length\":512, \"repetition_penalty\":1})",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.app_v1",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['REPLICATE_API_TOKEN']",
+        "kind": 5,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.app_v1",
+        "description": "pages.chatbot-with-streamlit-using-replicate.app_v1",
+        "peekOfCode": "os.environ['REPLICATE_API_TOKEN'] = replicate_api\n# Store LLM generated responses\nif \"messages\" not in st.session_state.keys():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]\n# Display or clear chat messages\nfor message in st.session_state.messages:\n    with st.chat_message(message[\"role\"]):\n        st.write(message[\"content\"])\ndef clear_chat_history():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.app_v1",
+        "documentation": {}
+    },
+    {
+        "label": "llm",
+        "kind": 5,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "description": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "peekOfCode": "llm = Llama(model_path=\"llama-2-7b-chat.ggmlv3.q2_K.bin\",\n            n_ctx=512,\n            n_batch=128)\n# Start timer\nstart = timeit.default_timer()\n# Generate LLM response\nprompt = \"What is Python?\"\noutput = llm(prompt,\n             max_tokens=-1,\n             echo=False,",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "documentation": {}
+    },
+    {
+        "label": "start",
+        "kind": 5,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "description": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "peekOfCode": "start = timeit.default_timer()\n# Generate LLM response\nprompt = \"What is Python?\"\noutput = llm(prompt,\n             max_tokens=-1,\n             echo=False,\n             temperature=0.1,\n             top_p=0.9)\n# Stop timer\nstop = timeit.default_timer()",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "documentation": {}
+    },
+    {
+        "label": "prompt",
+        "kind": 5,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "description": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "peekOfCode": "prompt = \"What is Python?\"\noutput = llm(prompt,\n             max_tokens=-1,\n             echo=False,\n             temperature=0.1,\n             top_p=0.9)\n# Stop timer\nstop = timeit.default_timer()\nduration = stop - start\nprint(\"Time: \", duration, '\\n\\n')",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "documentation": {}
+    },
+    {
+        "label": "output",
+        "kind": 5,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "description": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "peekOfCode": "output = llm(prompt,\n             max_tokens=-1,\n             echo=False,\n             temperature=0.1,\n             top_p=0.9)\n# Stop timer\nstop = timeit.default_timer()\nduration = stop - start\nprint(\"Time: \", duration, '\\n\\n')\n# Display generated text",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "documentation": {}
+    },
+    {
+        "label": "stop",
+        "kind": 5,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "description": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "peekOfCode": "stop = timeit.default_timer()\nduration = stop - start\nprint(\"Time: \", duration, '\\n\\n')\n# Display generated text\nprint(output['choices'][0]['text'])\n# Write to file\nwith open(\"response.txt\", \"a\") as f:\n  f.write(f\"Time: {duration}\")\n  f.write(output['choices'][0]['text'])",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "documentation": {}
+    },
+    {
+        "label": "duration",
+        "kind": 5,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "description": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "peekOfCode": "duration = stop - start\nprint(\"Time: \", duration, '\\n\\n')\n# Display generated text\nprint(output['choices'][0]['text'])\n# Write to file\nwith open(\"response.txt\", \"a\") as f:\n  f.write(f\"Time: {duration}\")\n  f.write(output['choices'][0]['text'])",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.llama2-local",
+        "documentation": {}
+    },
+    {
+        "label": "clear_chat_history",
+        "kind": 2,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.streamlit_app",
+        "description": "pages.chatbot-with-streamlit-using-replicate.streamlit_app",
+        "peekOfCode": "def clear_chat_history():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]\nst.sidebar.button('Clear Chat History', on_click=clear_chat_history)\n# Function for generating LLaMA2 response. Refactored from https://github.com/a16z-infra/llama2-chatbot\ndef generate_llama2_response(prompt_input):\n    string_dialogue = \"You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'.\"\n    for dict_message in st.session_state.messages:\n        if dict_message[\"role\"] == \"user\":\n            string_dialogue += \"User: \" + dict_message[\"content\"] + \"\\n\\n\"\n        else:",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "generate_llama2_response",
+        "kind": 2,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.streamlit_app",
+        "description": "pages.chatbot-with-streamlit-using-replicate.streamlit_app",
+        "peekOfCode": "def generate_llama2_response(prompt_input):\n    string_dialogue = \"You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'.\"\n    for dict_message in st.session_state.messages:\n        if dict_message[\"role\"] == \"user\":\n            string_dialogue += \"User: \" + dict_message[\"content\"] + \"\\n\\n\"\n        else:\n            string_dialogue += \"Assistant: \" + dict_message[\"content\"] + \"\\n\\n\"\n    output = replicate.run('a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5', \n                           input={\"prompt\": f\"{string_dialogue} {prompt_input} Assistant: \",\n                                  \"temperature\":temperature, \"top_p\":top_p, \"max_length\":max_length, \"repetition_penalty\":1})",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "clear_chat_history",
+        "kind": 2,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.streamlit_app_v2",
+        "description": "pages.chatbot-with-streamlit-using-replicate.streamlit_app_v2",
+        "peekOfCode": "def clear_chat_history():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]\nst.sidebar.button('Clear Chat History', on_click=clear_chat_history)\n# Function for generating LLaMA2 response\ndef generate_llama2_response(prompt_input):\n    string_dialogue = \"You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'.\"\n    for dict_message in st.session_state.messages:\n        if dict_message[\"role\"] == \"user\":\n            string_dialogue += \"User: \" + dict_message[\"content\"] + \"\\n\\n\"\n        else:",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.streamlit_app_v2",
+        "documentation": {}
+    },
+    {
+        "label": "generate_llama2_response",
+        "kind": 2,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.streamlit_app_v2",
+        "description": "pages.chatbot-with-streamlit-using-replicate.streamlit_app_v2",
+        "peekOfCode": "def generate_llama2_response(prompt_input):\n    string_dialogue = \"You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'.\"\n    for dict_message in st.session_state.messages:\n        if dict_message[\"role\"] == \"user\":\n            string_dialogue += \"User: \" + dict_message[\"content\"] + \"\\n\\n\"\n        else:\n            string_dialogue += \"Assistant: \" + dict_message[\"content\"] + \"\\n\\n\"\n    output = replicate.run(llm, \n                           input={\"prompt\": f\"{string_dialogue} {prompt_input} Assistant: \",\n                                  \"temperature\":temperature, \"top_p\":top_p, \"max_length\":max_length, \"repetition_penalty\":1})",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.streamlit_app_v2",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['REPLICATE_API_TOKEN']",
+        "kind": 5,
+        "importPath": "pages.chatbot-with-streamlit-using-replicate.streamlit_app_v2",
+        "description": "pages.chatbot-with-streamlit-using-replicate.streamlit_app_v2",
+        "peekOfCode": "os.environ['REPLICATE_API_TOKEN'] = replicate_api\n# Store LLM generated responses\nif \"messages\" not in st.session_state.keys():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]\n# Display or clear chat messages\nfor message in st.session_state.messages:\n    with st.chat_message(message[\"role\"]):\n        st.write(message[\"content\"])\ndef clear_chat_history():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]",
+        "detail": "pages.chatbot-with-streamlit-using-replicate.streamlit_app_v2",
+        "documentation": {}
+    },
+    {
         "label": "company",
         "kind": 5,
         "importPath": "pages.gamingzolvenix-repo.app",
@@ -12490,6 +13761,132 @@
         "description": "pages.gamingzolvenix-repo.app",
         "peekOfCode": "percentage_change_formattedS = f\"{percentage_changeS:.2f}%\"\nif not selected == \"HELP\":\n    selected_company = st.selectbox(\"\\n\\nSearch for a Company\", company)\n    st.write(\"---\")\n    n = company.index(selected_company)\n    selected_stocks = code[n]\n    if selected == \"HOME\":\n            col1,col2,col3=st.columns(3)\n            with col1:\n                st.subheader(\"Nifty\")",
         "detail": "pages.gamingzolvenix-repo.app",
+        "documentation": {}
+    },
+    {
+        "label": "clear_chat_history",
+        "kind": 2,
+        "importPath": "pages.llama2.app_v1",
+        "description": "pages.llama2.app_v1",
+        "peekOfCode": "def clear_chat_history():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]\nst.sidebar.button('Clear Chat History', on_click=clear_chat_history)\n# Function for generating LLaMA2 response\n# Refactored from https://github.com/a16z-infra/llama2-chatbot\ndef generate_llama2_response(prompt_input):\n    string_dialogue = \"You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'.\"\n    for dict_message in st.session_state.messages:\n        if dict_message[\"role\"] == \"user\":\n            string_dialogue += \"User: \" + dict_message[\"content\"] + \"\\n\\n\"",
+        "detail": "pages.llama2.app_v1",
+        "documentation": {}
+    },
+    {
+        "label": "generate_llama2_response",
+        "kind": 2,
+        "importPath": "pages.llama2.app_v1",
+        "description": "pages.llama2.app_v1",
+        "peekOfCode": "def generate_llama2_response(prompt_input):\n    string_dialogue = \"You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'.\"\n    for dict_message in st.session_state.messages:\n        if dict_message[\"role\"] == \"user\":\n            string_dialogue += \"User: \" + dict_message[\"content\"] + \"\\n\\n\"\n        else:\n            string_dialogue += \"Assistant: \" + dict_message[\"content\"] + \"\\n\\n\"\n    output = replicate.run('a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5', \n                           input={\"prompt\": f\"{string_dialogue} {prompt_input} Assistant: \",\n                                  \"temperature\":0.1, \"top_p\":0.9, \"max_length\":512, \"repetition_penalty\":1})",
+        "detail": "pages.llama2.app_v1",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['REPLICATE_API_TOKEN']",
+        "kind": 5,
+        "importPath": "pages.llama2.app_v1",
+        "description": "pages.llama2.app_v1",
+        "peekOfCode": "os.environ['REPLICATE_API_TOKEN'] = replicate_api\n# Store LLM generated responses\nif \"messages\" not in st.session_state.keys():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]\n# Display or clear chat messages\nfor message in st.session_state.messages:\n    with st.chat_message(message[\"role\"]):\n        st.write(message[\"content\"])\ndef clear_chat_history():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]",
+        "detail": "pages.llama2.app_v1",
+        "documentation": {}
+    },
+    {
+        "label": "llm",
+        "kind": 5,
+        "importPath": "pages.llama2.llama2-local",
+        "description": "pages.llama2.llama2-local",
+        "peekOfCode": "llm = Llama(model_path=\"llama-2-7b-chat.ggmlv3.q2_K.bin\",\n            n_ctx=512,\n            n_batch=128)\n# Start timer\nstart = timeit.default_timer()\n# Generate LLM response\nprompt = \"What is Python?\"\noutput = llm(prompt,\n             max_tokens=-1,\n             echo=False,",
+        "detail": "pages.llama2.llama2-local",
+        "documentation": {}
+    },
+    {
+        "label": "start",
+        "kind": 5,
+        "importPath": "pages.llama2.llama2-local",
+        "description": "pages.llama2.llama2-local",
+        "peekOfCode": "start = timeit.default_timer()\n# Generate LLM response\nprompt = \"What is Python?\"\noutput = llm(prompt,\n             max_tokens=-1,\n             echo=False,\n             temperature=0.1,\n             top_p=0.9)\n# Stop timer\nstop = timeit.default_timer()",
+        "detail": "pages.llama2.llama2-local",
+        "documentation": {}
+    },
+    {
+        "label": "prompt",
+        "kind": 5,
+        "importPath": "pages.llama2.llama2-local",
+        "description": "pages.llama2.llama2-local",
+        "peekOfCode": "prompt = \"What is Python?\"\noutput = llm(prompt,\n             max_tokens=-1,\n             echo=False,\n             temperature=0.1,\n             top_p=0.9)\n# Stop timer\nstop = timeit.default_timer()\nduration = stop - start\nprint(\"Time: \", duration, '\\n\\n')",
+        "detail": "pages.llama2.llama2-local",
+        "documentation": {}
+    },
+    {
+        "label": "output",
+        "kind": 5,
+        "importPath": "pages.llama2.llama2-local",
+        "description": "pages.llama2.llama2-local",
+        "peekOfCode": "output = llm(prompt,\n             max_tokens=-1,\n             echo=False,\n             temperature=0.1,\n             top_p=0.9)\n# Stop timer\nstop = timeit.default_timer()\nduration = stop - start\nprint(\"Time: \", duration, '\\n\\n')\n# Display generated text",
+        "detail": "pages.llama2.llama2-local",
+        "documentation": {}
+    },
+    {
+        "label": "stop",
+        "kind": 5,
+        "importPath": "pages.llama2.llama2-local",
+        "description": "pages.llama2.llama2-local",
+        "peekOfCode": "stop = timeit.default_timer()\nduration = stop - start\nprint(\"Time: \", duration, '\\n\\n')\n# Display generated text\nprint(output['choices'][0]['text'])\n# Write to file\nwith open(\"response.txt\", \"a\") as f:\n  f.write(f\"Time: {duration}\")\n  f.write(output['choices'][0]['text'])",
+        "detail": "pages.llama2.llama2-local",
+        "documentation": {}
+    },
+    {
+        "label": "duration",
+        "kind": 5,
+        "importPath": "pages.llama2.llama2-local",
+        "description": "pages.llama2.llama2-local",
+        "peekOfCode": "duration = stop - start\nprint(\"Time: \", duration, '\\n\\n')\n# Display generated text\nprint(output['choices'][0]['text'])\n# Write to file\nwith open(\"response.txt\", \"a\") as f:\n  f.write(f\"Time: {duration}\")\n  f.write(output['choices'][0]['text'])",
+        "detail": "pages.llama2.llama2-local",
+        "documentation": {}
+    },
+    {
+        "label": "clear_chat_history",
+        "kind": 2,
+        "importPath": "pages.llama2.streamlit_app",
+        "description": "pages.llama2.streamlit_app",
+        "peekOfCode": "def clear_chat_history():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]\nst.sidebar.button('Clear Chat History', on_click=clear_chat_history)\n# Function for generating LLaMA2 response. Refactored from https://github.com/a16z-infra/llama2-chatbot\ndef generate_llama2_response(prompt_input):\n    string_dialogue = \"You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'.\"\n    for dict_message in st.session_state.messages:\n        if dict_message[\"role\"] == \"user\":\n            string_dialogue += \"User: \" + dict_message[\"content\"] + \"\\n\\n\"\n        else:",
+        "detail": "pages.llama2.streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "generate_llama2_response",
+        "kind": 2,
+        "importPath": "pages.llama2.streamlit_app",
+        "description": "pages.llama2.streamlit_app",
+        "peekOfCode": "def generate_llama2_response(prompt_input):\n    string_dialogue = \"You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'.\"\n    for dict_message in st.session_state.messages:\n        if dict_message[\"role\"] == \"user\":\n            string_dialogue += \"User: \" + dict_message[\"content\"] + \"\\n\\n\"\n        else:\n            string_dialogue += \"Assistant: \" + dict_message[\"content\"] + \"\\n\\n\"\n    output = replicate.run('a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5', \n                           input={\"prompt\": f\"{string_dialogue} {prompt_input} Assistant: \",\n                                  \"temperature\":temperature, \"top_p\":top_p, \"max_length\":max_length, \"repetition_penalty\":1})",
+        "detail": "pages.llama2.streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "clear_chat_history",
+        "kind": 2,
+        "importPath": "pages.llama2.streamlit_app_v2",
+        "description": "pages.llama2.streamlit_app_v2",
+        "peekOfCode": "def clear_chat_history():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]\nst.sidebar.button('Clear Chat History', on_click=clear_chat_history)\n# Function for generating LLaMA2 response\ndef generate_llama2_response(prompt_input):\n    string_dialogue = \"You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'.\"\n    for dict_message in st.session_state.messages:\n        if dict_message[\"role\"] == \"user\":\n            string_dialogue += \"User: \" + dict_message[\"content\"] + \"\\n\\n\"\n        else:",
+        "detail": "pages.llama2.streamlit_app_v2",
+        "documentation": {}
+    },
+    {
+        "label": "generate_llama2_response",
+        "kind": 2,
+        "importPath": "pages.llama2.streamlit_app_v2",
+        "description": "pages.llama2.streamlit_app_v2",
+        "peekOfCode": "def generate_llama2_response(prompt_input):\n    string_dialogue = \"You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'.\"\n    for dict_message in st.session_state.messages:\n        if dict_message[\"role\"] == \"user\":\n            string_dialogue += \"User: \" + dict_message[\"content\"] + \"\\n\\n\"\n        else:\n            string_dialogue += \"Assistant: \" + dict_message[\"content\"] + \"\\n\\n\"\n    output = replicate.run(llm, \n                           input={\"prompt\": f\"{string_dialogue} {prompt_input} Assistant: \",\n                                  \"temperature\":temperature, \"top_p\":top_p, \"max_length\":max_length, \"repetition_penalty\":1})",
+        "detail": "pages.llama2.streamlit_app_v2",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ['REPLICATE_API_TOKEN']",
+        "kind": 5,
+        "importPath": "pages.llama2.streamlit_app_v2",
+        "description": "pages.llama2.streamlit_app_v2",
+        "peekOfCode": "os.environ['REPLICATE_API_TOKEN'] = replicate_api\n# Store LLM generated responses\nif \"messages\" not in st.session_state.keys():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]\n# Display or clear chat messages\nfor message in st.session_state.messages:\n    with st.chat_message(message[\"role\"]):\n        st.write(message[\"content\"])\ndef clear_chat_history():\n    st.session_state.messages = [{\"role\": \"assistant\", \"content\": \"How may I assist you today?\"}]",
+        "detail": "pages.llama2.streamlit_app_v2",
         "documentation": {}
     },
     {
