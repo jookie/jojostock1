@@ -18,6 +18,7 @@ from lib.rl.config import (
       TRAIN_END_DATE ,
       TRADE_START_DATE,
       TRADE_END_DATE,
+      RESULTS_DIR,
 )
 from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
 from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
