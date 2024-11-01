@@ -1,13 +1,15 @@
 # Welcome to my Git repo! I specialize in machine learning (ML), deep learning (DL), and natural language processing (NLP). Here, you'll find projects showcasing.
 # https://share.streamlit.io/explore?search=finviz&sort=most+viewed
 # finviz_url = "https://finviz.com/quote.ashx?t="
-from __future__ import annotations
-import os
+
 import streamlit as st
-import itertools
-import matplotlib.pyplot as plt
+st.set_page_config(
+    page_title="Stock prediction Trainig", 
+    layout="wide",
+    page_icon=':bar_chart:',
+    )
 from lib.utility.jprint import jprint
-from pages.StockMarketApp import styles ; styles.set()
+from pages.StockMarketApp import styles 
 from lib.rl.config import (
       DATA_SAVE_DIR,
       TRAINED_MODEL_DIR,
@@ -28,9 +30,12 @@ from stable_baselines3.common.logger import configure
 from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
 from lib.rl.main import check_and_make_directories
 from lib.rl.config_tickers import index_dict
+import os
+import itertools
+import matplotlib.pyplot as plt
 import warnings ; warnings.filterwarnings("ignore")
-def mkdirDataDf(fn):
-    os.makedirs(DATA_FRAME_DIR, exist_ok=True)
+styles.set()
+def get_full_path(fn):
     file_path = os.path.join(DATA_FRAME_DIR, fn )
     return file_path
   
@@ -55,30 +60,24 @@ def DataDownLoader() :
   
   return final_ticker_list
 
-up_candle = "📈"  # \U0001F4C8
-down_candle = ""  # \U0001F4C9
-# Set page title and configure layout
 
-      
-def main(ticker_list):
-  import pandas as pd
-  dir = [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]
-  check_and_make_directories( dir )
-  jprint("app.py: Directory Paths:   ",  "   //".join(dir),  '##')
+def set_yahoo_data_frame() :
   """app.py: Waiting data collection From Yahoo downloader ..."""
   df = YahooDownloader(start_date = TRAIN_START_DATE,
-                      end_date = TRADE_END_DATE,
-                      ticker_list = ticker_list).fetch_data()
-  st.write(df.shape)
+  end_date = TRADE_END_DATE,
+  ticker_list = ticker_list).fetch_data()
   df.sort_values(['date','tic'],ignore_index=True).head()
   fe = FeatureEngineer(
-                      use_technical_indicator=True,
-                      tech_indicator_list = INDICATORS,
-                      use_vix=True,
-                      use_turbulence=True,
-                      user_defined_feature = False)
-
+                    use_technical_indicator=True,
+                    tech_indicator_list = INDICATORS,
+                    use_vix=True,
+                    use_turbulence=True,
+                    user_defined_feature = False)
+  st.write(df.shape)
   processed = fe.preprocess_data(df)
+
+  import pandas as pd
+  
   list_ticker = processed["tic"].unique().tolist()
   list_date = list(pd.date_range(processed['date'].min(),processed['date'].max()).astype(str))
   combination = list(itertools.product(list_date,list_ticker))
@@ -87,13 +86,19 @@ def main(ticker_list):
   processed_full = processed_full.sort_values(['date','tic'])
   processed_full = processed_full.fillna(0)
   processed_full.sort_values(['date','tic'],ignore_index=True).head(10)
+  return df, processed_full
+  
+
+
+def main(ticker_list):
+  import pandas as pd
+  check_and_make_directories( [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR,    RESULTS_DIR, DATA_FRAME_DIR] )
+  procDataFrame , processed_full= set_yahoo_data_frame()
+  mvo_df = processed_full.sort_values(['date','tic'],ignore_index=True)[['date','tic','close']]
   train = data_split(processed_full, TRAIN_START_DATE,TRAIN_END_DATE)
   trade = data_split(processed_full, TRADE_START_DATE,TRADE_END_DATE)
-
-  st.write(train.head()) ; 
-  st.write(train.tail())
+  st.write(train.head()) ; st.write(train.tail())
   
-  mvo_df = processed_full.sort_values(['date','tic'],ignore_index=True)[['date','tic','close']]
   stock_dimension = len(train.tic.unique())
   state_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension
   st.write(f"Trained num of Symboles: {stock_dimension}, State Total Space: {state_space}")
@@ -326,18 +331,18 @@ def main(ticker_list):
   portfolioSize = 29 #set portfolio size
 
   #read stock prices in a dataframe
-  # df = pd.read_csv(StockFileName,  nrows= Rows)
+  # procDataFrame = pd.read_csv(StockFileName,  nrows= Rows)
 
   #extract asset labels
-  # assetLabels = df.columns[1:Columns+1].tolist()
+  # assetLabels = procDataFrame.columns[1:Columns+1].tolist()
   # st.write(assetLabels)
 
   #extract asset prices
-  # StockData = df.iloc[0:, 1:]
+  # StockData = procDataFrame.iloc[0:, 1:]
   StockData = mvo.head(mvo.shape[0]-336)
   st.write(StockData)
   TradeData = mvo.tail(336)
-  st.write(df.head())
+  st.write(procDataFrame.head())
   TradeData.to_numpy()
 
   #compute asset returns
@@ -377,7 +382,7 @@ def main(ticker_list):
   df_result_ppo = df_account_value_ppo.set_index(df_account_value_ppo.columns[0])
   df_result_sac = df_account_value_sac.set_index(df_account_value_sac.columns[0])
   
-  df_account_value_a2c.to_csv( mkdirDataDf( "df_account_value_a2c.csv"))
+  df_account_value_a2c.to_csv( get_full_path( "df_account_value_a2c.csv"))
   #baseline stats
   st.write("==============Get Baseline Stats===========")
   df_dji_ = get_baseline(
@@ -388,9 +393,9 @@ def main(ticker_list):
   df_dji = pd.DataFrame()
   df_dji['date'] = df_account_value_a2c['date']
   df_dji['account_value'] = df_dji_['close'] / df_dji_['close'][0] * env_kwargs["initial_amount"]
-  df_dji.to_csv(mkdirDataDf("df_dji.csv"))
+  df_dji.to_csv(get_full_path("df_dji.csv"))
   df_dji = df_dji.set_index(df_dji.columns[0])
-  df_dji.to_csv(mkdirDataDf("df_dji+.csv"))
+  df_dji.to_csv(get_full_path("df_dji+.csv"))
 
 
   result = pd.merge(df_result_a2c, df_result_ddpg, left_index=True, right_index=True, suffixes=('_a2c', '_ddpg'))
@@ -402,7 +407,7 @@ def main(ticker_list):
   result.columns = ['a2c', 'ddpg', 'td3', 'ppo', 'sac', 'mean var', 'dji']
 
   st.write("result: ", result)
-  result.to_csv(mkdirDataDf("result.csv"))
+  result.to_csv(get_full_path("result.csv"))
 
   plt.rcParams["figure.figsize"] = (15,5)
   fig, ax = plt.subplots()
@@ -414,11 +419,6 @@ def main(ticker_list):
 
 
 if __name__ == "__main__":
-  # st.set_page_config(
-  #     page_title="Stock prediction Trainig", 
-  #     layout="wide",
-  #     page_icon=':bar_chart:',
-  #     )
   st.title(" 📈 Stock Price Ptediction Training")
   st.markdown("Trainig to predict stock price movements for a given stock ticker symbol and its foundamental ratios")
   ticker_list = DataDownLoader()
