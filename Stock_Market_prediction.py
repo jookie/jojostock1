@@ -60,12 +60,11 @@ def DataDownLoader() :
   
   return final_ticker_list
 
-
-def set_yahoo_data_frame() :
+def set_yahoo_data_frame(ticker_ls) :
   """app.py: Waiting data collection From Yahoo downloader ..."""
   df = YahooDownloader(start_date = TRAIN_START_DATE,
   end_date = TRADE_END_DATE,
-  ticker_list = ticker_list).fetch_data()
+  ticker_list = ticker_ls).fetch_data()
   df.sort_values(['date','tic'],ignore_index=True).head()
   fe = FeatureEngineer(
                     use_technical_indicator=True,
@@ -86,22 +85,26 @@ def set_yahoo_data_frame() :
   processed_full = processed_full.sort_values(['date','tic'])
   processed_full = processed_full.fillna(0)
   processed_full.sort_values(['date','tic'],ignore_index=True).head(10)
-  return df, processed_full
   
-
-
-def main(ticker_list):
-  import pandas as pd
-  check_and_make_directories( [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR,    RESULTS_DIR, DATA_FRAME_DIR] )
-  procDataFrame , processed_full= set_yahoo_data_frame()
-  mvo_df = processed_full.sort_values(['date','tic'],ignore_index=True)[['date','tic','close']]
   train = data_split(processed_full, TRAIN_START_DATE,TRAIN_END_DATE)
   trade = data_split(processed_full, TRADE_START_DATE,TRADE_END_DATE)
   st.write(train.head()) ; st.write(train.tail())
-  
+
+  mvo_df = processed_full.sort_values(['date','tic'],ignore_index=True)[['date','tic','close']]
   stock_dimension = len(train.tic.unique())
   state_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension
-  st.write(f"Trained num of Symboles: {stock_dimension}, State Total Space: {state_space}")
+  st.write(f"Trained num of Symboles: {stock_dimension}, State Total Space: {state_space}")  
+  
+  return [df, processed_full, train, trade, mvo_df, stock_dimension, state_space]
+  
+def main(ticker_list):
+  import pandas as pd
+  check_and_make_directories( [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR,    RESULTS_DIR, DATA_FRAME_DIR] )
+  
+  _ya = set_yahoo_data_frame(ticker_list)
+  procDataFrame  = _ya[0] ; processed_full = _ya[1] ; train  = _ya[2], trade  = _ya[3]
+  mvo_df = _ya[4] ; stock_dimension = _ya[5] ; state_space = _ya[6]
+  
   buy_cost_list = sell_cost_list = [0.001] * stock_dimension
   num_stock_shares = [0] * stock_dimension
   env_kwargs = {
