@@ -9,7 +9,7 @@ st.set_page_config(
     page_icon=':bar_chart:',
     )
 from lib.utility.jprint import jprint
-from pages.StockMarketApp import styles 
+# from pages.StockMarketApp import styles 
 from lib.rl.config import (
       DATA_SAVE_DIR,
       TRAINED_MODEL_DIR,
@@ -34,7 +34,7 @@ import os
 import itertools
 import matplotlib.pyplot as plt
 import warnings ; warnings.filterwarnings("ignore")
-styles.set()
+# styles.set()
 def get_full_path(fn):
     file_path = os.path.join(DATA_FRAME_DIR, fn )
     return file_path
@@ -61,6 +61,7 @@ def DataDownLoader() :
   return final_ticker_list
 
 def set_yahoo_data_frame(ticker_ls) :
+  
   """app.py: Waiting data collection From Yahoo downloader ..."""
   df = YahooDownloader(start_date = TRAIN_START_DATE,
   end_date = TRADE_END_DATE,
@@ -95,15 +96,16 @@ def set_yahoo_data_frame(ticker_ls) :
   state_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension
   st.write(f"Trained num of Symboles: {stock_dimension}, State Total Space: {state_space}")  
   
-  return [df, processed_full, train, trade, mvo_df, stock_dimension, state_space]
+  from collections import namedtuple
+  Result = namedtuple("Result","df, processed_full, train, trade, mvo_df, stock_dimension, state_space")
+
+  return Result(df, processed_full, train, trade, mvo_df, stock_dimension, state_space)
   
 def main(ticker_list):
   import pandas as pd
   check_and_make_directories( [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR,    RESULTS_DIR, DATA_FRAME_DIR] )
   
-  _ya = set_yahoo_data_frame(ticker_list)
-  procDataFrame  = _ya[0] ; processed_full = _ya[1] ; train  = _ya[2], trade  = _ya[3]
-  mvo_df = _ya[4] ; stock_dimension = _ya[5] ; state_space = _ya[6]
+  procDataFrame, processed_full, train, trade, mvo_df, stock_dimension, state_space = set_yahoo_data_frame(ticker_list)
   
   buy_cost_list = sell_cost_list = [0.001] * stock_dimension
   num_stock_shares = [0] * stock_dimension
