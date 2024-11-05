@@ -8,7 +8,33 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import yfinance as yf
 import datetime
-from pages.StockMarketApp import styles ; styles.set()
+
+
+custom_css = """
+<style>
+body {
+background-color: black; /* Background color (black) */
+font-family: "Times New Roman", Times, serif; /* Font family (Times New Roman) */
+color: white; /* Text color (white) */
+line-height: 1.6; /* Line height for readability */
+}
+
+h1 {
+color: #3498db; /* Heading color (light blue) */
+}
+
+h2 {
+color: #e74c3c; /* Subheading color (red) */
+}
+
+p {
+margin: 10px 0; /* Margin for paragraphs */
+}
+
+</style>
+"""
+
+# styles.set()
 
 # Set page title and configure layout
 # st.set_page_config(page_title="Stock Sentiment Analysis", layout="wide")

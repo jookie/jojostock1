@@ -9,17 +9,12 @@ st.set_page_config(
     page_icon=':bar_chart:',
     )
 from lib.utility.jprint import jprint
-# from pages.StockMarketApp import styles 
 from lib.rl.config import (
       DATA_SAVE_DIR,
       TRAINED_MODEL_DIR,
       TENSORBOARD_LOG_DIR,
       DATA_FRAME_DIR,
       INDICATORS,
-      TRAIN_START_DATE,
-      TRAIN_END_DATE ,
-      TRADE_START_DATE,
-      TRADE_END_DATE,
       RESULTS_DIR,
 )
 from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
@@ -34,78 +29,38 @@ import os
 import itertools
 import matplotlib.pyplot as plt
 import warnings ; warnings.filterwarnings("ignore")
-# styles.set()
-def get_full_path(fn):
-    file_path = os.path.join(DATA_FRAME_DIR, fn )
-    return file_path
-  
-def DataDownLoader() :
-  # Placeholder for previous selection to retain index when tickers are empty
-  if "previous_index" not in st.session_state:
-      st.session_state.previous_index = list(index_dict.keys())[0]
-  st.title("Index and Ticker Selector")
-  # Dropdown to select an index (updated with new prompt and variable name)
-  selected_index = st.selectbox("Choose an Index", options=list(index_dict.keys()))
-  # Multi-select for tickers based on selected index
-  selected_tickers = st.multiselect(
-      "Select Tickers",
-      options=index_dict[selected_index],
-      default=index_dict[selected_index]  # Optional: default selects all tickers
-  )
-  # Update the session state only if the tickers are not empty
-  if selected_tickers:
-      st.session_state.previous_index = selected_index
-  # Placeholder for the list of tickers passed to YahooDownloader
-  final_ticker_list = selected_tickers if selected_tickers else index_dict[st.session_state.previous_index]
-  
-  return final_ticker_list
+# from pages.StockMarketApp import styles ; styles.set()
+from lib.utility.inputs import get_full_path, GetTickerList, set_yahoo_data_frame
 
-def set_yahoo_data_frame(ticker_ls) :
-  
-  """app.py: Waiting data collection From Yahoo downloader ..."""
-  df = YahooDownloader(start_date = TRAIN_START_DATE,
-  end_date = TRADE_END_DATE,
-  ticker_list = ticker_ls).fetch_data()
-  df.sort_values(['date','tic'],ignore_index=True).head()
-  fe = FeatureEngineer(
-                    use_technical_indicator=True,
-                    tech_indicator_list = INDICATORS,
-                    use_vix=True,
-                    use_turbulence=True,
-                    user_defined_feature = False)
-  st.write(df.shape)
-  processed = fe.preprocess_data(df)
+custom_css = """
+<style>
+body {
+background-color: black; /* Background color (black) */
+font-family: "Times New Roman", Times, serif; /* Font family (Times New Roman) */
+color: white; /* Text color (white) */
+line-height: 1.6; /* Line height for readability */
+}
 
+h1 {
+color: #3498db; /* Heading color (light blue) */
+}
+
+h2 {
+color: #e74c3c; /* Subheading color (red) */
+}
+
+p {
+margin: 10px 0; /* Margin for paragraphs */
+}
+
+</style>
+"""
+# Apply the custom CSS
+st.markdown(custom_css, unsafe_allow_html=True)
+
+def main(ticker_list, wf):
   import pandas as pd
-  
-  list_ticker = processed["tic"].unique().tolist()
-  list_date = list(pd.date_range(processed['date'].min(),processed['date'].max()).astype(str))
-  combination = list(itertools.product(list_date,list_ticker))
-  processed_full = pd.DataFrame(combination,columns=["date","tic"]).merge(processed,on=["date","tic"],how="left")
-  processed_full = processed_full[processed_full['date'].isin(processed['date'])]
-  processed_full = processed_full.sort_values(['date','tic'])
-  processed_full = processed_full.fillna(0)
-  processed_full.sort_values(['date','tic'],ignore_index=True).head(10)
-  
-  train = data_split(processed_full, TRAIN_START_DATE,TRAIN_END_DATE)
-  trade = data_split(processed_full, TRADE_START_DATE,TRADE_END_DATE)
-  st.write(train.head()) ; st.write(train.tail())
-
-  mvo_df = processed_full.sort_values(['date','tic'],ignore_index=True)[['date','tic','close']]
-  stock_dimension = len(train.tic.unique())
-  state_space = 1 + 2*stock_dimension + len(INDICATORS)*stock_dimension
-  st.write(f"Trained num of Symboles: {stock_dimension}, State Total Space: {state_space}")  
-  
-  from collections import namedtuple
-  Result = namedtuple("Result","df, processed_full, train, trade, mvo_df, stock_dimension, state_space")
-
-  return Result(df, processed_full, train, trade, mvo_df, stock_dimension, state_space)
-  
-def main(ticker_list):
-  import pandas as pd
-  check_and_make_directories( [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR,    RESULTS_DIR, DATA_FRAME_DIR] )
-  
-  procDataFrame, processed_full, train, trade, mvo_df, stock_dimension, state_space = set_yahoo_data_frame(ticker_list)
+  procDataFrame, processed_full, train, trade, mvo_df, stock_dimension, state_space = set_yahoo_data_frame(ticker_list, wf)
   
   buy_cost_list = sell_cost_list = [0.001] * stock_dimension
   num_stock_shares = [0] * stock_dimension
@@ -183,7 +138,7 @@ def main(ticker_list):
   trained_td3 = train_agent(agent, "td3", 5) if if_using_td3 else None
   trained_sac = train_agent(agent, "sac", 5) if if_using_sac else None
   
-  data_risk_indicator = processed_full[(processed_full.date<TRAIN_END_DATE) & (processed_full.date>=TRAIN_START_DATE)]
+  data_risk_indicator = processed_full[(processed_full.date<wf.train_end_date) & (processed_full.date>= wf.train_start_date)]
   insample_risk_indicator = data_risk_indicator.drop_duplicates(subset=['date'])
   
   st.write(f"Vix Indicator: {insample_risk_indicator.vix.quantile(0.996)}")
@@ -392,8 +347,8 @@ def main(ticker_list):
   st.write("==============Get Baseline Stats===========")
   df_dji_ = get_baseline(
           ticker="^DJI", 
-          start = TRADE_START_DATE,
-          end = TRADE_END_DATE)
+          start = wf.train_start_date,
+          end   = wf.train_end_date)
   stats = backtest_stats(df_dji_, value_col_name = 'close')
   df_dji = pd.DataFrame()
   df_dji['date'] = df_account_value_a2c['date']
@@ -419,13 +374,15 @@ def main(ticker_list):
   result.plot(ax=ax)
   st.pyplot(fig)
 
-
-
-
-
 if __name__ == "__main__":
+  from lib.utility.inputs import WorkflowScheduler
+  
   st.title(" 📈 Stock Price Ptediction Training")
   st.markdown("Trainig to predict stock price movements for a given stock ticker symbol and its foundamental ratios")
-  ticker_list = DataDownLoader()
-  if st.button("Download Data by Ticket"):
-    main(ticker_list)
+  check_and_make_directories( [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR,    RESULTS_DIR, DATA_FRAME_DIR] )
+  ticker_list = GetTickerList()
+  wf = WorkflowScheduler()
+  wf.display_sidebar()
+  
+  if st.button("Download Data per Ticket set"):
+    main(ticker_list, wf)

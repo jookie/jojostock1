@@ -1,5 +1,14 @@
 from __future__ import annotations
 
+sector_dict = {
+    "Technology": ["AAPL", "MSFT", "GOOGL", "META", "TSLA"],
+    "Healthcare": ["JNJ", "PFE", "MRK", "UNH", "ABBV"],
+    "Finance": ["JPM", "BAC", "WFC", "C", "GS"],
+    "Consumer Discretionary": ["AMZN", "HD", "NKE", "MCD", "SBUX"],
+    "Energy": ["XOM", "CVX", "COP", "PSX", "VLO"]
+}
+
+
 SINGLE_TICKER = ["AAPL"]
 
 # Dow 30 constituents in 2021/10
