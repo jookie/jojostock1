@@ -69,7 +69,6 @@ def main(ticker_list, _wf):
     st.write(df_account_value_a2c.head())
     st.write(df_account_value_a2c.tail())
     
-    
     df_result_a2c = df_account_value_a2c.set_index(df_account_value_a2c.columns[0])
     df_result_ddpg = df_account_value_ddpg.set_index(df_account_value_ddpg.columns[0])
     df_result_td3 = df_account_value_td3.set_index(df_account_value_td3.columns[0])
@@ -243,16 +242,7 @@ def main(ticker_list, _wf):
 
   Portfolio_Assets = TradeData # Initial_Portfolio
   MVO_result = pd.DataFrame(Portfolio_Assets, columns=["Mean Var"])
-#   MVO_result
-
-  # df_result_a2c = df_account_value_a2c.set_index(df_account_value_a2c.columns[0])
-  # df_result_ddpg = df_account_value_ddpg.set_index(df_account_value_ddpg.columns[0])
-  # df_result_td3 = df_account_value_td3.set_index(df_account_value_td3.columns[0])
-  # df_result_ppo = df_account_value_ppo.set_index(df_account_value_ppo.columns[0])
-  # df_result_sac = df_account_value_sac.set_index(df_account_value_sac.columns[0])
   
-  # df_account_value_a2c.to_csv( get_full_path( "df_account_value_a2c.csv"))
-  #baseline stats
   st.write("==============Get Baseline Stats===========")
   df_dji_ = get_baseline(
           ticker="^DJI", 

@@ -1,10 +1,17 @@
 from __future__ import annotations
-MAIN_RESULTS_DIR = 'train_results'
+import datetime
+import streamlit as st
+
+# Get current date and time in the specified format
+now = datetime.datetime.now().strftime("%Y%m%d-%Hh%M")
+
+st.write("Current Date and Time:", now)
+MAIN_RESULTS_DIR = 'pages/data' + now
 
 DATA_SAVE_DIR       = MAIN_RESULTS_DIR + "/datasets"
 TRAINED_MODEL_DIR   = MAIN_RESULTS_DIR + "/trained_models"
 TENSORBOARD_LOG_DIR = MAIN_RESULTS_DIR + "/tensorboard_log"
-RESULTS_DIR         = MAIN_RESULTS_DIR + "/results"
+RESULTS_DIR         = MAIN_RESULTS_DIR + "/main_results"
 DATA_FRAME_DIR      = MAIN_RESULTS_DIR + "/data_frame"
 
 # date format: '%Y-%m-%d'
