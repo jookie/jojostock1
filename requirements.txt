@@ -44,4 +44,5 @@ beautifulsoup4
 nltk
 joblib
 urllib3==1.26.14
+lumibot
 

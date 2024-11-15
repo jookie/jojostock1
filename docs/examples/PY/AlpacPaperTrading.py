@@ -117,6 +117,7 @@ if __name__ == "__main__":
     ALPACA_API_KEY = "PKEJH4W0URAU56SHKQW3"
     ALPACA_API_SECRET  = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"
     ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'
+    
     tech_indicator_list = ["macd", "rsi", "cci", "dx"]
     alpaca_trader = AlpacaPaperTrading(
         ticker_list, time_interval, drl_lib, agent, cwd, net_dim, 

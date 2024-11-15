@@ -1,11 +1,9 @@
 
 from __future__ import annotations
 
-
-ALPACA_API_KEY = "PKA2OY3YK7Y4M6Q7LCLR"
-ALPACA_API_SECRET  = "BxT64PIQtDBb*tnW"
+ALPACA_API_KEY      = "PKEJH4W0URAU56SHKQW3"
+ALPACA_API_SECRET    = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"
 ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'
-
 
 from finrl.config_tickers import DOW_30_TICKER
 from finrl.config import INDICATORS
@@ -345,7 +343,7 @@ def train_agent(args: Config):
 
         evaluator.evaluate_and_save(agent.act, args.horizon_len, logging_tuple)
         if (evaluator.total_step > args.break_step) or os.path.exists(f"{args.cwd}/stop"):
-            torch.save(agent.act.state_dict(), args.cwd + '/actor.pth')
+            torch.save(agent.act.state_dict(), args.cwd + '/')
             break  # stop training when reach `break_step` or `mkdir cwd/stop`
 
 
@@ -682,7 +680,15 @@ state_dim
 # Get the API Keys Ready
 # ALPACA_API_KEY = ""
 # ALPACA_API_SECRET  = ""
+
+ALPACA_API_KEY      = "PKEJH4W0URAU56SHKQW3"
+ALPACA_API_SECRET    = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"
 ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'
+
+
+ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'
+
+
 data_url = 'wss://data.alpaca.markets'
 env = StockTradingEnv
 # Show the data
