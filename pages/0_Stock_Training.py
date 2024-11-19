@@ -1,6 +1,10 @@
 # /content/papertrading_erl/actor.pth
 # /content/papertrading_erl_retrain/actor.pth
 
+# Integrating Lumibot with A2C (Advantage Actor-Critic), einforcement learning algorithm, involves leveraging machine learning libraries alongside Lumibot’s trading framework.
+technical analysis strategies such as PPO (Percentage Price Oscillator) A2C (Advantage Actor-Critic). The PPO is a momentum indicator commonly used in financial trading strategies.
+Lumibot, a Python library for creating and backtesting trading strategies, can be integrated with technical analysis strategies such as PPO (Percentage Price Oscillator). The PPO is a momentum indicator commonly used in financial trading strategies.
+
 from __future__ import annotations
 import sys ; sys.path.append("~/lib/rl")
 import streamlit as st

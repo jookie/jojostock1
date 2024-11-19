@@ -1,6 +1,14 @@
-# Welcome to my Git repo! I specialize in machine learning (ML), deep learning (DL), and natural language processing (NLP). Here, you'll find projects showcasing.
+# Machine learning (ML), deep learning (DL), and natural language processing (NLP). Here, you'll find projects showcasing.
 # https://share.streamlit.io/explore?search=finviz&sort=most+viewed
 # finviz_url = "https://finviz.com/quote.ashx?t="
+# Strategy mlstrat is initializing
+# 2024-11-19 15:49:55,242: INFO: [mlstrat] Executing the initialize lifecycle method
+# 2024-11-19 15:49:57,728: INFO: [mlstrat] Executing the before_starting_trading lifecycle method
+# 2024-11-19 15:49:57,789: INFO: [mlstrat] Strategy will check in again at: 2024-11-19 16:00:00
+# 2024-11-19 15:49:58,118: INFO: [mlstrat] Executing the before_market_opens lifecycle method
+# 2024-11-19 15:59:01,407: INFO: [mlstrat] Executing the before_market_closes lifecycle method
+# 2024-11-19 16:00:00,505: INFO: [mlstrat] The market is not currently open, skipping this trading iteration
+# 2024-11-19 16:00:01,046: INFO: [mlstrat] Executing the after_market_closes lifecycle method
 
 import streamlit as st
 st.set_page_config(
