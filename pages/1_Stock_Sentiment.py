@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import yfinance as yf
 import datetime
-# from pages.StockMarketApp import styles
 
 custom_css = """
 <style>
@@ -33,8 +32,7 @@ margin: 10px 0; /* Margin for paragraphs */
 
 </style>
 """
-# from pages.StockMarketApp import styles
-# styles.set()
+st.markdown(custom_css, unsafe_allow_html=True)
 
 # Set page title and configure layout
 # st.set_page_config(page_title="Stock Sentiment Analysis", layout="wide")

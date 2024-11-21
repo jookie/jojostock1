@@ -22,7 +22,7 @@ from lib.rl.main import check_and_make_directories
 from lib.rl.config_tickers import index_dict
 import matplotlib.pyplot as plt
 import warnings ; warnings.filterwarnings("ignore")
-# from pages.StockMarketApp import styles ; styles.set()
+
 from lib.utility.inputs import get_full_path, GetTickerList, set_yahoo_data_frame, predict_with_models
 
 def main(ticker_list, _wf):
