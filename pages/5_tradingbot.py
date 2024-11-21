@@ -1,16 +1,22 @@
 
-from lumibot.backtesting import YahooDataBacktesting
-from lumibot.strategies.strategy import Strategy
-from lumibot.traders import Trader
+from lib.lumibot.lumibot.backtesting import YahooDataBacktesting
+from lib.lumibot.lumibot.strategies.strategy import Strategy
+from lib.lumibot.lumibot.traders import Trader
 from datetime import datetime 
 from alpaca_trade_api import REST 
 # from timedelta import Timedelta 
-from pages.MLTradingBot.finbert_utils import estimate_sentiment
-# from .finbert_utils import estimate_sentiment
-from lumibot.brokers import Alpaca
-
-
 from datetime import timedelta
+
+from lib.lumibot.lumibot.brokers import Alpaca
+from lib.MLTradingBot.finbert_utils import estimate_sentiment
+
+from lib.rl.config_tickers import DOW_30_TICKER
+from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
+from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
+from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
+from lib.rl.agents.stablebaselines3.models import DRLAgent, DRLEnsembleAgent
+from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
+from lib.utility.jprint import jprint
 
 
 API_KEY = "PKEJH4W0URAU56SHKQW3" 
@@ -26,7 +32,7 @@ ALPACA_CONFIG = {
     # Put your own Alpaca key here:
     "API_KEY":  "PKEJH4W0URAU56SHKQW3" ,
     # Put your own Alpaca secret here:
-    "API_SECRET": "YOUR_ALPACA_SECRET",
+    "API_SECRET": "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow",
     # Set this to False to use a live account
     "PAPER": True
 }
@@ -110,6 +116,6 @@ strategy.backtest(
     end_date, 
     parameters={"symbol":"SPY", "cash_at_risk":.5}
 )
-# trader = Trader()
-# trader.add_strategy(strategy)
-# trader.run_all()
+trader = Trader()
+trader.add_strategy(strategy)
+trader.run_all()

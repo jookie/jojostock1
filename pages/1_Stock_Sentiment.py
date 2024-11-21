@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import yfinance as yf
 import datetime
-
+# from pages.StockMarketApp import styles
 
 custom_css = """
 <style>
@@ -33,7 +33,7 @@ margin: 10px 0; /* Margin for paragraphs */
 
 </style>
 """
-
+# from pages.StockMarketApp import styles
 # styles.set()
 
 # Set page title and configure layout
@@ -104,13 +104,13 @@ if news_table:
             st.write(sentiment_summary)
             
             plt.figure(figsize=(10, 8))
-            # plt.plot(stock_data.index.to_numpy(), stock_data["Close"])
-            plt.plot(stock_data.index[:, None], stock_data["Close"])
+            plt.plot(stock_data.index.to_numpy(), stock_data["Close"])
+            # plt.plot(stock_data.index[:, None], stock_data["Close"])
             plt.xlabel("Date")
             plt.ylabel("Stock Price")
             plt.title("Stock Price Movements - Line Chart")
             plt.xticks(rotation=45)
-            st.subheader("Stock Price Movements - Line Chart")
+            st.subheader("Jojo Price Movements - JOJO Chart")
             st.pyplot(plt)
 
 else:
