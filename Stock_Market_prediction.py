@@ -25,6 +25,18 @@ import warnings ; warnings.filterwarnings("ignore")
 
 from lib.utility.inputs import get_full_path, GetTickerList, set_yahoo_data_frame, predict_with_models
 
+# from lumibot.brokers import Alpaca
+# ALPACA_CREDS = {
+#     # Put your own Alpaca key here:
+#     "API_KEY":  "PKEJH4W0URAU56SHKQW3" ,
+#     # Put your own Alpaca secret here:
+#     "API_SECRET": "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow",
+#     # Set this to False to use a live account
+#     "PAPER": True
+# }
+# broker = Alpaca(ALPACA_CREDS)
+
+
 def main(ticker_list, _wf):
   import pandas as pd
   
@@ -274,6 +286,11 @@ if __name__ == "__main__":
   ticker_list = GetTickerList()
   wf = WorkflowScheduler()
   wf.display_sidebar()
-  
+  tic = [
+    "AXP" ,
+    # "AMGN"
+    ]
+  ticker_list = tic
   if st.button("Download Data per Ticket set"):
     main(ticker_list, wf)
+   

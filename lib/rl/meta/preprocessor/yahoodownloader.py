@@ -85,7 +85,10 @@ class YahooDownloader:
         # drop missing data
         data_df = data_df.dropna()
         data_df = data_df.reset_index(drop=True)
-        jprint("lib/rl/meta/preprocessor/yahoodownloader.py: Shape of DataFrame: ", data_df.shape, " records.")
+        jprint("Shape of DataFrame: ", data_df.shape, " records.")
+        
+        # print("Shape of DataFrame: ", data_df.shape)
+        # print("Display DataFrame: ", data_df.head())
         
         # jprint("lib/rl/meta/preprocessor/yahoodownloader Display DataFrame: ", data_df.head())
 

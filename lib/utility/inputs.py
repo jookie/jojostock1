@@ -119,7 +119,9 @@ def set_yahoo_data_frame(ticker_ls, wf) :
   wf.train_start_date,
   end_date = wf.trade_end_date,
   ticker_list = ticker_ls).fetch_data()
+  
   df.sort_values(['date','tic'],ignore_index=True).head()
+  
   fe = FeatureEngineer(
                     use_technical_indicator=True,
                     tech_indicator_list = INDICATORS,

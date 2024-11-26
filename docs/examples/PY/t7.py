@@ -7,9 +7,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import datetime
-ALPACA_API_KEY      = "PKEJH4W0URAU56SHKQW3"
+ALPACA_API_KEY       = "PKEJH4W0URAU56SHKQW3"
 ALPACA_API_SECRET    = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"
-ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'
+ALPACA_API_BASE_URL  = 'https://paper-api.alpaca.markets'
 from finrl.config_tickers import DOW_30_TICKER
 from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
 from finrl.meta.preprocessor.preprocessors import FeatureEngineer, data_split

@@ -47,8 +47,7 @@ It displays an animated fractal based on the the Julia Set. Use the slider
 to tune different parameters."""
 )
 check_and_make_directories([DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR])
-print(DOW_30_TICKER)
-st.write(", ".join(str(ticker) for ticker in DOW_30_TICKER))
+
 
 TRAIN_START_DATE = '2009-04-01'
 TRAIN_END_DATE = '2021-01-01'
@@ -56,9 +55,19 @@ TEST_START_DATE = '2021-01-01'
 TEST_END_DATE = '2022-06-01'
 from lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET, ALPACA_API_BASE_URL
 
+tic = DOW_30_TICKER
+tic = [DOW_30_TICKER[0]]
+
+st.write("jojo".join(str(ticker) for ticker in tic))
+# if tic = ["AXP"] has 1 row it work , but if tic = [
+#     "AXP",
+#     "AMGN"
+#     ] or greater than 1 I get the message below :
+
 df = YahooDownloader(start_date = TRAIN_START_DATE,
                      end_date = TEST_END_DATE,
-                     ticker_list = DOW_30_TICKER).fetch_data()
+                     ticker_list = tic).fetch_data()
+
 df.sort_values(['date','tic']).head()
 print(len(df.tic.unique()))
 print(df.tic.value_counts())
@@ -71,7 +80,6 @@ st.write(len(df.tic.unique()))
 # st.write(df.head())
 # st.write(df.tail())
 st.write(df.shape)
-
 
 # INDICATORS = ['macd',
 #                'rsi_30',

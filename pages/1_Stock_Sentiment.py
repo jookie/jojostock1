@@ -80,7 +80,7 @@ if news_table:
                            parsed_data.append([ticker, date, time, title])
 
       
-            df = pd.DataFrame(parsed_data, columns=["Ticker", "Date", "Time", "Headline"])
+            df = np.DataFrame(parsed_data, columns=["Ticker", "Date", "Time", "Headline"])
             vader = SentimentIntensityAnalyzer()
             f = lambda title: vader.polarity_scores(title)["compound"]
             df["Compound Score"] = df["Headline"].apply(f)
@@ -102,6 +102,8 @@ if news_table:
             st.write(sentiment_summary)
             
             plt.figure(figsize=(10, 8))
+            # DOV to numpyh
+            # The error indicates that Pandas is no longer supporting multi-dimensional indexing directly on its objects, such as trying to index a DataFrame or Series with [:, None]. Instead, you need to convert the object to a NumPy array before performing such indexing.
             plt.plot(stock_data.index.to_numpy(), stock_data["Close"])
             # plt.plot(stock_data.index[:, None], stock_data["Close"])
             plt.xlabel("Date")
