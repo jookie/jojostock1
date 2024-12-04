@@ -16,11 +16,11 @@ from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_bas
 
 from alpaca_trade_api import REST 
 
-from lib.lumibot.lumibot.brokers import Alpaca
+from lib.MLTradingBot.lumibot.lumibot.brokers import Alpaca
 from lib.MLTradingBot.finbert_utils import estimate_sentiment
-from lib.lumibot.lumibot.backtesting import YahooDataBacktesting
-from lib.lumibot.lumibot.strategies.strategy import Strategy
-from lib.lumibot.lumibot.traders import Trader
+from lib.MLTradingBot.lumibot.lumibot.backtesting import YahooDataBacktesting
+from lib.MLTradingBot.lumibot.lumibot.strategies.strategy import Strategy
+from lib.MLTradingBot.lumibot.lumibot.traders import Trader
 
 API_KEY = "PKEJH4W0URAU56SHKQW3" 
 API_SECRET = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"

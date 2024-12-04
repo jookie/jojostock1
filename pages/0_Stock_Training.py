@@ -178,8 +178,6 @@ st.write(df_summary)
 unique_trade_date = processed[(processed.date > TEST_START_DATE)&(processed.date <= TEST_END_DATE)].date.unique()
 df_trade_date = pd.DataFrame({'datadate':unique_trade_date})
 
-
-
 df_account_value=pd.DataFrame()
 for i in range(rebalance_window+validation_window, len(unique_trade_date)+1,rebalance_window):
     temp = pd.read_csv(RESULTS_DIR + '/account_value_trade_{}_{}.csv'.format('ensemble',i))
