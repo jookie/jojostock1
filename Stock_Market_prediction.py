@@ -286,11 +286,11 @@ if __name__ == "__main__":
   ticker_list = GetTickerList()
   wf = WorkflowScheduler()
   wf.display_sidebar()
-  tic = [
-    "AXP" ,
-    # "AMGN"
-    ]
-  ticker_list = tic
+#   tic = [
+#     "AXP" ,
+#     # "AMGN"
+# ]
+  # ticker_list = ticker_list[0]
   if st.button("Download Data per Ticket set"):
     main(ticker_list, wf)
    

@@ -10924,6 +10924,14 @@
         "documentation": {}
     },
     {
+        "label": "streamlit_pages",
+        "importPath": "streamlit_pages",
+        "description": "streamlit_pages",
+        "isExtraImport": true,
+        "detail": "streamlit_pages",
+        "documentation": {}
+    },
+    {
         "label": "ALPACA_API_KEY",
         "importPath": "lib.rl.config_private",
         "description": "lib.rl.config_private",
@@ -20258,6 +20266,105 @@
         "description": "lib.rl.train",
         "peekOfCode": "def train(\n    start_date,\n    end_date,\n    ticker_list,\n    data_source,\n    time_interval,\n    technical_indicator_list,\n    drl_lib,\n    env,\n    model_name,",
         "detail": "lib.rl.train",
+        "documentation": {}
+    },
+    {
+        "label": "project",
+        "kind": 5,
+        "importPath": "lib.sample.streamlit_pages.docs.source.conf",
+        "description": "lib.sample.streamlit_pages.docs.source.conf",
+        "peekOfCode": "project = u\"streamlit_pages\"\ncopyright = u\"2021, Venkatesh Boddu\"\nauthor = u\"Venkatesh Boddu\"\n# -- General configuration ---------------------------------------------------\n# Add any Sphinx extension module names here, as strings. They can be\n# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom\n# ones.\nextensions = [\n    \"autoapi.extension\",\n    \"sphinx.ext.napoleon\",",
+        "detail": "lib.sample.streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "copyright",
+        "kind": 5,
+        "importPath": "lib.sample.streamlit_pages.docs.source.conf",
+        "description": "lib.sample.streamlit_pages.docs.source.conf",
+        "peekOfCode": "copyright = u\"2021, Venkatesh Boddu\"\nauthor = u\"Venkatesh Boddu\"\n# -- General configuration ---------------------------------------------------\n# Add any Sphinx extension module names here, as strings. They can be\n# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom\n# ones.\nextensions = [\n    \"autoapi.extension\",\n    \"sphinx.ext.napoleon\",\n    \"sphinx.ext.viewcode\",",
+        "detail": "lib.sample.streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "author",
+        "kind": 5,
+        "importPath": "lib.sample.streamlit_pages.docs.source.conf",
+        "description": "lib.sample.streamlit_pages.docs.source.conf",
+        "peekOfCode": "author = u\"Venkatesh Boddu\"\n# -- General configuration ---------------------------------------------------\n# Add any Sphinx extension module names here, as strings. They can be\n# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom\n# ones.\nextensions = [\n    \"autoapi.extension\",\n    \"sphinx.ext.napoleon\",\n    \"sphinx.ext.viewcode\",\n    \"myst_nb\",",
+        "detail": "lib.sample.streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "extensions",
+        "kind": 5,
+        "importPath": "lib.sample.streamlit_pages.docs.source.conf",
+        "description": "lib.sample.streamlit_pages.docs.source.conf",
+        "peekOfCode": "extensions = [\n    \"autoapi.extension\",\n    \"sphinx.ext.napoleon\",\n    \"sphinx.ext.viewcode\",\n    \"myst_nb\",\n    \"sphinx_copybutton\",\n]\nautoapi_type = \"python\"\nautoapi_dirs = [\"../../src\"]\nnapoleon_numpy_docstring = True",
+        "detail": "lib.sample.streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "autoapi_type",
+        "kind": 5,
+        "importPath": "lib.sample.streamlit_pages.docs.source.conf",
+        "description": "lib.sample.streamlit_pages.docs.source.conf",
+        "peekOfCode": "autoapi_type = \"python\"\nautoapi_dirs = [\"../../src\"]\nnapoleon_numpy_docstring = True\n# List of patterns, relative to source directory, that match files and\n# directories to ignore when looking for source files.\n# This pattern also affects html_static_path and html_extra_path.\nexclude_patterns = [\"_build\", \"Thumbs.db\", \".DS_Store\"]\n# -- Options for HTML output -------------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.",
+        "detail": "lib.sample.streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "autoapi_dirs",
+        "kind": 5,
+        "importPath": "lib.sample.streamlit_pages.docs.source.conf",
+        "description": "lib.sample.streamlit_pages.docs.source.conf",
+        "peekOfCode": "autoapi_dirs = [\"../../src\"]\nnapoleon_numpy_docstring = True\n# List of patterns, relative to source directory, that match files and\n# directories to ignore when looking for source files.\n# This pattern also affects html_static_path and html_extra_path.\nexclude_patterns = [\"_build\", \"Thumbs.db\", \".DS_Store\"]\n# -- Options for HTML output -------------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.\n#",
+        "detail": "lib.sample.streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "napoleon_numpy_docstring",
+        "kind": 5,
+        "importPath": "lib.sample.streamlit_pages.docs.source.conf",
+        "description": "lib.sample.streamlit_pages.docs.source.conf",
+        "peekOfCode": "napoleon_numpy_docstring = True\n# List of patterns, relative to source directory, that match files and\n# directories to ignore when looking for source files.\n# This pattern also affects html_static_path and html_extra_path.\nexclude_patterns = [\"_build\", \"Thumbs.db\", \".DS_Store\"]\n# -- Options for HTML output -------------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.\n#\nhtml_theme = \"sphinx_rtd_theme\"",
+        "detail": "lib.sample.streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "exclude_patterns",
+        "kind": 5,
+        "importPath": "lib.sample.streamlit_pages.docs.source.conf",
+        "description": "lib.sample.streamlit_pages.docs.source.conf",
+        "peekOfCode": "exclude_patterns = [\"_build\", \"Thumbs.db\", \".DS_Store\"]\n# -- Options for HTML output -------------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.\n#\nhtml_theme = \"sphinx_rtd_theme\"",
+        "detail": "lib.sample.streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_theme",
+        "kind": 5,
+        "importPath": "lib.sample.streamlit_pages.docs.source.conf",
+        "description": "lib.sample.streamlit_pages.docs.source.conf",
+        "peekOfCode": "html_theme = \"sphinx_rtd_theme\"",
+        "detail": "lib.sample.streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "MultiPage",
+        "kind": 6,
+        "importPath": "lib.sample.streamlit_pages.src.streamlit_pages.streamlit_pages",
+        "description": "lib.sample.streamlit_pages.src.streamlit_pages.streamlit_pages",
+        "peekOfCode": "class MultiPage:\n    \"\"\"\n    MultiPage class will generate streamlit web app with multiple pages\n    \"\"\"\n    def __init__(self, location=\"body\"):\n        self.menu = []\n        self.location=location\n    def add_page(self, title, task):\n            self.menu.append({\n            \"title\": title,",
+        "detail": "lib.sample.streamlit_pages.src.streamlit_pages.streamlit_pages",
+        "documentation": {}
+    },
+    {
+        "label": "get_position",
+        "kind": 2,
+        "importPath": "lib.sample.streamlit_pages.src.streamlit_pages.streamlit_pages",
+        "description": "lib.sample.streamlit_pages.src.streamlit_pages.streamlit_pages",
+        "peekOfCode": "def get_position(spages,option):\n    for i in range(len(spages)):\n        if spages[i]['title'] == option:\n            break\n    return i\nclass MultiPage:\n    \"\"\"\n    MultiPage class will generate streamlit web app with multiple pages\n    \"\"\"\n    def __init__(self, location=\"body\"):",
+        "detail": "lib.sample.streamlit_pages.src.streamlit_pages.streamlit_pages",
         "documentation": {}
     },
     {
