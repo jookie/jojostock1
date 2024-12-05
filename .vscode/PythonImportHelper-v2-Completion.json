@@ -10730,6 +10730,22 @@
         "documentation": {}
     },
     {
+        "label": "usa_dict",
+        "importPath": "lib.rl.config_tickers",
+        "description": "lib.rl.config_tickers",
+        "isExtraImport": true,
+        "detail": "lib.rl.config_tickers",
+        "documentation": {}
+    },
+    {
+        "label": "SP_500_TICKER",
+        "importPath": "lib.rl.config_tickers",
+        "description": "lib.rl.config_tickers",
+        "isExtraImport": true,
+        "detail": "lib.rl.config_tickers",
+        "documentation": {}
+    },
+    {
         "label": "DOW_30_TICKER",
         "importPath": "lib.rl.config_tickers",
         "description": "lib.rl.config_tickers",
@@ -10921,6 +10937,14 @@
         "description": "lib.rl.test",
         "isExtraImport": true,
         "detail": "lib.rl.test",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit_pages",
+        "importPath": "streamlit_pages",
+        "description": "streamlit_pages",
+        "isExtraImport": true,
+        "detail": "streamlit_pages",
         "documentation": {}
     },
     {
@@ -19945,15 +19969,6 @@
         "documentation": {}
     },
     {
-        "label": "sector_dict",
-        "kind": 5,
-        "importPath": "lib.rl.config_tickers",
-        "description": "lib.rl.config_tickers",
-        "peekOfCode": "sector_dict = {\n    \"Technology\": [\"AAPL\", \"MSFT\", \"GOOGL\", \"META\", \"TSLA\"],\n    \"Healthcare\": [\"JNJ\", \"PFE\", \"MRK\", \"UNH\", \"ABBV\"],\n    \"Finance\": [\"JPM\", \"BAC\", \"WFC\", \"C\", \"GS\"],\n    \"Consumer Discretionary\": [\"AMZN\", \"HD\", \"NKE\", \"MCD\", \"SBUX\"],\n    \"Energy\": [\"XOM\", \"CVX\", \"COP\", \"PSX\", \"VLO\"]\n}\nSINGLE_TICKER = [\"AAPL\"]\n# Dow 30 constituents in 2021/10\n# check https://wrds-www.wharton.upenn.edu/ for U.S. index constituents",
-        "detail": "lib.rl.config_tickers",
-        "documentation": {}
-    },
-    {
         "label": "SINGLE_TICKER",
         "kind": 5,
         "importPath": "lib.rl.config_tickers",
@@ -20093,7 +20108,25 @@
         "kind": 5,
         "importPath": "lib.rl.config_tickers",
         "description": "lib.rl.config_tickers",
-        "peekOfCode": "custom_index = [\"MMM\", \"AXP\", \"BA\", \"CAT\", \"CSCO\"]\nindex_dict = {\n    \"Dow 30\": DOW_30_TICKER,\n    \"Nasdaq 100\": NAS_100_TICKER,\n    \"S&P 500\": SP_500_TICKER,\n    # Show me an example of streamlit select box with a  select of a singl index and a multi select of some tickers belon to the selected index\n    \"Hang Seng Index\" : HSI_50_TICKER, \n    \"SSE 50\" :SSE_50_TICKER, \n    \"CSI 300\" : CSI_300_TICKER, \n    \"CAC 40\" : CAC_40_TICKER, ",
+        "peekOfCode": "custom_index = [\"MMM\", \"AXP\", \"BA\", \"CAT\", \"CSCO\"]\nsector_dict = {\n    \"Technology\": [\"AAPL\", \"MSFT\", \"GOOGL\", \"META\", \"TSLA\"],\n    \"Healthcare\": [\"JNJ\", \"PFE\", \"MRK\", \"UNH\", \"ABBV\"],\n    \"Finance\": [\"JPM\", \"BAC\", \"WFC\", \"C\", \"GS\"],\n    \"Consumer Discretionary\": [\"AMZN\", \"HD\", \"NKE\", \"MCD\", \"SBUX\"],\n    \"Energy\": [\"XOM\", \"CVX\", \"COP\", \"PSX\", \"VLO\"]\n}\nusa_dict = {\n    # usa_dict[S&P 500]",
+        "detail": "lib.rl.config_tickers",
+        "documentation": {}
+    },
+    {
+        "label": "sector_dict",
+        "kind": 5,
+        "importPath": "lib.rl.config_tickers",
+        "description": "lib.rl.config_tickers",
+        "peekOfCode": "sector_dict = {\n    \"Technology\": [\"AAPL\", \"MSFT\", \"GOOGL\", \"META\", \"TSLA\"],\n    \"Healthcare\": [\"JNJ\", \"PFE\", \"MRK\", \"UNH\", \"ABBV\"],\n    \"Finance\": [\"JPM\", \"BAC\", \"WFC\", \"C\", \"GS\"],\n    \"Consumer Discretionary\": [\"AMZN\", \"HD\", \"NKE\", \"MCD\", \"SBUX\"],\n    \"Energy\": [\"XOM\", \"CVX\", \"COP\", \"PSX\", \"VLO\"]\n}\nusa_dict = {\n    # usa_dict[S&P 500]\n  \"NYSE\": SP_500_TICKER  ",
+        "detail": "lib.rl.config_tickers",
+        "documentation": {}
+    },
+    {
+        "label": "usa_dict",
+        "kind": 5,
+        "importPath": "lib.rl.config_tickers",
+        "description": "lib.rl.config_tickers",
+        "peekOfCode": "usa_dict = {\n    # usa_dict[S&P 500]\n  \"NYSE\": SP_500_TICKER  \n}\nindex_dict = {\n    \"Dow 30\": DOW_30_TICKER,\n    \"Nasdaq 100\": NAS_100_TICKER,\n    \"S&P 500\": SP_500_TICKER,\n    \"Hang Seng Index\" : HSI_50_TICKER, \n    \"SSE 50\" :SSE_50_TICKER, ",
         "detail": "lib.rl.config_tickers",
         "documentation": {}
     },
@@ -20102,7 +20135,7 @@
         "kind": 5,
         "importPath": "lib.rl.config_tickers",
         "description": "lib.rl.config_tickers",
-        "peekOfCode": "index_dict = {\n    \"Dow 30\": DOW_30_TICKER,\n    \"Nasdaq 100\": NAS_100_TICKER,\n    \"S&P 500\": SP_500_TICKER,\n    # Show me an example of streamlit select box with a  select of a singl index and a multi select of some tickers belon to the selected index\n    \"Hang Seng Index\" : HSI_50_TICKER, \n    \"SSE 50\" :SSE_50_TICKER, \n    \"CSI 300\" : CSI_300_TICKER, \n    \"CAC 40\" : CAC_40_TICKER, \n    \"DAX 30\" : DAX_30_TICKER, ",
+        "peekOfCode": "index_dict = {\n    \"Dow 30\": DOW_30_TICKER,\n    \"Nasdaq 100\": NAS_100_TICKER,\n    \"S&P 500\": SP_500_TICKER,\n    \"Hang Seng Index\" : HSI_50_TICKER, \n    \"SSE 50\" :SSE_50_TICKER, \n    \"CSI 300\" : CSI_300_TICKER, \n    \"CAC 40\" : CAC_40_TICKER, \n    \"DAX 30\" : DAX_30_TICKER, \n    \"TecDAX\" : TECDAX_TICKER, ",
         "detail": "lib.rl.config_tickers",
         "documentation": {}
     },
@@ -20435,7 +20468,16 @@
         "kind": 2,
         "importPath": "lib.utility.inputs",
         "description": "lib.utility.inputs",
-        "peekOfCode": "def GetTickerList():\n    # Initialize previous selection for retaining index or sector when tickers are empty\n    if \"previous_index\" not in st.session_state:\n        st.session_state.previous_index = list(index_dict.keys())[0]\n    if \"previous_type\" not in st.session_state:\n        st.session_state.previous_type = \"Index\"\n       # Selector for type (Index or Sector)\n    col1, col2= st.sidebar.columns([1, 2]) \n    with col1:\n        selection_type = st.radio(\"dsad\", options=[\"Index\", \"Sector\"], horizontal=False,  label_visibility=\"collapsed\")",
+        "peekOfCode": "def GetTickerList():\n    \"\"\"\n    Generate a list of tickers based on user selection (Index, Sector, or NYSE) in a Streamlit app.\n    Parameters:\n    - index_dict: Dictionary of indexes and their respective tickers.\n    - sector_dict: Dictionary of sectors and their respective tickers.\n    - usa_dict: Dictionary of NYSE-specific categories and tickers.\n    - SP_500_TICKER: List of tickers for the S&P 500.\n    Returns:\n    - final_ticker_list: List of selected tickers.",
+        "detail": "lib.utility.inputs",
+        "documentation": {}
+    },
+    {
+        "label": "GetTickerListOld",
+        "kind": 2,
+        "importPath": "lib.utility.inputs",
+        "description": "lib.utility.inputs",
+        "peekOfCode": "def GetTickerListOld():\n    # To create a Streamlit app that displays the selected index and tickers, you'll need to follow these steps:\n    # Set up a dropdown for index selection.\n    # Display the selected index.\n    # List or allow the user to choose specific tickers for that index.\n    # Display the chosen tickers.\n    # Initialize previous selection for retaining index or sector when tickers are empty\n    if \"previous_index\" not in st.session_state:\n        st.session_state.previous_index = list(index_dict.keys())[0]\n    if \"previous_type\" not in st.session_state:",
         "detail": "lib.utility.inputs",
         "documentation": {}
     },
@@ -21328,6 +21370,105 @@
         "description": "pages.5_sent_bot",
         "peekOfCode": "trader = Trader()\ntrader.add_strategy(strategy)\ntrader.run_all()",
         "detail": "pages.5_sent_bot",
+        "documentation": {}
+    },
+    {
+        "label": "project",
+        "kind": 5,
+        "importPath": "streamlit_pages.docs.source.conf",
+        "description": "streamlit_pages.docs.source.conf",
+        "peekOfCode": "project = u\"streamlit_pages\"\ncopyright = u\"2021, Venkatesh Boddu\"\nauthor = u\"Venkatesh Boddu\"\n# -- General configuration ---------------------------------------------------\n# Add any Sphinx extension module names here, as strings. They can be\n# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom\n# ones.\nextensions = [\n    \"autoapi.extension\",\n    \"sphinx.ext.napoleon\",",
+        "detail": "streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "copyright",
+        "kind": 5,
+        "importPath": "streamlit_pages.docs.source.conf",
+        "description": "streamlit_pages.docs.source.conf",
+        "peekOfCode": "copyright = u\"2021, Venkatesh Boddu\"\nauthor = u\"Venkatesh Boddu\"\n# -- General configuration ---------------------------------------------------\n# Add any Sphinx extension module names here, as strings. They can be\n# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom\n# ones.\nextensions = [\n    \"autoapi.extension\",\n    \"sphinx.ext.napoleon\",\n    \"sphinx.ext.viewcode\",",
+        "detail": "streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "author",
+        "kind": 5,
+        "importPath": "streamlit_pages.docs.source.conf",
+        "description": "streamlit_pages.docs.source.conf",
+        "peekOfCode": "author = u\"Venkatesh Boddu\"\n# -- General configuration ---------------------------------------------------\n# Add any Sphinx extension module names here, as strings. They can be\n# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom\n# ones.\nextensions = [\n    \"autoapi.extension\",\n    \"sphinx.ext.napoleon\",\n    \"sphinx.ext.viewcode\",\n    \"myst_nb\",",
+        "detail": "streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "extensions",
+        "kind": 5,
+        "importPath": "streamlit_pages.docs.source.conf",
+        "description": "streamlit_pages.docs.source.conf",
+        "peekOfCode": "extensions = [\n    \"autoapi.extension\",\n    \"sphinx.ext.napoleon\",\n    \"sphinx.ext.viewcode\",\n    \"myst_nb\",\n    \"sphinx_copybutton\",\n]\nautoapi_type = \"python\"\nautoapi_dirs = [\"../../src\"]\nnapoleon_numpy_docstring = True",
+        "detail": "streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "autoapi_type",
+        "kind": 5,
+        "importPath": "streamlit_pages.docs.source.conf",
+        "description": "streamlit_pages.docs.source.conf",
+        "peekOfCode": "autoapi_type = \"python\"\nautoapi_dirs = [\"../../src\"]\nnapoleon_numpy_docstring = True\n# List of patterns, relative to source directory, that match files and\n# directories to ignore when looking for source files.\n# This pattern also affects html_static_path and html_extra_path.\nexclude_patterns = [\"_build\", \"Thumbs.db\", \".DS_Store\"]\n# -- Options for HTML output -------------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.",
+        "detail": "streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "autoapi_dirs",
+        "kind": 5,
+        "importPath": "streamlit_pages.docs.source.conf",
+        "description": "streamlit_pages.docs.source.conf",
+        "peekOfCode": "autoapi_dirs = [\"../../src\"]\nnapoleon_numpy_docstring = True\n# List of patterns, relative to source directory, that match files and\n# directories to ignore when looking for source files.\n# This pattern also affects html_static_path and html_extra_path.\nexclude_patterns = [\"_build\", \"Thumbs.db\", \".DS_Store\"]\n# -- Options for HTML output -------------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.\n#",
+        "detail": "streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "napoleon_numpy_docstring",
+        "kind": 5,
+        "importPath": "streamlit_pages.docs.source.conf",
+        "description": "streamlit_pages.docs.source.conf",
+        "peekOfCode": "napoleon_numpy_docstring = True\n# List of patterns, relative to source directory, that match files and\n# directories to ignore when looking for source files.\n# This pattern also affects html_static_path and html_extra_path.\nexclude_patterns = [\"_build\", \"Thumbs.db\", \".DS_Store\"]\n# -- Options for HTML output -------------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.\n#\nhtml_theme = \"sphinx_rtd_theme\"",
+        "detail": "streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "exclude_patterns",
+        "kind": 5,
+        "importPath": "streamlit_pages.docs.source.conf",
+        "description": "streamlit_pages.docs.source.conf",
+        "peekOfCode": "exclude_patterns = [\"_build\", \"Thumbs.db\", \".DS_Store\"]\n# -- Options for HTML output -------------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.\n#\nhtml_theme = \"sphinx_rtd_theme\"",
+        "detail": "streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_theme",
+        "kind": 5,
+        "importPath": "streamlit_pages.docs.source.conf",
+        "description": "streamlit_pages.docs.source.conf",
+        "peekOfCode": "html_theme = \"sphinx_rtd_theme\"",
+        "detail": "streamlit_pages.docs.source.conf",
+        "documentation": {}
+    },
+    {
+        "label": "MultiPage",
+        "kind": 6,
+        "importPath": "streamlit_pages.src.streamlit_pages.streamlit_pages",
+        "description": "streamlit_pages.src.streamlit_pages.streamlit_pages",
+        "peekOfCode": "class MultiPage:\n    \"\"\"\n    MultiPage class will generate streamlit web app with multiple pages\n    \"\"\"\n    def __init__(self, location=\"body\"):\n        self.menu = []\n        self.location=location\n    def add_page(self, title, task):\n            self.menu.append({\n            \"title\": title,",
+        "detail": "streamlit_pages.src.streamlit_pages.streamlit_pages",
+        "documentation": {}
+    },
+    {
+        "label": "get_position",
+        "kind": 2,
+        "importPath": "streamlit_pages.src.streamlit_pages.streamlit_pages",
+        "description": "streamlit_pages.src.streamlit_pages.streamlit_pages",
+        "peekOfCode": "def get_position(spages,option):\n    for i in range(len(spages)):\n        if spages[i]['title'] == option:\n            break\n    return i\nclass MultiPage:\n    \"\"\"\n    MultiPage class will generate streamlit web app with multiple pages\n    \"\"\"\n    def __init__(self, location=\"body\"):",
+        "detail": "streamlit_pages.src.streamlit_pages.streamlit_pages",
         "documentation": {}
     },
     {

@@ -1,14 +1,5 @@
 from __future__ import annotations
 
-sector_dict = {
-    "Technology": ["AAPL", "MSFT", "GOOGL", "META", "TSLA"],
-    "Healthcare": ["JNJ", "PFE", "MRK", "UNH", "ABBV"],
-    "Finance": ["JPM", "BAC", "WFC", "C", "GS"],
-    "Consumer Discretionary": ["AMZN", "HD", "NKE", "MCD", "SBUX"],
-    "Energy": ["XOM", "CVX", "COP", "PSX", "VLO"]
-}
-
-
 SINGLE_TICKER = ["AAPL"]
 
 # Dow 30 constituents in 2021/10
@@ -1450,11 +1441,23 @@ FX_TICKER = [
 # We'll assume that DOW_30_TICKER, NAS_100_TICKER, and SP_500_TICKER are predefined lists containing the tickers for each respective index.
 custom_index = ["MMM", "AXP", "BA", "CAT", "CSCO"]
 
+
+sector_dict = {
+    "Technology": ["AAPL", "MSFT", "GOOGL", "META", "TSLA"],
+    "Healthcare": ["JNJ", "PFE", "MRK", "UNH", "ABBV"],
+    "Finance": ["JPM", "BAC", "WFC", "C", "GS"],
+    "Consumer Discretionary": ["AMZN", "HD", "NKE", "MCD", "SBUX"],
+    "Energy": ["XOM", "CVX", "COP", "PSX", "VLO"]
+}
+usa_dict = {
+    # usa_dict[S&P 500]
+  "NYSE": SP_500_TICKER  
+}
+
 index_dict = {
     "Dow 30": DOW_30_TICKER,
     "Nasdaq 100": NAS_100_TICKER,
     "S&P 500": SP_500_TICKER,
-    # Show me an example of streamlit select box with a  select of a singl index and a multi select of some tickers belon to the selected index
     "Hang Seng Index" : HSI_50_TICKER, 
     "SSE 50" :SSE_50_TICKER, 
     "CSI 300" : CSI_300_TICKER, 
