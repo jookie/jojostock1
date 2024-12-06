@@ -1,19 +1,10 @@
 from __future__ import annotations
 
-import copy
-import datetime
 import itertools
-import os
-import sys
-
-import matplotlib
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 from stable_baselines3.common.logger import configure
 
-from finrl import config
-from finrl import config_tickers
 from finrl.agents.stablebaselines3.models import DRLAgent
 from finrl.config import DATA_SAVE_DIR
 from finrl.config import INDICATORS

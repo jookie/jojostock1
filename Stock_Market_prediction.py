@@ -21,16 +21,16 @@ from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_bas
 from lib.rl.main import check_and_make_directories
 from lib.rl.config_tickers import index_dict
 import matplotlib.pyplot as plt
-import warnings ; warnings.filterwarnings("ignore")
-
+# import pandas as pd
 from lib.utility.inputs import get_full_path, GetTickerList, set_yahoo_data_frame, predict_with_models
 
 def main(ticker_list, _wf):
-  import pandas as pd
   
+  import pandas as pd
   mvo_df, env_kwargs, trade, processed_full, models = set_yahoo_data_frame(ticker_list, _wf)
   
   def get_e_trade_gym_results():
+   
     data_risk_indicator = processed_full[(processed_full.date<wf.train_end_date) & (processed_full.date>= wf.train_start_date)]
     insample_risk_indicator = data_risk_indicator.drop_duplicates(subset=['date'])
     
@@ -183,7 +183,7 @@ def main(ticker_list, _wf):
 
   #Dependencies
   import numpy as np
-  import pandas as pd
+  # import pandas as pd
 
 
   #input k-portfolio 1 dataset comprising 15 stocks
@@ -275,5 +275,6 @@ if __name__ == "__main__":
   wf = WorkflowScheduler()
   wf.display_sidebar()
   if st.button("Download Data per Ticket set"):
+    # st.write("dov: ",ticker_list)
     main(ticker_list, wf)
    
