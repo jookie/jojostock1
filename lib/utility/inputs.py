@@ -1,7 +1,6 @@
 
 # https://github.com/mkhorasani/Streamlit-Authenticator
-# https://streamlit.io/components
-# https://streamlit.io/components
+# https://streamlit.io/componen
 # https://okld-gallery.streamlit.app/?p=elements
 # https://extras.streamlit.app/
 # https://arnaudmiribel.github.io/streamlit-extras/extras/sandbox/
@@ -237,44 +236,6 @@ def predict_with_models(models, environment):
           }
       return results
 
-# def searchable_dropdown(col1):
-#     # Creating a Streamlit app that allows users to select stock tickers from a list using a searchable dropdown (with auto-complete/intellisense functionality) can be achieved using the st.selectbox or st.multiselect components. These components support user-friendly selection and typing.
-
-#     # Here’s the implementation:
-
-#     # Features:
-#     # Stock List: Predefined list of stock tickers.
-#     # Intellisense: Enables searching or typing in the dropdown.
-#     # Multiselect: Allows multiple stock selections.
-
-#     # Sample list of stock tickers
-#     stock_tickers = [
-#         "AAPL", "GOOGL", "AMZN", "MSFT", "TSLA", "META", "NFLX", "NVDA", "BABA", "INTC",
-#         "ORCL", "IBM", "ADBE", "CRM", "PYPL", "QCOM", "AMD", "SPOT", "UBER", "SQ"
-#     ]
-#     with col1:
-#         # st.title("Stock Market Selector")
-#         # st.write("""
-#         # ### Select your stocks of interest
-#         # You can choose from the list below or start typing to search for specific stock tickers.
-#         # """)
-#         # Multi-selection dropdown with intellisense
-#         selected_stocks = st.multiselect(
-#             # "Choose stock tickers:",
-#             options=stock_tickers,  # Options for the dropdown
-#             default=[],  # No default selection
-#             help="Search and select stock tickers from the list."
-#         )
-
-#         # Display selected stocks
-#         if selected_stocks:
-#             st.write(f"### Selected Stocks:")
-#             st.write(", ".join(selected_stocks))
-#         else:
-#             st.write("No stocks selected. Please choose from the dropdown.")
-  
-import streamlit as st
-
 def GetTickerList():
     """
     Generate a list of tickers based on user selection (Index, Sector, or NYSE) in a Streamlit app.
@@ -347,71 +308,5 @@ def GetTickerList():
     final_ticker_list = (
         selected_tickers if selected_tickers else options_dict[st.session_state.previous_index]
     )
-
-    return final_ticker_list
-  
-  
-  
-  
-def GetTickerListOld():
-    # To create a Streamlit app that displays the selected index and tickers, you'll need to follow these steps:
-
-    # Set up a dropdown for index selection.
-    # Display the selected index.
-    # List or allow the user to choose specific tickers for that index.
-    # Display the chosen tickers.
-    # Initialize previous selection for retaining index or sector when tickers are empty
-    if "previous_index" not in st.session_state:
-        st.session_state.previous_index = list(index_dict.keys())[0]
-    if "previous_type" not in st.session_state:
-        st.session_state.previous_type = "Index"
-        
-    # Selector for type (Index or Sector)
-    col1, col2= st.sidebar.columns([1, 2]) 
-            
-    with col1:
-        selection_type = st.radio(label="lbl1", options=["Index", "Sector", "NYSE"], horizontal=False,  label_visibility="collapsed")
-
-        # Set appropriate dictionary and options based on selection type
-        st.caption(f"Select {selection_type}: ")
-        if selection_type == "Index":
-            options_dict = index_dict
-        elif selection_type == "Sector":
-            options_dict = sector_dict
-        elif selection_type == "NYSE":
-            options_dict = usa_dict
-
-    with col2:
-        # Dropdown to select either an index or a sector based on selected type
-        selected_option = st.selectbox(f"Choose a {selection_type}", 
-                                       options=list(options_dict.keys()) , label_visibility="collapsed")
-
-    if "first_symbol" not in st.session_state:
-        st.session_state.first_symbol =  SP_500_TICKER[0]
-        default=SP_500_TICKER[1]
-        options=SP_500_TICKER
-    else:
-        if selection_type == "NYSE":
-            default=SP_500_TICKER[1]
-        else:
-            default= options_dict[selected_option] 
-            options=options_dict[selected_option]       
- 
-        
-    # Multi-select for tickers based on selected option (Index or Sector)
-    selected_tickers = st.multiselect(
-        label="Select Tickers",
-        options=options,
-        default=default,  # Optional: default selects all tickers
-        label_visibility="collapsed"
-    )
-
-    # Update the session state only if the tickers are not empty
-    if selected_tickers:
-        st.session_state.previous_index = selected_option
-        st.session_state.previous_type = selection_type
-       
-    # Final ticker list: If no tickers are selected, fall back to previous selection
-    final_ticker_list = selected_tickers if selected_tickers else options_dict[st.session_state.previous_index]
 
     return final_ticker_list
