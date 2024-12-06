@@ -80,7 +80,7 @@ if news_table:
                            parsed_data.append([ticker, date, time, title])
 
       
-            df = np.DataFrame(parsed_data, columns=["Ticker", "Date", "Time", "Headline"])
+            df = pd.DataFrame(parsed_data, columns=["Ticker", "Date", "Time", "Headline"])
             vader = SentimentIntensityAnalyzer()
             f = lambda title: vader.polarity_scores(title)["compound"]
             df["Compound Score"] = df["Headline"].apply(f)
