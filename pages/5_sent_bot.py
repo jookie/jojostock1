@@ -1,7 +1,7 @@
 
 from __future__ import annotations
-import sys ; sys.path.append("~/lib/MLTradingbot")
-sys.path.append("../lib")
+# import sys ; sys.path.append("~/lib/MLTradingbot")
+# sys.path.append("../lib")
 # import streamlit as st
 import warnings ; warnings.filterwarnings("ignore")
 import pandas as pd
@@ -15,12 +15,12 @@ from lib.rl.agents.stablebaselines3.models import DRLAgent, DRLEnsembleAgent
 from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
 
 from alpaca_trade_api import REST 
-
-from lib.MLTradingBot.lumibot.lumibot.brokers import Alpaca
 from lib.MLTradingBot.finbert_utils import estimate_sentiment
-from lib.MLTradingBot.lumibot.lumibot.backtesting import YahooDataBacktesting
-from lib.MLTradingBot.lumibot.lumibot.strategies.strategy import Strategy
+from lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting   import YahooDataBacktesting
+
 from lib.MLTradingBot.lumibot.lumibot.traders import Trader
+
+from lib.MLTradingBot.lumibot.lumibot.brokers.alpaca import Alpaca
 
 API_KEY = "PKEJH4W0URAU56SHKQW3" 
 API_SECRET = "9g6xpk2x2RiBeV5Cy48WdpxCU51chZx91Lj8x6Ow"
@@ -101,11 +101,6 @@ start_date = datetime(2020,1,1)
 end_date = datetime(2023,12,31) 
 
 broker = Alpaca(ALPACA_CREDS) 
-# broker = Alpaca(api_key=ALPACA_CREDS['API_KEY'], secret_key=ALPACA_CREDS['API_SECRET'])
-
-
-
-
 
 strategy = MLTrader(name='mlstrat', broker=broker, 
                     parameters={"symbol":"SPY", 
