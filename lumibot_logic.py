@@ -5,23 +5,25 @@ from __future__ import annotations
 import warnings ; warnings.filterwarnings("ignore")
 import sys
 from datetime import datetime 
-from alpaca_trade_api import REST 
 from lib.MLTradingBot.finbert_utils import estimate_sentiment
 from lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting   import YahooDataBacktesting
 from lib.MLTradingBot.lumibot.lumibot.strategies import Strategy
 from lib.MLTradingBot.lumibot.lumibot.traders import Trader
 from lib.MLTradingBot.lumibot.lumibot.brokers.alpaca import Alpaca
+# from lib.MLTradingBot.lumibot.lumibot.
+import alpaca_trade_api as tradeapi
 from datetime import timedelta 
+API_KEY = "PKXQGLU5DJJ30MUWS2G6", 
+API_SECRET =  "vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d"
 ALPACA_CREDS = {
-    "API_KEY": "PKXQGLU5DJJ30MUWS2G6", 
-    "API_SECRET": "vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d", 
+    "API_KEY": API_KEY, 
+    "API_SECRET": API_SECRET, 
     "PAPER": True
 }
 BASE_URL = "https://paper-api.alpaca.markets"
 
 
 print("==================MLTrader(Strategy)=============================")
-st.write("===============MLTrader(Strategy)================================")
 
 class MLTrader(Strategy): 
     def initialize(self, symbol:str="SPY", cash_at_risk:float=.5): 
@@ -29,7 +31,7 @@ class MLTrader(Strategy):
         self.sleeptime = "24H" 
         self.last_trade = None 
         self.cash_at_risk = cash_at_risk
-        self.api = REST(base_url=BASE_URL, key_id=api_key, secret_key=api_secret)
+        self.api = tradeapi.REST(base_url=BASE_URL, key_id=API_KEY, secret_key=API_SECRET)
 
     def position_sizing(self): 
         cash = self.get_cash() 
