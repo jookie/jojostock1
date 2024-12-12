@@ -3,7 +3,6 @@
 # placement using Alpaca and Lumibot:
 from __future__ import annotations
 import warnings ; warnings.filterwarnings("ignore")
-import pandas as pd
 import sys
 from datetime import datetime 
 from alpaca_trade_api import REST 
@@ -12,6 +11,7 @@ from lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting   import Yah
 from lib.MLTradingBot.lumibot.lumibot.strategies import Strategy
 from lib.MLTradingBot.lumibot.lumibot.traders import Trader
 from lib.MLTradingBot.lumibot.lumibot.brokers.alpaca import Alpaca
+from datetime import timedelta 
 ALPACA_CREDS = {
     "API_KEY": "PKXQGLU5DJJ30MUWS2G6", 
     "API_SECRET": "vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d", 
@@ -39,7 +39,7 @@ class MLTrader(Strategy):
 
     def get_dates(self): 
         today = self.get_datetime()
-        three_days_prior = today - pd.Timedelta(days=3)
+        three_days_prior = today - timedelta(days=3)
         return today.strftime('%Y-%m-%d'), three_days_prior.strftime('%Y-%m-%d')
 
     def get_sentiment(self): 
