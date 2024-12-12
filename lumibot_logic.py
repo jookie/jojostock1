@@ -28,11 +28,13 @@ print("==================MLTrader(Strategy)=============================")
 
 class MLTrader(Strategy): 
     def initialize(self, symbol:str="SPY", cash_at_risk:float=.5): 
+        print("================Initialize====================")
         self.symbol = symbol
         self.sleeptime = "24H" 
         self.last_trade = None 
         self.cash_at_risk = cash_at_risk
         self.api = tradeapi.REST(base_url=BASE_URL, key_id=API_KEY, secret_key=API_SECRET)
+        print("================Initialize====================")
 
     def position_sizing(self): 
         cash = self.get_cash() 
@@ -52,11 +54,13 @@ class MLTrader(Strategy):
                                  end=today) 
         news = [ev.__dict__["_raw"]["headline"] for ev in news]
         probability, sentiment = estimate_sentiment(news)
+        print("================Initialize====================")
         return probability, sentiment 
 
     def on_trading_iteration(self):
         cash, last_price, quantity = self.position_sizing() 
         probability, sentiment = self.get_sentiment()
+        print("================Initialize====================")
 
         if cash > last_price: 
             if sentiment == "positive" and probability > .999: 
