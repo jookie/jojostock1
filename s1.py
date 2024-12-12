@@ -18,11 +18,12 @@ if st.button("Place Order"):
         ["python", "lumibot_logic.py", symbol, order_type, str(quantity)],
         capture_output=True, text=True
     )
-    st.write("=======AFTER RUNNING SUBPROCESS 2=========")
+    st.write("=======AFTER RUNNING SUBPROCESS 1=========")
     
     if result.returncode == 0:
         st.success(f"Order placed successfully: {result.stdout}")
     else:
-        st.error(f"Error placing order: {result.stderr}")
+        st.error(f"Error Placing Trade order:")
+        # st.error(f"Error placing order: {result.stderr}")
         
     st.write("=======AFTER RUNNING SUBPROCESS 2=========") 
