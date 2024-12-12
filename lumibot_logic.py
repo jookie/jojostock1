@@ -2,7 +2,6 @@
 # Write a separate script (lumibot_logic.py) to handle order 
 # placement using Alpaca and Lumibot:
 from __future__ import annotations
-import streamlit as st
 import warnings ; warnings.filterwarnings("ignore")
 import os
 from dotenv import load_dotenv ; 
