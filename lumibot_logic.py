@@ -3,14 +3,7 @@
 # placement using Alpaca and Lumibot:
 from __future__ import annotations
 import warnings ; warnings.filterwarnings("ignore")
-import os
-from dotenv import load_dotenv ; 
 import pandas as pd
-load_dotenv(); 
-api_secret = os.getenv("API_SECRET" )
-api_key    = os.getenv("API_KEY")
-base_url   = os.getenv("BASE_URL")
-paper = True 
 import sys
 from datetime import datetime 
 from alpaca_trade_api import REST 
@@ -20,8 +13,8 @@ from lib.MLTradingBot.lumibot.lumibot.strategies import Strategy
 from lib.MLTradingBot.lumibot.lumibot.traders import Trader
 from lib.MLTradingBot.lumibot.lumibot.brokers.alpaca import Alpaca
 ALPACA_CREDS = {
-    "API_KEY": api_key, 
-    "API_SECRET": api_secret, 
+    "API_KEY": "PKXQGLU5DJJ30MUWS2G6", 
+    "API_SECRET": "vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d", 
     "PAPER": True
 }
 BASE_URL = "https://paper-api.alpaca.markets"
