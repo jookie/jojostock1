@@ -55,6 +55,7 @@ class MLTrader(Strategy):
         news = [ev.__dict__["_raw"]["headline"] for ev in news]
         probability, sentiment = estimate_sentiment(news)
         print("================Initialize====================")
+        
         return probability, sentiment 
 
     def on_trading_iteration(self):
@@ -91,6 +92,8 @@ class MLTrader(Strategy):
                 self.last_trade = "sell"
 
 if __name__ == "__main__":
+    
+    print("==================MLTrader(Strategy)=============================")
     start_date = datetime(2020,1,1)
     end_date = datetime(2023,12,31) 
     broker = Alpaca(ALPACA_CREDS) 
