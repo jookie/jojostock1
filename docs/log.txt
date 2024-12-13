@@ -1,0 +1,48 @@
+(base) dovpeles@Dovs-Mac-mini jojostock1 % python3 t1.py                                                         
+2024-12-13 13:28:39 | lumibot.credentials | INFO | .env file loaded from: /Users/dovpeles/dov/jojostock1/.env
+2024-12-13 13:28:39 | lib.MLTradingBot.lumibot.lumibot.credentials | INFO | .env file loaded from: /Users/dovpeles/dov/jojostock1/.env
+==========trade_client.submit_order(req) ===========:/n/n id=UUID('a70c51db-2959-4d76-8b5a-b2618f994c00') client_order_id='37c04c50-0a2b-44af-9fad-681e9e54811c' created_at=datetime.datetime(2024, 12, 13, 18, 28, 42, 754419, tzinfo=TzInfo(UTC)) updated_at=datetime.datetime(2024, 12, 13, 18, 28, 42, 755186, tzinfo=TzInfo(UTC)) submitted_at=datetime.datetime(2024, 12, 13, 18, 28, 42, 754419, tzinfo=TzInfo(UTC)) filled_at=None expired_at=None canceled_at=None failed_at=None replaced_at=None replaced_by=None replaces=None asset_id=UUID('b0b6dd9d-8b9b-48a9-ba46-b9d54906e415') symbol='AAPL' asset_class=<AssetClass.US_EQUITY: 'us_equity'> notional=None qty='1' filled_qty='0' filled_avg_price=None order_class=<OrderClass.SIMPLE: 'simple'> order_type=<OrderType.MARKET: 'market'> type=<OrderType.MARKET: 'market'> side=<OrderSide.BUY: 'buy'> time_in_force=<TimeInForce.DAY: 'day'> limit_price=None stop_price=None status=<OrderStatus.PENDING_NEW: 'pending_new'> extended_hours=False legs=None trail_percent=None trail_price=None hwm=None
+2024-12-13 13:28:42 | asyncio | INFO | [unknown] Waiting for the socket stream connection to be established, 
+                method _stream_established must be called
+2024-12-13 13:28:42 | alpaca.trading.stream | INFO | started trading stream
+2024-12-13 13:28:42 | alpaca.trading.stream | INFO | starting trading websocket connection
+2024-12-13 13:28:43 | alpaca.trading.stream | INFO | connected to: BaseURL.TRADING_STREAM_PAPER
+2024-12-13 13:28:43 | asyncio | INFO | Starting backtest...
+2024-12-13 13:28:43 | lumibot.traders.trader | INFO | Backtesting starting...
+Progress |██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100.00%  [Elapsed: 0:00:48 ETA: 0:00:00] 2024-12-13 13:29:35,816: INFO: [mlstrat] Strategy mlstrat is initializing
+2024-12-13 13:29:35,816: INFO: [mlstrat] Executing the initialize lifecycle method
+2024-12-13 13:29:38,428: INFO: [mlstrat] Executing the before_starting_trading lifecycle method
+2024-12-13 13:29:38,502: INFO: [mlstrat] Strategy will check in again at: 2024-12-13 14:00:00
+2024-12-13 13:29:40,194: INFO: [mlstrat] Executing the before_market_opens lifecycle method
+2024-12-13 14:00:00,675: INFO: [mlstrat] Not sending account summary to Discord because db_connection_str is not set
+2024-12-13 14:00:00,676: INFO: [mlstrat] Bot is running. Executing the on_trading_iteration lifecycle method at 2024-12-13 14:00:00
+2024-12-13 14:00:03,962: INFO: [mlstrat] Trading iteration ended at 2024-12-13 14:00:03, next check in time is 2024-12-13 15:00:00. Took 3.77s
+2024-12-13 14:26:28,635: WARNING: trading stream websocket error, restarting  connection: no close frame received or sent
+2024-12-13 14:26:28,650: INFO: starting trading websocket connection
+2024-12-13 14:26:28,876: INFO: connected to: BaseURL.TRADING_STREAM_PAPER
+2024-12-13 14:37:55,775: WARNING: trading stream websocket error, restarting  connection: no close frame received or sent
+2024-12-13 14:37:55,859: INFO: starting trading websocket connection
+2024-12-13 14:37:56,132: INFO: connected to: BaseURL.TRADING_STREAM_PAPER
+2024-12-13 14:41:50,290: WARNING: trading stream websocket error, restarting  connection: no close frame received or sent
+2024-12-13 14:41:50,304: INFO: starting trading websocket connection
+2024-12-13 14:41:50,507: INFO: connected to: BaseURL.TRADING_STREAM_PAPER
+2024-12-13 15:00:16,399: WARNING: trading stream websocket error, restarting  connection: no close frame received or sent
+2024-12-13 15:00:16,412: INFO: starting trading websocket connection
+2024-12-13 15:00:16,612: INFO: connected to: BaseURL.TRADING_STREAM_PAPER
+2024-12-13 15:03:32,749: WARNING: trading stream websocket error, restarting  connection: no close frame received or sent
+2024-12-13 15:03:32,762: INFO: starting trading websocket connection
+2024-12-13 15:03:33,822: INFO: connected to: BaseURL.TRADING_STREAM_PAPER
+2024-12-13 15:31:50,388: WARNING: trading stream websocket error, restarting  connection: no close frame received or sent
+2024-12-13 15:31:50,402: INFO: starting trading websocket connection
+2024-12-13 15:31:50,624: INFO: connected to: BaseURL.TRADING_STREAM_PAPER
+2024-12-13 16:04:10,810: INFO: [mlstrat] Executing the after_market_closes lifecycle method
+2024-12-13 16:04:11,994: WARNING: trading stream websocket error, restarting  connection: sent 1011 (unexpected error) keepalive ping timeout; no close frame received
+2024-12-13 16:04:12,017: INFO: starting trading websocket connection
+2024-12-13 16:04:12,229: INFO: [mlstrat] Executing the before_market_closes lifecycle method
+2024-12-13 16:04:12,289: INFO: connected to: BaseURL.TRADING_STREAM_PAPER
+2024-12-13 16:22:02,723: WARNING: trading stream websocket error, restarting  connection: no close frame received or sent
+2024-12-13 16:22:02,735: INFO: starting trading websocket connection
+2024-12-13 16:22:02,912: INFO: connected to: BaseURL.TRADING_STREAM_PAPER
+2024-12-13 16:34:43,205: WARNING: trading stream websocket error, restarting  connection: no close frame received or sent
+2024-12-13 16:34:43,268: INFO: starting trading websocket connection
+2024-12-13 16:34:43,735: INFO: connected to: BaseURL.TRADING_STREAM_PAPER
