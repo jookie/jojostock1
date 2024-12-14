@@ -44,5 +44,5 @@ setup(
     ],
     keywords="Reinforcement Learning, Finance",
     platform=["any"],
-    python_requires=">=3.12",
+    python_requires=">=3.7",
 )
