@@ -8,7 +8,9 @@ ALPACA_CREDS = {
     "PAPER": True
 }
 import streamlit as st
-from lib.MLTradingBot.finbert_utils import estimate_sentiment
+
+from finbert_utils import estimate_sentiment
+
 from alpaca_trade_api import REST 
 # from lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting import YahooDataBacktesting
 # from lib.MLTradingBot.lumibot.lumibot.strategies import Strategy
