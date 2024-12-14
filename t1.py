@@ -36,7 +36,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 
 trade_client = TradingClient(api_key=api_key, secret_key=api_secret, paper=True)
-symbol = "AAPL"
+symbol = "QQQ"
 req = MarketOrderRequest(
     symbol = symbol,
     qty= 1 , # notional is specified in USD, here we specify $1.11

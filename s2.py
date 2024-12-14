@@ -30,7 +30,7 @@ from datetime import datetime
 from alpaca_trade_api import REST 
 from datetime import timedelta 
 trade_client = TradingClient(api_key=api_key, secret_key=api_secret, paper=True)
-symbol = "AAPL"
+symbol = "SPY"
 req = MarketOrderRequest(
     symbol = symbol,
     qty= 1 ,
