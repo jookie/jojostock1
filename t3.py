@@ -13,6 +13,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import yfinance as yf
 from datetime import datetime, timedelta
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 from lib.MLTradingBot.finbert_utils import estimate_sentiment
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 analyzer = SentimentIntensityAnalyzer()
