@@ -1,57 +1,59 @@
-from __future__ import annotations
+
+
+
 import streamlit as st
-import warnings ; warnings.filterwarnings("ignore")
-ALPACA_CREDS = {
-    "API_KEY": "PKXQGLU5DJJ30MUWS2G6", 
-    "API_SECRET": "vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d", 
-    "BASE_URL" : "https://paper-api.alpaca.markets",
-    "PAPER": True
-}
-import streamlit as st
-
-from finbert_utils import estimate_sentiment
-
-from alpaca_trade_api import REST 
-# from lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting import YahooDataBacktesting
-# from lib.MLTradingBot.lumibot.lumibot.strategies import Strategy
-# from lib.MLTradingBot.lumibot.lumibot.traders import Trader
-# from lib.MLTradingBot.lumibot.lumibot.brokers.alpaca import Alpaca
+from alpaca_trade_api.rest import REST, TimeFrame
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import pandas as pd
 from datetime import datetime, timedelta
-import os
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
-api =REST(key_id=ALPACA_CREDS["API_KEY"], secret_key=ALPACA_CREDS["API_SECRET"])
-from datetime import datetime, timedelta
-from alpaca_trade_api import REST  # Adjust imports based on your setup
 
-# Initialize API
-api = REST(key_id=ALPACA_CREDS["API_KEY"], secret_key=ALPACA_CREDS["API_SECRET"])
+API_KEY = "your_api_key"
+API_SECRET = "your_api_secret"
+BASE_URL = "https://paper-api.alpaca.markets"  # Use for paper trading
 
-# Current datetime for 'today'
-today = datetime.now()
+# Initialize Alpaca client
+alpaca = REST(API_KEY, API_SECRET, base_url=BASE_URL)
 
-# Calculate three days prior
-three_days_prior = today - timedelta(days=3)
+# Sentiment analyzer
+analyzer = SentimentIntensityAnalyzer()
 
-# Format the datetime objects to RFC3339 (ISO8601) strings
-start = three_days_prior.isoformat(timespec="seconds") + "Z"  # Add 'Z' to denote UTC
-end = today.isoformat(timespec="seconds") + "Z"
+# Streamlit app setup
+st.title("Sentiment-Based Trading Bot")
+st.write("Analyze sentiment and trade stocks using Alpaca API.")
 
-# Fetch news
-news = api.get_news(
-    symbol="SPY", 
-    start=start, 
-    end=end
-)
+# User inputs
+symbol = st.text_input("Stock Symbol", value="AAPL")
+start_date = st.date_input("Start Date", value=datetime.now() - timedelta(days=30))
+end_date = st.date_input("End Date", value=datetime.now())
+sentiment_threshold = st.slider("Sentiment Threshold", -1.0, 1.0, 0.0)
 
-# Output results
-st.write(today)
-news = [ev.__dict__["_raw"]["headline"] for ev in news]
-print(news)
-probability, sentiment = estimate_sentiment(news)
-st.write(f"Probability: {probability}, Setiment: {sentiment}" )
-st.write(news)
+# Fetch historical price data
+if st.button("Fetch Data"):
+    st.write(f"Fetching historical data for {symbol}...")
+    bars = alpaca.get_bars(symbol, TimeFrame.Day, start_date, end_date).df
+    st.write(bars.tail())
 
+# Sentiment analysis
+if st.button("Analyze Sentiment"):
+    st.write("Performing sentiment analysis...")
+    data = {
+        "date": pd.date_range(start=start_date, end=end_date),
+        "news": [f"Sample headline for {symbol} on day {i}" for i in range((end_date - start_date).days)],
+    }
+    df = pd.DataFrame(data)
+    df["sentiment"] = df["news"].apply(lambda x: analyzer.polarity_scores(x)["compound"])
+    st.write(df)
+    st.line_chart(df["sentiment"])
 
+# Trading logic
+if st.button("Execute Trades"):
+    st.write("Executing trades...")
+    for index, row in df.iterrows():
+        if row["sentiment"] > sentiment_threshold:
+            st.write(f"BUY: {symbol} on {row['date']} (Sentiment: {row['sentiment']})")
+            alpaca.submit_order(symbol, qty=1, side="buy", type="market", time_in_force="gtc")
+        elif row["sentiment"] < -sentiment_threshold:
+            st.write(f"SELL: {symbol} on {row['date']} (Sentiment: {row['sentiment']})")
+            alpaca.submit_order(symbol, qty=1, side="sell", type="market", time_in_force="gtc")
 
-
-
+st.write("Adjust parameters and try again!")
