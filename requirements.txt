@@ -237,7 +237,7 @@ sseclient-py==1.8.0
 stable_baselines3==2.3.2
 stack-data==0.6.3
 stockstats==0.6.2
-streamlit==1.26.0
+streamlit>=1.36.0
 streamlit-option-menu==0.4.0
 swig==4.2.1
 sympy==1.13.2
