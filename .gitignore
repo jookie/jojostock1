@@ -115,6 +115,7 @@ cover/
 # Django stuff:
 *.log
 log
+logooooo
 log/**/*
 local_settings.py
 db.sqlite3
