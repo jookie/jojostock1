@@ -5,7 +5,7 @@
 # git remote -v
 # git remote add origin https://github.com/jookie/jojoStock.git
 # git push --set-upstream origin main
-# git branch -M main
+# #####
 
 # git clone https://github.com/jookie/jojostock1.git
 # cd jojostock1
@@ -13,7 +13,6 @@
 # git pull origin main
 # git checkout -b dov_trade
 # git push -u origin dov_trade
-
 git add .
 git commit -m "refactore"
 # git push -u origin dov-refactoring
