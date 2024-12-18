@@ -14,7 +14,7 @@
 # git push -u origin dov_trade
 # /Users/dovpeles/dov/jojostock1/lib/MLTradingBot
 git add .
-git commit -m "NOT Added lib/MLTradingBot/MLTradingBot as a regular folder"
+git commit -m "Added lib/MLTradingBot/MLTradingBot as a regular folder"
 git push origin dov_trade
 # -----------Go to GitHub and log in.
 # 1. Click on the "New" button to create a new repository.
