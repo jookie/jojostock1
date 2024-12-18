@@ -13,7 +13,8 @@
 # git pull origin main
 # git checkout -b dov_trade
 # git push -u origin dov_trade
-git add MLTradingBot
+# /Users/dovpeles/dov/jojostock1/lib/MLTradingBot
+git add .
 git commit -m "Added MLTradingBot as a regular folder"
 git push origin dov_trade
 # -----------Go to GitHub and log in.
