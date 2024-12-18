@@ -6,16 +6,15 @@
 # git remote add origin https://github.com/jookie/jojoStock.git
 # git push --set-upstream origin main
 # git branch -M main
-
+# rm -rf .git
 # git clone https://github.com/jookie/jojostock1.git
-# cd jojostock1
 # git checkout main
 # git pull origin main
 # git checkout -b dov_trade
 # git push -u origin dov_trade
 # /Users/dovpeles/dov/jojostock1/lib/MLTradingBot
 git add .
-git commit -m "NOT Added MLTradingBot as a regular folder"
+git commit -m "NOT Added lib/MLTradingBot/MLTradingBot as a regular folder"
 git push origin dov_trade
 # -----------Go to GitHub and log in.
 # 1. Click on the "New" button to create a new repository.
