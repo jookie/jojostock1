@@ -22,8 +22,6 @@ git push origin dov_trade
    # Do not initialize the repository with a README, .gitignore, or license if you've already initialized your project locally.
 # --------Remove Repository:
 # rm -rf .git
-# git init
-
 # git remote add origin https://github.com/jookie/news-stocks.git
 # streamlit run app.py  
 # git remote add origin https://github.com/jookie/jojostock1.git
