@@ -13,10 +13,9 @@
 # git pull origin main
 # git checkout -b dov_trade
 # git push -u origin dov_trade
-git add .
-git commit -m "refactore"
-# git push -u origin dov-refactoring
-git push -u origin main
+git add MLTradingBot
+git commit -m "Added MLTradingBot as a regular folder"
+git push origin dov_trade
 # -----------Go to GitHub and log in.
 # 1. Click on the "New" button to create a new repository.
 # 2. Name your repository and add a description.
