@@ -5,9 +5,9 @@ import streamlit as st
 # Get current date and time in the specified format
 now = datetime.datetime.now().strftime("%Y%m%d-%Hh%M")
 
-st.write("Current Date and Time:", now)
+st.write("Current lib/rl/config.py = config.py Date and Time:", now)
 MAIN_RESULTS_DIR = 'pages/data' + now
-
+# =======DOV MODE=================
 DATA_SAVE_DIR       = MAIN_RESULTS_DIR + "/datasets"
 TRAINED_MODEL_DIR   = MAIN_RESULTS_DIR + "/trained_models"
 TENSORBOARD_LOG_DIR = MAIN_RESULTS_DIR + "/tensorboard_log"
