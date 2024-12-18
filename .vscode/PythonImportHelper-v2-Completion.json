@@ -544,6 +544,30 @@
         "documentation": {}
     },
     {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
         "label": "streamlit",
         "kind": 6,
         "isExtraImport": true,
@@ -577,6 +601,14 @@
         "importPath": "matplotlib.pyplot",
         "description": "matplotlib.pyplot",
         "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "jprint",
+        "importPath": "lib.utility.jprint",
+        "description": "lib.utility.jprint",
+        "isExtraImport": true,
+        "detail": "lib.utility.jprint",
         "documentation": {}
     },
     {
@@ -1476,27 +1508,11 @@
         "documentation": {}
     },
     {
-        "label": "FeatureEngineer",
-        "importPath": "lib.rl.meta.preprocessor.preprocessors",
-        "description": "lib.rl.meta.preprocessor.preprocessors",
+        "label": "YahooDownloader",
+        "importPath": "lib.rl.meta.preprocessor.yahoodownloader",
+        "description": "lib.rl.meta.preprocessor.yahoodownloader",
         "isExtraImport": true,
-        "detail": "lib.rl.meta.preprocessor.preprocessors",
-        "documentation": {}
-    },
-    {
-        "label": "data_split",
-        "importPath": "lib.rl.meta.preprocessor.preprocessors",
-        "description": "lib.rl.meta.preprocessor.preprocessors",
-        "isExtraImport": true,
-        "detail": "lib.rl.meta.preprocessor.preprocessors",
-        "documentation": {}
-    },
-    {
-        "label": "data_split",
-        "importPath": "lib.rl.meta.preprocessor.preprocessors",
-        "description": "lib.rl.meta.preprocessor.preprocessors",
-        "isExtraImport": true,
-        "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "detail": "lib.rl.meta.preprocessor.yahoodownloader",
         "documentation": {}
     },
     {
@@ -1509,14 +1525,6 @@
     },
     {
         "label": "data_split",
-        "importPath": "lib.rl.meta.preprocessor.preprocessors",
-        "description": "lib.rl.meta.preprocessor.preprocessors",
-        "isExtraImport": true,
-        "detail": "lib.rl.meta.preprocessor.preprocessors",
-        "documentation": {}
-    },
-    {
-        "label": "FeatureEngineer",
         "importPath": "lib.rl.meta.preprocessor.preprocessors",
         "description": "lib.rl.meta.preprocessor.preprocessors",
         "isExtraImport": true,
@@ -1577,6 +1585,62 @@
         "description": "lib.rl.meta.preprocessor.preprocessors",
         "isExtraImport": true,
         "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "FeatureEngineer",
+        "importPath": "lib.rl.meta.preprocessor.preprocessors",
+        "description": "lib.rl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "data_split",
+        "importPath": "lib.rl.meta.preprocessor.preprocessors",
+        "description": "lib.rl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "FeatureEngineer",
+        "importPath": "lib.rl.meta.preprocessor.preprocessors",
+        "description": "lib.rl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "data_split",
+        "importPath": "lib.rl.meta.preprocessor.preprocessors",
+        "description": "lib.rl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "FeatureEngineer",
+        "importPath": "lib.rl.meta.preprocessor.preprocessors",
+        "description": "lib.rl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "data_split",
+        "importPath": "lib.rl.meta.preprocessor.preprocessors",
+        "description": "lib.rl.meta.preprocessor.preprocessors",
+        "isExtraImport": true,
+        "detail": "lib.rl.meta.preprocessor.preprocessors",
+        "documentation": {}
+    },
+    {
+        "label": "StockTradingEnv",
+        "importPath": "lib.rl.meta.env_stock_trading.env_stocktrading",
+        "description": "lib.rl.meta.env_stock_trading.env_stocktrading",
+        "isExtraImport": true,
+        "detail": "lib.rl.meta.env_stock_trading.env_stocktrading",
         "documentation": {}
     },
     {
@@ -1709,6 +1773,22 @@
     },
     {
         "label": "DRLAgent",
+        "importPath": "lib.rl.agents.stablebaselines3.models",
+        "description": "lib.rl.agents.stablebaselines3.models",
+        "isExtraImport": true,
+        "detail": "lib.rl.agents.stablebaselines3.models",
+        "documentation": {}
+    },
+    {
+        "label": "DRLAgent",
+        "importPath": "lib.rl.agents.stablebaselines3.models",
+        "description": "lib.rl.agents.stablebaselines3.models",
+        "isExtraImport": true,
+        "detail": "lib.rl.agents.stablebaselines3.models",
+        "documentation": {}
+    },
+    {
+        "label": "DRLEnsembleAgent",
         "importPath": "lib.rl.agents.stablebaselines3.models",
         "description": "lib.rl.agents.stablebaselines3.models",
         "isExtraImport": true,
@@ -1837,6 +1917,38 @@
     },
     {
         "label": "backtest_stats",
+        "importPath": "lib.rl.plot",
+        "description": "lib.rl.plot",
+        "isExtraImport": true,
+        "detail": "lib.rl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "backtest_stats",
+        "importPath": "lib.rl.plot",
+        "description": "lib.rl.plot",
+        "isExtraImport": true,
+        "detail": "lib.rl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "backtest_plot",
+        "importPath": "lib.rl.plot",
+        "description": "lib.rl.plot",
+        "isExtraImport": true,
+        "detail": "lib.rl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "get_daily_return",
+        "importPath": "lib.rl.plot",
+        "description": "lib.rl.plot",
+        "isExtraImport": true,
+        "detail": "lib.rl.plot",
+        "documentation": {}
+    },
+    {
+        "label": "get_baseline",
         "importPath": "lib.rl.plot",
         "description": "lib.rl.plot",
         "isExtraImport": true,
@@ -2288,6 +2400,46 @@
     },
     {
         "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -4712,6 +4864,38 @@
         "documentation": {}
     },
     {
+        "label": "REST",
+        "importPath": "alpaca_trade_api.rest",
+        "description": "alpaca_trade_api.rest",
+        "isExtraImport": true,
+        "detail": "alpaca_trade_api.rest",
+        "documentation": {}
+    },
+    {
+        "label": "REST",
+        "importPath": "alpaca_trade_api.rest",
+        "description": "alpaca_trade_api.rest",
+        "isExtraImport": true,
+        "detail": "alpaca_trade_api.rest",
+        "documentation": {}
+    },
+    {
+        "label": "TimeFrame",
+        "importPath": "alpaca_trade_api.rest",
+        "description": "alpaca_trade_api.rest",
+        "isExtraImport": true,
+        "detail": "alpaca_trade_api.rest",
+        "documentation": {}
+    },
+    {
+        "label": "REST",
+        "importPath": "alpaca_trade_api.rest",
+        "description": "alpaca_trade_api.rest",
+        "isExtraImport": true,
+        "detail": "alpaca_trade_api.rest",
+        "documentation": {}
+    },
+    {
         "label": "pytest",
         "kind": 6,
         "isExtraImport": true,
@@ -5986,6 +6170,14 @@
         "documentation": {}
     },
     {
+        "label": "DOW_30_TICKER",
+        "importPath": "lib.rl.config_tickers",
+        "description": "lib.rl.config_tickers",
+        "isExtraImport": true,
+        "detail": "lib.rl.config_tickers",
+        "documentation": {}
+    },
+    {
         "label": "DataProcessor",
         "importPath": "lib.rl.meta.data_processor",
         "description": "lib.rl.meta.data_processor",
@@ -6196,6 +6388,30 @@
         "documentation": {}
     },
     {
+        "label": "Strategy",
+        "importPath": "lib.MLTradingBot.lumibot.lumibot.strategies",
+        "description": "lib.MLTradingBot.lumibot.lumibot.strategies",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.lumibot.lumibot.strategies",
+        "documentation": {}
+    },
+    {
+        "label": "Trader",
+        "importPath": "lib.MLTradingBot.lumibot.lumibot.traders",
+        "description": "lib.MLTradingBot.lumibot.lumibot.traders",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.lumibot.lumibot.traders",
+        "documentation": {}
+    },
+    {
+        "label": "Trader",
+        "importPath": "lib.MLTradingBot.lumibot.lumibot.traders",
+        "description": "lib.MLTradingBot.lumibot.lumibot.traders",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.lumibot.lumibot.traders",
+        "documentation": {}
+    },
+    {
         "label": "Trader",
         "importPath": "lib.MLTradingBot.lumibot.lumibot.traders",
         "description": "lib.MLTradingBot.lumibot.lumibot.traders",
@@ -6301,6 +6517,30 @@
         "documentation": {}
     },
     {
+        "label": "SentimentIntensityAnalyzer",
+        "importPath": "nltk.sentiment.vader",
+        "description": "nltk.sentiment.vader",
+        "isExtraImport": true,
+        "detail": "nltk.sentiment.vader",
+        "documentation": {}
+    },
+    {
+        "label": "urlopen",
+        "importPath": "urllib.request",
+        "description": "urllib.request",
+        "isExtraImport": true,
+        "detail": "urllib.request",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "urllib.request",
+        "description": "urllib.request",
+        "isExtraImport": true,
+        "detail": "urllib.request",
+        "documentation": {}
+    },
+    {
         "label": "urlopen",
         "importPath": "urllib.request",
         "description": "urllib.request",
@@ -6354,6 +6594,38 @@
         "description": "bs4",
         "isExtraImport": true,
         "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "estimate_sentiment",
+        "importPath": "lib.MLTradingBot.finbert_utils",
+        "description": "lib.MLTradingBot.finbert_utils",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.finbert_utils",
+        "documentation": {}
+    },
+    {
+        "label": "estimate_sentiment",
+        "importPath": "lib.MLTradingBot.finbert_utils",
+        "description": "lib.MLTradingBot.finbert_utils",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.finbert_utils",
+        "documentation": {}
+    },
+    {
+        "label": "estimate_sentiment",
+        "importPath": "lib.MLTradingBot.finbert_utils",
+        "description": "lib.MLTradingBot.finbert_utils",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.finbert_utils",
         "documentation": {}
     },
     {
@@ -6402,6 +6674,30 @@
         "description": "lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting  ",
         "isExtraImport": true,
         "detail": "lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting  ",
+        "documentation": {}
+    },
+    {
+        "label": "YahooDataBacktesting",
+        "importPath": "lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting  ",
+        "description": "lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting  ",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting  ",
+        "documentation": {}
+    },
+    {
+        "label": "Alpaca",
+        "importPath": "lib.MLTradingBot.lumibot.lumibot.brokers.alpaca",
+        "description": "lib.MLTradingBot.lumibot.lumibot.brokers.alpaca",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.lumibot.lumibot.brokers.alpaca",
+        "documentation": {}
+    },
+    {
+        "label": "Alpaca",
+        "importPath": "lib.MLTradingBot.lumibot.lumibot.brokers.alpaca",
+        "description": "lib.MLTradingBot.lumibot.lumibot.brokers.alpaca",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.lumibot.lumibot.brokers.alpaca",
         "documentation": {}
     },
     {
@@ -6509,6 +6805,14 @@
         "documentation": {}
     },
     {
+        "label": "YahooDataBacktesting",
+        "importPath": "lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting",
+        "description": "lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting",
+        "documentation": {}
+    },
+    {
         "label": "TradingClient",
         "importPath": "alpaca.trading.client",
         "description": "alpaca.trading.client",
@@ -6563,6 +6867,22 @@
         "importPath": "subprocess",
         "description": "subprocess",
         "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "Strategy",
+        "importPath": "lib.MLTradingBot.lumibot.lumibot.strategies.strategy",
+        "description": "lib.MLTradingBot.lumibot.lumibot.strategies.strategy",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.lumibot.lumibot.strategies.strategy",
+        "documentation": {}
+    },
+    {
+        "label": "Timedelta",
+        "importPath": "timedelta",
+        "description": "timedelta",
+        "isExtraImport": true,
+        "detail": "timedelta",
         "documentation": {}
     },
     {
@@ -12875,6 +13195,213 @@
         "documentation": {}
     },
     {
+        "label": "MLTrader",
+        "kind": 6,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "class MLTrader(): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5):\n        self.symbol = symbol\n        self.sleeptime = \"24H\" \n        self.last_trade = None \n        self.cash_at_risk = cash_at_risk\n        self.api =REST(key_id=ALPACA_CREDS[\"API_KEY\"], secret_key=ALPACA_CREDS[\"API_SECRET\"],base_url=BASE_URL)\n        st.write(f\"Cash at risk: {self.cash_at_risk}\")\n    def position_sizing(self): \n        # cash = self.get_cash() ",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"TOKENIZERS_PARALLELISM\"]",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "os.environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"\nfrom lib.MLTradingBot.finbert_utils import estimate_sentiment\nfrom nltk.sentiment.vader import SentimentIntensityAnalyzer\nanalyzer = SentimentIntensityAnalyzer()\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "analyzer",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "analyzer = SentimentIntensityAnalyzer()\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}\nh1 {",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "custom_css",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "custom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}\nh1 {\ncolor: #3498db; /* Heading color (light blue) */",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_URL",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "BASE_URL = \"https://paper-api.alpaca.markets\"\nALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\", \n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\", \n    \"PAPER\": True\n}\nexample_ticker_symbols = [\"SPY\",\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "ALPACA_CREDS",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "ALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\", \n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\", \n    \"PAPER\": True\n}\nexample_ticker_symbols = [\"SPY\",\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "example_ticker_symbols",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "example_ticker_symbols = [\"SPY\",\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",\n\"ADBE\", \"CRM\", \"INTC\", \"ORCL\", \"HD\"\n]\nst.title(\"Sentiment-Based Trading Bot\")\nst.write(\"Analyze sentiment and trade stocks using Alpaca API.\")\n# Use a selectbox to allow users to choose from example ticker symbols",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "ticker",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "ticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# User inputs\n# symbol = st.text_input(\"Stock Symbol\", value=\"AAPL\")\nstart_date = st.date_input(\"Start Date\", value=datetime.now() - timedelta(days=30))\nend_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "start_date",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "start_date = st.date_input(\"Start Date\", value=datetime.now() - timedelta(days=30))\nend_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "end_date",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "end_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "sentiment_threshold",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "sentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "data = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "df = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):\n    st.write(\"Executing trades...\")\n    sentiment_threshold = -1 \n    for index, row in df.iterrows():\n        if row[\"sentiment\"] > sentiment_threshold:",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "df[\"sentiment\"]",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "df[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):\n    st.write(\"Executing trades...\")\n    sentiment_threshold = -1 \n    for index, row in df.iterrows():\n        if row[\"sentiment\"] > sentiment_threshold:\n            st.write(f\"BUY: {ticker} on {row['date']} (Sentiment: {row['sentiment']})\")",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "strat",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "strat = MLTrader()\nstrat.initialize(ticker, 0.5)\nstrat.on_trading_iteration()\nnews_tables = {}\nif ticker:\n      #Fetching stock price data\n            current_date = datetime.now().strftime(\"%Y-%m-%d\")\n            stock_data = yf.download(ticker, start=\"2000-01-01\", end=current_date)\n            finviz_url = \"https://finviz.com/quote.ashx?t=\"\n            url = finviz_url + ticker",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "news_tables",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "news_tables = {}\nif ticker:\n      #Fetching stock price data\n            current_date = datetime.now().strftime(\"%Y-%m-%d\")\n            stock_data = yf.download(ticker, start=\"2000-01-01\", end=current_date)\n            finviz_url = \"https://finviz.com/quote.ashx?t=\"\n            url = finviz_url + ticker\n            req = Request(url=url, headers={\"user-agent\": \"my-app\"})\n            response = urlopen(req)\n            html = BeautifulSoup(response, features=\"html.parser\")",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "MLTrader",
+        "kind": 6,
+        "importPath": "senti_lumi",
+        "description": "senti_lumi",
+        "peekOfCode": "class MLTrader(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): \n        self.symbol = symbol\n        self.sleeptime = \"24H\" \n        self.last_trade = None \n        self.cash_at_risk = cash_at_risk\n        self.api = REST(base_url=base_url, key_id=api_key, secret_key=api_secret)\n    def position_sizing(self): \n        cash = self.get_cash() \n        last_price = self.get_last_price(self.symbol)",
+        "detail": "senti_lumi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_URL",
+        "kind": 5,
+        "importPath": "senti_lumi",
+        "description": "senti_lumi",
+        "peekOfCode": "BASE_URL = \"https://paper-api.alpaca.markets\"\nAPI_KEY = \"PKXQGLU5DJJ30MUWS2G6\"\nAPI_SECRET =\"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\"\napi_secret = API_SECRET\napi_key    = API_KEY\nbase_url   = BASE_URL\nALPACA_CREDS = {\n    \"API_KEY\": api_key, \n    \"API_SECRET\": api_secret, \n    \"PAPER\": True",
+        "detail": "senti_lumi",
+        "documentation": {}
+    },
+    {
+        "label": "API_KEY",
+        "kind": 5,
+        "importPath": "senti_lumi",
+        "description": "senti_lumi",
+        "peekOfCode": "API_KEY = \"PKXQGLU5DJJ30MUWS2G6\"\nAPI_SECRET =\"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\"\napi_secret = API_SECRET\napi_key    = API_KEY\nbase_url   = BASE_URL\nALPACA_CREDS = {\n    \"API_KEY\": api_key, \n    \"API_SECRET\": api_secret, \n    \"PAPER\": True\n}",
+        "detail": "senti_lumi",
+        "documentation": {}
+    },
+    {
+        "label": "api_secret",
+        "kind": 5,
+        "importPath": "senti_lumi",
+        "description": "senti_lumi",
+        "peekOfCode": "api_secret = API_SECRET\napi_key    = API_KEY\nbase_url   = BASE_URL\nALPACA_CREDS = {\n    \"API_KEY\": api_key, \n    \"API_SECRET\": api_secret, \n    \"PAPER\": True\n}\n# from alpaca.trading.client import TradingClient\n# from alpaca.trading.requests import (MarketOrderRequest)",
+        "detail": "senti_lumi",
+        "documentation": {}
+    },
+    {
+        "label": "ALPACA_CREDS",
+        "kind": 5,
+        "importPath": "senti_lumi",
+        "description": "senti_lumi",
+        "peekOfCode": "ALPACA_CREDS = {\n    \"API_KEY\": api_key, \n    \"API_SECRET\": api_secret, \n    \"PAPER\": True\n}\n# from alpaca.trading.client import TradingClient\n# from alpaca.trading.requests import (MarketOrderRequest)\n# from alpaca.trading.enums import (\n#     OrderSide,\n#     OrderType,",
+        "detail": "senti_lumi",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"TOKENIZERS_PARALLELISM\"]",
+        "kind": 5,
+        "importPath": "senti_lumi",
+        "description": "senti_lumi",
+        "peekOfCode": "os.environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"\n# trade_client = TradingClient(api_key=api_key, secret_key=api_secret, paper=True)\n# symbol = \"QQQ\"\n# req = MarketOrderRequest(\n#     symbol = symbol,\n#     qty= 1 , # notional is specified in USD, here we specify $1.11\n#     side = OrderSide.BUY,\n#     type = OrderType.MARKET,\n#     time_in_force = TimeInForce.DAY,\n# )",
+        "detail": "senti_lumi",
+        "documentation": {}
+    },
+    {
+        "label": "trader",
+        "kind": 5,
+        "importPath": "senti_lumi",
+        "description": "senti_lumi",
+        "peekOfCode": "trader = Trader()\ntrader.add_strategy(strategy)\ntrader.run_all()",
+        "detail": "senti_lumi",
+        "documentation": {}
+    },
+    {
         "label": "api_secret",
         "kind": 5,
         "importPath": "t2",
@@ -13037,47 +13564,38 @@
         "documentation": {}
     },
     {
-        "label": "finviz_url",
-        "kind": 5,
+        "label": "MLTrader",
+        "kind": 6,
         "importPath": "t4",
         "description": "t4",
-        "peekOfCode": "finviz_url = \"https://finviz.com/quote.ashx?t=\"\nexample_ticker_symbols = [\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",\n\"ADBE\", \"CRM\", \"INTC\", \"ORCL\", \"HD\"\n]\n# Use a selectbox to allow users to choose from example ticker symbols\nticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)",
+        "peekOfCode": "class MLTrader(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): \n        self.symbol = symbol\n        self.sleeptime = \"24H\" \n        self.last_trade = None \n        self.cash_at_risk = cash_at_risk\n        self.api = REST(key_id=ALPACA_CREDS[\"API_KEY\"], secret_key=ALPACA_CREDS[\"API_SECRET\"])\n    def position_sizing(self): \n        cash = self.get_cash() \n        last_price = self.get_last_price(self.symbol)",
         "detail": "t4",
         "documentation": {}
     },
     {
-        "label": "example_ticker_symbols",
+        "label": "os.environ[\"TOKENIZERS_PARALLELISM\"]",
         "kind": 5,
         "importPath": "t4",
         "description": "t4",
-        "peekOfCode": "example_ticker_symbols = [\n\"AAPL\", \"MSFT\", \"GOOGL\", \"AMZN\", \"TSLA\",\n\"JPM\", \"NFLX\", \"FB\", \"BRK.B\", \"V\",\n\"NVDA\", \"DIS\", \"BA\", \"IBM\", \"GE\",\n\"PG\", \"JNJ\", \"KO\", \"MCD\", \"T\",\n\"ADBE\", \"CRM\", \"INTC\", \"ORCL\", \"HD\"\n]\n# Use a selectbox to allow users to choose from example ticker symbols\nticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\nnews_tables = {}",
+        "peekOfCode": "os.environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"\nBASE_URL = \"https://paper-api.alpaca.markets\"\nfrom timedelta import Timedelta\nALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\", \n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\", \n    \"PAPER\": True\n}\nclass MLTrader(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): ",
         "detail": "t4",
         "documentation": {}
     },
     {
-        "label": "ticker",
+        "label": "BASE_URL",
         "kind": 5,
         "importPath": "t4",
         "description": "t4",
-        "peekOfCode": "ticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\nnews_tables = {}\nif ticker:\n      #Fetching stock price data\n            current_date = datetime.now().strftime(\"%Y-%m-%d\")\n            stock_data = yf.download(ticker, start=\"2000-01-01\", end=current_date)\n            url = finviz_url + ticker\n            req = Request(url=url, headers={\"user-agent\": \"my-app\"})\n            response = urlopen(req)\n            html = BeautifulSoup(response, features=\"html.parser\")",
+        "peekOfCode": "BASE_URL = \"https://paper-api.alpaca.markets\"\nfrom timedelta import Timedelta\nALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\", \n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\", \n    \"PAPER\": True\n}\nclass MLTrader(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): \n        self.symbol = symbol",
         "detail": "t4",
         "documentation": {}
     },
     {
-        "label": "news_tables",
+        "label": "ALPACA_CREDS",
         "kind": 5,
         "importPath": "t4",
         "description": "t4",
-        "peekOfCode": "news_tables = {}\nif ticker:\n      #Fetching stock price data\n            current_date = datetime.now().strftime(\"%Y-%m-%d\")\n            stock_data = yf.download(ticker, start=\"2000-01-01\", end=current_date)\n            url = finviz_url + ticker\n            req = Request(url=url, headers={\"user-agent\": \"my-app\"})\n            response = urlopen(req)\n            html = BeautifulSoup(response, features=\"html.parser\")\n            news_table = html.find(id=\"news-table\")",
-        "detail": "t4",
-        "documentation": {}
-    },
-    {
-        "label": "symbol",
-        "kind": 5,
-        "importPath": "t4",
-        "description": "t4",
-        "peekOfCode": "symbol = st.text_input(\"Stock Symbol\", value=\"AAPL\")\nstart_date = st.date_input(\"Start Date\", value=datetime.now() - timedelta(days=30))\nend_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)",
+        "peekOfCode": "ALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\", \n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\", \n    \"PAPER\": True\n}\nclass MLTrader(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): \n        self.symbol = symbol\n        self.sleeptime = \"24H\" \n        self.last_trade = None ",
         "detail": "t4",
         "documentation": {}
     },
@@ -13086,7 +13604,7 @@
         "kind": 5,
         "importPath": "t4",
         "description": "t4",
-        "peekOfCode": "start_date = st.date_input(\"Start Date\", value=datetime.now() - timedelta(days=30))\nend_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)",
+        "peekOfCode": "start_date = datetime(2020,1,1)\nend_date = datetime(2023,12,31) \nbroker = Alpaca(ALPACA_CREDS) \nstrategy = MLTrader(name='mlstrat', broker=broker, \n                    parameters={\"symbol\":\"SPY\", \n                                \"cash_at_risk\":.5})\nstrategy.backtest(\n    YahooDataBacktesting, \n    start_date, \n    end_date, ",
         "detail": "t4",
         "documentation": {}
     },
@@ -13095,16 +13613,34 @@
         "kind": 5,
         "importPath": "t4",
         "description": "t4",
-        "peekOfCode": "end_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)",
+        "peekOfCode": "end_date = datetime(2023,12,31) \nbroker = Alpaca(ALPACA_CREDS) \nstrategy = MLTrader(name='mlstrat', broker=broker, \n                    parameters={\"symbol\":\"SPY\", \n                                \"cash_at_risk\":.5})\nstrategy.backtest(\n    YahooDataBacktesting, \n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}",
         "detail": "t4",
         "documentation": {}
     },
     {
-        "label": "sentiment_threshold",
+        "label": "broker",
         "kind": 5,
         "importPath": "t4",
         "description": "t4",
-        "peekOfCode": "sentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)",
+        "peekOfCode": "broker = Alpaca(ALPACA_CREDS) \nstrategy = MLTrader(name='mlstrat', broker=broker, \n                    parameters={\"symbol\":\"SPY\", \n                                \"cash_at_risk\":.5})\nstrategy.backtest(\n    YahooDataBacktesting, \n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}\n)",
+        "detail": "t4",
+        "documentation": {}
+    },
+    {
+        "label": "strategy",
+        "kind": 5,
+        "importPath": "t4",
+        "description": "t4",
+        "peekOfCode": "strategy = MLTrader(name='mlstrat', broker=broker, \n                    parameters={\"symbol\":\"SPY\", \n                                \"cash_at_risk\":.5})\nstrategy.backtest(\n    YahooDataBacktesting, \n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}\n)\ntrader = Trader()",
+        "detail": "t4",
+        "documentation": {}
+    },
+    {
+        "label": "trader",
+        "kind": 5,
+        "importPath": "t4",
+        "description": "t4",
+        "peekOfCode": "trader = Trader()\ntrader.add_strategy(strategy)\ntrader.run_all()",
         "detail": "t4",
         "documentation": {}
     }
