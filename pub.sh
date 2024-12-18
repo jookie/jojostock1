@@ -10,7 +10,7 @@
 # git checkout main
 # git pull origin main
 # git checkout -b dov_trade
-# git push -u origin dov_trade
+
 git add .
 git commit -m "refactore"
 # git push -u origin dov-refactoring
