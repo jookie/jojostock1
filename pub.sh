@@ -5,8 +5,6 @@
 # git remote -v
 # git remote add origin https://github.com/jookie/jojoStock.git
 # git push --set-upstream origin main
-# #####
-
 # git clone https://github.com/jookie/jojostock1.git
 # cd jojostock1
 # git checkout main
@@ -24,7 +22,6 @@ git push -u origin main
 # --------Remove Repository:
 # rm -rf .git
 # git init
-
 # git remote add origin https://github.com/jookie/news-stocks.git
 # streamlit run app.py  
 # git remote add origin https://github.com/jookie/jojostock1.git
