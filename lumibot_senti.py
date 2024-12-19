@@ -119,7 +119,9 @@ class MLTrader(Strategy):
                 )
                 self.submit_order(order) 
                 self.last_trade = "sell"
-
+#  ====DOV  MODICATION=======
+# start_date = datetime(2020,1,1)
+# end_date = datetime(2023,12,31) 
 start_date  = datetime(2020,1,1)
 end_date    = datetime(2020,11,12) 
 # end_date    = datetime(2023,12,31) 

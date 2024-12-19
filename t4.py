@@ -7,11 +7,13 @@ import warnings ; warnings.filterwarnings("ignore")
 import os
 from datetime import datetime 
 from alpaca_trade_api.rest import REST 
-from lib.MLTradingBot.finbert_utils import estimate_sentiment
-from lib.MLTradingBot.lumibot.lumibot.strategies.strategy import Strategy
-from lib.MLTradingBot.lumibot.lumibot.traders import Trader
-from lib.MLTradingBot.lumibot.lumibot.brokers.alpaca import Alpaca
-from lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting   import YahooDataBacktesting
+from lib.sentiment.finbert_utils import estimate_sentiment
+
+from lumibot.strategies.strategy import Strategy
+from lumibot.traders import Trader
+from lumibot.brokers.alpaca import Alpaca
+from lumibot.backtesting.yahoo_backtesting   import YahooDataBacktesting
+
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 BASE_URL = "https://paper-api.alpaca.markets"
 from timedelta import Timedelta
@@ -46,6 +48,7 @@ class MLTrader(Strategy):
                                  end=today) 
         news = [ev.__dict__["_raw"]["headline"] for ev in news]
         probability, sentiment = estimate_sentiment(news)
+        print(probability, sentiment) 
         return probability, sentiment 
 
     def on_trading_iteration(self):
@@ -79,9 +82,11 @@ class MLTrader(Strategy):
                 )
                 self.submit_order(order) 
                 self.last_trade = "sell"
-
+# ====DOV  MODICATION=======
 start_date = datetime(2020,1,1)
 end_date = datetime(2023,12,31) 
+# start_date = datetime(2023,1,1)
+# end_date = datetime(2023,1,2) 
 
 broker = Alpaca(ALPACA_CREDS) 
 
