@@ -4,7 +4,6 @@
 # LumiBot: Use LumiBot for algorithmic trading execution based on the sentiment signals.
 import nltk ; nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-nltk.download('vader_lexicon')
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -89,8 +88,6 @@ if news_table:
             f = lambda title: vader.polarity_scores(title)["compound"]
             df["Compound Score"] = df["Headline"].apply(f)
             df["Date"] = pd.to_datetime(df["Date"], errors="coerce").dt.date
-            
-            
             # Display data table
             st.subheader("News Headlines and Sentiment Scores")
             st.dataframe(df)
@@ -108,6 +105,7 @@ if news_table:
             plt.figure(figsize=(10, 8))
             # dov to numpyh
             # The error indicates that Pandas is no longer supporting multi-dimensional indexing directly on its objects, such as trying to index a DataFrame or Series with [:, None]. Instead, you need to convert the object to a NumPy array before performing such indexing.
+            # ==============DOV MOD=========
             plt.plot(stock_data.index.to_numpy(), stock_data["Close"])
             # plt.plot(stock_data.index[:, None], stock_data["Close"])
             plt.xlabel("Date")

@@ -11,13 +11,16 @@ from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 import pandas as pd
 import matplotlib.pyplot as plt
-import yfinance as yf
 from datetime import datetime, timedelta
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
+import yfinance as yf
 from lib.MLTradingBot.finbert_utils import estimate_sentiment
+import nltk
+nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 analyzer = SentimentIntensityAnalyzer()
+# print(analyzer.polarity_scores("This is a great day!"))
 custom_css = """
 <style>
 body {
@@ -71,8 +74,11 @@ data = {
 df = pd.DataFrame(data)
 df["sentiment"] = df["news"].apply(lambda x: analyzer.polarity_scores(x)["compound"])
 st.write("Performing sentiment analysis...")
+aa = analyzer.polarity_scores("This is a great day!")
+st.write(f"This is a great day! {aa}")
 st.write(df)
 st.line_chart(df["sentiment"])
+
 if st.button("Execute Trades"):
     st.write("Executing trades...")
     sentiment_threshold = -1 
@@ -154,7 +160,7 @@ class MLTrader():
 strat = MLTrader()
 strat.initialize(ticker, 0.5)
 strat.on_trading_iteration()
-
+# ====================
 news_tables = {}
 if ticker:
       #Fetching stock price data

@@ -48,7 +48,7 @@ class MLTrader(Strategy):
                                  end=today) 
         news = [ev.__dict__["_raw"]["headline"] for ev in news]
         probability, sentiment = estimate_sentiment(news)
-        print(probability, sentiment) 
+        print(probability, sentiment , news)
         return probability, sentiment 
 
     def on_trading_iteration(self):
@@ -94,7 +94,7 @@ strategy = MLTrader(name='mlstrat', broker=broker,
                     parameters={"symbol":"SPY", 
                                 "cash_at_risk":.5})
 strategy.backtest(
-    YahooDataBacktesting, 
+    YahooDataBacktesting, c
     start_date, 
     end_date, 
     parameters={"symbol":"SPY", "cash_at_risk":.5}

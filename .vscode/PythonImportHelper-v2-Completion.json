@@ -3455,6 +3455,14 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "timedelta",
         "importPath": "datetime",
         "description": "datetime",
@@ -6401,6 +6409,22 @@
     },
     {
         "label": "APIError",
+        "importPath": "alpaca_trade_api.rest",
+        "description": "alpaca_trade_api.rest",
+        "isExtraImport": true,
+        "detail": "alpaca_trade_api.rest",
+        "documentation": {}
+    },
+    {
+        "label": "REST",
+        "importPath": "alpaca_trade_api.rest",
+        "description": "alpaca_trade_api.rest",
+        "isExtraImport": true,
+        "detail": "alpaca_trade_api.rest",
+        "documentation": {}
+    },
+    {
+        "label": "TimeFrame",
         "importPath": "alpaca_trade_api.rest",
         "description": "alpaca_trade_api.rest",
         "isExtraImport": true,
@@ -14661,11 +14685,19 @@
         "documentation": {}
     },
     {
-        "label": "BeautifulSoup",
-        "importPath": "bs4",
-        "description": "bs4",
+        "label": "urlopen",
+        "importPath": "urllib.request",
+        "description": "urllib.request",
         "isExtraImport": true,
-        "detail": "bs4",
+        "detail": "urllib.request",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "urllib.request",
+        "description": "urllib.request",
+        "isExtraImport": true,
+        "detail": "urllib.request",
         "documentation": {}
     },
     {
@@ -14690,6 +14722,30 @@
         "description": "bs4",
         "isExtraImport": true,
         "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "estimate_sentiment",
+        "importPath": "lib.MLTradingBot.finbert_utils",
+        "description": "lib.MLTradingBot.finbert_utils",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.finbert_utils",
         "documentation": {}
     },
     {
@@ -27780,6 +27836,42 @@
         "documentation": {}
     },
     {
+        "label": "BASE_URL",
+        "kind": 5,
+        "importPath": "news",
+        "description": "news",
+        "peekOfCode": "BASE_URL = \"https://paper-api.alpaca.markets\"\nALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\", \n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\", \n    \"PAPER\": True\n}\nst.title(\"Sentiment-Based Trading Bot\")\napi =REST(key_id=ALPACA_CREDS[\"API_KEY\"], secret_key=ALPACA_CREDS[\"API_SECRET\"],base_url=BASE_URL)\nstart_date = datetime(2020, 1, 1).strftime('%Y-%m-%d')  # Correct format: '2020-01-01'\nend_date = datetime(2020, 11, 1).strftime('%Y-%m-%d')  # Correct format: '2020-11-01'",
+        "detail": "news",
+        "documentation": {}
+    },
+    {
+        "label": "ALPACA_CREDS",
+        "kind": 5,
+        "importPath": "news",
+        "description": "news",
+        "peekOfCode": "ALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\", \n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\", \n    \"PAPER\": True\n}\nst.title(\"Sentiment-Based Trading Bot\")\napi =REST(key_id=ALPACA_CREDS[\"API_KEY\"], secret_key=ALPACA_CREDS[\"API_SECRET\"],base_url=BASE_URL)\nstart_date = datetime(2020, 1, 1).strftime('%Y-%m-%d')  # Correct format: '2020-01-01'\nend_date = datetime(2020, 11, 1).strftime('%Y-%m-%d')  # Correct format: '2020-11-01'\ntry:",
+        "detail": "news",
+        "documentation": {}
+    },
+    {
+        "label": "start_date",
+        "kind": 5,
+        "importPath": "news",
+        "description": "news",
+        "peekOfCode": "start_date = datetime(2020, 1, 1).strftime('%Y-%m-%d')  # Correct format: '2020-01-01'\nend_date = datetime(2020, 11, 1).strftime('%Y-%m-%d')  # Correct format: '2020-11-01'\ntry:\n    news1 = api.get_news(symbol=\"SPY\", start=start_date, end=end_date)\n    print(f\"news1================{news1}=============\")\n    st.write(f\"news1================{news1}=============\")\n    news2 = [ev.__dict__[\"_raw\"][\"headline\"] for ev in news1]\n    print(f\"news2================{news2}=============\")\n    st.write(f\"news2================{news2}=============\")\nexcept Exception as e:",
+        "detail": "news",
+        "documentation": {}
+    },
+    {
+        "label": "end_date",
+        "kind": 5,
+        "importPath": "news",
+        "description": "news",
+        "peekOfCode": "end_date = datetime(2020, 11, 1).strftime('%Y-%m-%d')  # Correct format: '2020-11-01'\ntry:\n    news1 = api.get_news(symbol=\"SPY\", start=start_date, end=end_date)\n    print(f\"news1================{news1}=============\")\n    st.write(f\"news1================{news1}=============\")\n    news2 = [ev.__dict__[\"_raw\"][\"headline\"] for ev in news1]\n    print(f\"news2================{news2}=============\")\n    st.write(f\"news2================{news2}=============\")\nexcept Exception as e:\n    print(f\"Error fetching news: {e}\")",
+        "detail": "news",
+        "documentation": {}
+    },
+    {
         "label": "API_KEY",
         "kind": 5,
         "importPath": "s1",
@@ -27874,7 +27966,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "os.environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"\nfrom lib.MLTradingBot.finbert_utils import estimate_sentiment\nfrom nltk.sentiment.vader import SentimentIntensityAnalyzer\nanalyzer = SentimentIntensityAnalyzer()\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */",
+        "peekOfCode": "os.environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"\nimport yfinance as yf\nfrom lib.MLTradingBot.finbert_utils import estimate_sentiment\nimport nltk\nnltk.download('vader_lexicon')\nfrom nltk.sentiment.vader import SentimentIntensityAnalyzer\nanalyzer = SentimentIntensityAnalyzer()\n# print(analyzer.polarity_scores(\"This is a great day!\"))\ncustom_css = \"\"\"\n<style>",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27883,7 +27975,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "analyzer = SentimentIntensityAnalyzer()\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}\nh1 {",
+        "peekOfCode": "analyzer = SentimentIntensityAnalyzer()\n# print(analyzer.polarity_scores(\"This is a great day!\"))\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27946,7 +28038,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "end_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)",
+        "peekOfCode": "end_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\naa = analyzer.polarity_scores(\"This is a great day!\")",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27955,7 +28047,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "sentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])",
+        "peekOfCode": "sentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\naa = analyzer.polarity_scores(\"This is a great day!\")\nst.write(f\"This is a great day! {aa}\")",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27964,7 +28056,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "data = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):",
+        "peekOfCode": "data = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\naa = analyzer.polarity_scores(\"This is a great day!\")\nst.write(f\"This is a great day! {aa}\")\nst.write(df)",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27973,7 +28065,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "df = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):\n    st.write(\"Executing trades...\")\n    sentiment_threshold = -1 \n    for index, row in df.iterrows():\n        if row[\"sentiment\"] > sentiment_threshold:",
+        "peekOfCode": "df = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\naa = analyzer.polarity_scores(\"This is a great day!\")\nst.write(f\"This is a great day! {aa}\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):\n    st.write(\"Executing trades...\")\n    sentiment_threshold = -1 ",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27982,7 +28074,16 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "df[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):\n    st.write(\"Executing trades...\")\n    sentiment_threshold = -1 \n    for index, row in df.iterrows():\n        if row[\"sentiment\"] > sentiment_threshold:\n            st.write(f\"BUY: {ticker} on {row['date']} (Sentiment: {row['sentiment']})\")",
+        "peekOfCode": "df[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\naa = analyzer.polarity_scores(\"This is a great day!\")\nst.write(f\"This is a great day! {aa}\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):\n    st.write(\"Executing trades...\")\n    sentiment_threshold = -1 \n    for index, row in df.iterrows():",
+        "detail": "senti_all",
+        "documentation": {}
+    },
+    {
+        "label": "aa",
+        "kind": 5,
+        "importPath": "senti_all",
+        "description": "senti_all",
+        "peekOfCode": "aa = analyzer.polarity_scores(\"This is a great day!\")\nst.write(f\"This is a great day! {aa}\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):\n    st.write(\"Executing trades...\")\n    sentiment_threshold = -1 \n    for index, row in df.iterrows():\n        if row[\"sentiment\"] > sentiment_threshold:\n            st.write(f\"BUY: {ticker} on {row['date']} (Sentiment: {row['sentiment']})\")",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27991,7 +28092,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "strat = MLTrader()\nstrat.initialize(ticker, 0.5)\nstrat.on_trading_iteration()\nnews_tables = {}\nif ticker:\n      #Fetching stock price data\n            current_date = datetime.now().strftime(\"%Y-%m-%d\")\n            stock_data = yf.download(ticker, start=\"2000-01-01\", end=current_date)\n            finviz_url = \"https://finviz.com/quote.ashx?t=\"\n            url = finviz_url + ticker",
+        "peekOfCode": "strat = MLTrader()\nstrat.initialize(ticker, 0.5)\nstrat.on_trading_iteration()\n# ====================\nnews_tables = {}\nif ticker:\n      #Fetching stock price data\n            current_date = datetime.now().strftime(\"%Y-%m-%d\")\n            stock_data = yf.download(ticker, start=\"2000-01-01\", end=current_date)\n            finviz_url = \"https://finviz.com/quote.ashx?t=\"",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -28306,7 +28407,7 @@
         "kind": 5,
         "importPath": "t4",
         "description": "t4",
-        "peekOfCode": "start_date = datetime(2020,1,1)\nend_date = datetime(2023,12,31) \n# start_date = datetime(2023,1,1)\n# end_date = datetime(2023,1,2) \nbroker = Alpaca(ALPACA_CREDS) \nstrategy = MLTrader(name='mlstrat', broker=broker, \n                    parameters={\"symbol\":\"SPY\", \n                                \"cash_at_risk\":.5})\nstrategy.backtest(\n    YahooDataBacktesting, ",
+        "peekOfCode": "start_date = datetime(2020,1,1)\nend_date = datetime(2023,12,31) \n# start_date = datetime(2023,1,1)\n# end_date = datetime(2023,1,2) \nbroker = Alpaca(ALPACA_CREDS) \nstrategy = MLTrader(name='mlstrat', broker=broker, \n                    parameters={\"symbol\":\"SPY\", \n                                \"cash_at_risk\":.5})\nstrategy.backtest(\n    YahooDataBacktesting, c",
         "detail": "t4",
         "documentation": {}
     },
@@ -28315,7 +28416,7 @@
         "kind": 5,
         "importPath": "t4",
         "description": "t4",
-        "peekOfCode": "end_date = datetime(2023,12,31) \n# start_date = datetime(2023,1,1)\n# end_date = datetime(2023,1,2) \nbroker = Alpaca(ALPACA_CREDS) \nstrategy = MLTrader(name='mlstrat', broker=broker, \n                    parameters={\"symbol\":\"SPY\", \n                                \"cash_at_risk\":.5})\nstrategy.backtest(\n    YahooDataBacktesting, \n    start_date, ",
+        "peekOfCode": "end_date = datetime(2023,12,31) \n# start_date = datetime(2023,1,1)\n# end_date = datetime(2023,1,2) \nbroker = Alpaca(ALPACA_CREDS) \nstrategy = MLTrader(name='mlstrat', broker=broker, \n                    parameters={\"symbol\":\"SPY\", \n                                \"cash_at_risk\":.5})\nstrategy.backtest(\n    YahooDataBacktesting, c\n    start_date, ",
         "detail": "t4",
         "documentation": {}
     },
@@ -28324,7 +28425,7 @@
         "kind": 5,
         "importPath": "t4",
         "description": "t4",
-        "peekOfCode": "broker = Alpaca(ALPACA_CREDS) \nstrategy = MLTrader(name='mlstrat', broker=broker, \n                    parameters={\"symbol\":\"SPY\", \n                                \"cash_at_risk\":.5})\nstrategy.backtest(\n    YahooDataBacktesting, \n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}\n)",
+        "peekOfCode": "broker = Alpaca(ALPACA_CREDS) \nstrategy = MLTrader(name='mlstrat', broker=broker, \n                    parameters={\"symbol\":\"SPY\", \n                                \"cash_at_risk\":.5})\nstrategy.backtest(\n    YahooDataBacktesting, c\n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}\n)",
         "detail": "t4",
         "documentation": {}
     },
@@ -28333,7 +28434,7 @@
         "kind": 5,
         "importPath": "t4",
         "description": "t4",
-        "peekOfCode": "strategy = MLTrader(name='mlstrat', broker=broker, \n                    parameters={\"symbol\":\"SPY\", \n                                \"cash_at_risk\":.5})\nstrategy.backtest(\n    YahooDataBacktesting, \n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}\n)\ntrader = Trader()",
+        "peekOfCode": "strategy = MLTrader(name='mlstrat', broker=broker, \n                    parameters={\"symbol\":\"SPY\", \n                                \"cash_at_risk\":.5})\nstrategy.backtest(\n    YahooDataBacktesting, c\n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}\n)\ntrader = Trader()",
         "detail": "t4",
         "documentation": {}
     },
