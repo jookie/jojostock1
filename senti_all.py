@@ -17,7 +17,7 @@ import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 from lib.MLTradingBot.finbert_utils import estimate_sentiment
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-sentimentIntensityAnalyzerVader = SentimentIntensityAnalyzer()
+analyzer = SentimentIntensityAnalyzer()
 custom_css = """
 <style>
 body {
@@ -64,20 +64,18 @@ ticker = st.selectbox("Select a stock ticker symbol or enter your own:", example
 start_date = st.date_input("Start Date", value=datetime.now() - timedelta(days=30))
 end_date = st.date_input("End Date", value=datetime.now())
 sentiment_threshold = st.slider("Sentiment Threshold", -1.0, 1.0, 0.0)
-# =====DOV MODE===================
-sentiment_threshold = -1 
-
 data = {
     "date": pd.date_range(start=start_date, end=end_date),
     "news": [f"Sample headline for {ticker} on day {i}" for i in range(len(pd.date_range(start=start_date, end=end_date)))],
 }
 df = pd.DataFrame(data)
-df["sentiment"] = df["news"].apply(lambda x: sentimentIntensityAnalyzerVader.polarity_scores(x)["compound"])
+df["sentiment"] = df["news"].apply(lambda x: analyzer.polarity_scores(x)["compound"])
 st.write("Performing sentiment analysis...")
 st.write(df)
 st.line_chart(df["sentiment"])
 if st.button("Execute Trades"):
     st.write("Executing trades...")
+    sentiment_threshold = -1 
     for index, row in df.iterrows():
         if row["sentiment"] > sentiment_threshold:
             st.write(f"BUY: {ticker} on {row['date']} (Sentiment: {row['sentiment']})")
@@ -187,7 +185,7 @@ if news_table:
 
       
             df = pd.DataFrame(parsed_data, columns=["Ticker", "Date", "Time", "Headline"])
-            f = lambda title: sentimentIntensityAnalyzerVader.polarity_scores(title)["compound"]
+            f = lambda title: analyzer.polarity_scores(title)["compound"]
             df["Compound Score"] = df["Headline"].apply(f)
             df["Date"] = pd.to_datetime(df["Date"], errors="coerce").dt.date
             

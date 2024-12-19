@@ -14813,6 +14813,359 @@
         "documentation": {}
     },
     {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Regex",
+        "importPath": "alpacalib.regex",
+        "description": "alpacalib.regex",
+        "isExtraImport": true,
+        "detail": "alpacalib.regex",
+        "documentation": {}
+    },
+    {
+        "label": "RegexError",
+        "importPath": "alpacalib.regex",
+        "description": "alpacalib.regex",
+        "isExtraImport": true,
+        "detail": "alpacalib.regex",
+        "documentation": {}
+    },
+    {
+        "label": "NFA",
+        "importPath": "alpacalib.nfa",
+        "description": "alpacalib.nfa",
+        "isExtraImport": true,
+        "detail": "alpacalib.nfa",
+        "documentation": {}
+    },
+    {
+        "label": "DFA",
+        "importPath": "alpacalib.dfa",
+        "description": "alpacalib.dfa",
+        "isExtraImport": true,
+        "detail": "alpacalib.dfa",
+        "documentation": {}
+    },
+    {
+        "label": "Dot",
+        "importPath": "alpacalib.dot",
+        "description": "alpacalib.dot",
+        "isExtraImport": true,
+        "detail": "alpacalib.dot",
+        "documentation": {}
+    },
+    {
+        "label": "Options",
+        "importPath": "alpacalib.options",
+        "description": "alpacalib.options",
+        "isExtraImport": true,
+        "detail": "alpacalib.options",
+        "documentation": {}
+    },
+    {
+        "label": "OptionsError",
+        "importPath": "alpacalib.options",
+        "description": "alpacalib.options",
+        "isExtraImport": true,
+        "detail": "alpacalib.options",
+        "documentation": {}
+    },
+    {
+        "label": "Input",
+        "importPath": "alpacalib.input",
+        "description": "alpacalib.input",
+        "isExtraImport": true,
+        "detail": "alpacalib.input",
+        "documentation": {}
+    },
+    {
+        "label": "InputError",
+        "importPath": "alpacalib.input",
+        "description": "alpacalib.input",
+        "isExtraImport": true,
+        "detail": "alpacalib.input",
+        "documentation": {}
+    },
+    {
+        "label": "Output",
+        "importPath": "alpacalib.output",
+        "description": "alpacalib.output",
+        "isExtraImport": true,
+        "detail": "alpacalib.output",
+        "documentation": {}
+    },
+    {
+        "label": "OutputError",
+        "importPath": "alpacalib.output",
+        "description": "alpacalib.output",
+        "isExtraImport": true,
+        "detail": "alpacalib.output",
+        "documentation": {}
+    },
+    {
+        "label": "getpass",
+        "importPath": "getpass",
+        "description": "getpass",
+        "isExtraImport": true,
+        "detail": "getpass",
+        "documentation": {}
+    },
+    {
+        "label": "OptionParser",
+        "importPath": "optparse",
+        "description": "optparse",
+        "isExtraImport": true,
+        "detail": "optparse",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "print_",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "__version__",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "CockroachDatabase",
+        "importPath": "playhouse.cockroachdb",
+        "description": "playhouse.cockroachdb",
+        "isExtraImport": true,
+        "detail": "playhouse.cockroachdb",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "playhouse.reflection",
+        "description": "playhouse.reflection",
+        "isExtraImport": true,
+        "detail": "playhouse.reflection",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline_to_binary",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "publish_cmdline",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "default_description",
+        "importPath": "docutils.core",
+        "description": "docutils.core",
+        "isExtraImport": true,
+        "detail": "docutils.core",
+        "documentation": {}
+    },
+    {
+        "label": "locale",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "locale",
+        "description": "locale",
+        "detail": "locale",
+        "documentation": {}
+    },
+    {
+        "label": "manpage",
+        "importPath": "docutils.writers",
+        "description": "docutils.writers",
+        "isExtraImport": true,
+        "detail": "docutils.writers",
+        "documentation": {}
+    },
+    {
+        "label": "Writer",
+        "importPath": "docutils.writers.odf_odt",
+        "description": "docutils.writers.odf_odt",
+        "isExtraImport": true,
+        "detail": "docutils.writers.odf_odt",
+        "documentation": {}
+    },
+    {
+        "label": "Reader",
+        "importPath": "docutils.writers.odf_odt",
+        "description": "docutils.writers.odf_odt",
+        "isExtraImport": true,
+        "detail": "docutils.writers.odf_odt",
+        "documentation": {}
+    },
+    {
+        "label": "prepstyles",
+        "importPath": "docutils.writers.odf_odt",
+        "description": "docutils.writers.odf_odt",
+        "isExtraImport": true,
+        "detail": "docutils.writers.odf_odt",
+        "documentation": {}
+    },
+    {
         "label": "get_full_path",
         "importPath": "lib.utility.inputs",
         "description": "lib.utility.inputs",
@@ -26842,6 +27195,285 @@
         "documentation": {}
     },
     {
+        "label": "read_root",
+        "kind": 2,
+        "importPath": "venv.api.main",
+        "description": "venv.api.main",
+        "peekOfCode": "def read_root():\n    return {\"message\": \"Hello, World!\"}",
+        "detail": "venv.api.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "venv.api.main",
+        "description": "venv.api.main",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\ndef read_root():\n    return {\"message\": \"Hello, World!\"}",
+        "detail": "venv.api.main",
+        "documentation": {}
+    },
+    {
+        "label": "Alpaca",
+        "kind": 6,
+        "importPath": "venv.bin.alpaca",
+        "description": "venv.bin.alpaca",
+        "peekOfCode": "class Alpaca:\n    def main():\n        try:\n            Options.parse(sys.argv[1:])\n        except OptionsError as err:\n            print(err.args[0])\n            print()\n            Alpaca.show_help()\n            return\n        if Options.is_show_help():",
+        "detail": "venv.bin.alpaca",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "kind": 6,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "class BaseModel(Model):\n    class Meta:\n        database = database\n\"\"\"\nUNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):\n    def __init__(self, *_, **__): pass\n\"\"\"\nDATABASE_ALIASES = {\n    CockroachDatabase: ['cockroach', 'cockroachdb', 'crdb'],",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "UnknownField",
+        "kind": 6,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "class UnknownField(object):\n    def __init__(self, *_, **__): pass\n\"\"\"\nDATABASE_ALIASES = {\n    CockroachDatabase: ['cockroach', 'cockroachdb', 'crdb'],\n    MySQLDatabase: ['mysql', 'mysqldb'],\n    PostgresqlDatabase: ['postgres', 'postgresql'],\n    SqliteDatabase: ['sqlite', 'sqlite3'],\n}\nDATABASE_MAP = dict((value, key)",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "make_introspector",
+        "kind": 2,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "def make_introspector(database_type, database_name, **kwargs):\n    if database_type not in DATABASE_MAP:\n        err('Unrecognized database, must be one of: %s' %\n            ', '.join(DATABASE_MAP.keys()))\n        sys.exit(1)\n    schema = kwargs.pop('schema', None)\n    DatabaseClass = DATABASE_MAP[database_type]\n    db = DatabaseClass(database_name, **kwargs)\n    return Introspector.from_database(db, schema=schema)\ndef print_models(introspector, tables=None, preserve_order=False,",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "print_models",
+        "kind": 2,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "def print_models(introspector, tables=None, preserve_order=False,\n                 include_views=False, ignore_unknown=False, snake_case=True):\n    database = introspector.introspect(table_names=tables,\n                                       include_views=include_views,\n                                       snake_case=snake_case)\n    db_kwargs = introspector.get_database_kwargs()\n    header = HEADER % (\n        introspector.get_additional_imports(),\n        introspector.get_database_class().__name__,\n        introspector.get_database_name(),",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "print_header",
+        "kind": 2,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "def print_header(cmd_line, introspector):\n    timestamp = datetime.datetime.now()\n    print_('# Code generated by:')\n    print_('# python -m pwiz %s' % cmd_line)\n    print_('# Date: %s' % timestamp.strftime('%B %d, %Y %I:%M%p'))\n    print_('# Database: %s' % introspector.get_database_name())\n    print_('# Peewee version: %s' % peewee_version)\n    print_('')\ndef err(msg):\n    sys.stderr.write('\\033[91m%s\\033[0m\\n' % msg)",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "err",
+        "kind": 2,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "def err(msg):\n    sys.stderr.write('\\033[91m%s\\033[0m\\n' % msg)\n    sys.stderr.flush()\ndef get_option_parser():\n    parser = OptionParser(usage='usage: %prog [options] database_name')\n    ao = parser.add_option\n    ao('-H', '--host', dest='host')\n    ao('-p', '--port', dest='port', type='int')\n    ao('-u', '--user', dest='user')\n    ao('-P', '--password', dest='password', action='store_true')",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "get_option_parser",
+        "kind": 2,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "def get_option_parser():\n    parser = OptionParser(usage='usage: %prog [options] database_name')\n    ao = parser.add_option\n    ao('-H', '--host', dest='host')\n    ao('-p', '--port', dest='port', type='int')\n    ao('-u', '--user', dest='user')\n    ao('-P', '--password', dest='password', action='store_true')\n    engines = sorted(DATABASE_MAP)\n    ao('-e', '--engine', dest='engine', choices=engines,\n       help=('Database type, e.g. sqlite, mysql, postgresql or cockroachdb. '",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "get_connect_kwargs",
+        "kind": 2,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "def get_connect_kwargs(options):\n    ops = ('host', 'port', 'user', 'schema')\n    kwargs = dict((o, getattr(options, o)) for o in ops if getattr(options, o))\n    if options.password:\n        kwargs['password'] = getpass()\n    return kwargs\nif __name__ == '__main__':\n    raw_argv = sys.argv\n    parser = get_option_parser()\n    options, args = parser.parse_args()",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "HEADER",
+        "kind": 5,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "HEADER = \"\"\"from peewee import *%s\ndatabase = %s('%s'%s)\n\"\"\"\nBASE_MODEL = \"\"\"\\\nclass BaseModel(Model):\n    class Meta:\n        database = database\n\"\"\"\nUNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "kind": 5,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "database = %s('%s'%s)\n\"\"\"\nBASE_MODEL = \"\"\"\\\nclass BaseModel(Model):\n    class Meta:\n        database = database\n\"\"\"\nUNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):\n    def __init__(self, *_, **__): pass",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_MODEL",
+        "kind": 5,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "BASE_MODEL = \"\"\"\\\nclass BaseModel(Model):\n    class Meta:\n        database = database\n\"\"\"\nUNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):\n    def __init__(self, *_, **__): pass\n\"\"\"\nDATABASE_ALIASES = {",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "UNKNOWN_FIELD",
+        "kind": 5,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "UNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):\n    def __init__(self, *_, **__): pass\n\"\"\"\nDATABASE_ALIASES = {\n    CockroachDatabase: ['cockroach', 'cockroachdb', 'crdb'],\n    MySQLDatabase: ['mysql', 'mysqldb'],\n    PostgresqlDatabase: ['postgres', 'postgresql'],\n    SqliteDatabase: ['sqlite', 'sqlite3'],\n}",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_ALIASES",
+        "kind": 5,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "DATABASE_ALIASES = {\n    CockroachDatabase: ['cockroach', 'cockroachdb', 'crdb'],\n    MySQLDatabase: ['mysql', 'mysqldb'],\n    PostgresqlDatabase: ['postgres', 'postgresql'],\n    SqliteDatabase: ['sqlite', 'sqlite3'],\n}\nDATABASE_MAP = dict((value, key)\n                    for key in DATABASE_ALIASES\n                    for value in DATABASE_ALIASES[key])\ndef make_introspector(database_type, database_name, **kwargs):",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_MAP",
+        "kind": 5,
+        "importPath": "venv.bin.pwiz",
+        "description": "venv.bin.pwiz",
+        "peekOfCode": "DATABASE_MAP = dict((value, key)\n                    for key in DATABASE_ALIASES\n                    for value in DATABASE_ALIASES[key])\ndef make_introspector(database_type, database_name, **kwargs):\n    if database_type not in DATABASE_MAP:\n        err('Unrecognized database, must be one of: %s' %\n            ', '.join(DATABASE_MAP.keys()))\n        sys.exit(1)\n    schema = kwargs.pop('schema', None)\n    DatabaseClass = DATABASE_MAP[database_type]",
+        "detail": "venv.bin.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2html",
+        "description": "venv.bin.rst2html",
+        "peekOfCode": "description = ('Generates (X)HTML documents from standalone reStructuredText '\n               'sources.  ' + default_description)\npublish_cmdline(writer_name='html', description=description)",
+        "detail": "venv.bin.rst2html",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2html4",
+        "description": "venv.bin.rst2html4",
+        "peekOfCode": "description = ('Generates (X)HTML documents from standalone reStructuredText '\n               'sources.  ' + default_description)\npublish_cmdline(writer_name='html4', description=description)",
+        "detail": "venv.bin.rst2html4",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2html5",
+        "description": "venv.bin.rst2html5",
+        "peekOfCode": "description = ('Generates HTML5 documents from standalone '\n               'reStructuredText sources.\\n'\n               + default_description)\npublish_cmdline(writer_name='html5', description=description)",
+        "detail": "venv.bin.rst2html5",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2latex",
+        "description": "venv.bin.rst2latex",
+        "peekOfCode": "description = ('Generates LaTeX documents from standalone reStructuredText '\n               'sources. '\n               'Reads from <source> (default is stdin) and writes to '\n               '<destination> (default is stdout).  See '\n               '<https://docutils.sourceforge.io/docs/user/latex.html> for '\n               'the full reference.')\npublish_cmdline(writer_name='latex', description=description)",
+        "detail": "venv.bin.rst2latex",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2man",
+        "description": "venv.bin.rst2man",
+        "peekOfCode": "description = (\"Generates plain unix manual documents.  \"\n               + default_description)\npublish_cmdline(writer=manpage.Writer(), description=description)",
+        "detail": "venv.bin.rst2man",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2odt",
+        "description": "venv.bin.rst2odt",
+        "peekOfCode": "description = ('Generates OpenDocument/OpenOffice/ODF documents from '\n               'standalone reStructuredText sources.  ' + default_description)\nwriter = Writer()\nreader = Reader()\noutput = publish_cmdline_to_binary(reader=reader, writer=writer,\n                                   description=description)",
+        "detail": "venv.bin.rst2odt",
+        "documentation": {}
+    },
+    {
+        "label": "writer",
+        "kind": 5,
+        "importPath": "venv.bin.rst2odt",
+        "description": "venv.bin.rst2odt",
+        "peekOfCode": "writer = Writer()\nreader = Reader()\noutput = publish_cmdline_to_binary(reader=reader, writer=writer,\n                                   description=description)",
+        "detail": "venv.bin.rst2odt",
+        "documentation": {}
+    },
+    {
+        "label": "reader",
+        "kind": 5,
+        "importPath": "venv.bin.rst2odt",
+        "description": "venv.bin.rst2odt",
+        "peekOfCode": "reader = Reader()\noutput = publish_cmdline_to_binary(reader=reader, writer=writer,\n                                   description=description)",
+        "detail": "venv.bin.rst2odt",
+        "documentation": {}
+    },
+    {
+        "label": "output",
+        "kind": 5,
+        "importPath": "venv.bin.rst2odt",
+        "description": "venv.bin.rst2odt",
+        "peekOfCode": "output = publish_cmdline_to_binary(reader=reader, writer=writer,\n                                   description=description)",
+        "detail": "venv.bin.rst2odt",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2pseudoxml",
+        "description": "venv.bin.rst2pseudoxml",
+        "peekOfCode": "description = ('Generates pseudo-XML from standalone reStructuredText '\n               'sources (for testing purposes).  ' + default_description)\npublish_cmdline(description=description)",
+        "detail": "venv.bin.rst2pseudoxml",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2s5",
+        "description": "venv.bin.rst2s5",
+        "peekOfCode": "description = ('Generates S5 (X)HTML slideshow documents from standalone '\n               'reStructuredText sources.  ' + default_description)\npublish_cmdline(writer_name='s5', description=description)",
+        "detail": "venv.bin.rst2s5",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2xetex",
+        "description": "venv.bin.rst2xetex",
+        "peekOfCode": "description = ('Generates LaTeX documents from standalone reStructuredText '\n               'sources for compilation with the Unicode-aware TeX variants '\n               'XeLaTeX or LuaLaTeX. '\n               'Reads from <source> (default is stdin) and writes to '\n               '<destination> (default is stdout).  See '\n               '<https://docutils.sourceforge.io/docs/user/latex.html> for '\n               'the full reference.')\npublish_cmdline(writer_name='xetex', description=description)",
+        "detail": "venv.bin.rst2xetex",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rst2xml",
+        "description": "venv.bin.rst2xml",
+        "peekOfCode": "description = ('Generates Docutils-native XML from standalone '\n               'reStructuredText sources.  ' + default_description)\npublish_cmdline(writer_name='xml', description=description)",
+        "detail": "venv.bin.rst2xml",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "venv.bin.rstpep2html",
+        "description": "venv.bin.rstpep2html",
+        "peekOfCode": "description = ('Generates (X)HTML from reStructuredText-format PEP files.  '\n               + default_description)\npublish_cmdline(reader_name='pep', writer_name='pep_html',\n                description=description)",
+        "detail": "venv.bin.rstpep2html",
+        "documentation": {}
+    },
+    {
         "label": "sentiment_Vader",
         "kind": 2,
         "importPath": "Sentiment-Analysis-Using-Vader",
@@ -27242,16 +27874,16 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "os.environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"\nfrom lib.MLTradingBot.finbert_utils import estimate_sentiment\nfrom nltk.sentiment.vader import SentimentIntensityAnalyzer\nsentimentIntensityAnalyzerVader = SentimentIntensityAnalyzer()\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */",
+        "peekOfCode": "os.environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"\nfrom lib.MLTradingBot.finbert_utils import estimate_sentiment\nfrom nltk.sentiment.vader import SentimentIntensityAnalyzer\nanalyzer = SentimentIntensityAnalyzer()\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */",
         "detail": "senti_all",
         "documentation": {}
     },
     {
-        "label": "sentimentIntensityAnalyzerVader",
+        "label": "analyzer",
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "sentimentIntensityAnalyzerVader = SentimentIntensityAnalyzer()\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}\nh1 {",
+        "peekOfCode": "analyzer = SentimentIntensityAnalyzer()\ncustom_css = \"\"\"\n<style>\nbody {\nbackground-color: black; /* Background color (black) */\nfont-family: \"Times New Roman\", Times, serif; /* Font family (Times New Roman) */\ncolor: white; /* Text color (white) */\nline-height: 1.6; /* Line height for readability */\n}\nh1 {",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27296,7 +27928,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "ticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# User inputs\n# symbol = st.text_input(\"Stock Symbol\", value=\"AAPL\")\nstart_date = st.date_input(\"Start Date\", value=datetime.now() - timedelta(days=30))\nend_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\n# =====DOV MODE===================\nsentiment_threshold = -1 \ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),",
+        "peekOfCode": "ticker = st.selectbox(\"Select a stock ticker symbol or enter your own:\", example_ticker_symbols)\n# User inputs\n# symbol = st.text_input(\"Stock Symbol\", value=\"AAPL\")\nstart_date = st.date_input(\"Start Date\", value=datetime.now() - timedelta(days=30))\nend_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27305,7 +27937,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "start_date = st.date_input(\"Start Date\", value=datetime.now() - timedelta(days=30))\nend_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\n# =====DOV MODE===================\nsentiment_threshold = -1 \ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)",
+        "peekOfCode": "start_date = st.date_input(\"Start Date\", value=datetime.now() - timedelta(days=30))\nend_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27314,7 +27946,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "end_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\n# =====DOV MODE===================\nsentiment_threshold = -1 \ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: sentimentIntensityAnalyzerVader.polarity_scores(x)[\"compound\"])",
+        "peekOfCode": "end_date = st.date_input(\"End Date\", value=datetime.now())\nsentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27323,16 +27955,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "sentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\n# =====DOV MODE===================\nsentiment_threshold = -1 \ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: sentimentIntensityAnalyzerVader.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")",
-        "detail": "senti_all",
-        "documentation": {}
-    },
-    {
-        "label": "sentiment_threshold",
-        "kind": 5,
-        "importPath": "senti_all",
-        "description": "senti_all",
-        "peekOfCode": "sentiment_threshold = -1 \ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: sentimentIntensityAnalyzerVader.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])",
+        "peekOfCode": "sentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)\ndata = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27341,7 +27964,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "data = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: sentimentIntensityAnalyzerVader.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):",
+        "peekOfCode": "data = {\n    \"date\": pd.date_range(start=start_date, end=end_date),\n    \"news\": [f\"Sample headline for {ticker} on day {i}\" for i in range(len(pd.date_range(start=start_date, end=end_date)))],\n}\ndf = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27350,7 +27973,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "df = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: sentimentIntensityAnalyzerVader.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):\n    st.write(\"Executing trades...\")\n    for index, row in df.iterrows():\n        if row[\"sentiment\"] > sentiment_threshold:\n            st.write(f\"BUY: {ticker} on {row['date']} (Sentiment: {row['sentiment']})\")",
+        "peekOfCode": "df = pd.DataFrame(data)\ndf[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):\n    st.write(\"Executing trades...\")\n    sentiment_threshold = -1 \n    for index, row in df.iterrows():\n        if row[\"sentiment\"] > sentiment_threshold:",
         "detail": "senti_all",
         "documentation": {}
     },
@@ -27359,7 +27982,7 @@
         "kind": 5,
         "importPath": "senti_all",
         "description": "senti_all",
-        "peekOfCode": "df[\"sentiment\"] = df[\"news\"].apply(lambda x: sentimentIntensityAnalyzerVader.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):\n    st.write(\"Executing trades...\")\n    for index, row in df.iterrows():\n        if row[\"sentiment\"] > sentiment_threshold:\n            st.write(f\"BUY: {ticker} on {row['date']} (Sentiment: {row['sentiment']})\")\n            # alpaca.submit_order(ticker, qty=1, side=\"buy\", type=\"market\", time_in_force=\"gtc\")",
+        "peekOfCode": "df[\"sentiment\"] = df[\"news\"].apply(lambda x: analyzer.polarity_scores(x)[\"compound\"])\nst.write(\"Performing sentiment analysis...\")\nst.write(df)\nst.line_chart(df[\"sentiment\"])\nif st.button(\"Execute Trades\"):\n    st.write(\"Executing trades...\")\n    sentiment_threshold = -1 \n    for index, row in df.iterrows():\n        if row[\"sentiment\"] > sentiment_threshold:\n            st.write(f\"BUY: {ticker} on {row['date']} (Sentiment: {row['sentiment']})\")",
         "detail": "senti_all",
         "documentation": {}
     },
