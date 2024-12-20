@@ -3,9 +3,6 @@ from alpaca_trade_api.rest import REST
 from datetime import datetime, timedelta
 from lib.MLTradingBot.finbert_utils import estimate_sentiment
 import pandas as pd
-from Sentiment-Analysis-Using-Vader import data
-from lib.MLTradingBot.lumibot.lumibot.example_strategies.alphavantage.1-alphavantage_demo import (
-    data.columns)
 
 # Alpaca API credentials and initialization
 BASE_URL = "https://paper-api.alpaca.markets"  # Use Alpaca paper trading for testing
@@ -23,7 +20,7 @@ DJI_30_SYMBOLS = [
 ]
 
 # Streamlit app title
-st.title("Sentiment-Based Trading Bot with Live Trading")
+st.title("Sentiment-Based Trading Bot with Backtest and Live Trading")
 
 # Initialize Alpaca REST API
 api = REST(
@@ -64,7 +61,7 @@ else:
         # Process each news article
         for article in news1:
             sentiment_scores = estimate_sentiment(article.headline)
-            positive_score = sentiment_scores[0]  # Extract positive score
+            positive_score = float(sentiment_scores[0])  # Convert tensor to float
             parsed_data.append({
                 "Ticker": ", ".join(article.symbols),
                 "Date": article.created_at.strftime('%Y-%m-%d'),
@@ -97,6 +94,77 @@ else:
 
         # Display news in a table
         st.dataframe(df)
+
+        # Backtesting feature
+        st.subheader("Backtesting")
+        backtest_start_date = st.date_input("Backtest Start Date", value=three_days_ago)
+        backtest_end_date = st.date_input("Backtest End Date", value=today)
+
+        if backtest_start_date >= backtest_end_date:
+            st.error("Backtest Start Date must be before Backtest End Date!")
+        else:
+            try:
+                backtest_news = api.get_news(symbol=symbol, start=backtest_start_date.strftime('%Y-%m-%d'), end=backtest_end_date.strftime('%Y-%m-%d'))
+                backtest_data = []
+
+                for article in backtest_news:
+                    sentiment_scores = estimate_sentiment(article.headline)
+                    positive_score = float(sentiment_scores[0])  # Convert tensor to float
+                    # Use Alpaca API to fetch real price data for each news date
+                    price_data = api.get_bars(symbol, "day", start=article.created_at.strftime('%Y-%m-%d'), end=article.created_at.strftime('%Y-%m-%d')).df
+                    close_price = price_data['close'].iloc[0] if not price_data.empty else None
+                    backtest_data.append({
+                        "Date": article.created_at.strftime('%Y-%m-%d'),
+                        "Time": article.created_at.strftime('%H:%M:%S'),
+                        "Sentiment Score": positive_score,
+                        "Price": close_price,
+                        "Headline": article.headline
+                    })
+
+                backtest_df = pd.DataFrame(backtest_data).dropna()
+
+                # Simulate backtesting
+                starting_balance = st.number_input("Starting Balance ($)", value=10000.0)
+                balance = starting_balance
+                holdings = 0
+                trade_log = []
+
+                for _, row in backtest_df.iterrows():
+                    if row["Sentiment Score"] > 0.5:
+                        # Simulate buy
+                        trade_log.append({"Action": "BUY", "Date": row["Date"], "Time": row["Time"], "Price": row["Price"]})
+                        balance -= row["Price"]
+                        holdings += 1
+                    elif row["Sentiment Score"] < -0.5 and holdings > 0:
+                        # Simulate sell
+                        trade_log.append({"Action": "SELL", "Date": row["Date"], "Time": row["Time"], "Price": row["Price"]})
+                        balance += row["Price"]
+                        holdings -= 1
+
+                # Final balance calculation
+                final_balance = balance + holdings * backtest_df["Price"].iloc[-1] if holdings > 0 else balance
+
+                st.write(f"Starting Balance: ${starting_balance:.2f}")
+                st.write(f"Final Balance: ${final_balance:.2f}")
+                st.write(f"Net Profit/Loss: ${final_balance - starting_balance:.2f}")
+
+                # Display trade log
+                st.subheader("Trade Log")
+                st.dataframe(pd.DataFrame(trade_log))
+
+                # Generate tear sheet
+                st.subheader("Tear Sheet")
+                tear_sheet_data = {
+                    "Total Trades": len(trade_log),
+                    "Winning Trades": sum(1 for trade in trade_log if trade["Action"] == "SELL" and trade["Price"] > starting_balance / len(trade_log)),
+                    "Losing Trades": sum(1 for trade in trade_log if trade["Action"] == "SELL" and trade["Price"] < starting_balance / len(trade_log)),
+                    "Final Balance": final_balance,
+                    "Net Profit/Loss": final_balance - starting_balance
+                }
+                st.json(tear_sheet_data)
+
+            except Exception as e:
+                st.error(f"Error during backtesting: {e}")
 
         # Live trading
         st.subheader("Live Trading")
@@ -139,15 +207,3 @@ else:
             st.write(f"Average sentiment score is {avg_score:.2f}, which does not meet the threshold for trading.")
     else:
         st.write("No news data available for the given date range.")
-        
-# add to the existing code an option to allow back test:   The backtest will:
-# Analyze the sentiment of historical news and
-# Simulate buy/sell trades based on a user-defined sentiment threshold
-# Calculate profit/loss based historical data. assigned to each news event of backtesting real data. add the date range for the backtesting
-# Use real price data for backtesting by integrating a historical price API.
-# Add detailed trade logs showing each buy/sell event and balance changes.
-# Enable different backtesting strategies (e.g., long-only, short-only).
-
-# Add user defined date range for backtesting with historical data.columns
-# add a tearsheet and trades using real price Add detailed trade logs showing each buy/sell event and balance changes and tear sheet
-

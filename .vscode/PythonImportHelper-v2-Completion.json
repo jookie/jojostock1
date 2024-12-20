@@ -3015,6 +3015,22 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -5753,6 +5769,14 @@
     },
     {
         "label": "TimeFrame",
+        "importPath": "alpaca_trade_api.rest",
+        "description": "alpaca_trade_api.rest",
+        "isExtraImport": true,
+        "detail": "alpaca_trade_api.rest",
+        "documentation": {}
+    },
+    {
+        "label": "REST",
         "importPath": "alpaca_trade_api.rest",
         "description": "alpaca_trade_api.rest",
         "isExtraImport": true,
@@ -11589,6 +11613,14 @@
         "documentation": {}
     },
     {
+        "label": "estimate_sentiment",
+        "importPath": "lib.MLTradingBot.finbert_utils",
+        "description": "lib.MLTradingBot.finbert_utils",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.finbert_utils",
+        "documentation": {}
+    },
+    {
         "label": "YahooDataBacktesting",
         "importPath": "lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting  ",
         "description": "lib.MLTradingBot.lumibot.lumibot.backtesting.yahoo_backtesting  ",
@@ -12027,6 +12059,22 @@
         "description": "alpaca.trading.requests",
         "isExtraImport": true,
         "detail": "alpaca.trading.requests",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "importPath": "Sentiment-Analysis-Using-Vader",
+        "description": "Sentiment-Analysis-Using-Vader",
+        "isExtraImport": true,
+        "detail": "Sentiment-Analysis-Using-Vader",
+        "documentation": {}
+    },
+    {
+        "label": "data.columns",
+        "importPath": "lib.MLTradingBot.lumibot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
+        "description": "lib.MLTradingBot.lumibot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.lumibot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
         "documentation": {}
     },
     {
@@ -23024,6 +23072,60 @@
         "description": "t4",
         "peekOfCode": "sentiment_threshold = st.slider(\"Sentiment Threshold\", -1.0, 1.0, 0.0)",
         "detail": "t4",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_URL",
+        "kind": 5,
+        "importPath": "t6",
+        "description": "t6",
+        "peekOfCode": "BASE_URL = \"https://paper-api.alpaca.markets\"  # Use Alpaca paper trading for testing\nALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\",\n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\",\n    \"PAPER\": True\n}\n# List of DJI 30 stocks\nDJI_30_SYMBOLS = [\n    \"AAPL\", \"MSFT\", \"JPM\", \"JNJ\", \"V\", \"UNH\", \"PG\", \"HD\", \"DIS\", \"INTC\",\n    \"WMT\", \"IBM\", \"MMM\", \"KO\", \"MRK\", \"NKE\", \"PFE\", \"TRV\", \"CSCO\", \"AXP\",",
+        "detail": "t6",
+        "documentation": {}
+    },
+    {
+        "label": "ALPACA_CREDS",
+        "kind": 5,
+        "importPath": "t6",
+        "description": "t6",
+        "peekOfCode": "ALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\",\n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\",\n    \"PAPER\": True\n}\n# List of DJI 30 stocks\nDJI_30_SYMBOLS = [\n    \"AAPL\", \"MSFT\", \"JPM\", \"JNJ\", \"V\", \"UNH\", \"PG\", \"HD\", \"DIS\", \"INTC\",\n    \"WMT\", \"IBM\", \"MMM\", \"KO\", \"MRK\", \"NKE\", \"PFE\", \"TRV\", \"CSCO\", \"AXP\",\n    \"VZ\", \"BA\", \"CVX\", \"XOM\", \"CAT\", \"MCD\", \"GS\", \"WBA\", \"DOW\", \"AMGN\", \"SPY\"",
+        "detail": "t6",
+        "documentation": {}
+    },
+    {
+        "label": "DJI_30_SYMBOLS",
+        "kind": 5,
+        "importPath": "t6",
+        "description": "t6",
+        "peekOfCode": "DJI_30_SYMBOLS = [\n    \"AAPL\", \"MSFT\", \"JPM\", \"JNJ\", \"V\", \"UNH\", \"PG\", \"HD\", \"DIS\", \"INTC\",\n    \"WMT\", \"IBM\", \"MMM\", \"KO\", \"MRK\", \"NKE\", \"PFE\", \"TRV\", \"CSCO\", \"AXP\",\n    \"VZ\", \"BA\", \"CVX\", \"XOM\", \"CAT\", \"MCD\", \"GS\", \"WBA\", \"DOW\", \"AMGN\", \"SPY\"\n]\n# Streamlit app title\nst.title(\"Sentiment-Based Trading Bot with Backtest and Live Trading\")\n# Initialize Alpaca REST API\napi = REST(\n    key_id=ALPACA_CREDS[\"API_KEY\"],",
+        "detail": "t6",
+        "documentation": {}
+    },
+    {
+        "label": "api",
+        "kind": 5,
+        "importPath": "t6",
+        "description": "t6",
+        "peekOfCode": "api = REST(\n    key_id=ALPACA_CREDS[\"API_KEY\"],\n    secret_key=ALPACA_CREDS[\"API_SECRET\"],\n    base_url=BASE_URL\n)\n# Default dates for date inputs\ntoday = datetime.now()\nthree_days_ago = today - timedelta(days=3)\n# Create a row with symbol selection and date inputs\nst.subheader(\"News and Date Selection\")",
+        "detail": "t6",
+        "documentation": {}
+    },
+    {
+        "label": "today",
+        "kind": 5,
+        "importPath": "t6",
+        "description": "t6",
+        "peekOfCode": "today = datetime.now()\nthree_days_ago = today - timedelta(days=3)\n# Create a row with symbol selection and date inputs\nst.subheader(\"News and Date Selection\")\ncol1, col2, col3 = st.columns([1, 1, 1])\n# Symbol selection in the first column\nwith col1:\n    symbol = st.selectbox(\"Select Symbol for News\", DJI_30_SYMBOLS, index=DJI_30_SYMBOLS.index(\"SPY\"))\n# Start date input in the second column\nwith col2:",
+        "detail": "t6",
+        "documentation": {}
+    },
+    {
+        "label": "three_days_ago",
+        "kind": 5,
+        "importPath": "t6",
+        "description": "t6",
+        "peekOfCode": "three_days_ago = today - timedelta(days=3)\n# Create a row with symbol selection and date inputs\nst.subheader(\"News and Date Selection\")\ncol1, col2, col3 = st.columns([1, 1, 1])\n# Symbol selection in the first column\nwith col1:\n    symbol = st.selectbox(\"Select Symbol for News\", DJI_30_SYMBOLS, index=DJI_30_SYMBOLS.index(\"SPY\"))\n# Start date input in the second column\nwith col2:\n    start_date = st.date_input(\"Start Date\", value=three_days_ago)",
+        "detail": "t6",
         "documentation": {}
     }
 ]
