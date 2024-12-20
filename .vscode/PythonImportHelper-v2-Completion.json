@@ -2943,6 +2943,14 @@
         "documentation": {}
     },
     {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -5697,14 +5705,6 @@
     },
     {
         "label": "REST",
-        "importPath": "alpaca_trade_api.rest",
-        "description": "alpaca_trade_api.rest",
-        "isExtraImport": true,
-        "detail": "alpaca_trade_api.rest",
-        "documentation": {}
-    },
-    {
-        "label": "TimeFrame",
         "importPath": "alpaca_trade_api.rest",
         "description": "alpaca_trade_api.rest",
         "isExtraImport": true,
@@ -11498,30 +11498,6 @@
         "description": "urllib.request",
         "isExtraImport": true,
         "detail": "urllib.request",
-        "documentation": {}
-    },
-    {
-        "label": "urlopen",
-        "importPath": "urllib.request",
-        "description": "urllib.request",
-        "isExtraImport": true,
-        "detail": "urllib.request",
-        "documentation": {}
-    },
-    {
-        "label": "Request",
-        "importPath": "urllib.request",
-        "description": "urllib.request",
-        "isExtraImport": true,
-        "detail": "urllib.request",
-        "documentation": {}
-    },
-    {
-        "label": "BeautifulSoup",
-        "importPath": "bs4",
-        "description": "bs4",
-        "isExtraImport": true,
-        "detail": "bs4",
         "documentation": {}
     },
     {
@@ -22479,7 +22455,7 @@
         "kind": 5,
         "importPath": "news",
         "description": "news",
-        "peekOfCode": "BASE_URL = \"https://paper-api.alpaca.markets\"\nALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\", \n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\", \n    \"PAPER\": True\n}\nst.title(\"Sentiment-Based Trading Bot\")\napi =REST(key_id=ALPACA_CREDS[\"API_KEY\"], secret_key=ALPACA_CREDS[\"API_SECRET\"],base_url=BASE_URL)\nstart_date = datetime(2020, 1, 1).strftime('%Y-%m-%d')  # Correct format: '2020-01-01'\nend_date = datetime(2020, 11, 1).strftime('%Y-%m-%d')  # Correct format: '2020-11-01'",
+        "peekOfCode": "BASE_URL = \"https://paper-api.alpaca.markets\"  # Use Alpaca paper trading for testing\nALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\",\n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\",\n    \"PAPER\": True\n}\n# List of DJI 30 stocks\nDJI_30_SYMBOLS = [\n    \"AAPL\", \"MSFT\", \"JPM\", \"JNJ\", \"V\", \"UNH\", \"PG\", \"HD\", \"DIS\", \"INTC\",\n    \"WMT\", \"IBM\", \"MMM\", \"KO\", \"MRK\", \"NKE\", \"PFE\", \"TRV\", \"CSCO\", \"AXP\",",
         "detail": "news",
         "documentation": {}
     },
@@ -22488,25 +22464,43 @@
         "kind": 5,
         "importPath": "news",
         "description": "news",
-        "peekOfCode": "ALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\", \n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\", \n    \"PAPER\": True\n}\nst.title(\"Sentiment-Based Trading Bot\")\napi =REST(key_id=ALPACA_CREDS[\"API_KEY\"], secret_key=ALPACA_CREDS[\"API_SECRET\"],base_url=BASE_URL)\nstart_date = datetime(2020, 1, 1).strftime('%Y-%m-%d')  # Correct format: '2020-01-01'\nend_date = datetime(2020, 11, 1).strftime('%Y-%m-%d')  # Correct format: '2020-11-01'\ntry:",
+        "peekOfCode": "ALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\",\n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\",\n    \"PAPER\": True\n}\n# List of DJI 30 stocks\nDJI_30_SYMBOLS = [\n    \"AAPL\", \"MSFT\", \"JPM\", \"JNJ\", \"V\", \"UNH\", \"PG\", \"HD\", \"DIS\", \"INTC\",\n    \"WMT\", \"IBM\", \"MMM\", \"KO\", \"MRK\", \"NKE\", \"PFE\", \"TRV\", \"CSCO\", \"AXP\",\n    \"VZ\", \"BA\", \"CVX\", \"XOM\", \"CAT\", \"MCD\", \"GS\", \"WBA\", \"DOW\", \"AMGN\", \"SPY\"",
         "detail": "news",
         "documentation": {}
     },
     {
-        "label": "start_date",
+        "label": "DJI_30_SYMBOLS",
         "kind": 5,
         "importPath": "news",
         "description": "news",
-        "peekOfCode": "start_date = datetime(2020, 1, 1).strftime('%Y-%m-%d')  # Correct format: '2020-01-01'\nend_date = datetime(2020, 11, 1).strftime('%Y-%m-%d')  # Correct format: '2020-11-01'\ntry:\n    news1 = api.get_news(symbol=\"SPY\", start=start_date, end=end_date)\n    print(f\"news1================{news1}=============\")\n    st.write(f\"news1================{news1}=============\")\n    news2 = [ev.__dict__[\"_raw\"][\"headline\"] for ev in news1]\n    print(f\"news2================{news2}=============\")\n    st.write(f\"news2================{news2}=============\")\nexcept Exception as e:",
+        "peekOfCode": "DJI_30_SYMBOLS = [\n    \"AAPL\", \"MSFT\", \"JPM\", \"JNJ\", \"V\", \"UNH\", \"PG\", \"HD\", \"DIS\", \"INTC\",\n    \"WMT\", \"IBM\", \"MMM\", \"KO\", \"MRK\", \"NKE\", \"PFE\", \"TRV\", \"CSCO\", \"AXP\",\n    \"VZ\", \"BA\", \"CVX\", \"XOM\", \"CAT\", \"MCD\", \"GS\", \"WBA\", \"DOW\", \"AMGN\", \"SPY\"\n]\n# Streamlit app title\nst.title(\"Sentiment-Based Trading Bot with Live Trading\")\n# Initialize Alpaca REST API\napi = REST(\n    key_id=ALPACA_CREDS[\"API_KEY\"],",
         "detail": "news",
         "documentation": {}
     },
     {
-        "label": "end_date",
+        "label": "api",
         "kind": 5,
         "importPath": "news",
         "description": "news",
-        "peekOfCode": "end_date = datetime(2020, 11, 1).strftime('%Y-%m-%d')  # Correct format: '2020-11-01'\ntry:\n    news1 = api.get_news(symbol=\"SPY\", start=start_date, end=end_date)\n    print(f\"news1================{news1}=============\")\n    st.write(f\"news1================{news1}=============\")\n    news2 = [ev.__dict__[\"_raw\"][\"headline\"] for ev in news1]\n    print(f\"news2================{news2}=============\")\n    st.write(f\"news2================{news2}=============\")\nexcept Exception as e:\n    print(f\"Error fetching news: {e}\")",
+        "peekOfCode": "api = REST(\n    key_id=ALPACA_CREDS[\"API_KEY\"],\n    secret_key=ALPACA_CREDS[\"API_SECRET\"],\n    base_url=BASE_URL\n)\n# Default dates for date inputs\ntoday = datetime.now()\nthree_days_ago = today - timedelta(days=3)\n# Create a row with symbol selection and date inputs\nst.subheader(\"News and Date Selection\")",
+        "detail": "news",
+        "documentation": {}
+    },
+    {
+        "label": "today",
+        "kind": 5,
+        "importPath": "news",
+        "description": "news",
+        "peekOfCode": "today = datetime.now()\nthree_days_ago = today - timedelta(days=3)\n# Create a row with symbol selection and date inputs\nst.subheader(\"News and Date Selection\")\ncol1, col2, col3 = st.columns([1, 1, 1])\n# Symbol selection in the first column\nwith col1:\n    symbol = st.selectbox(\"Select Symbol for News\", DJI_30_SYMBOLS, index=DJI_30_SYMBOLS.index(\"SPY\"))\n# Start date input in the second column\nwith col2:",
+        "detail": "news",
+        "documentation": {}
+    },
+    {
+        "label": "three_days_ago",
+        "kind": 5,
+        "importPath": "news",
+        "description": "news",
+        "peekOfCode": "three_days_ago = today - timedelta(days=3)\n# Create a row with symbol selection and date inputs\nst.subheader(\"News and Date Selection\")\ncol1, col2, col3 = st.columns([1, 1, 1])\n# Symbol selection in the first column\nwith col1:\n    symbol = st.selectbox(\"Select Symbol for News\", DJI_30_SYMBOLS, index=DJI_30_SYMBOLS.index(\"SPY\"))\n# Start date input in the second column\nwith col2:\n    start_date = st.date_input(\"Start Date\", value=three_days_ago)",
         "detail": "news",
         "documentation": {}
     },
