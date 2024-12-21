@@ -22,10 +22,10 @@ from finbert_utils import estimate_sentiment
 # from lumibot.traders import Trader
 # from lumibot.brokers import Alpaca
 
-from lib.MLTradingBot.lumibot.lumibot.backtesting  import YahooDataBacktesting
-from lib.MLTradingBot.lumibot.lumibot.strategies import Strategy
-from lib.MLTradingBot.lumibot.lumibot.traders import Trader
-from lib.MLTradingBot.lumibot.lumibot.brokers import Alpaca
+from lib.MLTradingBot.lumibot00.lumibot.backtesting  import YahooDataBacktesting
+from lib.MLTradingBot.lumibot00.lumibot.strategies import Strategy
+from lib.MLTradingBot.lumibot00.lumibot.traders import Trader
+from lib.MLTradingBot.lumibot00.lumibot.brokers import Alpaca
 
 # Load environment variables from .env file
 # Access API_SECRET environment variable

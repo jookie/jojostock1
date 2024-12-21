@@ -1,4 +1,4 @@
-# git
+# rm -rf .git
 # export PATH=/usr/local/share/npm/bin:$PATH
 # git checkout -b my-new-branch
 # git clone https://github.com/gamingzolvenix/gamingzolvenix-repo.git

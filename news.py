@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from lib.MLTradingBot.finbert_utils import estimate_sentiment
 import pandas as pd
 from Sentiment-Analysis-Using-Vader import data
-from lib.MLTradingBot.lumibot.lumibot.example_strategies.alphavantage.1-alphavantage_demo import (
+from lib.MLTradingBot.lumibot00.lumibot.example_strategies.alphavantage.1-alphavantage_demo import (
     data.columns)
 
 # Alpaca API credentials and initialization
