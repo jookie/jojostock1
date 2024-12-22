@@ -3055,14 +3055,6 @@
         "documentation": {}
     },
     {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -12139,6 +12131,14 @@
         "description": "vaderSentiment.vaderSentiment",
         "isExtraImport": true,
         "detail": "vaderSentiment.vaderSentiment",
+        "documentation": {}
+    },
+    {
+        "label": "StockBracket",
+        "importPath": "lib.MLTradingBot.lumibot.example_strategies.stock_bracket",
+        "description": "lib.MLTradingBot.lumibot.example_strategies.stock_bracket",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.lumibot.example_strategies.stock_bracket",
         "documentation": {}
     },
     {
