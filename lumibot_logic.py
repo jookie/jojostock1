@@ -6,10 +6,10 @@ import warnings ; warnings.filterwarnings("ignore")
 import sys
 from datetime import datetime , timedelta 
 
-from lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting import YahooDataBacktesting
-from lib.MLTradingBot.lumibot00.lumibot.strategies import Strategy
-from lib.MLTradingBot.lumibot00.lumibot.traders import Trader
-from lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca import Alpaca
+from lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting import YahooDataBacktesting
+from lib.MLTradingBot.lumibot.strategies import Strategy
+from lib.MLTradingBot.lumibot.traders import Trader
+from lib.MLTradingBot.lumibot.brokers.alpaca import Alpaca
 from lib.MLTradingBot.finbert_utils import estimate_sentiment
 import alpaca_trade_api as tradeapi
 

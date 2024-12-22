@@ -10209,42 +10209,50 @@
     },
     {
         "label": "strategy.name",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.example_strategies.fasttrading_2",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.example_strategies.fasttrading_2",
+        "importPath": "lib.MLTradingBot.lumibot.example_strategies.fasttrading_2",
+        "description": "lib.MLTradingBot.lumibot.example_strategies.fasttrading_2",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.example_strategies.fasttrading_2",
+        "detail": "lib.MLTradingBot.lumibot.example_strategies.fasttrading_2",
         "documentation": {}
     },
     {
         "label": "YahooDataBacktesting",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting",
+        "importPath": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
+        "description": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting",
+        "detail": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
         "documentation": {}
     },
     {
         "label": "YahooDataBacktesting",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting",
+        "importPath": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
+        "description": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting",
+        "detail": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
         "documentation": {}
     },
     {
         "label": "YahooDataBacktesting",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting",
+        "importPath": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
+        "description": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting",
+        "detail": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
         "documentation": {}
     },
     {
         "label": "YahooDataBacktesting",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting",
+        "importPath": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
+        "description": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting",
+        "detail": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
+        "documentation": {}
+    },
+    {
+        "label": "YahooDataBacktesting",
+        "importPath": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
+        "description": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
         "documentation": {}
     },
     {
@@ -11373,90 +11381,90 @@
     },
     {
         "label": "YahooDataBacktesting",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.backtesting ",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.backtesting ",
+        "importPath": "lib.MLTradingBot.lumibot.backtesting ",
+        "description": "lib.MLTradingBot.lumibot.backtesting ",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.backtesting ",
+        "detail": "lib.MLTradingBot.lumibot.backtesting ",
         "documentation": {}
     },
     {
         "label": "Strategy",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.strategies",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.strategies",
+        "importPath": "lib.MLTradingBot.lumibot.strategies",
+        "description": "lib.MLTradingBot.lumibot.strategies",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.strategies",
+        "detail": "lib.MLTradingBot.lumibot.strategies",
         "documentation": {}
     },
     {
         "label": "Strategy",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.strategies",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.strategies",
+        "importPath": "lib.MLTradingBot.lumibot.strategies",
+        "description": "lib.MLTradingBot.lumibot.strategies",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.strategies",
+        "detail": "lib.MLTradingBot.lumibot.strategies",
         "documentation": {}
     },
     {
         "label": "Strategy",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.strategies",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.strategies",
+        "importPath": "lib.MLTradingBot.lumibot.strategies",
+        "description": "lib.MLTradingBot.lumibot.strategies",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.strategies",
+        "detail": "lib.MLTradingBot.lumibot.strategies",
         "documentation": {}
     },
     {
         "label": "Strategy",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.strategies",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.strategies",
+        "importPath": "lib.MLTradingBot.lumibot.strategies",
+        "description": "lib.MLTradingBot.lumibot.strategies",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.strategies",
+        "detail": "lib.MLTradingBot.lumibot.strategies",
         "documentation": {}
     },
     {
         "label": "Trader",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.traders",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.traders",
+        "importPath": "lib.MLTradingBot.lumibot.traders",
+        "description": "lib.MLTradingBot.lumibot.traders",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.traders",
+        "detail": "lib.MLTradingBot.lumibot.traders",
         "documentation": {}
     },
     {
         "label": "Trader",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.traders",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.traders",
+        "importPath": "lib.MLTradingBot.lumibot.traders",
+        "description": "lib.MLTradingBot.lumibot.traders",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.traders",
+        "detail": "lib.MLTradingBot.lumibot.traders",
         "documentation": {}
     },
     {
         "label": "Trader",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.traders",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.traders",
+        "importPath": "lib.MLTradingBot.lumibot.traders",
+        "description": "lib.MLTradingBot.lumibot.traders",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.traders",
+        "detail": "lib.MLTradingBot.lumibot.traders",
         "documentation": {}
     },
     {
         "label": "Trader",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.traders",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.traders",
+        "importPath": "lib.MLTradingBot.lumibot.traders",
+        "description": "lib.MLTradingBot.lumibot.traders",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.traders",
+        "detail": "lib.MLTradingBot.lumibot.traders",
         "documentation": {}
     },
     {
         "label": "Trader",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.traders",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.traders",
+        "importPath": "lib.MLTradingBot.lumibot.traders",
+        "description": "lib.MLTradingBot.lumibot.traders",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.traders",
+        "detail": "lib.MLTradingBot.lumibot.traders",
         "documentation": {}
     },
     {
         "label": "Alpaca",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.brokers",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.brokers",
+        "importPath": "lib.MLTradingBot.lumibot.brokers",
+        "description": "lib.MLTradingBot.lumibot.brokers",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.brokers",
+        "detail": "lib.MLTradingBot.lumibot.brokers",
         "documentation": {}
     },
     {
@@ -11670,42 +11678,42 @@
     },
     {
         "label": "YahooDataBacktesting",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting  ",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting  ",
+        "importPath": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting  ",
+        "description": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting  ",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting  ",
+        "detail": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting  ",
         "documentation": {}
     },
     {
         "label": "Alpaca",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca",
+        "importPath": "lib.MLTradingBot.lumibot.brokers.alpaca",
+        "description": "lib.MLTradingBot.lumibot.brokers.alpaca",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca",
+        "detail": "lib.MLTradingBot.lumibot.brokers.alpaca",
         "documentation": {}
     },
     {
         "label": "Alpaca",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca",
+        "importPath": "lib.MLTradingBot.lumibot.brokers.alpaca",
+        "description": "lib.MLTradingBot.lumibot.brokers.alpaca",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca",
+        "detail": "lib.MLTradingBot.lumibot.brokers.alpaca",
         "documentation": {}
     },
     {
         "label": "Alpaca",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca",
+        "importPath": "lib.MLTradingBot.lumibot.brokers.alpaca",
+        "description": "lib.MLTradingBot.lumibot.brokers.alpaca",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca",
+        "detail": "lib.MLTradingBot.lumibot.brokers.alpaca",
         "documentation": {}
     },
     {
         "label": "Alpaca",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca",
+        "importPath": "lib.MLTradingBot.lumibot.brokers.alpaca",
+        "description": "lib.MLTradingBot.lumibot.brokers.alpaca",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca",
+        "detail": "lib.MLTradingBot.lumibot.brokers.alpaca",
         "documentation": {}
     },
     {
@@ -12119,10 +12127,10 @@
     },
     {
         "label": "data.columns",
-        "importPath": "lib.MLTradingBot.lumibot00.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "lib.MLTradingBot.lumibot00.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
+        "importPath": "lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
+        "description": "lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
         "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot00.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
+        "detail": "lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
         "documentation": {}
     },
     {
@@ -12131,14 +12139,6 @@
         "description": "vaderSentiment.vaderSentiment",
         "isExtraImport": true,
         "detail": "vaderSentiment.vaderSentiment",
-        "documentation": {}
-    },
-    {
-        "label": "YahooDataBacktesting",
-        "importPath": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
-        "description": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
-        "isExtraImport": true,
-        "detail": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
         "documentation": {}
     },
     {

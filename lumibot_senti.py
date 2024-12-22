@@ -22,10 +22,10 @@ from alpaca.trading.enums import (
 )
 # import subprocess
 import streamlit as st
-from lib.MLTradingBot.lumibot00.lumibot.backtesting.yahoo_backtesting import YahooDataBacktesting
-from lib.MLTradingBot.lumibot00.lumibot.strategies import Strategy
-from lib.MLTradingBot.lumibot00.lumibot.traders import Trader
-from lib.MLTradingBot.lumibot00.lumibot.brokers.alpaca import Alpaca
+from lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting import YahooDataBacktesting
+from lib.MLTradingBot.lumibot.strategies import Strategy
+from lib.MLTradingBot.lumibot.traders import Trader
+from lib.MLTradingBot.lumibot.brokers.alpaca import Alpaca
 from lib.MLTradingBot.finbert_utils import estimate_sentiment
 import datetime
 from datetime import datetime 
