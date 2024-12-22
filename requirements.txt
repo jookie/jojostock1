@@ -58,7 +58,6 @@ rpds-py==0.20.0
 rsa==4.9
 safetensors==0.4.5
 schedule==1.2.2
-scikit-learn==1.4.0
 scipy>=1.13.0
 scs==3.2.7
 seaborn==0.13.2
