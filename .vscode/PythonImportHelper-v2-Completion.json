@@ -3047,6 +3047,22 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -12115,6 +12131,14 @@
         "description": "vaderSentiment.vaderSentiment",
         "isExtraImport": true,
         "detail": "vaderSentiment.vaderSentiment",
+        "documentation": {}
+    },
+    {
+        "label": "YahooDataBacktesting",
+        "importPath": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
+        "description": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
+        "isExtraImport": true,
+        "detail": "lib.MLTradingBot.lumibot.backtesting.yahoo_backtesting",
         "documentation": {}
     },
     {
