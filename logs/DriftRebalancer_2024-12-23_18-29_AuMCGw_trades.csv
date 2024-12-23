@@ -1,0 +1,21 @@
+time,strategy,identifier,symbol,side,type,status,multiplier,time_in_force,asset.strike,asset.multiplier,asset.asset_type,price,filled_quantity,trade_cost
+2023-01-03 09:30:00-05:00,DriftRebalancer,cd899738de03439cb888e401b2af6cdf,SPY,buy,limit,new,1,gtc,0.0,1,stock,,,
+2023-01-03 09:30:00-05:00,DriftRebalancer,df6b414c943c490ab2b1e07f91863455,TLT,buy,limit,new,1,gtc,0.0,1,stock,,,
+2023-01-03 09:30:00-05:00,DriftRebalancer,cd899738de03439cb888e401b2af6cdf,SPY,buy,limit,fill,1,gtc,0.0,1,stock,384.3699951171875,155.0,0.0
+2023-01-03 09:30:00-05:00,DriftRebalancer,df6b414c943c490ab2b1e07f91863455,TLT,buy,limit,fill,1,gtc,0.0,1,stock,102.19999694824219,389.0,0.0
+2023-07-31 09:30:00-04:00,DriftRebalancer,a3e213df4752499abc2345c7e0644478,SPY,sell,limit,new,1,gtc,0.0,1,stock,,,
+2023-07-31 09:30:00-04:00,DriftRebalancer,470540990e394113aa601f51c997b1c3,TLT,buy,limit,new,1,gtc,0.0,1,stock,,,
+2023-07-31 09:30:00-04:00,DriftRebalancer,a3e213df4752499abc2345c7e0644478,SPY,sell,limit,fill,1,gtc,0.0,1,stock,456.2699890136719,10.0,0.0
+2023-07-31 09:30:00-04:00,DriftRebalancer,470540990e394113aa601f51c997b1c3,TLT,buy,limit,fill,1,gtc,0.0,1,stock,98.83999633789062,9.0,0.0
+2023-08-21 09:30:00-04:00,DriftRebalancer,f66e388bc4bc43c9b877eee625054879,SPY,sell,limit,new,1,gtc,0.0,1,stock,,,
+2023-08-21 09:30:00-04:00,DriftRebalancer,1e0427d6fd27422fa30c688c7f919c3d,TLT,buy,limit,new,1,gtc,0.0,1,stock,,,
+2023-08-21 09:30:00-04:00,DriftRebalancer,f66e388bc4bc43c9b877eee625054879,SPY,sell,limit,fill,1,gtc,0.0,1,stock,441.17999267578125,1.0,0.0
+2023-08-21 09:30:00-04:00,DriftRebalancer,1e0427d6fd27422fa30c688c7f919c3d,TLT,buy,limit,fill,1,gtc,0.0,1,stock,92.63999938964844,50.0,0.0
+2024-04-10 09:30:00-04:00,DriftRebalancer,7339c59097ae480e842619a81220f604,SPY,sell,limit,new,1,gtc,0.0,1,stock,,,
+2024-04-10 09:30:00-04:00,DriftRebalancer,a0f62819cdb54be3a4c05e3c8ce86a84,TLT,buy,limit,new,1,gtc,0.0,1,stock,,,
+2024-04-10 09:30:00-04:00,DriftRebalancer,7339c59097ae480e842619a81220f604,SPY,sell,limit,fill,1,gtc,0.0,1,stock,515.6799926757812,9.0,0.0
+2024-04-10 09:30:00-04:00,DriftRebalancer,a0f62819cdb54be3a4c05e3c8ce86a84,TLT,buy,limit,fill,1,gtc,0.0,1,stock,90.37999725341797,13.0,0.0
+2024-07-01 09:30:00-04:00,DriftRebalancer,b4d0113e87bc4ff9bfa23d39704ac9c6,SPY,sell,limit,new,1,gtc,0.0,1,stock,,,
+2024-07-01 09:30:00-04:00,DriftRebalancer,34e2b131352542c99a4ac0b254a38e31,TLT,buy,limit,new,1,gtc,0.0,1,stock,,,
+2024-07-01 09:30:00-04:00,DriftRebalancer,b4d0113e87bc4ff9bfa23d39704ac9c6,SPY,sell,limit,fill,1,gtc,0.0,1,stock,543.7000122070312,2.0,0.0
+2024-07-01 09:30:00-04:00,DriftRebalancer,34e2b131352542c99a4ac0b254a38e31,TLT,buy,limit,fill,1,gtc,0.0,1,stock,90.68000030517578,54.0,0.0
