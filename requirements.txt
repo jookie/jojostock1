@@ -39,8 +39,6 @@ stable-baselines3 # stable baselines3
 gymnasium # for gym 
 # pytorch
 # elegantrl
-appdirs
-
 
 
 
