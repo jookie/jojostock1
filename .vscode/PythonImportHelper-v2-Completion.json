@@ -6030,6 +6030,14 @@
         "documentation": {}
     },
     {
+        "label": "CcxtBacktesting",
+        "importPath": "lumibot.backtesting",
+        "description": "lumibot.backtesting",
+        "isExtraImport": true,
+        "detail": "lumibot.backtesting",
+        "documentation": {}
+    },
+    {
         "label": "Alpaca",
         "importPath": "lumibot.brokers",
         "description": "lumibot.brokers",
@@ -7592,6 +7600,22 @@
     },
     {
         "label": "Asset",
+        "importPath": "lumibot.entities",
+        "description": "lumibot.entities",
+        "isExtraImport": true,
+        "detail": "lumibot.entities",
+        "documentation": {}
+    },
+    {
+        "label": "Asset",
+        "importPath": "lumibot.entities",
+        "description": "lumibot.entities",
+        "isExtraImport": true,
+        "detail": "lumibot.entities",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
         "importPath": "lumibot.entities",
         "description": "lumibot.entities",
         "isExtraImport": true,
@@ -13954,6 +13978,14 @@
     },
     {
         "label": "CcxtBacktestingExampleStrategy",
+        "importPath": "lumibot.example_strategies.ccxt_backtesting_example",
+        "description": "lumibot.example_strategies.ccxt_backtesting_example",
+        "isExtraImport": true,
+        "detail": "lumibot.example_strategies.ccxt_backtesting_example",
+        "documentation": {}
+    },
+    {
+        "label": "CcxtBacktesting",
         "importPath": "lumibot.example_strategies.ccxt_backtesting_example",
         "description": "lumibot.example_strategies.ccxt_backtesting_example",
         "isExtraImport": true,
