@@ -153,12 +153,9 @@ ALPACA_CONFIG = {  # Paper trading!
     else True,
 }
 
-
-API_KEY = "PKXQGLU5DJJ30MUWS2G6", 
-API_SECRET =  "vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d"
 ALPACA_CREDS = {
-    "API_KEY": API_KEY, 
-    "API_SECRET": API_SECRET, 
+    "API_KEY": "PKXQGLU5DJJ30MUWS2G6", 
+    "API_SECRET": "vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d", 
     "PAPER": True
 }
 BASE_URL = "https://paper-api.alpaca.markets"

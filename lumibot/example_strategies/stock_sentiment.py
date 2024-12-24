@@ -1,4 +1,5 @@
 from lumibot.strategies import Strategy
+from docs.lib.MLTradingBot.lumibot.tools.thetadata_helper import BASE_URL
 from .finbert_utils import estimate_sentiment
 from alpaca_trade_api import REST 
 from datetime import timedelta 

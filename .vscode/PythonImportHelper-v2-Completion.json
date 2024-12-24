@@ -13330,6 +13330,14 @@
         "documentation": {}
     },
     {
+        "label": "BASE_URL",
+        "importPath": "docs.lib.MLTradingBot.lumibot.tools.thetadata_helper",
+        "description": "docs.lib.MLTradingBot.lumibot.tools.thetadata_helper",
+        "isExtraImport": true,
+        "detail": "docs.lib.MLTradingBot.lumibot.tools.thetadata_helper",
+        "documentation": {}
+    },
+    {
         "label": "ALPACA_API_KEY",
         "importPath": "lib.rl.config_private",
         "description": "lib.rl.config_private",
@@ -23457,25 +23465,7 @@
         "kind": 5,
         "importPath": "lumibot.credentials",
         "description": "lumibot.credentials",
-        "peekOfCode": "ALPACA_CONFIG = {  # Paper trading!\n    # Add ALPACA_API_KEY, ALPACA_API_SECRET, and ALPACA_IS_PAPER to your .env file or set them as secrets\n    \"API_KEY\": os.environ.get(\"ALPACA_API_KEY\"),\n    \"API_SECRET\": os.environ.get(\"ALPACA_API_SECRET\"),\n    \"PAPER\": os.environ.get(\"ALPACA_IS_PAPER\").lower() == \"true\"\n    if os.environ.get(\"ALPACA_IS_PAPER\")\n    else True,\n}\nAPI_KEY = \"PKXQGLU5DJJ30MUWS2G6\", \nAPI_SECRET =  \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\"",
-        "detail": "lumibot.credentials",
-        "documentation": {}
-    },
-    {
-        "label": "API_KEY",
-        "kind": 5,
-        "importPath": "lumibot.credentials",
-        "description": "lumibot.credentials",
-        "peekOfCode": "API_KEY = \"PKXQGLU5DJJ30MUWS2G6\", \nAPI_SECRET =  \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\"\nALPACA_CREDS = {\n    \"API_KEY\": API_KEY, \n    \"API_SECRET\": API_SECRET, \n    \"PAPER\": True\n}\nBASE_URL = \"https://paper-api.alpaca.markets\"\n# Tradier Configuration\nTRADIER_CONFIG = {",
-        "detail": "lumibot.credentials",
-        "documentation": {}
-    },
-    {
-        "label": "API_SECRET",
-        "kind": 5,
-        "importPath": "lumibot.credentials",
-        "description": "lumibot.credentials",
-        "peekOfCode": "API_SECRET =  \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\"\nALPACA_CREDS = {\n    \"API_KEY\": API_KEY, \n    \"API_SECRET\": API_SECRET, \n    \"PAPER\": True\n}\nBASE_URL = \"https://paper-api.alpaca.markets\"\n# Tradier Configuration\nTRADIER_CONFIG = {\n    # Add TRADIER_ACCESS_TOKEN, TRADIER_ACCOUNT_NUMBER, and TRADIER_IS_PAPER to your .env file or set them as secrets",
+        "peekOfCode": "ALPACA_CONFIG = {  # Paper trading!\n    # Add ALPACA_API_KEY, ALPACA_API_SECRET, and ALPACA_IS_PAPER to your .env file or set them as secrets\n    \"API_KEY\": os.environ.get(\"ALPACA_API_KEY\"),\n    \"API_SECRET\": os.environ.get(\"ALPACA_API_SECRET\"),\n    \"PAPER\": os.environ.get(\"ALPACA_IS_PAPER\").lower() == \"true\"\n    if os.environ.get(\"ALPACA_IS_PAPER\")\n    else True,\n}\nALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\", ",
         "detail": "lumibot.credentials",
         "documentation": {}
     },
@@ -23484,7 +23474,7 @@
         "kind": 5,
         "importPath": "lumibot.credentials",
         "description": "lumibot.credentials",
-        "peekOfCode": "ALPACA_CREDS = {\n    \"API_KEY\": API_KEY, \n    \"API_SECRET\": API_SECRET, \n    \"PAPER\": True\n}\nBASE_URL = \"https://paper-api.alpaca.markets\"\n# Tradier Configuration\nTRADIER_CONFIG = {\n    # Add TRADIER_ACCESS_TOKEN, TRADIER_ACCOUNT_NUMBER, and TRADIER_IS_PAPER to your .env file or set them as secrets\n    \"ACCESS_TOKEN\": os.environ.get(\"TRADIER_ACCESS_TOKEN\"),",
+        "peekOfCode": "ALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\", \n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\", \n    \"PAPER\": True\n}\nBASE_URL = \"https://paper-api.alpaca.markets\"\n# Tradier Configuration\nTRADIER_CONFIG = {\n    # Add TRADIER_ACCESS_TOKEN, TRADIER_ACCOUNT_NUMBER, and TRADIER_IS_PAPER to your .env file or set them as secrets\n    \"ACCESS_TOKEN\": os.environ.get(\"TRADIER_ACCESS_TOKEN\"),",
         "detail": "lumibot.credentials",
         "documentation": {}
     },

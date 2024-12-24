@@ -1,0 +1,15 @@
+time,strategy,identifier,symbol,side,type,status,multiplier,time_in_force,asset.strike,asset.multiplier,asset.asset_type,price,filled_quantity,trade_cost
+2023-06-06 09:30:00-04:00,StockSentiment,c10d23b4ba074e59a88665cb7d0385e3,SPY,buy,market,new,1,gtc,0.0,1,stock,,,
+2023-06-06 09:30:00-04:00,StockSentiment,c10d23b4ba074e59a88665cb7d0385e3,SPY,buy,market,fill,1,gtc,0.0,1,stock,426.6700134277344,117.0,249.6019578552246
+2023-06-12 09:30:00-04:00,StockSentiment,005b32309b0e4fe38167260f726e9482,SPY,sell,stop,canceled,1,day,0.0,1,stock,,,
+2023-06-12 09:30:00-04:00,StockSentiment,a7b9f5b55de346de94edf5c87c261e1a,SPY,sell,limit,canceled,1,day,0.0,1,stock,,,
+2023-06-12 09:30:00-04:00,StockSentiment,e2f0be735924457e82564fbe48b92ab6,SPY,sell,market,new,1,day,0.0,1,stock,,,
+2023-06-12 09:30:00-04:00,StockSentiment,5261f49f1e7f430db5056f212fac9e3f,SPY,sell,market,new,1,gtc,0.0,1,stock,,,
+2023-06-12 09:30:00-04:00,StockSentiment,e2f0be735924457e82564fbe48b92ab6,SPY,sell,market,fill,1,day,0.0,1,stock,430.9200134277344,117.0,252.08820785522462
+2023-06-12 09:30:00-04:00,StockSentiment,5261f49f1e7f430db5056f212fac9e3f,SPY,sell,market,fill,1,gtc,0.0,1,stock,430.9200134277344,58.0,124.96680389404297
+2023-06-29 09:30:00-04:00,StockSentiment,180c703649914b979247cb43ff0b6a8c,SPY,sell,market,new,1,gtc,0.0,1,stock,,,
+2023-06-29 09:30:00-04:00,StockSentiment,180c703649914b979247cb43ff0b6a8c,SPY,sell,market,fill,1,gtc,0.0,1,stock,435.9599914550781,143.0,311.71139389038086
+2023-07-18 09:30:00-04:00,StockSentiment,fce6425051c94d208106fbab0ec1c1ee,SPY,buy,limit,canceled,1,day,0.0,1,stock,,,
+2023-07-18 09:30:00-04:00,StockSentiment,0a93992c9f4446cdaf86ce820fb0c4c3,SPY,buy,stop,fill,1,day,0.0,1,stock,452.46601409912114,58.0,131.21514408874512
+2023-07-27 09:30:00-04:00,StockSentiment,04f3370b6e0a45928d4702b79fd2c253,SPY,buy,limit,canceled,1,day,0.0,1,stock,,,
+2023-07-27 09:30:00-04:00,StockSentiment,b668393d537243fa9bc2e47c59ef848f,SPY,buy,stop,fill,1,day,0.0,1,stock,459.0199890136719,143.0,328.19929214477537
