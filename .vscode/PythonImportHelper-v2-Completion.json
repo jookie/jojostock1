@@ -10641,6 +10641,14 @@
         "documentation": {}
     },
     {
+        "label": "ALPACA_CREDS",
+        "importPath": "lumibot.credentials",
+        "description": "lumibot.credentials",
+        "isExtraImport": true,
+        "detail": "lumibot.credentials",
+        "documentation": {}
+    },
+    {
         "label": "POLYGON_API_KEY",
         "importPath": "lumibot.credentials",
         "description": "lumibot.credentials",
@@ -22243,7 +22251,16 @@
         "kind": 6,
         "importPath": "lumibot.example_strategies.stock_sentiment",
         "description": "lumibot.example_strategies.stock_sentiment",
-        "peekOfCode": "class StockSentiment(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): \n        self.symbol = symbol\n        self.sleeptime = \"24H\" \n        self.last_trade = None \n        self.cash_at_risk = cash_at_risk\n        self.api = REST(base_url=base_url, key_id=api_key, secret_key=api_secret)\n    def position_sizing(self): \n        cash = self.get_cash() \n        last_price = self.get_last_price(self.symbol)",
+        "peekOfCode": "class StockSentiment(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): \n        self.symbol = symbol\n        self.sleeptime = \"24H\" \n        self.last_trade = None \n        self.cash_at_risk = cash_at_risk\n        self.api = REST(\n            key_id=ALPACA_CREDS[\"API_KEY\"],\n            secret_key=ALPACA_CREDS[\"API_SECRET\"],\n            base_url=BASE_URL",
+        "detail": "lumibot.example_strategies.stock_sentiment",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_URL",
+        "kind": 5,
+        "importPath": "lumibot.example_strategies.stock_sentiment",
+        "description": "lumibot.example_strategies.stock_sentiment",
+        "peekOfCode": "BASE_URL = \"https://paper-api.alpaca.markets\"  \nimport os\nos.environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"\nclass StockSentiment(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): \n        self.symbol = symbol\n        self.sleeptime = \"24H\" \n        self.last_trade = None \n        self.cash_at_risk = cash_at_risk\n        self.api = REST(",
         "detail": "lumibot.example_strategies.stock_sentiment",
         "documentation": {}
     },
@@ -22252,7 +22269,7 @@
         "kind": 5,
         "importPath": "lumibot.example_strategies.stock_sentiment",
         "description": "lumibot.example_strategies.stock_sentiment",
-        "peekOfCode": "os.environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"\nclass StockSentiment(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): \n        self.symbol = symbol\n        self.sleeptime = \"24H\" \n        self.last_trade = None \n        self.cash_at_risk = cash_at_risk\n        self.api = REST(base_url=base_url, key_id=api_key, secret_key=api_secret)\n    def position_sizing(self): \n        cash = self.get_cash() ",
+        "peekOfCode": "os.environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"\nclass StockSentiment(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): \n        self.symbol = symbol\n        self.sleeptime = \"24H\" \n        self.last_trade = None \n        self.cash_at_risk = cash_at_risk\n        self.api = REST(\n            key_id=ALPACA_CREDS[\"API_KEY\"],\n            secret_key=ALPACA_CREDS[\"API_SECRET\"],",
         "detail": "lumibot.example_strategies.stock_sentiment",
         "documentation": {}
     },

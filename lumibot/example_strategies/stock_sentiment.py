@@ -2,6 +2,8 @@ from lumibot.strategies import Strategy
 from .finbert_utils import estimate_sentiment
 from alpaca_trade_api import REST 
 from datetime import timedelta 
+from lumibot.credentials import ALPACA_CREDS
+BASE_URL = "https://paper-api.alpaca.markets"  
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 class StockSentiment(Strategy): 
@@ -10,7 +12,12 @@ class StockSentiment(Strategy):
         self.sleeptime = "24H" 
         self.last_trade = None 
         self.cash_at_risk = cash_at_risk
-        self.api = REST(base_url=base_url, key_id=api_key, secret_key=api_secret)
+        self.api = REST(
+            key_id=ALPACA_CREDS["API_KEY"],
+            secret_key=ALPACA_CREDS["API_SECRET"],
+            base_url=BASE_URL
+        )
+      # REST(base_url=base_url, key_id=api_key, secret_key=api_secret)
 
     def position_sizing(self): 
         cash = self.get_cash() 
