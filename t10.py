@@ -13,7 +13,7 @@ This strategy will buy a few symbols that have 2x or 3x returns (have leverage),
 also diversify and rebalance the portfolio often.
 """
 if __name__ == "__main__":
-    is_live = False
+    is_live = True
     if is_live:
         ####
         # Run the strategy live
