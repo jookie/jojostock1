@@ -24557,5 +24557,23 @@
         "peekOfCode": "DATABASE_MAP = dict((value, key)\n                    for key in DATABASE_ALIASES\n                    for value in DATABASE_ALIASES[key])\ndef make_introspector(database_type, database_name, **kwargs):\n    if database_type not in DATABASE_MAP:\n        err('Unrecognized database, must be one of: %s' %\n            ', '.join(DATABASE_MAP.keys()))\n        sys.exit(1)\n    schema = kwargs.pop('schema', None)\n    DatabaseClass = DATABASE_MAP[database_type]",
         "detail": "venv.bin.pwiz",
         "documentation": {}
+    },
+    {
+        "label": "ALPACA_CREDS",
+        "kind": 5,
+        "importPath": "t10",
+        "description": "t10",
+        "peekOfCode": "ALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\", \n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\", \n    \"PAPER\": True\n}\n\"\"\"\nStrategy Description\nThis strategy will buy a few symbols that have 2x or 3x returns (have leverage), but will \nalso diversify and rebalance the portfolio often.\n\"\"\"",
+        "detail": "t10",
+        "documentation": {}
+    },
+    {
+        "label": "trader",
+        "kind": 5,
+        "importPath": "t10",
+        "description": "t10",
+        "peekOfCode": "trader = Trader()\ntrader.add_strategy(strategy)\ntrader.run_all()\n# strategy = StockSentiment(broker=broker)\n        # result = StockSentiment.backtest(\n        #     YahooDataBacktesting,\n        #     backtesting_start,\n        #     backtesting_end,\n        #  )\n        # print(\"Backtest result: \", result)",
+        "detail": "t10",
+        "documentation": {}
     }
 ]
