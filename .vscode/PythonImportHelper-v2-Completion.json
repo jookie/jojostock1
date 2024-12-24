@@ -536,14 +536,6 @@
         "documentation": {}
     },
     {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
         "label": "copy",
         "kind": 6,
         "isExtraImport": true,
@@ -1611,14 +1603,6 @@
     },
     {
         "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -5476,30 +5460,6 @@
         "documentation": {}
     },
     {
-        "label": "OrderSide",
-        "importPath": "alpaca.trading.enums",
-        "description": "alpaca.trading.enums",
-        "isExtraImport": true,
-        "detail": "alpaca.trading.enums",
-        "documentation": {}
-    },
-    {
-        "label": "OrderType",
-        "importPath": "alpaca.trading.enums",
-        "description": "alpaca.trading.enums",
-        "isExtraImport": true,
-        "detail": "alpaca.trading.enums",
-        "documentation": {}
-    },
-    {
-        "label": "TimeInForce",
-        "importPath": "alpaca.trading.enums",
-        "description": "alpaca.trading.enums",
-        "isExtraImport": true,
-        "detail": "alpaca.trading.enums",
-        "documentation": {}
-    },
-    {
         "label": "tqdm",
         "importPath": "tqdm",
         "description": "tqdm",
@@ -7630,14 +7590,6 @@
         "documentation": {}
     },
     {
-        "label": "Trader",
-        "importPath": "lumibot.traders",
-        "description": "lumibot.traders",
-        "isExtraImport": true,
-        "detail": "lumibot.traders",
-        "documentation": {}
-    },
-    {
         "label": "RandomForestRegressor",
         "importPath": "sklearn.ensemble",
         "description": "sklearn.ensemble",
@@ -9178,14 +9130,6 @@
         "documentation": {}
     },
     {
-        "label": "TradingClient",
-        "importPath": "alpaca.trading.client",
-        "description": "alpaca.trading.client",
-        "isExtraImport": true,
-        "detail": "alpaca.trading.client",
-        "documentation": {}
-    },
-    {
         "label": "TradingStream",
         "importPath": "alpaca.trading.stream",
         "description": "alpaca.trading.stream",
@@ -10625,14 +10569,6 @@
         "documentation": {}
     },
     {
-        "label": "Alpaca",
-        "importPath": "lumibot.brokers.alpaca",
-        "description": "lumibot.brokers.alpaca",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers.alpaca",
-        "documentation": {}
-    },
-    {
         "label": "Trader",
         "importPath": "lumibot.traders.trader",
         "description": "lumibot.traders.trader",
@@ -10714,14 +10650,6 @@
     },
     {
         "label": "IS_BACKTESTING",
-        "importPath": "lumibot.credentials",
-        "description": "lumibot.credentials",
-        "isExtraImport": true,
-        "detail": "lumibot.credentials",
-        "documentation": {}
-    },
-    {
-        "label": "ALPACA_CREDS",
         "importPath": "lumibot.credentials",
         "description": "lumibot.credentials",
         "isExtraImport": true,
@@ -13394,46 +13322,6 @@
         "documentation": {}
     },
     {
-        "label": "MarketOrderRequest",
-        "importPath": "alpaca.trading.requests",
-        "description": "alpaca.trading.requests",
-        "isExtraImport": true,
-        "detail": "alpaca.trading.requests",
-        "documentation": {}
-    },
-    {
-        "label": "YahooDataBacktesting",
-        "importPath": "lumibot.backtesting.yahoo_backtesting",
-        "description": "lumibot.backtesting.yahoo_backtesting",
-        "isExtraImport": true,
-        "detail": "lumibot.backtesting.yahoo_backtesting",
-        "documentation": {}
-    },
-    {
-        "label": "YahooDataBacktesting",
-        "importPath": "lumibot.backtesting.yahoo_backtesting",
-        "description": "lumibot.backtesting.yahoo_backtesting",
-        "isExtraImport": true,
-        "detail": "lumibot.backtesting.yahoo_backtesting",
-        "documentation": {}
-    },
-    {
-        "label": "YahooDataBacktesting",
-        "importPath": "lumibot.backtesting.yahoo_backtesting",
-        "description": "lumibot.backtesting.yahoo_backtesting",
-        "isExtraImport": true,
-        "detail": "lumibot.backtesting.yahoo_backtesting",
-        "documentation": {}
-    },
-    {
-        "label": "YahooDataBacktesting",
-        "importPath": "lumibot.backtesting.yahoo_backtesting",
-        "description": "lumibot.backtesting.yahoo_backtesting",
-        "isExtraImport": true,
-        "detail": "lumibot.backtesting.yahoo_backtesting",
-        "documentation": {}
-    },
-    {
         "label": "ALPACA_API_KEY",
         "importPath": "lib.rl.config_private",
         "description": "lib.rl.config_private",
@@ -13848,6 +13736,30 @@
         "description": "lumibot.example_strategies.stock_diversified_leverage",
         "isExtraImport": true,
         "detail": "lumibot.example_strategies.stock_diversified_leverage",
+        "documentation": {}
+    },
+    {
+        "label": "YahooDataBacktesting",
+        "importPath": "lumibot.backtesting.yahoo_backtesting",
+        "description": "lumibot.backtesting.yahoo_backtesting",
+        "isExtraImport": true,
+        "detail": "lumibot.backtesting.yahoo_backtesting",
+        "documentation": {}
+    },
+    {
+        "label": "YahooDataBacktesting",
+        "importPath": "lumibot.backtesting.yahoo_backtesting",
+        "description": "lumibot.backtesting.yahoo_backtesting",
+        "isExtraImport": true,
+        "detail": "lumibot.backtesting.yahoo_backtesting",
+        "documentation": {}
+    },
+    {
+        "label": "YahooDataBacktesting",
+        "importPath": "lumibot.backtesting.yahoo_backtesting",
+        "description": "lumibot.backtesting.yahoo_backtesting",
+        "isExtraImport": true,
+        "detail": "lumibot.backtesting.yahoo_backtesting",
         "documentation": {}
     },
     {
@@ -22641,92 +22553,11 @@
         "documentation": {}
     },
     {
-        "label": "BASE_URL",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.stock_sentiment",
-        "description": "lumibot.example_strategies.stock_sentiment",
-        "peekOfCode": "BASE_URL = \"https://paper-api.alpaca.markets\"\nAPI_KEY = \"PKXQGLU5DJJ30MUWS2G6\"\nAPI_SECRET =\"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\"\napi_secret = API_SECRET\napi_key    = API_KEY\nbase_url   = BASE_URL\nALPACA_CREDS = {\n    \"API_KEY\": api_key, \n    \"API_SECRET\": api_secret, \n    \"PAPER\": True",
-        "detail": "lumibot.example_strategies.stock_sentiment",
-        "documentation": {}
-    },
-    {
-        "label": "API_KEY",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.stock_sentiment",
-        "description": "lumibot.example_strategies.stock_sentiment",
-        "peekOfCode": "API_KEY = \"PKXQGLU5DJJ30MUWS2G6\"\nAPI_SECRET =\"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\"\napi_secret = API_SECRET\napi_key    = API_KEY\nbase_url   = BASE_URL\nALPACA_CREDS = {\n    \"API_KEY\": api_key, \n    \"API_SECRET\": api_secret, \n    \"PAPER\": True\n}",
-        "detail": "lumibot.example_strategies.stock_sentiment",
-        "documentation": {}
-    },
-    {
-        "label": "api_secret",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.stock_sentiment",
-        "description": "lumibot.example_strategies.stock_sentiment",
-        "peekOfCode": "api_secret = API_SECRET\napi_key    = API_KEY\nbase_url   = BASE_URL\nALPACA_CREDS = {\n    \"API_KEY\": api_key, \n    \"API_SECRET\": api_secret, \n    \"PAPER\": True\n}\nfrom alpaca.trading.client import TradingClient\nfrom alpaca.trading.requests import (MarketOrderRequest)",
-        "detail": "lumibot.example_strategies.stock_sentiment",
-        "documentation": {}
-    },
-    {
-        "label": "ALPACA_CREDS",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.stock_sentiment",
-        "description": "lumibot.example_strategies.stock_sentiment",
-        "peekOfCode": "ALPACA_CREDS = {\n    \"API_KEY\": api_key, \n    \"API_SECRET\": api_secret, \n    \"PAPER\": True\n}\nfrom alpaca.trading.client import TradingClient\nfrom alpaca.trading.requests import (MarketOrderRequest)\nfrom alpaca.trading.enums import (\n    OrderSide,\n    OrderType,",
-        "detail": "lumibot.example_strategies.stock_sentiment",
-        "documentation": {}
-    },
-    {
         "label": "os.environ[\"TOKENIZERS_PARALLELISM\"]",
         "kind": 5,
         "importPath": "lumibot.example_strategies.stock_sentiment",
         "description": "lumibot.example_strategies.stock_sentiment",
-        "peekOfCode": "os.environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"\ntrade_client = TradingClient(api_key=api_key, secret_key=api_secret, paper=True)\nsymbol = \"QQQ\"\nreq = MarketOrderRequest(\n    symbol = symbol,\n    qty= 1 , # notional is specified in USD, here we specify $1.11\n    side = OrderSide.BUY,\n    type = OrderType.MARKET,\n    time_in_force = TimeInForce.DAY,\n)",
-        "detail": "lumibot.example_strategies.stock_sentiment",
-        "documentation": {}
-    },
-    {
-        "label": "trade_client",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.stock_sentiment",
-        "description": "lumibot.example_strategies.stock_sentiment",
-        "peekOfCode": "trade_client = TradingClient(api_key=api_key, secret_key=api_secret, paper=True)\nsymbol = \"QQQ\"\nreq = MarketOrderRequest(\n    symbol = symbol,\n    qty= 1 , # notional is specified in USD, here we specify $1.11\n    side = OrderSide.BUY,\n    type = OrderType.MARKET,\n    time_in_force = TimeInForce.DAY,\n)\nres = trade_client.submit_order(req)",
-        "detail": "lumibot.example_strategies.stock_sentiment",
-        "documentation": {}
-    },
-    {
-        "label": "symbol",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.stock_sentiment",
-        "description": "lumibot.example_strategies.stock_sentiment",
-        "peekOfCode": "symbol = \"QQQ\"\nreq = MarketOrderRequest(\n    symbol = symbol,\n    qty= 1 , # notional is specified in USD, here we specify $1.11\n    side = OrderSide.BUY,\n    type = OrderType.MARKET,\n    time_in_force = TimeInForce.DAY,\n)\nres = trade_client.submit_order(req)\nprint(f\"==========trade_client.submit_order(req) ===========:/n/n {res}\")",
-        "detail": "lumibot.example_strategies.stock_sentiment",
-        "documentation": {}
-    },
-    {
-        "label": "req",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.stock_sentiment",
-        "description": "lumibot.example_strategies.stock_sentiment",
-        "peekOfCode": "req = MarketOrderRequest(\n    symbol = symbol,\n    qty= 1 , # notional is specified in USD, here we specify $1.11\n    side = OrderSide.BUY,\n    type = OrderType.MARKET,\n    time_in_force = TimeInForce.DAY,\n)\nres = trade_client.submit_order(req)\nprint(f\"==========trade_client.submit_order(req) ===========:/n/n {res}\")\nclass StockSentiment(Strategy): ",
-        "detail": "lumibot.example_strategies.stock_sentiment",
-        "documentation": {}
-    },
-    {
-        "label": "res",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.stock_sentiment",
-        "description": "lumibot.example_strategies.stock_sentiment",
-        "peekOfCode": "res = trade_client.submit_order(req)\nprint(f\"==========trade_client.submit_order(req) ===========:/n/n {res}\")\nclass StockSentiment(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): \n        self.symbol = symbol\n        self.sleeptime = \"24H\" \n        self.last_trade = None \n        self.cash_at_risk = cash_at_risk\n        self.api = REST(base_url=base_url, key_id=api_key, secret_key=api_secret)\n    def position_sizing(self): ",
-        "detail": "lumibot.example_strategies.stock_sentiment",
-        "documentation": {}
-    },
-    {
-        "label": "trader",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.stock_sentiment",
-        "description": "lumibot.example_strategies.stock_sentiment",
-        "peekOfCode": "trader = Trader()\ntrader.add_strategy(strategy)\ntrader.run_all()",
+        "peekOfCode": "os.environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"\nclass StockSentiment(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): \n        self.symbol = symbol\n        self.sleeptime = \"24H\" \n        self.last_trade = None \n        self.cash_at_risk = cash_at_risk\n        self.api = REST(base_url=base_url, key_id=api_key, secret_key=api_secret)\n    def position_sizing(self): \n        cash = self.get_cash() ",
         "detail": "lumibot.example_strategies.stock_sentiment",
         "documentation": {}
     },
