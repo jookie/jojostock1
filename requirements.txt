@@ -31,3 +31,6 @@ tabulate
 thetadata
 holidays
 psutil
+streamlit
+transformers
+
