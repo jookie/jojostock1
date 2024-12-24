@@ -33,4 +33,5 @@ holidays
 psutil
 streamlit
 transformers
+torch
 
