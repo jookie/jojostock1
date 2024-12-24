@@ -49,7 +49,7 @@ if __name__ == "__main__":
         from lumibot.credentials import ALPACA_CREDS
         trader = Trader()
         broker = Alpaca(ALPACA_CREDS)
-        strategy = DiversifiedLeverage(broker=broker)
+        strategy = StockSentiment(broker=broker)
         trader.add_strategy(strategy)
         trader.run_all()
     else:
@@ -73,5 +73,5 @@ if __name__ == "__main__":
             buy_trading_fees=[trading_fee],
             sell_trading_fees=[trading_fee],
         )
-        # print("Backtest result: ", result)
+        print("Backtest result: ", result)
         st.write(f"Backtest result: {result}")
