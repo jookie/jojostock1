@@ -53,10 +53,6 @@ if __name__ == "__main__":
         trader.add_strategy(strategy)
         trader.run_all()
     else:
-        ####
-        # Backtest the strategy
-        ####
-        # Choose the time from and to which you want to backtest
         backtesting_start = datetime(2023, 6, 1)
         backtesting_end = datetime(2023, 7, 31)
         # 0.01% trading/slippage fee
