@@ -13723,22 +13723,6 @@
         "documentation": {}
     },
     {
-        "label": "DiversifiedLeverage",
-        "importPath": "lumibot.example_strategies.stock_diversified_leverage",
-        "description": "lumibot.example_strategies.stock_diversified_leverage",
-        "isExtraImport": true,
-        "detail": "lumibot.example_strategies.stock_diversified_leverage",
-        "documentation": {}
-    },
-    {
-        "label": "DiversifiedLeverage",
-        "importPath": "lumibot.example_strategies.stock_diversified_leverage",
-        "description": "lumibot.example_strategies.stock_diversified_leverage",
-        "isExtraImport": true,
-        "detail": "lumibot.example_strategies.stock_diversified_leverage",
-        "documentation": {}
-    },
-    {
         "label": "YahooDataBacktesting",
         "importPath": "lumibot.backtesting.yahoo_backtesting",
         "description": "lumibot.backtesting.yahoo_backtesting",
@@ -13784,6 +13768,14 @@
         "description": "lumibot.example_strategies.ccxt_backtesting_example",
         "isExtraImport": true,
         "detail": "lumibot.example_strategies.ccxt_backtesting_example",
+        "documentation": {}
+    },
+    {
+        "label": "DiversifiedLeverage",
+        "importPath": "lumibot.example_strategies.stock_diversified_leverage",
+        "description": "lumibot.example_strategies.stock_diversified_leverage",
+        "isExtraImport": true,
+        "detail": "lumibot.example_strategies.stock_diversified_leverage",
         "documentation": {}
     },
     {

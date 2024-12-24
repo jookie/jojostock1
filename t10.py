@@ -4,7 +4,6 @@ from lumibot.backtesting import YahooDataBacktesting
 from lumibot.brokers import Alpaca
 from lumibot.entities import TradingFee
 from lumibot.traders import Trader
-from lumibot.example_strategies.stock_diversified_leverage import DiversifiedLeverage
 from lumibot.credentials import IS_BACKTESTING
 from lumibot.backtesting.yahoo_backtesting import  YahooDataBacktesting
 from lumibot.example_strategies.stock_sentiment import StockSentiment
@@ -64,7 +63,8 @@ if __name__ == "__main__":
         trading_fee = TradingFee(percent_fee=0.005)
         # Initialize the backtesting object
         print("Starting Backtest...")
-        result = DiversifiedLeverage.backtest(
+        st.write(f"Starting Backtest...")
+        result = StockSentiment.backtest(
             YahooDataBacktesting,
             backtesting_start,
             backtesting_end,
