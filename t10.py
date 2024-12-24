@@ -73,5 +73,5 @@ if __name__ == "__main__":
             buy_trading_fees=[trading_fee],
             sell_trading_fees=[trading_fee],
         )
-        print("Backtest result: ", result)
+        # print("Backtest result: ", result)
         st.write(f"Backtest result: {result}")
