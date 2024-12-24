@@ -13,15 +13,13 @@ from lumibot.entities import TradingFee
 from lumibot.strategies.strategy import Strategy
 from lumibot.traders import Trader
 from lumibot.example_strategies.stock_diversified_leverage import DiversifiedLeverage
-from docs.lib.MLTradingBot.snSomeThink import ALPACA_CREDS
+
 """
 Strategy Description
 
 This strategy will buy a few symbols that have 2x or 3x returns (have leverage), but will 
 also diversify and rebalance the portfolio often.
 """
-
-
 
 if __name__ == "__main__":
     is_live = False
@@ -63,3 +61,4 @@ if __name__ == "__main__":
         )
 
         print("Backtest result: ", result)
+        st.write(f"Backtest result: {result}")
