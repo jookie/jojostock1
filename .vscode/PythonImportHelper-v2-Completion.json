@@ -1890,22 +1890,6 @@
         "documentation": {}
     },
     {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
         "label": "itertools",
         "kind": 6,
         "isExtraImport": true,
@@ -5733,14 +5717,6 @@
         "documentation": {}
     },
     {
-        "label": "CcxtBacktesting",
-        "importPath": "lumibot.backtesting",
-        "description": "lumibot.backtesting",
-        "isExtraImport": true,
-        "detail": "lumibot.backtesting",
-        "documentation": {}
-    },
-    {
         "label": "YahooDataBacktesting",
         "importPath": "lumibot.backtesting",
         "description": "lumibot.backtesting",
@@ -7206,22 +7182,6 @@
         "documentation": {}
     },
     {
-        "label": "Asset",
-        "importPath": "lumibot.entities",
-        "description": "lumibot.entities",
-        "isExtraImport": true,
-        "detail": "lumibot.entities",
-        "documentation": {}
-    },
-    {
-        "label": "Order",
-        "importPath": "lumibot.entities",
-        "description": "lumibot.entities",
-        "isExtraImport": true,
-        "detail": "lumibot.entities",
-        "documentation": {}
-    },
-    {
         "label": "TradingFee",
         "importPath": "lumibot.entities",
         "description": "lumibot.entities",
@@ -7243,14 +7203,6 @@
         "description": "lumibot.entities.asset",
         "isExtraImport": true,
         "detail": "lumibot.entities.asset",
-        "documentation": {}
-    },
-    {
-        "label": "Strategy",
-        "importPath": "lumibot.strategies.strategy",
-        "description": "lumibot.strategies.strategy",
-        "isExtraImport": true,
-        "detail": "lumibot.strategies.strategy",
         "documentation": {}
     },
     {
@@ -10745,14 +10697,6 @@
         "documentation": {}
     },
     {
-        "label": "IS_BACKTESTING",
-        "importPath": "lumibot.credentials",
-        "description": "lumibot.credentials",
-        "isExtraImport": true,
-        "detail": "lumibot.credentials",
-        "documentation": {}
-    },
-    {
         "label": "DriftRebalancer",
         "importPath": "lumibot.example_strategies.drift_rebalancer",
         "description": "lumibot.example_strategies.drift_rebalancer",
@@ -13848,14 +13792,6 @@
         "description": "docutils.writers.odf_odt",
         "isExtraImport": true,
         "detail": "docutils.writers.odf_odt",
-        "documentation": {}
-    },
-    {
-        "label": "YahooDataBacktesting",
-        "importPath": "lumibot.backtesting.yahoo_backtesting",
-        "description": "lumibot.backtesting.yahoo_backtesting",
-        "isExtraImport": true,
-        "detail": "lumibot.backtesting.yahoo_backtesting",
         "documentation": {}
     },
     {
