@@ -1930,6 +1930,46 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "itertools",
         "kind": 6,
         "isExtraImport": true,
@@ -6038,6 +6078,166 @@
         "documentation": {}
     },
     {
+        "label": "CcxtBacktesting",
+        "importPath": "lumibot.backtesting",
+        "description": "lumibot.backtesting",
+        "isExtraImport": true,
+        "detail": "lumibot.backtesting",
+        "documentation": {}
+    },
+    {
+        "label": "YahooDataBacktesting",
+        "importPath": "lumibot.backtesting",
+        "description": "lumibot.backtesting",
+        "isExtraImport": true,
+        "detail": "lumibot.backtesting",
+        "documentation": {}
+    },
+    {
+        "label": "Alpaca",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "Alpaca",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "Broker",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "Broker",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "Broker",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "Broker",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "Ccxt",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "Alpaca",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "Alpaca",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "InteractiveBrokers",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "Tradier",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "InteractiveBrokersREST",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "ExampleBroker",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "Alpaca",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "Ccxt",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "InteractiveBrokers",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "InteractiveBrokersREST",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
+        "label": "Tradier",
+        "importPath": "lumibot.brokers",
+        "description": "lumibot.brokers",
+        "isExtraImport": true,
+        "detail": "lumibot.brokers",
+        "documentation": {}
+    },
+    {
         "label": "Alpaca",
         "importPath": "lumibot.brokers",
         "description": "lumibot.brokers",
@@ -6183,142 +6383,6 @@
     },
     {
         "label": "Alpaca",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "Alpaca",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "Broker",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "Broker",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "Broker",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "Broker",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "Ccxt",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "Alpaca",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "Alpaca",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "InteractiveBrokers",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "Tradier",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "InteractiveBrokersREST",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "ExampleBroker",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "Alpaca",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "Ccxt",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "InteractiveBrokers",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "InteractiveBrokersREST",
-        "importPath": "lumibot.brokers",
-        "description": "lumibot.brokers",
-        "isExtraImport": true,
-        "detail": "lumibot.brokers",
-        "documentation": {}
-    },
-    {
-        "label": "Tradier",
         "importPath": "lumibot.brokers",
         "description": "lumibot.brokers",
         "isExtraImport": true,
@@ -7624,10 +7688,26 @@
     },
     {
         "label": "Asset",
-        "importPath": "lumibot.entities.asset",
-        "description": "lumibot.entities.asset",
+        "importPath": "lumibot.entities",
+        "description": "lumibot.entities",
         "isExtraImport": true,
-        "detail": "lumibot.entities.asset",
+        "detail": "lumibot.entities",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "importPath": "lumibot.entities",
+        "description": "lumibot.entities",
+        "isExtraImport": true,
+        "detail": "lumibot.entities",
+        "documentation": {}
+    },
+    {
+        "label": "TradingFee",
+        "importPath": "lumibot.entities",
+        "description": "lumibot.entities",
+        "isExtraImport": true,
+        "detail": "lumibot.entities",
         "documentation": {}
     },
     {
@@ -7655,11 +7735,11 @@
         "documentation": {}
     },
     {
-        "label": "Strategy",
-        "importPath": "lumibot.strategies.strategy",
-        "description": "lumibot.strategies.strategy",
+        "label": "Asset",
+        "importPath": "lumibot.entities.asset",
+        "description": "lumibot.entities.asset",
         "isExtraImport": true,
-        "detail": "lumibot.strategies.strategy",
+        "detail": "lumibot.entities.asset",
         "documentation": {}
     },
     {
@@ -7940,6 +8020,30 @@
         "description": "lumibot.strategies.strategy",
         "isExtraImport": true,
         "detail": "lumibot.strategies.strategy",
+        "documentation": {}
+    },
+    {
+        "label": "Strategy",
+        "importPath": "lumibot.strategies.strategy",
+        "description": "lumibot.strategies.strategy",
+        "isExtraImport": true,
+        "detail": "lumibot.strategies.strategy",
+        "documentation": {}
+    },
+    {
+        "label": "Strategy",
+        "importPath": "lumibot.strategies.strategy",
+        "description": "lumibot.strategies.strategy",
+        "isExtraImport": true,
+        "detail": "lumibot.strategies.strategy",
+        "documentation": {}
+    },
+    {
+        "label": "Trader",
+        "importPath": "lumibot.traders",
+        "description": "lumibot.traders",
+        "isExtraImport": true,
+        "detail": "lumibot.traders",
         "documentation": {}
     },
     {
@@ -11378,6 +11482,22 @@
         "documentation": {}
     },
     {
+        "label": "IS_BACKTESTING",
+        "importPath": "lumibot.credentials",
+        "description": "lumibot.credentials",
+        "isExtraImport": true,
+        "detail": "lumibot.credentials",
+        "documentation": {}
+    },
+    {
+        "label": "IS_BACKTESTING",
+        "importPath": "lumibot.credentials",
+        "description": "lumibot.credentials",
+        "isExtraImport": true,
+        "detail": "lumibot.credentials",
+        "documentation": {}
+    },
+    {
         "label": "DriftRebalancer",
         "importPath": "lumibot.example_strategies.drift_rebalancer",
         "description": "lumibot.example_strategies.drift_rebalancer",
@@ -11395,6 +11515,14 @@
     },
     {
         "label": "LimitOrderRebalanceLogic",
+        "importPath": "lumibot.example_strategies.drift_rebalancer",
+        "description": "lumibot.example_strategies.drift_rebalancer",
+        "isExtraImport": true,
+        "detail": "lumibot.example_strategies.drift_rebalancer",
+        "documentation": {}
+    },
+    {
+        "label": "DriftRebalancer",
         "importPath": "lumibot.example_strategies.drift_rebalancer",
         "description": "lumibot.example_strategies.drift_rebalancer",
         "isExtraImport": true,
@@ -13961,6 +14089,14 @@
         "documentation": {}
     },
     {
+        "label": "DiversifiedLeverage",
+        "importPath": "lumibot.example_strategies.stock_diversified_leverage",
+        "description": "lumibot.example_strategies.stock_diversified_leverage",
+        "isExtraImport": true,
+        "detail": "lumibot.example_strategies.stock_diversified_leverage",
+        "documentation": {}
+    },
+    {
         "label": "LimitAndTrailingStop",
         "importPath": "lumibot.example_strategies.stock_limit_and_trailing_stops",
         "description": "lumibot.example_strategies.stock_limit_and_trailing_stops",
@@ -13985,7 +14121,7 @@
         "documentation": {}
     },
     {
-        "label": "CcxtBacktesting",
+        "label": "CcxtBacktestingExampleStrategy",
         "importPath": "lumibot.example_strategies.ccxt_backtesting_example",
         "description": "lumibot.example_strategies.ccxt_backtesting_example",
         "isExtraImport": true,
@@ -14923,6 +15059,30 @@
         "description": "lumibot.backtesting.yahoo_backtesting",
         "isExtraImport": true,
         "detail": "lumibot.backtesting.yahoo_backtesting",
+        "documentation": {}
+    },
+    {
+        "label": "YahooDataBacktesting",
+        "importPath": "lumibot.backtesting.yahoo_backtesting",
+        "description": "lumibot.backtesting.yahoo_backtesting",
+        "isExtraImport": true,
+        "detail": "lumibot.backtesting.yahoo_backtesting",
+        "documentation": {}
+    },
+    {
+        "label": "YahooDataBacktesting",
+        "importPath": "lumibot.backtesting.yahoo_backtesting",
+        "description": "lumibot.backtesting.yahoo_backtesting",
+        "isExtraImport": true,
+        "detail": "lumibot.backtesting.yahoo_backtesting",
+        "documentation": {}
+    },
+    {
+        "label": "ALPACA_CREDS",
+        "importPath": "docs.lib.MLTradingBot.snSomeThink",
+        "description": "docs.lib.MLTradingBot.snSomeThink",
+        "isExtraImport": true,
+        "detail": "docs.lib.MLTradingBot.snSomeThink",
         "documentation": {}
     },
     {
@@ -26315,7 +26475,43 @@
         "kind": 5,
         "importPath": "lumibot.credentials",
         "description": "lumibot.credentials",
-        "peekOfCode": "ALPACA_CONFIG = {  # Paper trading!\n    # Add ALPACA_API_KEY, ALPACA_API_SECRET, and ALPACA_IS_PAPER to your .env file or set them as secrets\n    \"API_KEY\": os.environ.get(\"ALPACA_API_KEY\"),\n    \"API_SECRET\": os.environ.get(\"ALPACA_API_SECRET\"),\n    \"PAPER\": os.environ.get(\"ALPACA_IS_PAPER\").lower() == \"true\"\n    if os.environ.get(\"ALPACA_IS_PAPER\")\n    else True,\n}\n# Tradier Configuration\nTRADIER_CONFIG = {",
+        "peekOfCode": "ALPACA_CONFIG = {  # Paper trading!\n    # Add ALPACA_API_KEY, ALPACA_API_SECRET, and ALPACA_IS_PAPER to your .env file or set them as secrets\n    \"API_KEY\": os.environ.get(\"ALPACA_API_KEY\"),\n    \"API_SECRET\": os.environ.get(\"ALPACA_API_SECRET\"),\n    \"PAPER\": os.environ.get(\"ALPACA_IS_PAPER\").lower() == \"true\"\n    if os.environ.get(\"ALPACA_IS_PAPER\")\n    else True,\n}\nAPI_KEY = \"PKXQGLU5DJJ30MUWS2G6\", \nAPI_SECRET =  \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\"",
+        "detail": "lumibot.credentials",
+        "documentation": {}
+    },
+    {
+        "label": "API_KEY",
+        "kind": 5,
+        "importPath": "lumibot.credentials",
+        "description": "lumibot.credentials",
+        "peekOfCode": "API_KEY = \"PKXQGLU5DJJ30MUWS2G6\", \nAPI_SECRET =  \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\"\nALPACA_CREDS = {\n    \"API_KEY\": API_KEY, \n    \"API_SECRET\": API_SECRET, \n    \"PAPER\": True\n}\nBASE_URL = \"https://paper-api.alpaca.markets\"\n# Tradier Configuration\nTRADIER_CONFIG = {",
+        "detail": "lumibot.credentials",
+        "documentation": {}
+    },
+    {
+        "label": "API_SECRET",
+        "kind": 5,
+        "importPath": "lumibot.credentials",
+        "description": "lumibot.credentials",
+        "peekOfCode": "API_SECRET =  \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\"\nALPACA_CREDS = {\n    \"API_KEY\": API_KEY, \n    \"API_SECRET\": API_SECRET, \n    \"PAPER\": True\n}\nBASE_URL = \"https://paper-api.alpaca.markets\"\n# Tradier Configuration\nTRADIER_CONFIG = {\n    # Add TRADIER_ACCESS_TOKEN, TRADIER_ACCOUNT_NUMBER, and TRADIER_IS_PAPER to your .env file or set them as secrets",
+        "detail": "lumibot.credentials",
+        "documentation": {}
+    },
+    {
+        "label": "ALPACA_CREDS",
+        "kind": 5,
+        "importPath": "lumibot.credentials",
+        "description": "lumibot.credentials",
+        "peekOfCode": "ALPACA_CREDS = {\n    \"API_KEY\": API_KEY, \n    \"API_SECRET\": API_SECRET, \n    \"PAPER\": True\n}\nBASE_URL = \"https://paper-api.alpaca.markets\"\n# Tradier Configuration\nTRADIER_CONFIG = {\n    # Add TRADIER_ACCESS_TOKEN, TRADIER_ACCOUNT_NUMBER, and TRADIER_IS_PAPER to your .env file or set them as secrets\n    \"ACCESS_TOKEN\": os.environ.get(\"TRADIER_ACCESS_TOKEN\"),",
+        "detail": "lumibot.credentials",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_URL",
+        "kind": 5,
+        "importPath": "lumibot.credentials",
+        "description": "lumibot.credentials",
+        "peekOfCode": "BASE_URL = \"https://paper-api.alpaca.markets\"\n# Tradier Configuration\nTRADIER_CONFIG = {\n    # Add TRADIER_ACCESS_TOKEN, TRADIER_ACCOUNT_NUMBER, and TRADIER_IS_PAPER to your .env file or set them as secrets\n    \"ACCESS_TOKEN\": os.environ.get(\"TRADIER_ACCESS_TOKEN\"),\n    \"ACCOUNT_NUMBER\": os.environ.get(\"TRADIER_ACCOUNT_NUMBER\"),\n    \"PAPER\": os.environ.get(\"TRADIER_IS_PAPER\").lower() == \"true\"\n    if os.environ.get(\"TRADIER_IS_PAPER\")\n    else True,\n}",
         "detail": "lumibot.credentials",
         "documentation": {}
     },

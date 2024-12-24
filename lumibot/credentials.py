@@ -153,6 +153,19 @@ ALPACA_CONFIG = {  # Paper trading!
     else True,
 }
 
+
+API_KEY = "PKXQGLU5DJJ30MUWS2G6", 
+API_SECRET =  "vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d"
+ALPACA_CREDS = {
+    "API_KEY": API_KEY, 
+    "API_SECRET": API_SECRET, 
+    "PAPER": True
+}
+BASE_URL = "https://paper-api.alpaca.markets"
+
+
+
+
 # Tradier Configuration
 TRADIER_CONFIG = {
     # Add TRADIER_ACCESS_TOKEN, TRADIER_ACCOUNT_NUMBER, and TRADIER_IS_PAPER to your .env file or set them as secrets
