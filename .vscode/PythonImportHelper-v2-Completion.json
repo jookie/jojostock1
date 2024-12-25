@@ -4201,14 +4201,6 @@
         "documentation": {}
     },
     {
-        "label": "Tuple",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "Union",
         "importPath": "typing",
         "description": "typing",
@@ -4226,6 +4218,14 @@
     },
     {
         "label": "Iterator",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -10649,6 +10649,14 @@
         "documentation": {}
     },
     {
+        "label": "BASE_URL",
+        "importPath": "lumibot.credentials",
+        "description": "lumibot.credentials",
+        "isExtraImport": true,
+        "detail": "lumibot.credentials",
+        "documentation": {}
+    },
+    {
         "label": "POLYGON_API_KEY",
         "importPath": "lumibot.credentials",
         "description": "lumibot.credentials",
@@ -10657,7 +10665,7 @@
         "documentation": {}
     },
     {
-        "label": "IS_BACKTESTING",
+        "label": "ALPACA_CREDS",
         "importPath": "lumibot.credentials",
         "description": "lumibot.credentials",
         "isExtraImport": true,
@@ -22120,51 +22128,6 @@
         "documentation": {}
     },
     {
-        "label": "estimate_sentiment",
-        "kind": 2,
-        "importPath": "lumibot.example_strategies.finbert_utils",
-        "description": "lumibot.example_strategies.finbert_utils",
-        "peekOfCode": "def estimate_sentiment(news):\n    if news:\n        tokens = tokenizer(news, return_tensors=\"pt\", padding=True).to(device)\n        result = model(tokens[\"input_ids\"], attention_mask=tokens[\"attention_mask\"])[\n            \"logits\"\n        ]\n        result = torch.nn.functional.softmax(torch.sum(result, 0), dim=-1)\n        probability = result[torch.argmax(result)]\n        sentiment = labels[torch.argmax(result)]\n        return probability, sentiment",
-        "detail": "lumibot.example_strategies.finbert_utils",
-        "documentation": {}
-    },
-    {
-        "label": "device",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.finbert_utils",
-        "description": "lumibot.example_strategies.finbert_utils",
-        "peekOfCode": "device = \"cuda:0\" if torch.cuda.is_available() else \"cpu\"\ntokenizer = AutoTokenizer.from_pretrained(\"ProsusAI/finbert\")\nmodel = AutoModelForSequenceClassification.from_pretrained(\"ProsusAI/finbert\").to(device)\nlabels = [\"positive\", \"negative\", \"neutral\"]\n# added by dov to prevent TOKENIZERS_PARALLELISM the warning:\n# TOKENIZERS_PARALLELISM=False\ndef estimate_sentiment(news):\n    if news:\n        tokens = tokenizer(news, return_tensors=\"pt\", padding=True).to(device)\n        result = model(tokens[\"input_ids\"], attention_mask=tokens[\"attention_mask\"])[",
-        "detail": "lumibot.example_strategies.finbert_utils",
-        "documentation": {}
-    },
-    {
-        "label": "tokenizer",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.finbert_utils",
-        "description": "lumibot.example_strategies.finbert_utils",
-        "peekOfCode": "tokenizer = AutoTokenizer.from_pretrained(\"ProsusAI/finbert\")\nmodel = AutoModelForSequenceClassification.from_pretrained(\"ProsusAI/finbert\").to(device)\nlabels = [\"positive\", \"negative\", \"neutral\"]\n# added by dov to prevent TOKENIZERS_PARALLELISM the warning:\n# TOKENIZERS_PARALLELISM=False\ndef estimate_sentiment(news):\n    if news:\n        tokens = tokenizer(news, return_tensors=\"pt\", padding=True).to(device)\n        result = model(tokens[\"input_ids\"], attention_mask=tokens[\"attention_mask\"])[\n            \"logits\"",
-        "detail": "lumibot.example_strategies.finbert_utils",
-        "documentation": {}
-    },
-    {
-        "label": "model",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.finbert_utils",
-        "description": "lumibot.example_strategies.finbert_utils",
-        "peekOfCode": "model = AutoModelForSequenceClassification.from_pretrained(\"ProsusAI/finbert\").to(device)\nlabels = [\"positive\", \"negative\", \"neutral\"]\n# added by dov to prevent TOKENIZERS_PARALLELISM the warning:\n# TOKENIZERS_PARALLELISM=False\ndef estimate_sentiment(news):\n    if news:\n        tokens = tokenizer(news, return_tensors=\"pt\", padding=True).to(device)\n        result = model(tokens[\"input_ids\"], attention_mask=tokens[\"attention_mask\"])[\n            \"logits\"\n        ]",
-        "detail": "lumibot.example_strategies.finbert_utils",
-        "documentation": {}
-    },
-    {
-        "label": "labels",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.finbert_utils",
-        "description": "lumibot.example_strategies.finbert_utils",
-        "peekOfCode": "labels = [\"positive\", \"negative\", \"neutral\"]\n# added by dov to prevent TOKENIZERS_PARALLELISM the warning:\n# TOKENIZERS_PARALLELISM=False\ndef estimate_sentiment(news):\n    if news:\n        tokens = tokenizer(news, return_tensors=\"pt\", padding=True).to(device)\n        result = model(tokens[\"input_ids\"], attention_mask=tokens[\"attention_mask\"])[\n            \"logits\"\n        ]\n        result = torch.nn.functional.softmax(torch.sum(result, 0), dim=-1)",
-        "detail": "lumibot.example_strategies.finbert_utils",
-        "documentation": {}
-    },
-    {
         "label": "LifecycleLogger",
         "kind": 6,
         "importPath": "lumibot.example_strategies.lifecycle_logger",
@@ -22260,15 +22223,6 @@
         "importPath": "lumibot.example_strategies.stock_sentiment",
         "description": "lumibot.example_strategies.stock_sentiment",
         "peekOfCode": "class StockSentiment(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): \n        self.symbol = symbol\n        self.sleeptime = \"24H\" \n        self.last_trade = None \n        self.cash_at_risk = cash_at_risk\n        self.api = REST(\n            key_id=ALPACA_CREDS[\"API_KEY\"],\n            secret_key=ALPACA_CREDS[\"API_SECRET\"],\n            base_url=BASE_URL",
-        "detail": "lumibot.example_strategies.stock_sentiment",
-        "documentation": {}
-    },
-    {
-        "label": "BASE_URL",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.stock_sentiment",
-        "description": "lumibot.example_strategies.stock_sentiment",
-        "peekOfCode": "BASE_URL = \"https://paper-api.alpaca.markets\"  \nimport os\nos.environ[\"TOKENIZERS_PARALLELISM\"] = \"false\"\nclass StockSentiment(Strategy): \n    def initialize(self, symbol:str=\"SPY\", cash_at_risk:float=.5): \n        self.symbol = symbol\n        self.sleeptime = \"24H\" \n        self.last_trade = None \n        self.cash_at_risk = cash_at_risk\n        self.api = REST(",
         "detail": "lumibot.example_strategies.stock_sentiment",
         "documentation": {}
     },
@@ -23551,6 +23505,51 @@
         "documentation": {}
     },
     {
+        "label": "estimate_sentiment",
+        "kind": 2,
+        "importPath": "lumibot.finbert_utils",
+        "description": "lumibot.finbert_utils",
+        "peekOfCode": "def estimate_sentiment(news):\n    if news:\n        tokens = tokenizer(news, return_tensors=\"pt\", padding=True).to(device)\n        result = model(tokens[\"input_ids\"], attention_mask=tokens[\"attention_mask\"])[\n            \"logits\"\n        ]\n        result = torch.nn.functional.softmax(torch.sum(result, 0), dim=-1)\n        probability = result[torch.argmax(result)]\n        sentiment = labels[torch.argmax(result)]\n        return probability, sentiment",
+        "detail": "lumibot.finbert_utils",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "lumibot.finbert_utils",
+        "description": "lumibot.finbert_utils",
+        "peekOfCode": "device = \"cuda:0\" if torch.cuda.is_available() else \"cpu\"\ntokenizer = AutoTokenizer.from_pretrained(\"ProsusAI/finbert\")\nmodel = AutoModelForSequenceClassification.from_pretrained(\"ProsusAI/finbert\").to(device)\nlabels = [\"positive\", \"negative\", \"neutral\"]\n# added by dov to prevent TOKENIZERS_PARALLELISM the warning:\n# TOKENIZERS_PARALLELISM=False\ndef estimate_sentiment(news):\n    if news:\n        tokens = tokenizer(news, return_tensors=\"pt\", padding=True).to(device)\n        result = model(tokens[\"input_ids\"], attention_mask=tokens[\"attention_mask\"])[",
+        "detail": "lumibot.finbert_utils",
+        "documentation": {}
+    },
+    {
+        "label": "tokenizer",
+        "kind": 5,
+        "importPath": "lumibot.finbert_utils",
+        "description": "lumibot.finbert_utils",
+        "peekOfCode": "tokenizer = AutoTokenizer.from_pretrained(\"ProsusAI/finbert\")\nmodel = AutoModelForSequenceClassification.from_pretrained(\"ProsusAI/finbert\").to(device)\nlabels = [\"positive\", \"negative\", \"neutral\"]\n# added by dov to prevent TOKENIZERS_PARALLELISM the warning:\n# TOKENIZERS_PARALLELISM=False\ndef estimate_sentiment(news):\n    if news:\n        tokens = tokenizer(news, return_tensors=\"pt\", padding=True).to(device)\n        result = model(tokens[\"input_ids\"], attention_mask=tokens[\"attention_mask\"])[\n            \"logits\"",
+        "detail": "lumibot.finbert_utils",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "lumibot.finbert_utils",
+        "description": "lumibot.finbert_utils",
+        "peekOfCode": "model = AutoModelForSequenceClassification.from_pretrained(\"ProsusAI/finbert\").to(device)\nlabels = [\"positive\", \"negative\", \"neutral\"]\n# added by dov to prevent TOKENIZERS_PARALLELISM the warning:\n# TOKENIZERS_PARALLELISM=False\ndef estimate_sentiment(news):\n    if news:\n        tokens = tokenizer(news, return_tensors=\"pt\", padding=True).to(device)\n        result = model(tokens[\"input_ids\"], attention_mask=tokens[\"attention_mask\"])[\n            \"logits\"\n        ]",
+        "detail": "lumibot.finbert_utils",
+        "documentation": {}
+    },
+    {
+        "label": "labels",
+        "kind": 5,
+        "importPath": "lumibot.finbert_utils",
+        "description": "lumibot.finbert_utils",
+        "peekOfCode": "labels = [\"positive\", \"negative\", \"neutral\"]\n# added by dov to prevent TOKENIZERS_PARALLELISM the warning:\n# TOKENIZERS_PARALLELISM=False\ndef estimate_sentiment(news):\n    if news:\n        tokens = tokenizer(news, return_tensors=\"pt\", padding=True).to(device)\n        result = model(tokens[\"input_ids\"], attention_mask=tokens[\"attention_mask\"])[\n            \"logits\"\n        ]\n        result = torch.nn.functional.softmax(torch.sum(result, 0), dim=-1)",
+        "detail": "lumibot.finbert_utils",
+        "documentation": {}
+    },
+    {
         "label": "TRAIN_START_DATE",
         "kind": 5,
         "importPath": "pages.0_Stock_Training",
@@ -24559,20 +24558,20 @@
         "documentation": {}
     },
     {
-        "label": "ALPACA_CREDS",
-        "kind": 5,
-        "importPath": "t10",
-        "description": "t10",
-        "peekOfCode": "ALPACA_CREDS = {\n    \"API_KEY\": \"PKXQGLU5DJJ30MUWS2G6\", \n    \"API_SECRET\": \"vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d\", \n    \"PAPER\": True\n}\n\"\"\"\nStrategy Description\nThis strategy will buy a few symbols that have 2x or 3x returns (have leverage), but will \nalso diversify and rebalance the portfolio often.\n\"\"\"",
-        "detail": "t10",
-        "documentation": {}
-    },
-    {
         "label": "results",
         "kind": 5,
         "importPath": "t10",
         "description": "t10",
-        "peekOfCode": "results = strategy.backtest(\n    YahooDataBacktesting, \n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}\n)\nst.write(results)\nprint(results)\n# trader = Trader()\n# trader.add_strategy(strategy)",
+        "peekOfCode": "results = strategy.backtest(\n    YahooDataBacktesting, \n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}\n)\nst.write(results)\nprint(results)\ntrader = Trader()\ntrader.add_strategy(strategy)",
+        "detail": "t10",
+        "documentation": {}
+    },
+    {
+        "label": "trader",
+        "kind": 5,
+        "importPath": "t10",
+        "description": "t10",
+        "peekOfCode": "trader = Trader()\ntrader.add_strategy(strategy)\ntrader.run_all()",
         "detail": "t10",
         "documentation": {}
     }

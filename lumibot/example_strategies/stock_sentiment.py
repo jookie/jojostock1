@@ -1,10 +1,9 @@
 from lumibot.strategies import Strategy
 from docs.lib.MLTradingBot.lumibot.tools.thetadata_helper import BASE_URL
-from .finbert_utils import estimate_sentiment
+from ..finbert_utils import estimate_sentiment
 from alpaca_trade_api import REST 
 from datetime import timedelta 
-from lumibot.credentials import ALPACA_CREDS
-BASE_URL = "https://paper-api.alpaca.markets"  
+from lumibot.credentials import ALPACA_CREDS, BASE_URL
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 class StockSentiment(Strategy): 

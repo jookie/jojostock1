@@ -4,15 +4,10 @@ from lumibot.backtesting import YahooDataBacktesting
 from lumibot.brokers import Alpaca
 from lumibot.entities import TradingFee
 from lumibot.traders import Trader
-from lumibot.credentials import IS_BACKTESTING
+from lumibot.credentials import ALPACA_CREDS
 from lumibot.backtesting.yahoo_backtesting import  YahooDataBacktesting
 from lumibot.example_strategies.stock_sentiment import StockSentiment
 
-ALPACA_CREDS = {
-    "API_KEY": "PKXQGLU5DJJ30MUWS2G6", 
-    "API_SECRET": "vPSm9TeqjD7WhYYcuhhvdyXZiFjJQDSlO5ic5s1d", 
-    "PAPER": True
-}
 """
 Strategy Description
 This strategy will buy a few symbols that have 2x or 3x returns (have leverage), but will 
@@ -34,7 +29,7 @@ results = strategy.backtest(
 st.write(results)
 print(results)
 
-# trader = Trader()
-# trader.add_strategy(strategy)
-# trader.run_all()
+trader = Trader()
+trader.add_strategy(strategy)
+trader.run_all()
 
