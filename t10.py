@@ -21,26 +21,20 @@ also diversify and rebalance the portfolio often.
 
 start_date  = datetime(2020,1,1)
 end_date    = datetime(2020,11,12) 
-# end_date    = datetime(2023,12,31) 
 broker      = Alpaca(ALPACA_CREDS) 
 strategy    = StockSentiment(name='mlstrat', broker=broker, 
                     parameters={"symbol":"SPY", 
                                 "cash_at_risk":.5})
-strategy.backtest(
+results = strategy.backtest(
     YahooDataBacktesting, 
     start_date, 
     end_date, 
     parameters={"symbol":"SPY", "cash_at_risk":.5}
 )
-trader = Trader()
-trader.add_strategy(strategy)
-trader.run_all()
-# strategy = StockSentiment(broker=broker)
- 
-        # result = StockSentiment.backtest(
-        #     YahooDataBacktesting,
-        #     backtesting_start,
-        #     backtesting_end,
-        #  )
-        # print("Backtest result: ", result)
-        # st.write(f"Backtest result: {result}")
+st.write(results)
+st.print(results)
+
+# trader = Trader()
+# trader.add_strategy(strategy)
+# trader.run_all()
+

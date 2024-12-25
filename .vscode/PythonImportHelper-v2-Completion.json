@@ -1834,14 +1834,6 @@
         "documentation": {}
     },
     {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -1859,6 +1851,14 @@
     },
     {
         "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -5677,7 +5677,7 @@
         "documentation": {}
     },
     {
-        "label": "CcxtBacktesting",
+        "label": "YahooDataBacktesting",
         "importPath": "lumibot.backtesting",
         "description": "lumibot.backtesting",
         "isExtraImport": true,
@@ -5685,7 +5685,7 @@
         "documentation": {}
     },
     {
-        "label": "YahooDataBacktesting",
+        "label": "CcxtBacktesting",
         "importPath": "lumibot.backtesting",
         "description": "lumibot.backtesting",
         "isExtraImport": true,
@@ -7150,6 +7150,14 @@
         "documentation": {}
     },
     {
+        "label": "TradingFee",
+        "importPath": "lumibot.entities",
+        "description": "lumibot.entities",
+        "isExtraImport": true,
+        "detail": "lumibot.entities",
+        "documentation": {}
+    },
+    {
         "label": "Asset",
         "importPath": "lumibot.entities",
         "description": "lumibot.entities",
@@ -7159,14 +7167,6 @@
     },
     {
         "label": "Order",
-        "importPath": "lumibot.entities",
-        "description": "lumibot.entities",
-        "isExtraImport": true,
-        "detail": "lumibot.entities",
-        "documentation": {}
-    },
-    {
-        "label": "TradingFee",
         "importPath": "lumibot.entities",
         "description": "lumibot.entities",
         "isExtraImport": true,
@@ -13442,6 +13442,14 @@
         "documentation": {}
     },
     {
+        "label": "DiversifiedLeverage",
+        "importPath": "lumibot.example_strategies.stock_diversified_leverage",
+        "description": "lumibot.example_strategies.stock_diversified_leverage",
+        "isExtraImport": true,
+        "detail": "lumibot.example_strategies.stock_diversified_leverage",
+        "documentation": {}
+    },
+    {
         "label": "YahooDataBacktesting",
         "importPath": "lumibot.backtesting.yahoo_backtesting",
         "description": "lumibot.backtesting.yahoo_backtesting",
@@ -13487,14 +13495,6 @@
         "description": "lumibot.example_strategies.ccxt_backtesting_example",
         "isExtraImport": true,
         "detail": "lumibot.example_strategies.ccxt_backtesting_example",
-        "documentation": {}
-    },
-    {
-        "label": "DiversifiedLeverage",
-        "importPath": "lumibot.example_strategies.stock_diversified_leverage",
-        "description": "lumibot.example_strategies.stock_diversified_leverage",
-        "isExtraImport": true,
-        "detail": "lumibot.example_strategies.stock_diversified_leverage",
         "documentation": {}
     },
     {
@@ -24568,11 +24568,11 @@
         "documentation": {}
     },
     {
-        "label": "trader",
+        "label": "results",
         "kind": 5,
         "importPath": "t10",
         "description": "t10",
-        "peekOfCode": "trader = Trader()\ntrader.add_strategy(strategy)\ntrader.run_all()\n# strategy = StockSentiment(broker=broker)\n        # result = StockSentiment.backtest(\n        #     YahooDataBacktesting,\n        #     backtesting_start,\n        #     backtesting_end,\n        #  )\n        # print(\"Backtest result: \", result)",
+        "peekOfCode": "results = strategy.backtest(\n    YahooDataBacktesting, \n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}\n)\nst.write(results)\nst.print(results)\n# trader = Trader()\n# trader.add_strategy(strategy)",
         "detail": "t10",
         "documentation": {}
     }
