@@ -32,7 +32,7 @@ results = strategy.backtest(
     parameters={"symbol":"SPY", "cash_at_risk":.5}
 )
 st.write(results)
-st.print(results)
+print(results)
 
 # trader = Trader()
 # trader.add_strategy(strategy)

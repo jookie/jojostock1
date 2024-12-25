@@ -24572,7 +24572,7 @@
         "kind": 5,
         "importPath": "t10",
         "description": "t10",
-        "peekOfCode": "results = strategy.backtest(\n    YahooDataBacktesting, \n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}\n)\nst.write(results)\nst.print(results)\n# trader = Trader()\n# trader.add_strategy(strategy)",
+        "peekOfCode": "results = strategy.backtest(\n    YahooDataBacktesting, \n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}\n)\nst.write(results)\nprint(results)\n# trader = Trader()\n# trader.add_strategy(strategy)",
         "detail": "t10",
         "documentation": {}
     }
