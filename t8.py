@@ -17,7 +17,6 @@ if __name__ == "__main__":
     IS_BACKTESTING = True
     if not IS_BACKTESTING:
         print("This strategy is not meant to be run live. Please set IS_BACKTESTING to True.")
-        st.write("This strategy is not meant to be run live. Please set IS_BACKTESTING to True.")        
         exit()
     else:
         parameters = {

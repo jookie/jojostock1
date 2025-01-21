@@ -24558,20 +24558,11 @@
         "documentation": {}
     },
     {
-        "label": "results",
-        "kind": 5,
+        "label": "run_backtest",
+        "kind": 2,
         "importPath": "t10",
         "description": "t10",
-        "peekOfCode": "results = strategy.backtest(\n    YahooDataBacktesting, \n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}\n)\nst.write(results)\nprint(results)\ntrader = Trader()\ntrader.add_strategy(strategy)",
-        "detail": "t10",
-        "documentation": {}
-    },
-    {
-        "label": "trader",
-        "kind": 5,
-        "importPath": "t10",
-        "description": "t10",
-        "peekOfCode": "trader = Trader()\ntrader.add_strategy(strategy)\ntrader.run_all()",
+        "peekOfCode": "def run_backtest():\n    backtesting_start  = datetime(2020,1,1)\n    backtesting_end   = datetime(2020,11,12) \n    st.write(f\"Backtesting: Start {backtesting_start} End {backtesting_end}\")\n    broker      = Alpaca(ALPACA_CREDS) \n    strategy    = StockSentiment(name='mlstrat', broker=broker, \n                        parameters={\"symbol\":\"SPY\", \n                                    \"cash_at_risk\":.5})\n    results = strategy.backtest(\n        YahooDataBacktesting, ",
         "detail": "t10",
         "documentation": {}
     }
