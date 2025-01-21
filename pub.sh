@@ -13,11 +13,8 @@ git push -u origin main
 # 1. Click on the "New" button to create a new repository.
 # 2. Name your repository and add a description.
    # Do not initialize the repository with a README, .gitignore, or license if you've already initialized your project locally.
-# --------Remove Repository:
 # rm -rf .git
 # git remote add origin https://github.com/jookie/news-stocks.git
-# streamlit run app.py  
-# git remote add origin https://github.com/jookie/jojostock1.git
 # git branch -M main
 # git push -u origin main
 
