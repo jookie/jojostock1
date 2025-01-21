@@ -7150,14 +7150,6 @@
         "documentation": {}
     },
     {
-        "label": "TradingFee",
-        "importPath": "lumibot.entities",
-        "description": "lumibot.entities",
-        "isExtraImport": true,
-        "detail": "lumibot.entities",
-        "documentation": {}
-    },
-    {
         "label": "Asset",
         "importPath": "lumibot.entities",
         "description": "lumibot.entities",
@@ -13458,35 +13450,27 @@
         "documentation": {}
     },
     {
-        "label": "YahooDataBacktesting",
-        "importPath": "lumibot.backtesting.yahoo_backtesting",
-        "description": "lumibot.backtesting.yahoo_backtesting",
-        "isExtraImport": true,
-        "detail": "lumibot.backtesting.yahoo_backtesting",
-        "documentation": {}
-    },
-    {
-        "label": "YahooDataBacktesting",
-        "importPath": "lumibot.backtesting.yahoo_backtesting",
-        "description": "lumibot.backtesting.yahoo_backtesting",
-        "isExtraImport": true,
-        "detail": "lumibot.backtesting.yahoo_backtesting",
-        "documentation": {}
-    },
-    {
-        "label": "YahooDataBacktesting",
-        "importPath": "lumibot.backtesting.yahoo_backtesting",
-        "description": "lumibot.backtesting.yahoo_backtesting",
-        "isExtraImport": true,
-        "detail": "lumibot.backtesting.yahoo_backtesting",
-        "documentation": {}
-    },
-    {
         "label": "StockSentiment",
         "importPath": "lumibot.example_strategies.stock_sentiment",
         "description": "lumibot.example_strategies.stock_sentiment",
         "isExtraImport": true,
         "detail": "lumibot.example_strategies.stock_sentiment",
+        "documentation": {}
+    },
+    {
+        "label": "YahooDataBacktesting",
+        "importPath": "lumibot.backtesting.yahoo_backtesting",
+        "description": "lumibot.backtesting.yahoo_backtesting",
+        "isExtraImport": true,
+        "detail": "lumibot.backtesting.yahoo_backtesting",
+        "documentation": {}
+    },
+    {
+        "label": "YahooDataBacktesting",
+        "importPath": "lumibot.backtesting.yahoo_backtesting",
+        "description": "lumibot.backtesting.yahoo_backtesting",
+        "isExtraImport": true,
+        "detail": "lumibot.backtesting.yahoo_backtesting",
         "documentation": {}
     },
     {
@@ -24562,7 +24546,16 @@
         "kind": 2,
         "importPath": "t10",
         "description": "t10",
-        "peekOfCode": "def run_backtest():\n    backtesting_start  = datetime(2020,1,1)\n    backtesting_end   = datetime(2020,11,12) \n    st.write(f\"Backtesting: Start {backtesting_start} End {backtesting_end}\")\n    broker      = Alpaca(ALPACA_CREDS) \n    strategy    = StockSentiment(name='mlstrat', broker=broker, \n                        parameters={\"symbol\":\"SPY\", \n                                    \"cash_at_risk\":.5})\n    results = strategy.backtest(\n        YahooDataBacktesting, ",
+        "peekOfCode": "def run_backtest():\n    backtesting_start = datetime(2020,1,1)\n    backtesting_end   = datetime(2020,11,12)\n    print(f\"Backtesting from {backtesting_start} to {backtesting_end} ...\")\n    broker = Alpaca(ALPACA_CREDS)\n    strategy = StockSentiment(\n        name=\"mlstrat\",\n        broker=broker,\n        parameters={\n            \"symbol\": \"SPY\",",
+        "detail": "t10",
+        "documentation": {}
+    },
+    {
+        "label": "start_backtest_in_thread",
+        "kind": 2,
+        "importPath": "t10",
+        "description": "t10",
+        "peekOfCode": "def start_backtest_in_thread():\n    # Reset previous results\n    st.session_state[\"backtest_results\"] = None\n    # Create and start thread\n    t = threading.Thread(target=run_backtest, args=())\n    t.start()\n    st.session_state[\"thread\"] = t\n# Button to start the backtest in a thread\nif st.button(\"Start Backtest\"):\n    if st.session_state[\"thread\"] is None or not st.session_state[\"thread\"].is_alive():",
         "detail": "t10",
         "documentation": {}
     }

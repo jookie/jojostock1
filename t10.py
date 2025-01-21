@@ -1,57 +1,78 @@
-from datetime import datetime
 import streamlit as st
+import threading
+from datetime import datetime
 from lumibot.backtesting import YahooDataBacktesting
 from lumibot.brokers import Alpaca
-from lumibot.entities import TradingFee
 from lumibot.traders import Trader
 from lumibot.credentials import ALPACA_CREDS
-from lumibot.backtesting.yahoo_backtesting import  YahooDataBacktesting
 from lumibot.example_strategies.stock_sentiment import StockSentiment
-# Streamlit server consistently failed status checks
-# Please fix the errors, push an update to the git repo, or reboot the app.
-
 
 st.set_page_config(
     page_title="FinBERT: Financial Sentiment Analysis with BERT",
     layout="wide",
     page_icon=':bar_chart:',
 )
+
 st.title("Sentiment-Based Trading Bot with Live Trading")
 st.subheader("FinBERT pre-trained NLP model to analyze sentiment of financial text.")
-"""
-Automated sentiment or polarity analysis of texts produced by financial actors using Natural Language processing (NLP) methods.
-"""
+st.write("""
+Automated sentiment or polarity analysis of texts produced by financial actors using Natural Language Processing (NLP) methods.
+""")
 
-import streamlit as st
-import threading
+# A global or session_state variable to store results
+if "backtest_results" not in st.session_state:
+    st.session_state["backtest_results"] = None
+if "thread" not in st.session_state:
+    st.session_state["thread"] = None
 
 def run_backtest():
-    backtesting_start  = datetime(2020,1,1)
-    backtesting_end   = datetime(2020,11,12) 
-    st.write(f"Backtesting: Start {backtesting_start} End {backtesting_end}")
-    broker      = Alpaca(ALPACA_CREDS) 
-    strategy    = StockSentiment(name='mlstrat', broker=broker, 
-                        parameters={"symbol":"SPY", 
-                                    "cash_at_risk":.5})
-    results = strategy.backtest(
-        YahooDataBacktesting, 
-        backtesting_start, 
-        backtesting_end, 
-        parameters={"symbol":"SPY", "cash_at_risk":.5}
-    )
-    st.write(results)
-    print(results)
+    backtesting_start = datetime(2020,1,1)
+    backtesting_end   = datetime(2020,11,12)
+    print(f"Backtesting from {backtesting_start} to {backtesting_end} ...")
 
+    broker = Alpaca(ALPACA_CREDS)
+    strategy = StockSentiment(
+        name="mlstrat",
+        broker=broker,
+        parameters={
+            "symbol": "SPY",
+            "cash_at_risk": 0.5
+        }
+    )
+
+    # Perform the backtest (avoid st.write in background thread)
+    results = strategy.backtest(
+        YahooDataBacktesting,
+        backtesting_start,
+        backtesting_end,
+        parameters={"symbol": "SPY", "cash_at_risk": 0.5}
+    )
+    # Store the results for the main thread to display
+    st.session_state["backtest_results"] = results
+
+    # Optionally start live trading
     trader = Trader()
     trader.add_strategy(strategy)
-    trader.run_all()    
-    
-if __name__ == "__main__":
-    if st.button("Start Backtest"):
-        st.write("Starting backtest in the background...")
-        thread = threading.Thread(target=run_backtest)
-        thread.start()
-        st.write("Backtest is running...")
-        
+    trader.run_all()
 
+def start_backtest_in_thread():
+    # Reset previous results
+    st.session_state["backtest_results"] = None
 
+    # Create and start thread
+    t = threading.Thread(target=run_backtest, args=())
+    t.start()
+    st.session_state["thread"] = t
+
+# Button to start the backtest in a thread
+if st.button("Start Backtest"):
+    if st.session_state["thread"] is None or not st.session_state["thread"].is_alive():
+        st.write("Starting backtest in background...")
+        start_backtest_in_thread()
+    else:
+        st.write("A backtest is already running.")
+
+# Display results if available
+if st.session_state["backtest_results"] is not None:
+    st.success("Backtest completed!")
+    st.write(st.session_state["backtest_results"])
