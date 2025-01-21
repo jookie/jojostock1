@@ -46,12 +46,12 @@ def run_backtest():
     trader.add_strategy(strategy)
     trader.run_all()    
     
-
-if st.button("Start Backtest"):
-    st.write("Starting backtest in the background...")
-    thread = threading.Thread(target=run_backtest)
-    thread.start()
-    st.write("Backtest is running...")
-    
+if __name__ == "__main__":
+    if st.button("Start Backtest"):
+        st.write("Starting backtest in the background...")
+        thread = threading.Thread(target=run_backtest)
+        thread.start()
+        st.write("Backtest is running...")
+        
 
 
