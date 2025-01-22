@@ -8,7 +8,7 @@ from termcolor import colored
 
 from lumibot import LUMIBOT_DEFAULT_PYTZ
 import pandas as pd
-
+import streamlit as st
 
 def get_chunks(l, chunk_size):
     chunks = []
@@ -132,6 +132,8 @@ def print_progress_bar(
     line = f"\r{prefix} |{colored(bar, 'green')}| {percent_str}% {suffix} {eta_str} {portfolio_value_str}"
     file.write(line)
     file.flush()
+    
+    st.write("============================")
 
 
 def get_lumibot_datetime():

@@ -7,7 +7,7 @@ from pathlib import Path
 # Overloading time.sleep to warn users against using it
 
 logger = logging.getLogger(__name__)
-
+import streamlit as st
 
 class Trader:
     def __init__(self, logfile="", backtest=False, debug=False, strategies=None, quiet_logs=False):
@@ -146,6 +146,7 @@ class Trader:
         # Continue with the rest of the method logic
         # signal.signal(signal.SIGINT, self._stop_pool)
         print("Skipping signal handling in non-interactive environment.")
+        st.write("Skipping signal handling in non-interactive environment.")
         self._set_logger()
         self._init_pool()
         self._start_pool()

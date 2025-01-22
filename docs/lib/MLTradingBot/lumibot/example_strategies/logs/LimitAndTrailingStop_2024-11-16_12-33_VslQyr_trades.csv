@@ -1,9 +1,0 @@
-time,strategy,identifier,symbol,side,type,status,multiplier,time_in_force,asset.strike,asset.multiplier,asset.asset_type,price,filled_quantity,trade_cost
-2023-03-03 09:30:00-05:00,LimitAndTrailingStop,c45b48a8150741e5b691e961e2d3b0ed,SPY,buy,limit,new,1,gtc,0.0,1,stock,,,
-2023-03-03 09:30:00-05:00,LimitAndTrailingStop,b27c890130864ed99cc4defa2b490505,SPY,sell,limit,new,1,gtc,0.0,1,stock,,,
-2023-03-03 09:30:00-05:00,LimitAndTrailingStop,7a07d39cbd65453fbe275e6f51bfadd0,SPY,sell,trailing_stop,new,1,gtc,0.0,1,stock,,,
-2023-03-03 09:30:00-05:00,LimitAndTrailingStop,364ab8e1d2664125be94d02be4861b3a,SPY,sell,trailing_stop,new,1,gtc,0.0,1,stock,,,
-2023-03-03 09:30:00-05:00,LimitAndTrailingStop,c45b48a8150741e5b691e961e2d3b0ed,SPY,buy,limit,fill,1,gtc,0.0,1,stock,399.7099914550781,100.0,0.0
-2023-03-06 08:30:00-05:00,LimitAndTrailingStop,b27c890130864ed99cc4defa2b490505,SPY,sell,limit,fill,1,gtc,0.0,1,stock,407.0,100.0,0.0
-2023-03-07 09:30:00-05:00,LimitAndTrailingStop,7a07d39cbd65453fbe275e6f51bfadd0,SPY,sell,trailing_stop,fill,1,gtc,0.0,1,stock,399.30101196289064,100.0,0.0
-2023-03-07 09:30:00-05:00,LimitAndTrailingStop,364ab8e1d2664125be94d02be4861b3a,SPY,sell,trailing_stop,fill,1,gtc,0.0,1,stock,400.45001220703125,50.0,0.0
