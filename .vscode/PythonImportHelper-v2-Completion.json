@@ -24333,16 +24333,16 @@
         "kind": 2,
         "importPath": "t10",
         "description": "t10",
-        "peekOfCode": "def run_backtest():\n    backtesting_start = datetime(2020,1,1)\n    backtesting_end   = datetime(2020,11,12)\n    print(f\"Backtesting from {backtesting_start} to {backtesting_end} ...\")\n    broker = Alpaca(ALPACA_CREDS)\n    strategy = StockSentiment(\n        name=\"mlstrat\",\n        broker=broker,\n        parameters={\n            \"symbol\": \"SPY\",",
+        "peekOfCode": "def run_backtest():\n    \"\"\"Long-running backtest & live trading in a background thread.\"\"\"\n    try:\n        st.session_state[\"backtest_running\"] = True\n        # Define the backtest period\n        start_date = datetime(2020,1,1)\n        end_date   = datetime(2020,11,12)\n        print(f\"[Thread] Starting backtest from {start_date} to {end_date}...\")\n        # Set up broker and strategy\n        broker = Alpaca(ALPACA_CREDS)",
         "detail": "t10",
         "documentation": {}
     },
     {
-        "label": "start_backtest_in_thread",
+        "label": "start_background_backtest",
         "kind": 2,
         "importPath": "t10",
         "description": "t10",
-        "peekOfCode": "def start_backtest_in_thread():\n    # Reset previous results\n    st.session_state[\"backtest_results\"] = None\n    # Create and start thread\n    t = threading.Thread(target=run_backtest, args=())\n    t.start()\n    st.session_state[\"thread\"] = t\n# Button to start the backtest in a thread\nif st.button(\"Start Backtest\"):\n    if st.session_state[\"thread\"] is None or not st.session_state[\"thread\"].is_alive():",
+        "peekOfCode": "def start_background_backtest():\n    # Reset old results\n    st.session_state[\"backtest_results\"] = None\n    st.session_state[\"tear_sheet_figure\"] = None\n    # Start a thread to run the backtest\n    worker_thread = threading.Thread(target=run_backtest, args=())\n    worker_thread.start()\n# Button to trigger backtest\nif st.button(\"Start Backtest\"):\n    # Prevent multiple backtest runs",
         "detail": "t10",
         "documentation": {}
     }
