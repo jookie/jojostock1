@@ -8,7 +8,7 @@ from termcolor import colored
 
 from lumibot import LUMIBOT_DEFAULT_PYTZ
 import pandas as pd
-import streamlit as st
+# DOV = import streamlit as st
 
 def get_chunks(l, chunk_size):
     chunks = []
@@ -133,7 +133,7 @@ def print_progress_bar(
     file.write(line)
     file.flush()
     
-    st.write("============================")
+    # st.write("DOV ============================")
 
 
 def get_lumibot_datetime():
