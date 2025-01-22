@@ -84,11 +84,17 @@ def run_backtest():
         # Start live trading (This is a blocking call)
         trader = Trader()
         trader.add_strategy(strategy)
-        trader.run_all()  # This may never exit, be aware for hosting timeouts
+        # Start the trading in a separate thread to avoid blocking Streamlit
+        trader_thread = threading.Thread(target=trader.run_all)
+        trader_thread.start()
 
+        # Display a progress bar in the Streamlit app
+        while trader_thread.is_alive():
+            st.progress(100 * (1 - trader_thread._stop.__self__.is_alive()))
+            st.write("Running live trading...")
+        
     finally:
         st.session_state["backtest_running"] = False
-
 
 def start_background_backtest():
     # Reset old results
@@ -98,7 +104,6 @@ def start_background_backtest():
     # Start a thread to run the backtest
     worker_thread = threading.Thread(target=run_backtest, args=())
     worker_thread.start()
-
 
 # Button to trigger backtest
 if st.button("Start Backtest"):
