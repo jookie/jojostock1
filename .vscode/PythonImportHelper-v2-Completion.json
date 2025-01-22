@@ -9917,30 +9917,6 @@
         "documentation": {}
     },
     {
-        "label": "TimeSeries",
-        "importPath": "alpha_vantage.timeseries",
-        "description": "alpha_vantage.timeseries",
-        "isExtraImport": true,
-        "detail": "alpha_vantage.timeseries",
-        "documentation": {}
-    },
-    {
-        "label": "TimeSeries",
-        "importPath": "alpha_vantage.timeseries",
-        "description": "alpha_vantage.timeseries",
-        "isExtraImport": true,
-        "detail": "alpha_vantage.timeseries",
-        "documentation": {}
-    },
-    {
-        "label": "TimeSeries",
-        "importPath": "alpha_vantage.timeseries",
-        "description": "alpha_vantage.timeseries",
-        "isExtraImport": true,
-        "detail": "alpha_vantage.timeseries",
-        "documentation": {}
-    },
-    {
         "label": "LUMIBOT_DEFAULT_PYTZ",
         "importPath": "lumibot",
         "description": "lumibot",
@@ -17099,69 +17075,6 @@
         "documentation": {}
     },
     {
-        "label": "key",
-        "kind": 5,
-        "importPath": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "key = open('../1-alphavantage.txt').read()\n# ### 3. Create TimeSeries Object and Make API Call\n# In[8]:\nts = TimeSeries(key, output_format='pandas')\ndata, meta = ts.get_intraday('TSLA', interval='1min', outputsize='full')\n# ### 4. Examine Data\n# In[7]:\nmeta",
-        "detail": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "ts",
-        "kind": 5,
-        "importPath": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "ts = TimeSeries(key, output_format='pandas')\ndata, meta = ts.get_intraday('TSLA', interval='1min', outputsize='full')\n# ### 4. Examine Data\n# In[7]:\nmeta\n# In[8]:\ndata.info()\n# In[9]:",
-        "detail": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "columns",
-        "kind": 5,
-        "importPath": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "columns = ['open', 'high', 'low', 'close', 'volume']\ndata.columns = columns\n# In[13]:\ndata['TradeDate'] = data.index.date\ndata['time'] = data.index.time\n# In[14]:\ndata.loc['2020-12-31']\n# In[15]:",
-        "detail": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "data.columns",
-        "kind": 5,
-        "importPath": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "data.columns = columns\n# In[13]:\ndata['TradeDate'] = data.index.date\ndata['time'] = data.index.time\n# In[14]:\ndata.loc['2020-12-31']\n# In[15]:\nmarket = data.between_time('09:30:00', '16:00:00').copy()",
-        "detail": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "data['TradeDate']",
-        "kind": 5,
-        "importPath": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "data['TradeDate'] = data.index.date\ndata['time'] = data.index.time\n# In[14]:\ndata.loc['2020-12-31']\n# In[15]:\nmarket = data.between_time('09:30:00', '16:00:00').copy()\nmarket.sort_index(inplace=True)\nmarket.info()\n# In[16]:",
-        "detail": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "data['time']",
-        "kind": 5,
-        "importPath": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "data['time'] = data.index.time\n# In[14]:\ndata.loc['2020-12-31']\n# In[15]:\nmarket = data.between_time('09:30:00', '16:00:00').copy()\nmarket.sort_index(inplace=True)\nmarket.info()\n# In[16]:",
-        "detail": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "market",
-        "kind": 5,
-        "importPath": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "market = data.between_time('09:30:00', '16:00:00').copy()\nmarket.sort_index(inplace=True)\nmarket.info()\n# In[16]:\nmarket.groupby('TradeDate').agg({'low':min, 'high':max})\n# In[17]:\nmarket.loc[market.groupby('TradeDate')['low'].idxmin()]\n# In[18]:",
-        "detail": "docs.lib.MLTradingBot.lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
         "label": "CcxtBacktestingExampleStrategy",
         "kind": 6,
         "importPath": "docs.lib.MLTradingBot.lumibot.example_strategies.ccxt_backtesting_example",
@@ -18878,69 +18791,6 @@
         "description": "docs.lib.MLTradingBot.t1",
         "peekOfCode": "strategy = MLTrader(name='mlstrat', broker=broker, \n                    parameters={\"symbol\":\"SPY\", \n                                \"cash_at_risk\":.5})\nstrategy.backtest(\n    YahooDataBacktesting, \n    start_date, \n    end_date, \n    parameters={\"symbol\":\"SPY\", \"cash_at_risk\":.5}\n)\ntrader.add_strategy(strategy)",
         "detail": "docs.lib.MLTradingBot.t1",
-        "documentation": {}
-    },
-    {
-        "label": "key",
-        "kind": 5,
-        "importPath": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "key = open('../1-alphavantage.txt').read()\n# ### 3. Create TimeSeries Object and Make API Call\n# In[8]:\nts = TimeSeries(key, output_format='pandas')\ndata, meta = ts.get_intraday('TSLA', interval='1min', outputsize='full')\n# ### 4. Examine Data\n# In[7]:\nmeta",
-        "detail": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "ts",
-        "kind": 5,
-        "importPath": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "ts = TimeSeries(key, output_format='pandas')\ndata, meta = ts.get_intraday('TSLA', interval='1min', outputsize='full')\n# ### 4. Examine Data\n# In[7]:\nmeta\n# In[8]:\ndata.info()\n# In[9]:",
-        "detail": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "columns",
-        "kind": 5,
-        "importPath": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "columns = ['open', 'high', 'low', 'close', 'volume']\ndata.columns = columns\n# In[13]:\ndata['TradeDate'] = data.index.date\ndata['time'] = data.index.time\n# In[14]:\ndata.loc['2020-12-31']\n# In[15]:",
-        "detail": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "data.columns",
-        "kind": 5,
-        "importPath": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "data.columns = columns\n# In[13]:\ndata['TradeDate'] = data.index.date\ndata['time'] = data.index.time\n# In[14]:\ndata.loc['2020-12-31']\n# In[15]:\nmarket = data.between_time('09:30:00', '16:00:00').copy()",
-        "detail": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "data['TradeDate']",
-        "kind": 5,
-        "importPath": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "data['TradeDate'] = data.index.date\ndata['time'] = data.index.time\n# In[14]:\ndata.loc['2020-12-31']\n# In[15]:\nmarket = data.between_time('09:30:00', '16:00:00').copy()\nmarket.sort_index(inplace=True)\nmarket.info()\n# In[16]:",
-        "detail": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "data['time']",
-        "kind": 5,
-        "importPath": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "data['time'] = data.index.time\n# In[14]:\ndata.loc['2020-12-31']\n# In[15]:\nmarket = data.between_time('09:30:00', '16:00:00').copy()\nmarket.sort_index(inplace=True)\nmarket.info()\n# In[16]:",
-        "detail": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "market",
-        "kind": 5,
-        "importPath": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "market = data.between_time('09:30:00', '16:00:00').copy()\nmarket.sort_index(inplace=True)\nmarket.info()\n# In[16]:\nmarket.groupby('TradeDate').agg({'low':min, 'high':max})\n# In[17]:\nmarket.loc[market.groupby('TradeDate')['low'].idxmin()]\n# In[18]:",
-        "detail": "docs.lib.lumi.example_strategies.alphavantage.1-alphavantage_demo",
         "documentation": {}
     },
     {
@@ -22883,69 +22733,6 @@
         "description": "lumibot.example_strategies.FastTrading.main",
         "peekOfCode": "stats_file = f\"logs/{strategy_name}_{datestring}.csv\"\n# Run the actual backtest\nprint(f\"Starting Backtest...\")\nstrategy.backtest(\n    YahooDataBacktesting, \n    backtesting_start, \n    backtesting_end,\n    stats_file=stats_file\n) \n###",
         "detail": "lumibot.example_strategies.FastTrading.main",
-        "documentation": {}
-    },
-    {
-        "label": "key",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "key = open('../1-alphavantage.txt').read()\n# ### 3. Create TimeSeries Object and Make API Call\n# In[8]:\nts = TimeSeries(key, output_format='pandas')\ndata, meta = ts.get_intraday('TSLA', interval='1min', outputsize='full')\n# ### 4. Examine Data\n# In[7]:\nmeta",
-        "detail": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "ts",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "ts = TimeSeries(key, output_format='pandas')\ndata, meta = ts.get_intraday('TSLA', interval='1min', outputsize='full')\n# ### 4. Examine Data\n# In[7]:\nmeta\n# In[8]:\ndata.info()\n# In[9]:",
-        "detail": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "columns",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "columns = ['open', 'high', 'low', 'close', 'volume']\ndata.columns = columns\n# In[13]:\ndata['TradeDate'] = data.index.date\ndata['time'] = data.index.time\n# In[14]:\ndata.loc['2020-12-31']\n# In[15]:",
-        "detail": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "data.columns",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "data.columns = columns\n# In[13]:\ndata['TradeDate'] = data.index.date\ndata['time'] = data.index.time\n# In[14]:\ndata.loc['2020-12-31']\n# In[15]:\nmarket = data.between_time('09:30:00', '16:00:00').copy()",
-        "detail": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "data['TradeDate']",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "data['TradeDate'] = data.index.date\ndata['time'] = data.index.time\n# In[14]:\ndata.loc['2020-12-31']\n# In[15]:\nmarket = data.between_time('09:30:00', '16:00:00').copy()\nmarket.sort_index(inplace=True)\nmarket.info()\n# In[16]:",
-        "detail": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "data['time']",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "data['time'] = data.index.time\n# In[14]:\ndata.loc['2020-12-31']\n# In[15]:\nmarket = data.between_time('09:30:00', '16:00:00').copy()\nmarket.sort_index(inplace=True)\nmarket.info()\n# In[16]:",
-        "detail": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "documentation": {}
-    },
-    {
-        "label": "market",
-        "kind": 5,
-        "importPath": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "description": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
-        "peekOfCode": "market = data.between_time('09:30:00', '16:00:00').copy()\nmarket.sort_index(inplace=True)\nmarket.info()\n# In[16]:\nmarket.groupby('TradeDate').agg({'low':min, 'high':max})\n# In[17]:\nmarket.loc[market.groupby('TradeDate')['low'].idxmin()]\n# In[18]:",
-        "detail": "lumibot.example_strategies.alphavantage.1-alphavantage_demo",
         "documentation": {}
     },
     {
