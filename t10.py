@@ -2,7 +2,7 @@ import streamlit as st
 import threading
 from datetime import datetime
 
-# LumiBot imports
+# LumiBot imports v1
 from lumibot.backtesting import YahooDataBacktesting
 from lumibot.brokers import Alpaca
 from lumibot.traders import Trader
