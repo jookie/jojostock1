@@ -11,11 +11,13 @@ from datetime import timedelta
 
 # from lumiwealth_tradier import Tradier as _Tradier
 
+# This class extends the Strategy class from Lumibot and overrides its lifecycle methods.
 class BrokerTest(Strategy):
     # =====Overloading lifecycle methods=============
 
     def initialize(self):
         # Set the time between trading iterations
+        # strategy runs every 20 seconds.
         self.sleeptime = "20S"
 
         # Set the market to 24/7 since those are the hours for the crypto market
@@ -24,6 +26,7 @@ class BrokerTest(Strategy):
         # Record the last trade time
         self.last_trade_time = None
 
+        # The strike price (also known as the exercise price) is a crucial concept in options trading. It refers to the price at which an option contract allows the holder to buy (for call options) or sell (for put options) the underlying asset.
         self.strike = 520
 
     def on_trading_iteration(self):

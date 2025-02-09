@@ -1,64 +1,105 @@
+import streamlit as st
+import threading
+import contextlib
+import sys
+import os
+from datetime import datetime
+from lumibot.brokers import Alpaca
+from lumibot.backtesting import YahooDataBacktesting
+from lumibot.strategies import Strategy
 
-2. **Ensure Virtual Environment is Activated:**
-   It is recommended to use a virtual environment to manage your project's dependencies. You can activate your virtual environment using:
+# Suppress Streamlit thread context warnings
+def suppress_st_warnings():
+    original_st_write = st.write
+    def modified_st_write(*args, **kwargs):
+        with contextlib.redirect_stdout(sys.stdout):
+            with contextlib.redirect_stderr(sys.stderr):
+                original_st_write(*args, **kwargs)
+    st.write = modified_st_write
 
-   - **For macOS/Linux:**
-     ```bash
-     source venv/bin/activate
-     ```
+# Set dummy credentials
+os.environ["APCA_API_KEY_ID"] = "BACKTEST"
+os.environ["APCA_API_SECRET_KEY"] = "BACKTEST"
 
-   If you haven't created a virtual environment, you can create one with:
+class BacktestStrategy(Strategy):
+    def initialize(self):
+        self.sleeptime = "1D"
+        self.backtest_progress = 0
+        
+    def on_trading_iteration(self):
+        if self.backtest_running:
+            days_total = (self.datetime_end - self.datetime_start).days
+            days_done = (self.get_datetime() - self.datetime_start).days
+            self.backtest_progress = days_done / days_total
+            st.session_state.backtest_progress = self.backtest_progress
 
-   ```bash
-   python -m venv venv
-   ```
+# Initialize session state
+if 'backtest_running' not in st.session_state:
+    st.session_state.backtest_running = False
+if 'backtest_progress' not in st.session_state:
+    st.session_state.backtest_progress = 0
+if 'backtest_results' not in st.session_state:
+    st.session_state.backtest_results = None
 
-3. **Install Packages:**
-   Run the following command to install all the packages listed in the `requirements.txt` file:
+def run_backtest():
+    suppress_st_warnings()  # Apply warning suppression
+    try:
+        broker = Alpaca(
+            {"API_KEY": "BACKTEST", "API_SECRET": "BACKTEST"},
+            connect_stream=False,
+            backtesting=True
+        )
+        
+        backtesting = YahooDataBacktesting(
+            datetime_start=datetime(2023, 1, 1),
+            datetime_end=datetime(2023, 3, 31),
+            broker=broker
+        )
+        
+        strategy = BacktestStrategy(broker=broker, budget=100000)
+        strategy.backtest_running = True
+        strategy.datetime_start = backtesting.datetime_start
+        strategy.datetime_end = backtesting.datetime_end
+        
+        results = strategy.backtest()
+        st.session_state.backtest_results = results
+    except Exception as e:
+        st.session_state.backtest_results = f"Error: {str(e)}"
+    finally:
+        st.session_state.backtest_running = False
 
-   ```bash
-pip install -r requirements.txt
-  
-4. **Verify Installation:**
-   You can verify that the packages were installed correctly by listing installed packages:
+def start_background_backtest():
+    st.session_state.backtest_running = True
+    st.session_state.backtest_results = None
+    thread = threading.Thread(target=run_backtest, daemon=True)
+    thread.start()
 
-   ```bash
-   pip list
-   ```
+def cancel_backtest():
+    st.session_state.backtest_running = False
 
-# 🗒️ Answer 2
-To collapse a cell in a Jupyter Notebook, you can follow these steps:
-2. **Install nbextensions**: If you're using classic Jupyter Notebook, you can install `nbextensions`, which provides additional functionality, including the ability to collapse cells.
-   - Install nbextensions using the following command:
-     ```bash
-     pip install jupyter_contrib_nbextensions
-     jupyter contrib nbextension install --user
-     ```
-   - Once installed, open Jupyter Notebook, go to the "Nbextensions" tab, and enable "Collapsible Headings" or other relevant extensions.
+# Streamlit UI
+st.title("Backtesting Controller")
 
-3. **Use Keyboard Shortcuts**: In JupyterLab, you can also use keyboard shortcuts to collapse cells:
-   - Select the cell you want to collapse.
-   - Use `Ctrl` + `Shift` + `-` to collapse the cell.
-   - Use `Ctrl` + `Shift` + `+` to expand the cell again.
+col1, col2 = st.columns(2)
+with col1:
+    if st.button("Start Backtest", disabled=st.session_state.backtest_running):
+        start_background_backtest()
 
-## Start a new repository
-rm -rf .git
-git init
+with col2:
+    if st.button("Cancel Backtest", disabled=not st.session_state.backtest_running):
+        cancel_backtest()
 
+# Progress bar
+if st.session_state.backtest_running:
+    progress_bar = st.progress(st.session_state.backtest_progress)
+    st.caption("Backtest in progress...")
+else:
+    st.session_state.backtest_progress = 0
 
-
-
-
-<div align="left">
-   <a href="https://www.facebook.com/watch?v=837476216740094" target="_blank">
-        <img src="jojo/img/386622_facebook_icon.png" alt="Facebook Button" style="width: 20px; height: 20px;">
-  </a>
-     <a href="https://www.facebook.com/watch?v=837476216740094" target="_blank">
-        <img src="jojo/img/386622_facebook_icon.png" alt="Facebook Button" style="width: 20px; height: 20px;">
-  </a>
-</div>
-How Configure automation to run the python script  four times a day using Vercel's scheduling show source code project structure and folders and files I have vercel and git hub repo show how to deploy and version control on vrcel and git hub.
-step-by-step detailed guide and code to configuring automation to run a Python script called main.py four times a day using Vercel's scheduling, along with how to set up your project structure, version control with GitHub, how to deploy on Vercel and how to run the script automaticaly or manually from a control panel.
-The script main.py create a file called hello.txt with the text  "step-by-step detailed guide and code" the user should have an access to the file on demand
-
-
+# Display results
+if st.session_state.backtest_results and not st.session_state.backtest_running:
+    if isinstance(st.session_state.backtest_results, str):
+        st.error(st.session_state.backtest_results)
+    else:
+        st.success("Backtest completed successfully!")
+        st.write(f"Final Portfolio Value: ${st.session_state.backtest_results['ending_portfolio_value']:,.2f}")

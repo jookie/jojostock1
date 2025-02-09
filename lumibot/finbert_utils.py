@@ -6,7 +6,6 @@ import sys ; sys.path.append("~/lib/rl")
 import warnings ; warnings.filterwarnings("ignore")
 import pandas as pd
 
-
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 from typing import Tuple 
@@ -21,6 +20,35 @@ labels = ["positive", "negative", "neutral"]
 # added by dov to prevent TOKENIZERS_PARALLELISM the warning:
 # TOKENIZERS_PARALLELISM=False
 
+
+# Step 1: Sentiment Analysis with BERT
+# We will use the transformers library from Hugging Face to load a pre-trained BERT model for sentiment analysis. This model will classify financial news or tweets as positive, neutral, or negative.
+
+def get_sentiment_score(text):
+    # DOV
+    from transformers import pipeline
+    # Load pre-trained BERT model for sentiment analysis
+    sentiment_analyzer = pipeline("sentiment-analysis", model="finiteautomata/bertweet-base-sentiment-analysis")
+        
+    result = sentiment_analyzer(text)
+    sentiment = result[0]['label']
+    score = result[0]['score']
+    return sentiment, score
+
+# Step 2: Data Collection
+# For this example, we will assume that you have a dataset of financial news or tweets. You can use APIs like Twitter API or financial news APIs to collect real-time data.
+def collect_data():
+    import pandas as pd
+    # Example dataset
+    data = {
+        'date': ['2023-10-01', '2023-10-02', '2023-10-03'],
+        'text': ['Great earnings report!', 'Market crash expected.', 'Stable growth predicted.']
+    }
+    df = pd.DataFrame(data)
+    # Apply sentiment analysis
+    df['sentiment'], df['score'] = zip(*df['text'].apply(get_sentiment_score))
+    print(df)
+    
 def estimate_sentiment(news):
     if news:
         tokens = tokenizer(news, return_tensors="pt", padding=True).to(device)
