@@ -1,12 +1,5 @@
-import streamlit as st
-import threading
-import contextlib
-import sys
-import os
-from datetime import datetime
-from lumibot.brokers import Alpaca
-from lumibot.backtesting import YahooDataBacktesting
-from lumibot.strategies import Strategy
+source venv/bin/activate
+
 
 # Suppress Streamlit thread context warnings
 def suppress_st_warnings():

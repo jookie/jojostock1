@@ -1,132 +1,111 @@
 import streamlit as st
 import threading
+import time
 from datetime import datetime
-
-# LumiBot imports v1
-from lumibot.backtesting import YahooDataBacktesting
 from lumibot.brokers import Alpaca
-from lumibot.traders import Trader
-from lumibot.credentials import ALPACA_CREDS
-# Import your strategy (example)
-from lumibot.example_strategies.stock_sentiment import StockSentiment
+from lumibot.backtesting import YahooDataBacktesting
+from lumibot.strategies import Strategy
+import pandas as pd
+import os
+import warnings
 
-st.set_page_config(
-    page_title="FinBERT: Financial Sentiment Analysis with BERT",
-    layout="wide",
-    page_icon=':bar_chart:',
-)
+# Suppress all warnings
+warnings.filterwarnings("ignore")
+os.environ['STREAMLIT_RUNNING_IN_BARE_MODE'] = '1'
 
-st.title("Sentiment-Based Trading Bot with Live Trading")
-st.subheader("FinBERT pre-trained NLP model to analyze sentiment of financial text.")
-st.write("""
-Automated sentiment or polarity analysis of texts produced by financial actors using NLP methods.
-""")
+# Global progress state
+class ProgressState:
+    def __init__(self):
+        self.value = 0.0
+        self.lock = threading.Lock()
+        self.trading_days = None
+        
+    def initialize(self, start, end):
+        """Calculate actual trading days"""
+        dates = pd.bdate_range(start=start, end=end)
+        self.trading_days = len(dates)
+        
+    def update(self, current_date):
+        """Update progress based on business days"""
+        with self.lock:
+            days_passed = pd.bdate_range(
+                start=self.start_date, 
+                end=current_date
+            ).nunique()
+            self.value = min(days_passed / self.trading_days, 1.0)
 
-# Store results in session_state so we can display them from the main thread
-if "backtest_results" not in st.session_state:
-    st.session_state["backtest_results"] = None
-if "tear_sheet_figure" not in st.session_state:
-    st.session_state["tear_sheet_figure"] = None
-if "backtest_running" not in st.session_state:
-    st.session_state["backtest_running"] = False
+progress = ProgressState()
 
-def run_backtest():
-    """Long-running backtest & live trading in a background thread."""
+class DailyProgressStrategy(Strategy):
+    def initialize(self):
+        self.sleeptime = "1D"  # Match Yahoo's daily data
+        progress.initialize(
+            self.parameters["start_date"],
+            self.parameters["end_date"]
+        )
+        
+    def on_trading_iteration(self):
+        progress.update(self.get_datetime())
+        time.sleep(0.01)  # Allow UI updates
+
+def backtest_worker():
     try:
-        st.session_state["backtest_running"] = True
-
-        # Define the backtest period
-        start_date = datetime(2020,1,1)
-        end_date   = datetime(2020,11,12)
-        print(f"[Thread] Starting backtest from {start_date} to {end_date}...")
-
-        # Set up broker and strategy
-        broker = Alpaca(ALPACA_CREDS)
-        strategy = StockSentiment(
-            name="mlstrat",
+        from lumibot.credentials import ALPACA_CREDS
+        broker = Alpaca(
+            ALPACA_CREDS, 
+            connect_stream=False
+        )
+        
+        start_date = datetime(2023, 1, 1)
+        end_date = datetime(2023, 12, 31)
+        
+        progress.start_date = start_date
+        
+        backtesting = YahooDataBacktesting(
+            datetime_start=start_date,
+            datetime_end=end_date,
+            broker=broker
+        )
+        
+        strategy = DailyProgressStrategy(
             broker=broker,
+            budget=100000,
             parameters={
-                "symbol": "SPY",
-                "cash_at_risk": 0.5
+                "start_date": start_date,
+                "end_date": end_date
             }
         )
-
-        # Run the backtest
-        results = strategy.backtest(
-            YahooDataBacktesting,
-            start_date,
-            end_date,
-            parameters={"symbol":"SPY", "cash_at_risk":0.5},
-        )
-        st.session_state["backtest_results"] = results
-
-        # OPTIONAL: Generate a tear sheet if LumiBot (or you) provide a function
-        # Adjust this to your actual tear sheet method:
-        # e.g. `fig = results.create_tear_sheet()`
-        # or   `fig = results.display_tear_sheet()`
-        # Make sure the function returns a Matplotlib figure rather than printing
-        # or displaying inline. If it displays inline, you need to adapt it to return a figure.
-
-        if hasattr(results, "create_tear_sheet"):
-            fig = results.create_tear_sheet()
-            st.session_state["tear_sheet_figure"] = fig
-        elif hasattr(results, "display_tear_sheet"):
-            # If display_tear_sheet returns a figure
-            fig = results.display_tear_sheet(return_fig=True)
-            st.session_state["tear_sheet_figure"] = fig
-        else:
-            # If there's no tear sheet method, you'll need custom logic:
-            print("[Thread] No tear sheet method found in results.")
-            st.session_state["tear_sheet_figure"] = None
-
-        print("[Thread] Backtest finished. Starting live trading...")
-
-        # Start live trading (This is a blocking call)
-        trader = Trader()
-        trader.add_strategy(strategy)
-        # Start the trading in a separate thread to avoid blocking Streamlit
-        trader_thread = threading.Thread(target=trader.run_all)
-        trader_thread.start()
-
-        # Display a progress bar in the Streamlit app
-        while trader_thread.is_alive():
-            st.progress(100 * (1 - trader_thread._stop.__self__.is_alive()))
-            st.write("Running live trading...")
         
-    finally:
-        st.session_state["backtest_running"] = False
+        strategy.backtest()
+        progress.value = 1.0  # Force completion
+        
+    except Exception as e:
+        st.error(f"Backtest failed: {str(e)}")
 
-def start_background_backtest():
-    # Reset old results
-    st.session_state["backtest_results"] = None
-    st.session_state["tear_sheet_figure"] = None
+# Streamlit UI
+st.title("Stock Backtest Analyzer")
 
-    # Start a thread to run the backtest
-    worker_thread = threading.Thread(target=run_backtest, args=())
-    worker_thread.start()
+if st.button("Start Analysis"):
+    progress.value = 0.0
+    thread = threading.Thread(target=backtest_worker, daemon=True)
+    thread.start()
 
-# Button to trigger backtest
-if st.button("Start Backtest"):
-    # Prevent multiple backtest runs
-    if not st.session_state["backtest_running"]:
-        st.write("Backtest is starting in the background...")
-        start_background_backtest()
-    else:
-        st.warning("A backtest is already running!")
+placeholder = st.empty()
+progress_bar = st.progress(0.0)
 
-# Status / Results display
-if st.session_state["backtest_running"]:
-    st.info("Backtest is running... (this might take a while).")
-
-elif st.session_state["backtest_results"] is not None:
-    st.success("Backtest completed!")
-    st.write("### Backtest Results")
-    st.write(st.session_state["backtest_results"])
-
-    # Display the tear sheet if we have it
-    if st.session_state["tear_sheet_figure"] is not None:
-        st.write("### Tear Sheet")
-        st.pyplot(st.session_state["tear_sheet_figure"])
-    else:
-        st.warning("No tear sheet figure available.")
-
+# UI update loop
+while True:
+    try:
+        current_value = progress.value
+        progress_bar.progress(current_value)
+        
+        # Update every 100ms
+        time.sleep(0.1)
+        
+        # Exit condition
+        if current_value >= 0.999:
+            placeholder.success("Analysis complete!")
+            break
+            
+    except KeyboardInterrupt:
+        break

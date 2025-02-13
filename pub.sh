@@ -1,3 +1,6 @@
+# source venv/bin/activate
+# source venv/bin/activate
+
 # rm -rf .git
 # export PATH=/usr/local/share/npm/bin:$PATH
 # git checkout -b my-new-branch
