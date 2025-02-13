@@ -1,0 +1,9 @@
+time,strategy,identifier,symbol,side,type,status,multiplier,time_in_force,asset.strike,asset.multiplier,asset.asset_type,price,filled_quantity,trade_cost
+2023-06-05 01:00:00-04:00,CcxtBacktestingExampleStrategy,e16edf6973e14eaea2d65dc7c8491ecf,BTC,buy,market,new,1,gtc,0.0,1,crypto,,,
+2023-06-05 01:00:00-04:00,CcxtBacktestingExampleStrategy,e16edf6973e14eaea2d65dc7c8491ecf,BTC,buy,market,fill,1,gtc,0.0,1,crypto,27118.0,1.0,0.0
+2023-06-21 01:00:00-04:00,CcxtBacktestingExampleStrategy,46391bf90c774ed5988b96414660fbca,BTC,sell,market,new,1,gtc,0.0,1,crypto,,,
+2023-06-21 01:00:00-04:00,CcxtBacktestingExampleStrategy,46391bf90c774ed5988b96414660fbca,BTC,sell,market,fill,1,gtc,0.0,1,crypto,28316.1,1.0,0.0
+2023-08-17 01:00:00-04:00,CcxtBacktestingExampleStrategy,5590c31bf3ec4beaa030b7fe5b167377,BTC,buy,market,new,1,gtc,0.0,1,crypto,,,
+2023-08-17 01:00:00-04:00,CcxtBacktestingExampleStrategy,5590c31bf3ec4beaa030b7fe5b167377,BTC,buy,market,fill,1,gtc,0.0,1,crypto,28732.8,1.0,0.0
+2023-10-23 01:00:00-04:00,CcxtBacktestingExampleStrategy,c01002c5658848ef96d8c00e2dca833e,BTC,sell,market,new,1,gtc,0.0,1,crypto,,,
+2023-10-23 01:00:00-04:00,CcxtBacktestingExampleStrategy,c01002c5658848ef96d8c00e2dca833e,BTC,sell,market,fill,1,gtc,0.0,1,crypto,29976.6,1.0,0.0

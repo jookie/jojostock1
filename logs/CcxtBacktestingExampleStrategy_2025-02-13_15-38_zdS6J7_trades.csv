@@ -1,0 +1,9 @@
+time,strategy,identifier,symbol,side,type,status,multiplier,time_in_force,asset.strike,asset.multiplier,asset.asset_type,price,filled_quantity,trade_cost
+2023-03-09 00:00:00-05:00,CcxtBacktestingExampleStrategy,259516df34874110a6e26a133eab1354,ETH,buy,market,new,1,gtc,0.0,1,crypto,,,
+2023-03-09 00:00:00-05:00,CcxtBacktestingExampleStrategy,259516df34874110a6e26a133eab1354,ETH,buy,market,fill,1,gtc,0.0,1,crypto,1534.0,17.0,0.0
+2023-05-28 01:00:00-04:00,CcxtBacktestingExampleStrategy,1bfc0a3b29d54bc7b0d5d3506bdbc670,ETH,sell,market,new,1,gtc,0.0,1,crypto,,,
+2023-05-28 01:00:00-04:00,CcxtBacktestingExampleStrategy,1bfc0a3b29d54bc7b0d5d3506bdbc670,ETH,sell,market,fill,1,gtc,0.0,1,crypto,1828.81,17.0,0.0
+2023-06-14 01:00:00-04:00,CcxtBacktestingExampleStrategy,b706b840ee3c419ab1eb55627cf7a665,ETH,buy,market,new,1,gtc,0.0,1,crypto,,,
+2023-06-14 01:00:00-04:00,CcxtBacktestingExampleStrategy,b706b840ee3c419ab1eb55627cf7a665,ETH,buy,market,fill,1,gtc,0.0,1,crypto,1740.0,16.0,0.0
+2023-10-23 01:00:00-04:00,CcxtBacktestingExampleStrategy,fbd64aa4f066438489ee97522a5c08aa,ETH,sell,market,new,1,gtc,0.0,1,crypto,,,
+2023-10-23 01:00:00-04:00,CcxtBacktestingExampleStrategy,fbd64aa4f066438489ee97522a5c08aa,ETH,sell,market,fill,1,gtc,0.0,1,crypto,1663.72,16.0,0.0

@@ -1,65 +1,102 @@
-from datetime import datetime
-
-from lumibot.credentials import IS_BACKTESTING
+import streamlit as st
+from datetime import datetime, date
+from lumibot.entities import Asset, Order
+from lumibot.backtesting import YahooDataBacktesting
+from lumibot.strategies.strategy import Strategy
 from lumibot.example_strategies.drift_rebalancer import DriftRebalancer
+from pandas import DataFrame
 
-"""
-Strategy Description:
+class Classic60_40Strategy(Strategy):
+    def initialize(self, cash_at_risk: float = 0.25, drift_threshold: float = 0.05, stock_symbol: str = "SPY", bond_symbol: str = "TLT", stock_allocation: float = 0.60):
+        self.set_market("NYSE")
+        self.sleeptime = "1D"
+        self.cash_at_risk = cash_at_risk
+        self.drift_threshold = drift_threshold
+        self.stock_symbol = stock_symbol
+        self.bond_symbol = bond_symbol
+        self.target_weights = {stock_symbol: stock_allocation, bond_symbol: 1 - stock_allocation}
+        self.last_trade = None
 
-This script implements a "Drift Rebalancer" strategy for a classic 60/40 portfolio.
-It maintains a portfolio consisting of:
-    - 60% stocks (SPY - S&P 500 ETF)
-    - 40% bonds (TLT - Long-term US Treasury ETF)
+    def on_trading_iteration(self):
+        current_dt = self.get_datetime()
+        # Implement rebalance logic here
 
-The strategy monitors the portfolio daily and rebalances when the asset allocation 
-devitates beyond a specified threshold (5%).
-If the weight of an asset drifts beyond this threshold, the strategy sells the overweight asset 
-and buys the underweight asset to restore the target balance.
+# Streamlit UI
+st.set_page_config(page_title="Custom Portfolio Backtesting", layout="wide")
 
-This script is designed for **backtesting only** and will not run in live trading mode.
-"""
-
-if __name__ == "__main__":
-    # Ensure that the script is running in backtesting mode
-    if not IS_BACKTESTING:
-        print("This strategy is not meant to be run live. Please set IS_BACKTESTING to True.")
-        exit()
-    else:
-        # Define strategy parameters
-        parameters = {
-            "market": "NYSE",  # Market where the strategy is executed
-            "sleeptime": "1D",  # Time interval for rebalancing (daily)
-            "drift_threshold": "0.05",  # Rebalance when assets drift beyond 5% of target weights
-            "acceptable_slippage": "0.005",  # 0.5% slippage tolerance for order execution
-            "fill_sleeptime": 15,  # Order fill wait time in seconds
-            "target_weights": {
-                "SPY": "0.60",  # 60% allocated to SPY (stocks)
-                "TLT": "0.40"   # 40% allocated to TLT (bonds)
-            },
-            "shorting": False  # Short selling is not allowed
+st.markdown(
+    """
+    <style>
+        .stButton>button {
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
         }
+        .stButton>button:hover {
+            background-color: #45a049;
+        }
+        .stTitle {
+            color: #1E88E5;
+            font-size: 36px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-        from lumibot.backtesting import YahooDataBacktesting
+st.markdown("<div class='stTitle'>📈 Custom Portfolio Backtesting Tool</div>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center; font-size:18px;'>This strategy allows you to customize your portfolio allocation by selecting different stocks and bonds, as well as adjusting their weights dynamically.</p>", unsafe_allow_html=True)
+st.markdown("---")
 
-        # Define backtesting start and end dates
-        backtesting_start = datetime(2023, 1, 2)  # Backtesting starts from Jan 2, 2023
-        backtesting_end = datetime(2024, 10, 31)  # Backtesting runs until Oct 31, 2024
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.subheader("Asset Selection")
+    stock_symbol = st.selectbox("Select Stock ETF", ["SPY", "QQQ", "DIA", "VTI"])
+    bond_symbol = st.selectbox("Select Bond ETF", ["TLT", "AGG", "BND", "IEF"])
 
-        # Run the backtest using Yahoo Finance data
-        results = DriftRebalancer.backtest(
-            YahooDataBacktesting,  # Data source for historical prices
-            backtesting_start,  # Start date for backtest
-            backtesting_end,  # End date for backtest
-            benchmark_asset="SPY",  # Compare performance against SPY (S&P 500 ETF)
-            parameters=parameters,  # Pass strategy parameters
-            show_plot=False,  # Disable plot visualization
-            show_tearsheet=False,  # Disable performance report generation
-            save_tearsheet=False,  # Do not save performance report
-            show_indicators=False,  # Do not display additional indicators
-            save_logfile=False,  # Do not save logs
-            # show_progress_bar=False,  # Uncomment to hide progress bar
-            # quiet_logs=False  # Uncomment to show detailed logs
-        )
+with col2:
+    st.subheader("Allocation Settings")
+    stock_allocation = st.slider("Stock Allocation (%)", 10, 90, 60) / 100
+    bond_allocation = 1 - stock_allocation  # Ensure total sums to 100%
+    st.write(f"Bond Allocation: {bond_allocation * 100:.0f}%")
 
-        # Print backtest results
-        print(results)
+with col3:
+    st.subheader("Backtesting Period")
+    col3_1, col3_2 = st.columns(2)
+    with col3_1:
+        start_date = datetime.combine(st.date_input("Start Date", date(2023, 1, 2)), datetime.min.time())
+    with col3_2:
+        end_date = datetime.combine(st.date_input("End Date", date(2024, 10, 31)), datetime.min.time())
+
+st.markdown("---")
+
+if st.button("🚀 Run Backtest", use_container_width=True):
+    parameters = {
+        "market": "NYSE",
+        "sleeptime": "1D",
+        "drift_threshold": 0.05,
+        "cash_at_risk": 0.25,
+        "target_weights": {stock_symbol: stock_allocation, bond_symbol: bond_allocation},
+    }
+
+    results = DriftRebalancer.backtest(
+        YahooDataBacktesting,
+        start_date,
+        end_date,
+        benchmark_asset=stock_symbol,
+        parameters=parameters,
+        show_plot=True,
+        show_tearsheet=True,
+    )
+
+    st.success("✅ Backtest completed!")
+    st.markdown("### 📊 Backtest Results")
+    st.write(results)
