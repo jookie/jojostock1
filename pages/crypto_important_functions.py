@@ -1,3 +1,4 @@
+# https://pro.kraken.com/app/home
 import datetime
 
 from lumibot.brokers import Ccxt
@@ -125,7 +126,7 @@ class ImportantFunctions(Strategy):
 if __name__ == "__main__":
     trader = Trader()
     apiKey = "TeMNNph2JfzX/ZqFPslo3Bt21p/KAgsqxIWPXvqkbKqkglx/iDtFapLr"
-    secret = "RPPIH3vT9bmBkhKkItKvVa8Df5g3cJY0xfsd15sHPcBSpuomMJ5wOjnBfKT3jURJj+vK0C=="
+    secret = "RPPIH3vT9bmBkhKkItKvVa8Df5g3cJY0xfsd15sHPcBSpuomMJ5wOjnBfKT3jURJj+vK0C"
     KRAKEN_CONFIG = {
         "exchange_id": "kraken",
         "apiKey": apiKey,
