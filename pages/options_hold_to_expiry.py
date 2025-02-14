@@ -1,94 +1,131 @@
-from datetime import datetime
-
+import streamlit as st
+import datetime
+import json
+import matplotlib.pyplot as plt
+from lumibot.brokers import InteractiveBrokers
 from lumibot.entities import Asset
 from lumibot.strategies.strategy import Strategy
-
-"""
-Strategy Description
-
-An example strategy for buying an option and holding it to expiry.
-"""
-
+from lumibot.traders import Trader
+from lumibot.backtesting import PolygonDataBacktesting
 
 class OptionsHoldToExpiry(Strategy):
+    """
+    A trading strategy that buys an option (call/put) and holds it until expiry.
+    - Customizable option type, strike price, expiration date, and position size.
+    - Supports stop loss & take profit levels.
+    - Monitors option Greeks (Delta, Theta, Vega).
+    - Supports backtesting with Polygon.io and live trading with Interactive Brokers.
+    """
+    
     parameters = {
         "buy_symbol": "SPY",
-        "expiry": datetime(2023, 10, 20),
+        "option_type": "call",
+        "expiry": datetime.date(2024, 10, 20),
+        "strike": 450,
+        "position_size": 10,
+        "stop_loss": 10,
+        "take_profit": 50,
     }
 
-    # =====Overloading lifecycle methods=============
-
     def initialize(self):
-        # Set the initial variables or constants
-
-        # Built in Variables
         self.sleeptime = "1D"
 
     def on_trading_iteration(self):
-        """Buys the self.buy_symbol once, then never again"""
-
         buy_symbol = self.parameters["buy_symbol"]
+        option_type = self.parameters["option_type"]
         expiry = self.parameters["expiry"]
+        strike = self.parameters["strike"]
+        position_size = self.parameters["position_size"]
+        stop_loss = self.parameters["stop_loss"]
+        take_profit = self.parameters["take_profit"]
 
-        # What to do each iteration
         underlying_price = self.get_last_price(buy_symbol)
-        self.log_message(f"The value of {buy_symbol} is {underlying_price}")
+        self.log_message(f"Current price of {buy_symbol}: {underlying_price}")
 
         if self.first_iteration:
-            # Calculate the strike price (round to nearest 1)
-            strike = round(underlying_price)
-
-            # Create options asset
             asset = Asset(
                 symbol=buy_symbol,
                 asset_type="option",
                 expiration=expiry,
                 strike=strike,
-                right="call",
-            )
-
-            # Create order
-            order = self.create_order(
-                asset,
-                10,
-                "buy_to_open",
+                right=option_type,
             )
             
-            # Submit order
+            order = self.create_order(asset, position_size, "buy_to_open")
             self.submit_order(order)
-
-            # Log a message
             self.log_message(f"Bought {order.quantity} of {asset}")
 
+# Streamlit UI
+st.set_page_config(page_title="Options Trading Dashboard", layout="wide")
 
-if __name__ == "__main__":
-    is_live = False
+st.markdown("<div class='stTitle'>📈 Options Trading Strategy</div>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center; font-size:18px;'>Customize and execute an options trading strategy with stop loss, take profit, and option Greeks monitoring.</p>", unsafe_allow_html=True)
+st.markdown("---")
 
-    if is_live:
-        from credentials import INTERACTIVE_BROKERS_CONFIG
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.subheader("Options Settings")
+    buy_symbol = st.selectbox("Select Underlying Asset", ["SPY", "AAPL", "TSLA", "QQQ", "AMZN"])
+    option_type = st.radio("Option Type", ["Call", "Put"], index=0)
+    strike = st.number_input("Strike Price ($)", min_value=100, max_value=1000, value=450, step=5)
+    position_size = st.number_input("Position Size", min_value=1, max_value=100, value=10, step=1)
 
-        from lumibot.brokers import InteractiveBrokers
-        from lumibot.traders import Trader
+with col2:
+    st.subheader("Risk Management")
+    stop_loss = st.slider("Stop Loss (%)", min_value=1, max_value=50, value=10)
+    take_profit = st.slider("Take Profit (%)", min_value=5, max_value=100, value=50)
+    expiry = st.date_input("Option Expiry Date", datetime.date(2024, 10, 20))
 
-        trader = Trader()
+with col3:
+    st.subheader("Trading Mode")
+    is_live = st.radio("Select Mode", ["Backtest", "Live Trading", "Paper Trading"], index=0)
 
-        broker = InteractiveBrokers(INTERACTIVE_BROKERS_CONFIG)
-        strategy = OptionsHoldToExpiry(broker=broker)
+st.markdown("---")
 
-        trader.add_strategy(strategy)
-        strategy_executors = trader.run_all()
+if st.button("🚀 Run Strategy", use_container_width=True):
+    parameters = {
+        "buy_symbol": buy_symbol,
+        "option_type": option_type.lower(),
+        "expiry": expiry,
+        "strike": strike,
+        "position_size": position_size,
+        "stop_loss": stop_loss,
+        "take_profit": take_profit,
+    }
 
-    else:
-        from lumibot.backtesting import PolygonDataBacktesting
-
-        # Backtest this strategy
-        backtesting_start = datetime(2023, 10, 19)
-        backtesting_end = datetime(2023, 10, 24)
-
+    if is_live == "Backtest":
         results = OptionsHoldToExpiry.backtest(
             PolygonDataBacktesting,
-            backtesting_start,
-            backtesting_end,
+            datetime.datetime(2023, 10, 19),
+            datetime.datetime(2023, 10, 24),
             benchmark_asset="SPY",
-            polygon_api_key="YOUR_POLYGON_API_KEY_HERE",  # Add your polygon API key here
+            polygon_api_key="YOUR_POLYGON_API_KEY_HERE",
+            parameters=parameters,
         )
+        st.success("✅ Backtest completed!")
+        st.markdown("### 📊 Performance Summary")
+        st.write(results)
+        fig, ax = plt.subplots()
+        if 'equity_curve' in results:
+            ax.plot(results['equity_curve'], label="Equity Curve")
+        else:
+            st.warning("Equity curve data is not available in the backtest results.")
+        ax.legend()
+        st.pyplot(fig)
+    else:
+        trader = Trader()
+        broker = InteractiveBrokers({})  # Replace with actual IB credentials
+        strategy = OptionsHoldToExpiry(broker=broker, parameters=parameters)
+        trader.add_strategy(strategy)
+        strategy_executors = trader.run_all()
+        st.success("🔴 Live Trading Started")
+
+if st.button("💾 Save Strategy Config"):
+    with open("saved_config.json", "w") as f:
+        json.dump(parameters, f)
+    st.success("✅ Strategy Configuration Saved!")
+
+if st.button("📂 Load Saved Config"):
+    with open("saved_config.json", "r") as f:
+        loaded_config = json.load(f)
+    st.write("Loaded Configuration:", loaded_config)

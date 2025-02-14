@@ -1,6 +1,5 @@
 # run_backtest.py
 import sys
-sys.path.append('/Users/dovpeles/dov/jojostock1/lib/MLTradingBot')
 
 from datetime import datetime , timedelta 
 import streamlit as st

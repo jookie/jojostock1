@@ -1,111 +1,124 @@
 import streamlit as st
-import threading
-import time
-from datetime import datetime
-from lumibot.brokers import Alpaca
+import logging
+import datetime
+from lumibot.strategies.strategy import Strategy
 from lumibot.backtesting import YahooDataBacktesting
-from lumibot.strategies import Strategy
-import pandas as pd
-import os
-import warnings
+from lumibot.credentials import ALPACA_CONFIG
+from lumibot.brokers import Alpaca
+from lumibot.traders import Trader
 
-# Suppress all warnings
-warnings.filterwarnings("ignore")
-os.environ['STREAMLIT_RUNNING_IN_BARE_MODE'] = '1'
+logger = logging.getLogger(__name__)
 
-# Global progress state
-class ProgressState:
-    def __init__(self):
-        self.value = 0.0
-        self.lock = threading.Lock()
-        self.trading_days = None
-        
-    def initialize(self, start, end):
-        """Calculate actual trading days"""
-        dates = pd.bdate_range(start=start, end=end)
-        self.trading_days = len(dates)
-        
-    def update(self, current_date):
-        """Update progress based on business days"""
-        with self.lock:
-            days_passed = pd.bdate_range(
-                start=self.start_date, 
-                end=current_date
-            ).nunique()
-            self.value = min(days_passed / self.trading_days, 1.0)
+class LifecycleLogger(Strategy):
+    """
+    A strategy that logs key lifecycle events during a trading session.
+    It does not execute trades but provides valuable insights into:
+    - Market opening and closing times
+    - Trading session start and end
+    - Iterative trading loops
+    
+    Useful for debugging and understanding the trading lifecycle.
+    """
+    parameters = {
+        "sleeptime": "10s",
+        "market": "24/7",
+    }
 
-progress = ProgressState()
+    def initialize(self, symbol=""):
+        self.sleeptime = self.parameters["sleeptime"]
+        self.set_market(self.parameters["market"])
 
-class DailyProgressStrategy(Strategy):
-    def initialize(self):
-        self.sleeptime = "1D"  # Match Yahoo's daily data
-        progress.initialize(
-            self.parameters["start_date"],
-            self.parameters["end_date"]
-        )
-        
+    def before_market_opens(self):
+        dt = self.get_datetime()
+        logger.info(f"{dt} before_market_opens called")
+
+    def before_starting_trading(self):
+        dt = self.get_datetime()
+        logger.info(f"{dt} before_starting_trading called")
+
     def on_trading_iteration(self):
-        progress.update(self.get_datetime())
-        time.sleep(0.01)  # Allow UI updates
+        dt = self.get_datetime()
+        logger.info(f"{dt} on_trading_iteration called")
 
-def backtest_worker():
-    try:
-        from lumibot.credentials import ALPACA_CREDS
-        broker = Alpaca(
-            ALPACA_CREDS, 
-            connect_stream=False
-        )
-        
-        start_date = datetime(2023, 1, 1)
-        end_date = datetime(2023, 12, 31)
-        
-        progress.start_date = start_date
-        
-        backtesting = YahooDataBacktesting(
-            datetime_start=start_date,
-            datetime_end=end_date,
-            broker=broker
-        )
-        
-        strategy = DailyProgressStrategy(
-            broker=broker,
-            budget=100000,
-            parameters={
-                "start_date": start_date,
-                "end_date": end_date
-            }
-        )
-        
-        strategy.backtest()
-        progress.value = 1.0  # Force completion
-        
-    except Exception as e:
-        st.error(f"Backtest failed: {str(e)}")
+    def before_market_closes(self):
+        dt = self.get_datetime()
+        logger.info(f"{dt} before_market_closes called")
+
+    def after_market_closes(self):
+        dt = self.get_datetime()
+        logger.info(f"{dt} after_market_closes called")
 
 # Streamlit UI
-st.title("Stock Backtest Analyzer")
+st.set_page_config(page_title="Lifecycle Logger", layout="wide")
 
-if st.button("Start Analysis"):
-    progress.value = 0.0
-    thread = threading.Thread(target=backtest_worker, daemon=True)
-    thread.start()
+st.markdown(
+    """
+    <style>
+        .stButton>button {
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .stButton>button:hover {
+            background-color: #45a049;
+        }
+        .stTitle {
+            color: #1E88E5;
+            font-size: 36px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-placeholder = st.empty()
-progress_bar = st.progress(0.0)
+st.markdown("<div class='stTitle'>📊 Lifecycle Logger Strategy</div>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center; font-size:18px;'>This strategy logs key trading lifecycle events without executing trades. Use it for debugging or monitoring market behavior.</p>", unsafe_allow_html=True)
+st.markdown("---")
 
-# UI update loop
-while True:
-    try:
-        current_value = progress.value
-        progress_bar.progress(current_value)
-        
-        # Update every 100ms
-        time.sleep(0.1)
-        
-        # Exit condition
-        if current_value >= 0.999:
-            placeholder.success("Analysis complete!")
-            break
-            
-    except KeyboardInterrupt:
-        break
+col1, col2 = st.columns(2)
+with col1:
+    st.subheader("Trading Settings")
+    sleeptime = st.slider("Sleep Time Between Iterations (Seconds)", 1, 60, 10)
+    market_hours = st.selectbox("Market Type", ["24/7", "NYSE", "Crypto"])
+
+with col2:
+    st.subheader("Backtesting Period")
+    start_date = datetime.datetime.combine(st.date_input("Start Date", datetime.date(2023, 1, 1)), datetime.datetime.min.time())
+    end_date = datetime.datetime.combine(st.date_input("End Date", datetime.date(2024, 9, 1)), datetime.datetime.min.time())
+
+st.markdown("---")
+
+if st.button("🚀 Run Backtest", use_container_width=True):
+    parameters = {
+        "sleeptime": f"{sleeptime}s",
+        "market": market_hours,
+    }
+    
+    results = LifecycleLogger.backtest(
+        YahooDataBacktesting,
+        start_date,
+        end_date,
+        benchmark_asset="SPY",
+        parameters=parameters,
+    )
+
+    st.success("✅ Backtest completed!")
+    st.markdown("### 📊 Backtest Results")
+    st.write(results)
+
+# Live Trading
+if st.button("🔴 Start Live Trading", use_container_width=True):
+    trader = Trader()
+    broker = Alpaca(ALPACA_CONFIG)
+    strategy = LifecycleLogger(broker=broker)
+    trader.add_strategy(strategy)
+    strategy_executors = trader.run_all()
+    st.success("🔴 Live Trading Started")

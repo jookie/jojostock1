@@ -1,0 +1,5 @@
+time,strategy,identifier,symbol,side,type,status,multiplier,time_in_force,asset.strike,asset.multiplier,asset.asset_type,price,filled_quantity,trade_cost
+2023-01-03 09:30:00-05:00,StockBracket,aa681d21a87249658c68b4cc7661e03c,SPY,buy,market,new,1,gtc,0.0,1,stock,,,
+2023-01-03 09:30:00-05:00,StockBracket,aa681d21a87249658c68b4cc7661e03c,SPY,buy,market,fill,1,gtc,0.0,1,stock,384.3699951171875,10.0,0.0
+2023-01-04 09:30:00-05:00,StockBracket,ec0fa0636dcc426791354e2845093c65,SPY,sell,limit,canceled,1,day,0.0,1,stock,,,
+2023-01-04 09:30:00-05:00,StockBracket,ebe7bb05b06546dea39f3d110ed59cef,SPY,sell,stop,fill,1,day,0.0,1,stock,383.17999267578125,10.0,0.0

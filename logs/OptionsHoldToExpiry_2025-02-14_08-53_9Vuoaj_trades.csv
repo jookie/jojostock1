@@ -1,0 +1,2 @@
+time,strategy,identifier,symbol,side,type,status,multiplier,time_in_force,asset.right,asset.strike,asset.multiplier,asset.expiration,asset.asset_type
+2023-10-19 09:30:00-04:00,OptionsHoldToExpiry,28cde9a76d73461ebca5dd59bdca8ce9,SPY,buy,market,new,1,gtc,CALL,450,100,2024-10-20,option
