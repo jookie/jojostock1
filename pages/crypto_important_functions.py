@@ -124,20 +124,21 @@ class ImportantFunctions(Strategy):
 
 if __name__ == "__main__":
     trader = Trader()
-
+    apiKey = "TeMNNph2JfzX/ZqFPslo3Bt21p/KAgsqxIWPXvqkbKqkglx/iDtFapLr"
+    secret = "RPPIH3vT9bmBkhKkItKvVa8Df5g3cJY0xfsd15sHPcBSpuomMJ5wOjnBfKT3jURJj+vK0C=="
     KRAKEN_CONFIG = {
         "exchange_id": "kraken",
-        "apiKey": "YOUR_API_KEY",
-        "secret": "YOUR_SECRET_KEY",
+        "apiKey": apiKey,
+        "secret": secret,
         "margin": True,
         "sandbox": False,
     }
-
+    # https://pro.kraken.com/app/settings/api
     # Check that the user has filled in the API keys
-    if KRAKEN_CONFIG["apiKey"] == "YOUR_API_KEY":
-        raise Exception("Please fill in your API key")
-    if KRAKEN_CONFIG["secret"] == "YOUR_SECRET_KEY":
-        raise Exception("Please fill in your secret key")
+    # if KRAKEN_CONFIG["apiKey"] == apiKey:
+    #     raise Exception("Please fill in your API key")
+    # if KRAKEN_CONFIG["secret"] == secret:
+    #     raise Exception("Please fill in your secret key")
 
     broker = Ccxt(KRAKEN_CONFIG)
 
