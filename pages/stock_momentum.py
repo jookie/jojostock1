@@ -1,6 +1,6 @@
 # stock_momentum.py
 import sys
-sys.path.append('/Users/dovpeles/dov/jojostock1/lib/MLTradingBot')
+# sys.path.append('/Users/dovpeles/dov/jojostock1/lib/MLTradingBot')
 from lumibot.strategies.strategy import Strategy
 from datetime import datetime
 import streamlit as st

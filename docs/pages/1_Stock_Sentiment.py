@@ -39,7 +39,6 @@ margin: 10px 0; /* Margin for paragraphs */
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # Set page title and configure layout
-# st.set_page_config(page_title="Stock Sentiment Analysis", layout="wide")
 # #page title and subtitle
 # st.title("Stock Sentiment Analysis - Jojo")
 # st.markdown("Analyze the sentiment of news headlines and stock price movements for a given stock ticker symbol.")

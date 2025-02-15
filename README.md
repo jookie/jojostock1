@@ -1,4 +1,23 @@
 
+This is the first and start page of a multipages streamlit platform
+add a UI using Streamlit, which will allow user to interact with your stock sentiment trading strategy in user-friendly way. The UI will enable users to:
+Select Backtest period
+Select a stock symbols
+Set cash at risk
+Run sentiment analysis
+View sentiment results and trading decisions
+add styles Heading subheader and description of the  strategy. 
+
+
+
+
+
+
+
+
+
+
+
 <h2 align="center">
  <br>
  <img src="public/groqlabs-logo-black2.png" alt="AI StockBot" width="500">
@@ -231,3 +250,25 @@ Examples for Stocks, Options, and Crypto in the notebooks provided below. Open t
 - 🔄 **Adaptive Interface**: Dynamically render TradingView UI components for financial interfaces tailored to your specific query
 - ⚡ **JojoFam-Powered Performance**: Leverage JojoFam's cutting-edge inference technology for near-instantaneous responses and seamless user experience
 - 🌐 **Multi-Asset Market Coverage**: Access comprehensive data and analysis across stocks, forex, bonds, and cryptocurrencies
+
+
+
+
+
+
+
+
+
+
+
+
+You can use the following websites to find and book flights from Barcelona to Tel Aviv:
+
+- [Skyscanner - Barcelona to Tel Aviv Flights](https://www.skyscanner.com/transport/flights/bcn/tlv/)
+
+- [Google Flights - Barcelona to Tel Aviv](https://www.google.com/flights?hl=en#flt=/m/0d8lt./m/02_0g6.
+- I apologize for the confusion. It appears the previous link wasn’t correct. You might find the most reliable and up-to-date details for Hotel Rialto Barcelona on Booking.com. Please try the following link:
+
+[Hotel Rialto Barcelona on Booking.com](https://www.booking.com/hotel/es/rialto.en.html)
+
+This listing should provide current rates, guest reviews, and booking options. Let me know if you need any further assistance!

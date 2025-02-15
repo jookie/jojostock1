@@ -37,7 +37,6 @@ from lib.rl.config import (
     TimeInForce,
 )
 
-# st.set_page_config(page_title="Stock Training", page_icon="📹")
 st.button("Re-run")
 # st.markdown("# Stock Training")
 # st.sidebar.header("Stock Testing")

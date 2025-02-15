@@ -1,6 +1,6 @@
 from lumibot.strategies import Strategy
 from lumibot.tools.thetadata_helper import BASE_URL
-from ..finbert_utils import estimate_sentiment
+from lumibot.finbert_utils import estimate_sentiment
 from alpaca_trade_api import REST 
 from datetime import timedelta 
 from lumibot.credentials import ALPACA_CREDS, BASE_URL
