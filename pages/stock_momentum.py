@@ -1,189 +1,215 @@
-# export PYTHONPATH="/Users/dovpeles/dov/jojostock1/lib/MLTradingBot:$PYTHONPATH"
-
+# stock_momentum.py
 import sys
 sys.path.append('/Users/dovpeles/dov/jojostock1/lib/MLTradingBot')
 from lumibot.strategies.strategy import Strategy
-
 from datetime import datetime
+import streamlit as st
+from lumibot.backtesting import YahooDataBacktesting
 
+# Custom CSS Styling
+st.markdown("""
+    <style>
+    .main-header {
+        font-size: 36px !important;
+        color: #2E86C1;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #2E86C1;
+        margin-bottom: 25px;
+    }
+    .strategy-card {
+        background-color: #F8F9F9;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 15px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .metric-box {
+        padding: 15px;
+        background-color: white;
+        border-radius: 8px;
+        margin: 10px 0;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .disclaimer {
+        font-size: 12px;
+        color: #666;
+        margin-top: 20px;
+    }
+    .config-section {
+        background-color: #FFFFFF;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 15px 0;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .stButton>button {
+        background-color: #4CAF50 !important;
+        color: white !important;
+        font-size: 16px !important;
+        padding: 10px 24px !important;
+        border-radius: 8px !important;
+        width: 100%;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
+# Page Header
+st.markdown('<div class="main-header">📈 Momentum Trading Strategy</div>', unsafe_allow_html=True)
 
-"""
-Strategy Description
+# Strategy Description
+st.markdown("""
+    **Strategy Overview**  
+    This strategy identifies the best-performing asset from a predefined list over a specified period and invests in it:
+    - **Momentum-Based**: Buys the asset with the highest recent returns
+    - **Daily Rebalancing**: Adjusts holdings based on daily performance
+    - **Diversified Assets**: Tracks multiple symbols (e.g., SPY, VEU, AGG)
+    - **Risk Management**: Automatically reallocates to the best-performing asset
+""")
+st.divider()
 
-Buys the best performing asset from self.symbols over self.period number of days.
-For example, if SPY increased 2% yesterday, but VEU and AGG only increased 1% yesterday,
-then we will buy SPY.
-"""
+# Momentum Strategy Class
 class Momentum(Strategy):
-    # =====Overloading lifecycle methods=============
-
     def initialize(self, symbols=None):
-        # Setting the waiting period (in days)
         self.period = 2
-
-        # The counter for the number of days we have been holding the current asset
         self.counter = 0
-
-        # There is only one trading operation per day
-        # No need to sleep between iterations
         self.sleeptime = 0
-
-        # Set the symbols that we will be monitoring for momentum
-        if symbols:
-            self.symbols = symbols
-        else:
-            self.symbols = ["SPY", "VEU", "AGG"]
-
-        # The asset that we want to buy/currently own, and the quantity
+        self.symbols = symbols if symbols else ["SPY", "VEU", "AGG"]
         self.asset = ""
         self.quantity = 0
-    def on_trading_iteration(self):    
-        # setting the buying budge
-        buying_budget = self.unspent_money
-        
-        # Get the momentums of all the assets we are tracking
-        
-    def on_trading_iteration2(self):
-        # When the counter reaches the desired holding period,
-        # re-evaluate which asset we should be holding
-        momentums = []
+        st.session_state.trade_history = []
+        st.session_state.last_trade = "No trades yet"
+
+    def on_trading_iteration(self):
         if self.counter == self.period or self.counter == 0:
             self.counter = 0
             momentums = self.get_assets_momentums()
 
-            # Get the asset with the highest return in our period
-            # (aka the highest momentum)
+            # Find the best-performing asset
             momentums.sort(key=lambda x: x.get("return"))
             best_asset_data = momentums[-1]
             best_asset = best_asset_data["symbol"]
             best_asset_return = best_asset_data["return"]
 
-            # Get the data for the currently held asset
+            # Check if the best asset has changed
             if self.asset:
-                current_asset_data = [
-                    m for m in momentums if m["symbol"] == self.asset
-                ][0]
+                current_asset_data = [m for m in momentums if m["symbol"] == self.asset][0]
                 current_asset_return = current_asset_data["return"]
-
-                # If the returns are equals, keep the current asset
                 if current_asset_return >= best_asset_return:
                     best_asset = self.asset
                     best_asset_data = current_asset_data
 
-            self.log_message("%s best symbol." % best_asset)
+            # Log the best asset
+            self.log_message(f"{best_asset} is the best-performing asset.")
 
-            # If the asset with the highest momentum has changed, buy the new asset
+            # Rebalance if necessary
             if best_asset != self.asset:
-                # Sell the current asset that we own
                 if self.asset:
-                    self.log_message("Swapping %s for %s." % (self.asset, best_asset))
+                    self.log_message(f"Swapping {self.asset} for {best_asset}.")
                     order = self.create_order(self.asset, self.quantity, "sell")
                     self.submit_order(order)
+                    st.session_state.last_trade = f"🔄 Swapped {self.asset} for {best_asset}"
 
-                # Calculate the quantity and send the buy order for the new asset
                 self.asset = best_asset
                 best_asset_price = best_asset_data["price"]
                 self.quantity = int(self.portfolio_value // best_asset_price)
                 order = self.create_order(self.asset, self.quantity, "buy")
                 self.submit_order(order)
+                st.session_state.last_trade += f"\n🛒 Bought {self.quantity} shares of {best_asset} at ${best_asset_price:.2f}"
             else:
-                self.log_message("Keeping %d shares of %s" % (self.quantity, self.asset))
+                self.log_message(f"Keeping {self.quantity} shares of {self.asset}.")
+                st.session_state.last_trade = f"📊 Holding {self.quantity} shares of {self.asset}"
+
+            st.session_state.trade_history.append({
+                "date": self.get_datetime(),
+                "action": "Rebalanced",
+                "symbol": best_asset,
+                "quantity": self.quantity,
+                "price": best_asset_price,
+                "return": best_asset_return,
+            })
 
         self.counter += 1
-
-        # Stop for the day, since we are looking at daily momentums
         self.await_market_to_close()
 
     def on_abrupt_closing(self):
-        # Sell all positions
         self.sell_all()
 
-    def trace_stats(self, context, snapshot_before):
-        """
-        Add additional stats to the CSV logfile
-        """
-        # Get the values of all our variables from the last iteration
-        row = {
-            "old_best_asset": snapshot_before.get("asset"),
-            "old_asset_quantity": snapshot_before.get("quantity"),
-            "old_cash": snapshot_before.get("cash"),
-            "new_best_asset": self.asset,
-            "new_asset_quantity": self.quantity,
-        }
-
-        # Get the momentums of all the assets from the context of on_trading_iteration
-        # (notice that on_trading_iteration has a variable called momentums, this is what
-        # we are reading here)
-        momentums = context.get("momentums")
-        if len(momentums) != 0:
-            for item in momentums:
-                symbol = item.get("symbol")
-                for key in item:
-                    if key != "symbol":
-                        row[f"{symbol}_{key}"] = item[key]
-
-        # Add all of our values to the row in the CSV file. These automatically get
-        # added to portfolio_value, cash and return
-        return row
-
-    # =============Helper methods====================
-
     def get_assets_momentums(self):
-        """
-        Gets the momentums (the percentage return) for all the assets we are tracking,
-        over the time period set in self.period
-        """
         momentums = []
         data = self.get_bars(self.symbols, self.period + 2, timestep="day")
         for asset, bars_set in data.items():
-            # Get the return for symbol over self.period days
             symbol = asset.symbol
             symbol_momentum = bars_set.get_momentum(num_periods=self.period)
-            self.log_message(
-                "%s has a return value of %.2f%% over the last %d day(s)."
-                % (symbol, 100 * symbol_momentum, self.period)
-            )
-
-            momentums.append(
-                {
-                    "symbol": symbol,
-                    "price": bars_set.get_last_price(),
-                    "return": symbol_momentum,
-                }
-            )
-
+            momentums.append({
+                "symbol": symbol,
+                "price": bars_set.get_last_price(),
+                "return": symbol_momentum,
+            })
         return momentums
 
+# Configuration Panel
+with st.container():
+    st.subheader("⚙️ Strategy Configuration")
+    col1, col2 = st.columns(2)
+    with col1:
+        symbols = st.text_input("Symbols (comma-separated)", value="SPY,VEU,AGG")
+        symbols = [s.strip() for s in symbols.split(",")]
+    with col2:
+        period = st.number_input("Momentum Period (Days)", min_value=1, value=2)
+    
+    live_mode = st.toggle("Live Trading Mode", value=False)
 
-if __name__ == "__main__":
-    is_live = False
+# Backtest Configuration
+if not live_mode:
+    st.subheader("📅 Backtest Period")
+    col1, col2 = st.columns(2)
+    with col1:
+        start_date = st.date_input("Start Date", value=datetime(2023, 1, 1))
+    with col2:
+        end_date = st.date_input("End Date", value=datetime(2023, 8, 1))
 
-    if is_live:
-        from credentials import ALPACA_CONFIG
-
-        from lumibot.brokers import Alpaca
-        from lumibot.traders import Trader
-
-        trader = Trader()
-
-        broker = Alpaca(ALPACA_CONFIG)
-
-        strategy = Momentum(broker=broker)
-
-        trader.add_strategy(strategy)
-        strategy_executors = trader.run_all()
-
+# Execution Control
+if st.button("🚀 Start Analysis" if live_mode else "📊 Run Backtest"):
+    if live_mode:
+        st.error("Live trading is not implemented in this example.")
     else:
-        from lumibot.backtesting import YahooDataBacktesting
+        with st.spinner("🔍 Running backtest..."):
+            results = Momentum.backtest(
+                YahooDataBacktesting,
+                datetime(start_date.year, start_date.month, start_date.day),
+                datetime(end_date.year, end_date.month, end_date.day),
+                benchmark_asset="SPY",
+                parameters={"symbols": symbols, "period": period},
+            )
+            
+            st.subheader("📊 Performance Report")
+            cols = st.columns(3)
+            with cols[0]:
+                st.metric("Strategy Return", f"{results.get('total_return', 0):.2f}%")
+            with cols[1]:
+                benchmark_return = results.get("benchmark_return", "N/A")
+                if benchmark_return != "N/A":
+                    st.metric("Benchmark Return", f"{benchmark_return:.2f}%")
+                else:
+                    st.metric("Benchmark Return", "N/A")
+            with cols[2]:
+                st.metric("Max Drawdown", f"{results.get('max_drawdown', 0):.2f}%")
+            
+            if 'portfolio_value' in results:
+                st.line_chart(results['portfolio_value'], use_container_width=True, color="#2E86C1")
+            else:
+                st.warning("Portfolio value data not available for charting.")
 
-        # Backtest this strategy
-        backtesting_start = datetime(2023, 1, 1)
-        backtesting_end = datetime(2023, 8, 1)
+# Trade History
+if 'trade_history' in st.session_state:
+    st.subheader("📝 Trade History")
+    st.dataframe(st.session_state.trade_history)
 
-        results = Momentum.backtest(
-            YahooDataBacktesting,
-            backtesting_start,
-            backtesting_end,
-            benchmark_asset="SPY",
-        )
+# Disclaimer
+st.divider()
+st.markdown("""
+    <div class="disclaimer">
+    *Momentum trading involves substantial risk and may not be suitable for all investors. 
+    Past performance is not indicative of future results. Backtest results are hypothetical and based on historical data.*
+    </div>
+    """, unsafe_allow_html=True)

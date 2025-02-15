@@ -1,3 +1,4 @@
+# pages/strangle.py
 import datetime
 import logging
 import time
@@ -5,10 +6,72 @@ from itertools import cycle
 
 import pandas as pd
 from yfinance import Ticker, download
-
+import streamlit as st
 from lumibot.strategies.strategy import Strategy
+from lumibot.backtesting import YahooDataBacktesting
 
+# Custom CSS Styling
+st.markdown("""
+    <style>
+    .main-header {
+        font-size: 36px !important;
+        color: #2E86C1;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #2E86C1;
+        margin-bottom: 25px;
+    }
+    .strategy-card {
+        background-color: #F8F9F9;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 15px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .metric-box {
+        padding: 15px;
+        background-color: white;
+        border-radius: 8px;
+        margin: 10px 0;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .disclaimer {
+        font-size: 12px;
+        color: #666;
+        margin-top: 20px;
+    }
+    .config-section {
+        background-color: #FFFFFF;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 15px 0;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .stButton>button {
+        background-color: #4CAF50 !important;
+        color: white !important;
+        font-size: 16px !important;
+        padding: 10px 24px !important;
+        border-radius: 8px !important;
+        width: 100%;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
+# Page Header
+st.markdown('<div class="main-header">📈 Strangle Options Strategy</div>', unsafe_allow_html=True)
+
+# Strategy Description
+st.markdown("""
+    **Strategy Overview**  
+    This strategy implements a **long strangle** options trading strategy:
+    - **Long Strangle**: Buys an out-of-the-money call and an out-of-the-money put option.
+    - **Profit Potential**: Unlimited upside if the underlying asset moves significantly in either direction.
+    - **Risk Management**: Limited to the premium paid for the options.
+    - **Earnings Play**: Typically placed two weeks before earnings announcements.
+""")
+st.divider()
+
+# Strangle Strategy Class
 class Strangle(Strategy):
     """Strategy Description: Strangle
 
@@ -36,8 +99,6 @@ class Strangle(Strategy):
     """
 
     IS_BACKTESTABLE = False
-
-    # =====Overloading lifecycle methods=============
 
     def initialize(self):
         self.time_start = time.time()
@@ -364,3 +425,87 @@ class Strangle(Strategy):
                 expiration_date = expiration
 
         return expiration_date
+
+# Configuration Panel
+with st.container():
+    st.subheader("⚙️ Strategy Configuration")
+    col1, col2 = st.columns(2)
+    with col1:
+        take_profit_threshold = st.number_input("Take Profit Threshold (%)", value=0.1, format="%.2f")
+    with col2:
+        max_trades = st.number_input("Max Trades", min_value=1, value=4)
+    
+    col3, col4 = st.columns(2)
+    with col3:
+        max_days_expiry = st.number_input("Max Days to Expiry", min_value=1, value=15)
+    with col4:
+        days_to_earnings_min = st.number_input("Min Days to Earnings", min_value=1, value=100)
+    
+    live_mode = st.toggle("Live Trading Mode", value=False)
+
+# Backtest Date Range
+st.subheader("📅 Backtest Period")
+col1, col2 = st.columns(2)
+with col1:
+    start_date = st.date_input("Start Date", value=datetime.datetime(2023, 1, 1))
+with col2:
+    end_date = st.date_input("End Date", value=datetime.datetime(2023, 8, 1))
+
+# Convert to datetime objects
+# start_date = datetime.datetime.combine(start_date, datetime.time(0, 0))
+# end_date = datetime.datetime.combine(end_date, datetime.time(23, 59, 59))
+    
+# Update Strategy Parameters
+Strangle.take_profit_threshold = take_profit_threshold / 100
+Strangle.max_trades = max_trades
+Strangle.max_days_expiry = max_days_expiry
+Strangle.days_to_earnings_min = days_to_earnings_min
+
+# Execution Control
+if st.button("🚀 Start Analysis" if live_mode else "📊 Run Backtest"):
+    if live_mode:
+        st.error("Live trading is not implemented in this example.")
+    else:
+        with st.spinner("🔍 Running backtest..."):
+            results = Strangle.backtest(
+                YahooDataBacktesting,
+                datetime(start_date.year, start_date.month, start_date.day),
+                datetime(end_date.year, end_date.month, end_date.day), 
+                benchmark_asset="SPY",
+            )
+            
+            if results is None:
+                st.error("⚠️ Backtest failed! No results returned. Check the strategy or backtest parameters.")
+                st.stop()  # Prevent further execution
+                        
+            st.subheader("📊 Performance Report")
+            cols = st.columns(3)
+            with cols[0]:
+                st.metric("Strategy Return", f"{results.get('total_return', 0):.2f}%")
+            with cols[1]:
+                benchmark_return = results.get("benchmark_return", "N/A")
+                if benchmark_return != "N/A":
+                    st.metric("Benchmark Return", f"{benchmark_return:.2f}%")
+                else:
+                    st.metric("Benchmark Return", "N/A")
+            with cols[2]:
+                st.metric("Max Drawdown", f"{results.get('max_drawdown', 0):.2f}%")
+            
+            if 'portfolio_value' in results:
+                st.line_chart(results['portfolio_value'], use_container_width=True, color="#2E86C1")
+            else:
+                st.warning("Portfolio value data not available for charting.")
+
+# Trade History
+if 'trade_history' in st.session_state:
+    st.subheader("📝 Trade History")
+    st.dataframe(st.session_state.trade_history)
+
+# Disclaimer
+st.divider()
+st.markdown("""
+    <div class="disclaimer">
+    *Options trading involves substantial risk and may not be suitable for all investors. 
+    Past performance is not indicative of future results. Backtest results are hypothetical and based on historical data.*
+    </div>
+    """, unsafe_allow_html=True)

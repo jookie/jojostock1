@@ -1,0 +1,8 @@
+time,strategy,identifier,symbol,side,type,status,multiplier,time_in_force,asset.strike,asset.multiplier,asset.asset_type,price,filled_quantity,trade_cost
+2023-01-03 09:30:00-05:00,Momentum,ea63aea73fda423889ef0c3f23f9b58d,SPY,buy,market,new,1,gtc,0.0,1,stock,,,
+2023-01-03 09:30:00-05:00,Momentum,ea63aea73fda423889ef0c3f23f9b58d,SPY,buy,market,fill,1,gtc,0.0,1,stock,384.3699951171875,261.0,0.0
+2023-01-05 09:30:00-05:00,Momentum,1c9c067a08964c7fb59a66c92720ffe0,SPY,sell,market,new,1,gtc,0.0,1,stock,,,
+2023-01-05 09:30:00-05:00,Momentum,4d95547e932a4d0799be643139b09f2b,VEU,buy,market,new,1,gtc,0.0,1,stock,,,
+2023-01-05 09:30:00-05:00,Momentum,1c9c067a08964c7fb59a66c92720ffe0,SPY,sell,market,fill,1,gtc,0.0,1,stock,381.7200012207031,261.0,0.0
+2023-01-05 09:30:00-05:00,Momentum,4d95547e932a4d0799be643139b09f2b,VEU,buy,market,fill,1,gtc,0.0,1,stock,50.93000030517578,1933.0,0.0
+2023-01-09 09:30:00-05:00,Momentum,9fb847c3a26841ed8a4f34efecc9bc78,VEU,sell,market,new,1,day,0.0,1,stock,,,

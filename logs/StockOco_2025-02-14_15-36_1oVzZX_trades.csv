@@ -1,0 +1,6 @@
+time,strategy,identifier,symbol,side,type,status,multiplier,time_in_force,asset.strike,asset.multiplier,asset.asset_type,price,filled_quantity,trade_cost
+2023-03-03 09:30:00-05:00,StockOco,628a0d1ded144bb08befce750bffae2c,SPY,buy,market,new,1,gtc,0.0,1,stock,,,
+2023-03-03 09:30:00-05:00,StockOco,7993de85d0f84c0e8586bb21ce4abffe,SPY,sell,oco,new,1,gtc,0.0,1,stock,,,
+2023-03-03 09:30:00-05:00,StockOco,628a0d1ded144bb08befce750bffae2c,SPY,buy,market,fill,1,gtc,0.0,1,stock,399.7099914550781,10.0,0.0
+2023-03-06 08:30:00-05:00,StockOco,317fe609442142a89234447e4e81c6be,SPY,sell,stop,canceled,1,day,0.0,1,stock,,,
+2023-03-06 08:30:00-05:00,StockOco,2cce136e671549889dcb4ba71ee39250,SPY,sell,limit,fill,1,day,0.0,1,stock,405.04998779296875,10.0,0.0
