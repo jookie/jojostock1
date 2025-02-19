@@ -1,5 +1,6 @@
 # source venv/bin/activate
 # source venv/bin/activate
+# source /Users/dovpeles/workspace/jojostock1/jojostock1/jojostock1/venv/bin/activate
 
 # rm -rf .git
 # export PATH=/usr/local/share/npm/bin:$PATH

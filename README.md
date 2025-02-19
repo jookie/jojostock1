@@ -1,22 +1,13 @@
 
-This is the first and start page of a multipages streamlit platform
-add a UI using Streamlit, which will allow user to interact with your stock sentiment trading strategy in user-friendly way. The UI will enable users to:
+This is the first page  and start page of a multipages streamlit platform
+use same style as previouse caht
+add a UI at the top of the page below the description using Streamlit, which will allow user to interact with your stock sentiment trading strategy in user-friendly way. The UI will enable users to:
 Select Backtest period
 Select a stock symbols
 Set cash at risk
 Run sentiment analysis
 View sentiment results and trading decisions
 add styles Heading subheader and description of the  strategy. 
-
-
-
-
-
-
-
-
-
-
 
 <h2 align="center">
  <br>
