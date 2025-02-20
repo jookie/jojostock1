@@ -16,8 +16,7 @@ import datetime
 from lib.rl.config_tickers import DOW_30_TICKER
 from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
 from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
-from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
-from lib.rl.agents.stablebaselines3.models import DRLAgent, DRLEnsembleAgent
+from lib.rl.agents.stablebaselines3.models import DRLEnsembleAgent
 from lib.rl.plot import backtest_stats, backtest_plot, get_daily_return, get_baseline
 from lib.utility.jprint import jprint
 # import alpaca.trading.enums
@@ -36,6 +35,11 @@ from lib.rl.config import (
     OrderSide,
     TimeInForce,
 )
+
+import configparser
+configparser.SafeConfigParser = configparser.RawConfigParser
+
+
 
 st.button("Re-run")
 # st.markdown("# Stock Training")
