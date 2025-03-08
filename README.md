@@ -1,13 +1,4 @@
 
-This is the first page  and start page of a multipages streamlit platform
-use same style as previouse caht
-add a UI at the top of the page below the description using Streamlit, which will allow user to interact with your stock sentiment trading strategy in user-friendly way. The UI will enable users to:
-Select Backtest period
-Select a stock symbols
-Set cash at risk
-Run sentiment analysis
-View sentiment results and trading decisions
-add styles Heading subheader and description of the  strategy. 
 
 <h2 align="center">
  <br>
@@ -242,24 +233,15 @@ Examples for Stocks, Options, and Crypto in the notebooks provided below. Open t
 - ⚡ **JojoFam-Powered Performance**: Leverage JojoFam's cutting-edge inference technology for near-instantaneous responses and seamless user experience
 - 🌐 **Multi-Asset Market Coverage**: Access comprehensive data and analysis across stocks, forex, bonds, and cryptocurrencies
 
+## Chat prompt
+make a UI using Streamlit. Allow user to interact with stock sentiment trading strategy. The UI will enable users to:
+Select Backtest period
+Select a stock symbols
+Set cash at risk
+Run sentiment analysis
+View sentiment results and trading decisions
+make a global styles file and make the Heading, Subheader with the description of the  strategy in each page using a global styles from a fil. 
 
 
 
 
-
-
-
-
-
-
-
-You can use the following websites to find and book flights from Barcelona to Tel Aviv:
-
-- [Skyscanner - Barcelona to Tel Aviv Flights](https://www.skyscanner.com/transport/flights/bcn/tlv/)
-
-- [Google Flights - Barcelona to Tel Aviv](https://www.google.com/flights?hl=en#flt=/m/0d8lt./m/02_0g6.
-- I apologize for the confusion. It appears the previous link wasn’t correct. You might find the most reliable and up-to-date details for Hotel Rialto Barcelona on Booking.com. Please try the following link:
-
-[Hotel Rialto Barcelona on Booking.com](https://www.booking.com/hotel/es/rialto.en.html)
-
-This listing should provide current rates, guest reviews, and booking options. Let me know if you need any further assistance!

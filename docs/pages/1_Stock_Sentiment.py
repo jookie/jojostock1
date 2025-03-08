@@ -59,7 +59,13 @@ if ticker:
       #Fetching stock price data
             current_date = datetime.datetime.now().strftime("%Y-%m-%d")
             stock_data = yf.download(ticker, start="2000-01-01", end=current_date)
-      
+            
+            if stock_data:
+                  combined_data = pd.concat(stock_data.values(), axis=1)
+                  print(combined_data.head())
+            else:
+                  print("⚠️ No valid data retrieved! Check ticker names or API availability.")
+            
             url = finviz_url + ticker
       
             req = Request(url=url, headers={"user-agent": "my-app"})
