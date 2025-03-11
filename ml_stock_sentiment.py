@@ -16,12 +16,15 @@ st.set_page_config(
     page_icon=':bar_chart:',
 )
 
-st.title("Sentiment-Based Trading Bot with Live Trading")
+# Streamlit UI
+st.title("📊 FinRAG Financial Assistant")
+# st.title("Sentiment-Based Trading Bot with Live Trading")
 st.subheader("FinBERT pre-trained NLP model to analyze sentiment of financial text.")
 st.write("""
 Automated sentiment or polarity analysis of texts produced by financial actors using NLP methods.
 This strategy uses FinBERT to analyze the sentiment of financial news and make trading decisions based on the sentiment score.
 """)
+st.write("Ask any finance-related question, and I'll fetch the best answer for you!")
 
 # Store results in session_state so we can display them from the main thread
 if "backtest_results" not in st.session_state:
