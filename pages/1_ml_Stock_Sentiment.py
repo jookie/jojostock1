@@ -1,4 +1,4 @@
-# Stock Sentiment Analysis & Trading Strategy
+# 📈 Stock Sentiment Analysis & Trading Strategy
 import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -13,15 +13,24 @@ from alpaca.data.timeframe import TimeFrame
 from alpaca.data.models.bars import BarSet
 from lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET
 
-# Download NLTK dependencies
+# 🔥 Download NLTK dependencies
 nltk.download("vader_lexicon")
 
-# UI Configuration
-st.set_page_config(layout="wide")
-st.title("📈 Stock Sentiment Analysis & Trading Strategy")
-st.markdown("Analyze stock market trends using sentiment analysis and historical data.")
+# 🎨 Streamlit UI Configuration
+st.set_page_config(page_title="Stock Sentiment & Trading", layout="wide", page_icon="📊")
+st.markdown(
+    """
+    <style>
+        .block-container { padding-top: 20px; }
+        h1 { color: #3498db; text-align: center; }
+        h2 { color: #e74c3c; }
+        .stAlert { font-size: 18px; font-weight: bold; }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
-# Define available tickers
+# 📌 Define available tickers
 TICKERS = [
     "AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "JPM", "NFLX", "FB", "BRK.B", "V",
     "NVDA", "DIS", "BA", "IBM", "GE", "PG", "JNJ", "KO", "MCD", "T",
@@ -29,24 +38,25 @@ TICKERS = [
 ]
 FINVIZ_URL = "https://finviz.com/quote.ashx?t="
 
-# UI Layout: Ticker & Date Selection in a Single Row
+# 🛠️ Layout for ticker & date selection in a single row
+st.markdown("## 📊 Stock Sentiment & Trading Strategy")
 col1, col2, col3 = st.columns([2, 1, 1])
 
 with col1:
-    ticker = st.selectbox("Select a Stock Ticker:", TICKERS)
+    ticker = st.selectbox("📈 Select a Stock Ticker:", TICKERS)
 
 with col2:
-    start_date = st.date_input("Start Date", datetime.date(2024, 1, 1))
+    start_date = st.date_input("📅 Start Date", datetime.date(2024, 1, 1))
 
 with col3:
-    end_date = st.date_input("End Date", datetime.date.today())
+    end_date = st.date_input("📅 End Date", datetime.date.today())
 
-# Cached API Client
+# 🔄 Cached API Client
 @st.cache_resource
 def get_stock_client():
     return StockHistoricalDataClient(ALPACA_API_KEY, ALPACA_API_SECRET)
 
-# Fetch Stock Data from Alpaca
+# 📊 Fetch Stock Data from Alpaca
 @st.cache_data
 def fetch_stock_data(ticker, start_date, end_date):
     try:
@@ -59,10 +69,9 @@ def fetch_stock_data(ticker, start_date, end_date):
         st.error(f"⚠️ Error fetching stock data: {e}")
         return None
 
-# Fetch News Data from Finviz
+# 📰 Fetch News Data from Finviz
 @st.cache_data
 def fetch_news_data(ticker):
-    """Retrieve news headlines from Finviz and return a serializable format."""
     try:
         req = Request(url=FINVIZ_URL + ticker, headers={"user-agent": "Mozilla/5.0"})
         html = BeautifulSoup(urlopen(req), features="html.parser")
@@ -77,43 +86,33 @@ def fetch_news_data(ticker):
                     date, time = (date_data[1], date_data[0]) if len(date_data) > 1 else ("Unknown", "")
                     news_list.append({"title": title, "date": date, "time": time})
 
-            return news_list  # Return as a list of dictionaries (serializable)
-
+            return news_list  # ✅ Return as a serializable list of dictionaries
     except Exception as e:
         st.error(f"⚠️ Error fetching news: {e}")
         return None
 
-# Analyze Sentiment from News Headlines
+# 🧠 Analyze Sentiment from News
 @st.cache_data
 def analyze_sentiment(news_list, ticker):
-    """Analyze sentiment scores of news headlines from a list of dictionaries."""
     if not news_list:
         return None
 
-    # Convert list of dicts to DataFrame
     df = pd.DataFrame(news_list)
-
-    # Ensure Date column is properly formatted
     df["Date"] = pd.to_datetime(df["date"], errors="coerce").dt.date
-
-    # Perform sentiment analysis
     df["Compound Score"] = df["title"].apply(lambda title: SentimentIntensityAnalyzer().polarity_scores(title)["compound"])
-    
     return df
 
-
-# Display Sentiment Summary
+# 📊 Display Sentiment Summary
 def display_sentiment_summary(df):
+    st.subheader("📊 Sentiment Summary")
     summary = {
-        "Average Score": df["Compound Score"].mean(),
-        "Positive": (df["Compound Score"] > 0).sum() / len(df) * 100,
-        "Negative": (df["Compound Score"] < 0).sum() / len(df) * 100,
-        "Neutral": (df["Compound Score"] == 0).sum() / len(df) * 100,
+        "📈 Positive": f"{(df['Compound Score'] > 0).sum() / len(df) * 100:.2f}%",
+        "📉 Negative": f"{(df['Compound Score'] < 0).sum() / len(df) * 100:.2f}%",
+        "⚖️ Neutral": f"{(df['Compound Score'] == 0).sum() / len(df) * 100:.2f}%"
     }
-    st.subheader("Sentiment Summary")
-    st.write(summary)
+    st.json(summary)
 
-# Plot Stock Data
+# 📈 Plot Stock Data
 def plot_stock_data(data, ticker):
     if isinstance(data, BarSet):
         df_list = []
@@ -130,6 +129,7 @@ def plot_stock_data(data, ticker):
             close_col = f"{ticker}_close" if f"{ticker}_close" in combined_data.columns else None
             
             if close_col:
+                st.subheader(f"📈 {ticker} Stock Price Movements")
                 st.line_chart(combined_data[close_col])
             else:
                 st.warning(f"⚠️ No closing price data available for {ticker}.")
@@ -138,24 +138,25 @@ def plot_stock_data(data, ticker):
     else:
         st.warning("⚠️ Unexpected data structure received from Alpaca API.")
 
-# Main App Logic
+# 🏆 Main App Logic
 if ticker:
     stock_data = fetch_stock_data(ticker, start_date, end_date)
     
     if stock_data:
-        st.subheader(f"{ticker} Stock Data from {start_date} to {end_date}")
+        st.subheader(f"📊 {ticker} Stock Data from {start_date} to {end_date}")
         plot_stock_data(stock_data, ticker)
     else:
         st.warning("⚠️ No stock data retrieved. Try adjusting the date range or ticker.")
 
-    news_table = fetch_news_data(ticker)
-    if news_table:
-        df = analyze_sentiment(news_table, ticker)
+    # 📰 News Section
+    news_data = fetch_news_data(ticker)
+    if news_data:
+        df = analyze_sentiment(news_data, ticker)
         if df is not None:
-            st.subheader("📰 News Headlines & Sentiment Scores")
+            st.subheader("📰 Latest News & Sentiment Scores")
             st.dataframe(df)
             display_sentiment_summary(df)
         else:
             st.warning("⚠️ No sentiment data available.")
     else:
-        st.warning("⚠️ No news found for the entered stock ticker symbol.")
+        st.warning("⚠️ No news found for the selected stock.")
