@@ -10,15 +10,6 @@ from alpaca.data.timeframe import TimeFrame
 from alpaca.data.models.bars import BarSet
 from alpaca_trade_api import REST
 from lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET
-from lib.utility.util import (
-    get_real_time_price,
-    fetch_stock_data,
-    fetch_news_data,
-    analyze_sentiment,
-    display_sentiment_summary,
-    plot_stock_data
-)
-
 
 FINVIZ_URL = "https://finviz.com/quote.ashx?t="
 
@@ -26,7 +17,7 @@ FINVIZ_URL = "https://finviz.com/quote.ashx?t="
 nltk.download("vader_lexicon")
 
 # 📡 Fetch Real-Time Stock Price
-def get_real_time_price9999(ticker):
+def get_real_time_price(ticker):
     api = REST(ALPACA_API_KEY, ALPACA_API_SECRET, base_url="https://data.alpaca.markets/v2")
     trade = api.get_latest_trade(ticker)
     return trade.price
@@ -73,17 +64,34 @@ def convert_alpaca_data_to_df(stock_data):
 # 📰 Fetch News Data from Finviz
 @st.cache_data
 def fetch_news_data(ticker):
+    """Retrieve news headlines from Finviz and ensure date values exist."""
     try:
         req = Request(url=FINVIZ_URL + ticker, headers={"user-agent": "Mozilla/5.0"})
-        html = BeautifulSoup(urlopen(req), features="html.parser")
+        html = BeautifulSoup(urlopen(req), "html.parser")
         news_table = html.find(id="news-table")
 
-        if news_table:
-            return [{"title": row.a.text, "date": row.td.text.split()[1], "time": row.td.text.split()[0]} 
-                    for row in news_table.findAll("tr") if row.a]
+        if not news_table:
+            st.warning(f"⚠️ No news data found for {ticker}.")
+            return None
+
+        news_list = []
+        for row in news_table.findAll("tr"):
+            if row.a:
+                title = row.a.text.strip()
+                date_time_text = row.td.text.strip().split()
+
+                # ✅ Ensure we always have a date
+                date = date_time_text[1] if len(date_time_text) > 1 else date_time_text[0] if date_time_text else "Unknown"
+
+                news_list.append({"title": title, "date": date})
+
+        return news_list if news_list else None  # Return None if no valid news found
+
     except Exception as e:
         st.error(f"⚠️ Error fetching news: {e}")
         return None
+
+
 
 # 🧠 Analyze Sentiment from News
 @st.cache_data
