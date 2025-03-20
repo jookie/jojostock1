@@ -12,6 +12,14 @@ from alpaca.data.requests import StockBarsRequest
 from alpaca.data.timeframe import TimeFrame
 from alpaca.data.models.bars import BarSet
 from lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET
+from lib.utility.util import (
+    get_real_time_price,
+    fetch_stock_data,
+    fetch_news_data,
+    analyze_sentiment,
+    display_sentiment_summary,
+    plot_stock_data
+)
 
 # 🔥 Download NLTK dependencies
 nltk.download("vader_lexicon")
@@ -76,12 +84,6 @@ import time
 col1, col2 = st.columns([2, 1])
  
 from alpaca_trade_api import REST
-
-def get_real_time_price(ticker):
-    """Fetches real-time stock price from Alpaca API."""
-    api = REST(ALPACA_API_KEY, ALPACA_API_SECRET, base_url="https://data.alpaca.markets/v2")
-    trade = api.get_latest_trade(ticker)
-    return trade.price  # ✅ Correct attribute for latest price
 
 st.subheader("📡 Live Stock Price")
 latest_price = get_real_time_price(ticker)
