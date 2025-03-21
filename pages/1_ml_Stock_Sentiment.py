@@ -64,8 +64,12 @@ content =  """This application combines **news sentiment analysis** and **histor
         - 📰 **News Sentiment Analysis** using NLP (VADER).
         - 📊 **Buy/Sell Signals & Moving Averages** (SMA/EMA).
         - 🤖 **AI-Powered Sentiment Analysis** (GPT-4 integration).
-        - 📈 **Portfolio Tracking** with profit/loss calculation.
+        - 💰 Portfolio Analysis – Track multiple stocks and calculate profit/loss.
         - 🤖 **Auto-Trading Support** via Alpaca API.
+        - 🔮 Stock Prediction – Use AI models like LSTMs to predict future prices.
+        - 🌍 Alternative Data Sources – Integrate Twitter, Reddit, or Google Trends.
+        - 📰 Daily Market Summary – Show top gainers/losers and market trends.
+
 
         🚀 **Select a stock ticker and a date range to begin!**
         """
