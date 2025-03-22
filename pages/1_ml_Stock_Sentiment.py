@@ -4,7 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 import nltk
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 from alpaca.data.historical import StockHistoricalDataClient
@@ -17,6 +16,7 @@ from lib.rl.config_tickers import DOW_30_TICKER
 from lib.rl.config_tickers import index_dict
 
 from lib.utility.util import (
+    get_ticker_start_end_date,
     get_real_time_price,
     fetch_stock_data,
     fetch_news_data,
@@ -28,6 +28,7 @@ from lib.utility.util import (
     convert_barSet_to_DataFrame,
     compute_moving_averages,
     collapsible_detailed_description,
+    load_and_plot_stock_data,
 )
 
 # 🔥 Download NLTK dependencies
@@ -76,65 +77,35 @@ content =  """This application combines **news sentiment analysis** and **histor
 # Collapsible Detailed Description
 collapsible_detailed_description(header, content)
 
-# Select Index Category
-col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
-
-with col1:
-    selected_index = st.selectbox("📈 Select Index Category:", list(index_dict.keys()))
-    TICKERS = index_dict[selected_index]  # Update TICKERS based on selection
-
-with col2:
-    ticker = st.selectbox("📊 Select a Stock Ticker:", TICKERS)
-
-with col3:
-    start_date = st.date_input("📅 Start Date", datetime.date(2025, 1, 1))
-
-with col4:    
-    end_date = st.date_input("📅 End Date", datetime.date.today())
-
-col1, col2 = st.columns([2, 1])
-
-
-st.subheader("📡 Live Stock Price")
-latest_price = get_real_time_price(ticker)
-
-if latest_price is None:
-    st.warning(f"⚠️ No trade data found for {ticker}. Please select another stock.")
-else:
-    st.metric(label=f"{ticker} Price", value=f"${latest_price:.2f}")
-
+ticker, start_date, end_date = get_ticker_start_end_date(index_dict)
 
 # 🏆 Main App Logic
 if ticker:
-    stock_data = fetch_stock_data(ticker, start_date, end_date)
+   df_stock_ , close_col = load_and_plot_stock_data(ticker, start_date, end_date)
 
-if not stock_data or not stock_data.__dict__:  # ✅ Correct way to check if BarSet is empty
+if not df_stock_:  # ✅ Correct way to check if BarSet is empty
     st.warning(f"⚠️ No stock data found for {ticker}. Try another ticker or date range.")
 else :
-    if (isinstance(stock_data, BarSet)) :
-        # convert_barSet_to_DataFrame
-        df_stock_ , close_col = convert_barSet_to_DataFrame(stock_data, BarSet, ticker)
-        if stock_data:
-            st.subheader(f"📊 {ticker} Stock Data from {start_date} to {end_date}")
-            plot_stock_data(stock_data, ticker)
+    if df_stock_:
+        st.subheader(f"📊 {ticker} Stock Data from {start_date} to {end_date}")
+        plot_stock_data(df_stock_, ticker)
+    else:
+        st.warning("⚠️ No stock data retrieved. Try adjusting the date range or ticker.")
+    # 📰 News Section
+    news_data = fetch_news_data(ticker)
+    if news_data:
+        df_news = analyze_sentiment(news_data)
+        if df_news is not None:
+            st.subheader("📰 Latest News & Sentiment Scores")
+            st.dataframe(df_news)
+            display_sentiment_summary(df_news)
         else:
-            st.warning("⚠️ No stock data retrieved. Try adjusting the date range or ticker.")
+            st.warning("⚠️ No sentiment data available.")
 
-        # 📰 News Section
-        news_data = fetch_news_data(ticker)
-        if news_data:
-            df_news = analyze_sentiment(news_data)
-            if df_news is not None:
-                st.subheader("📰 Latest News & Sentiment Scores")
-                st.dataframe(df_news)
-                display_sentiment_summary(df_news)
-            else:
-                st.warning("⚠️ No sentiment data available.")
+    # Ensure correct 'close' column
+    compute_moving_averages(df_stock_, ticker, df_news)
+        # Generate buy/sell signals
+    df_merged = generate_trade_signals(df_stock_, df_news, close_col)
 
-        # Ensure correct 'close' column
-        compute_moving_averages(df_stock_, ticker, df_news)
-            # Generate buy/sell signals
-        df_merged = generate_trade_signals(df_stock_, df_news, close_col)
-
-        # Plot results
-        st.line_chart(df_merged[[close_col, "SMA_50", "EMA_20", "Buy_Signal", "Sell_Signal"]])
+    # Plot results
+    st.line_chart(df_merged[[close_col, "SMA_50", "EMA_20", "Buy_Signal", "Sell_Signal"]])

@@ -10,7 +10,10 @@ from alpaca.data.timeframe import TimeFrame
 from alpaca.data.models.bars import BarSet
 from alpaca_trade_api import REST
 from lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET
+import datetime
+import random
 
+import plotly.express as px
 
 FINVIZ_URL = "https://finviz.com/quote.ashx?t="
 
@@ -20,6 +23,33 @@ nltk.download("vader_lexicon")
 # 📡 Fetch Real-Time Stock Price
 import alpaca_trade_api as tradeapi
 
+def get_ticker_start_end_date(index_dict):
+    # Select Index Category
+    col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
+    with col1:
+        selected_index = st.selectbox("📈 Select Index Category:", list(index_dict.keys()))
+        TICKERS = index_dict[selected_index]  # Update TICKERS based on selection
+
+    with col2:
+        ticker = st.selectbox("📊 Select a Stock Ticker:", TICKERS)
+
+    with col3:
+        start_date = st.date_input("📅 Start Date", datetime.date(2025, 1, 1))
+
+    with col4:    
+        end_date = st.date_input("📅 End Date", datetime.date.today())
+
+    col1, col2 = st.columns([2, 1])
+
+    st.subheader("📡 Live Stock Price")
+    latest_price = get_real_time_price(ticker)
+
+    if latest_price is None:
+        st.warning(f"⚠️ No trade data found for {ticker}. Please select another stock.")
+    else:
+        st.metric(label=f"{ticker} Price", value=f"${latest_price:.2f}")
+    return ticker, start_date, end_date
+        
 def get_real_time_price(ticker):
     try:
         api = tradeapi.REST(ALPACA_API_KEY, ALPACA_API_SECRET, base_url="https://paper-api.alpaca.markets")
@@ -28,11 +58,6 @@ def get_real_time_price(ticker):
     except tradeapi.rest.APIError as e:
         print(f"⚠️ Alpaca API Error: {e}")  # ✅ Log the error
         return None  # ✅ Return None if no trade is found
-
-def get_real_time_price9999(ticker):
-    api = REST(ALPACA_API_KEY, ALPACA_API_SECRET, base_url="https://data.alpaca.markets/v2")
-    trade = api.get_latest_trade(ticker)
-    return trade.price
 
 # 🔄 Cached API Client
 @st.cache_resource
@@ -47,10 +72,23 @@ def get_stock_client():
 # 📊 Fetch Stock Data from Alpaca
 @st.cache_data
 def fetch_stock_data(ticker, start_date, end_date):
+    """Fetch historical stock data from Alpaca."""
     try:
+        # client = get_stock_client()
+        # request_params = StockBarsRequest(symbol_or_symbols=[ticker], timeframe=TimeFrame.Day, start=start_date, end=end_date)
+        # return client.get_stock_bars(request_params)
+    
+        if not ticker:
+            raise ValueError("Ticker is empty or None.")
+        
         client = get_stock_client()
-        request_params = StockBarsRequest(symbol_or_symbols=[ticker], timeframe=TimeFrame.Day, start=start_date, end=end_date)
-        return client.get_stock_bars(request_params)
+        request_params = StockBarsRequest(
+            symbol_or_symbols=[ticker.upper()],
+            timeframe=TimeFrame.Day,
+            start=start_date,
+            end=end_date
+        )
+        return client.get_stock_bars(request_params)    
     except Exception as e:
         st.error(f"⚠️ Error fetching stock data: {e}")
         return None
@@ -108,8 +146,6 @@ def fetch_news_data(ticker):
         st.error(f"⚠️ Error fetching news: {e}")
         return None
 
-
-
 # 🧠 Analyze Sentiment from News
 @st.cache_data
 def analyze_sentiment(news_list):
@@ -120,7 +156,6 @@ def analyze_sentiment(news_list):
     df_sentiment["Date"] = pd.to_datetime(df_sentiment["date"], errors="coerce").dt.date
     df_sentiment["Compound Score"] = df_sentiment["title"].apply(lambda title: SentimentIntensityAnalyzer().polarity_scores(title)["compound"])
     return df_sentiment
-
 
 # 📊 Display Sentiment Summary
 def display_sentiment_summary(df_sentiment):
@@ -210,7 +245,6 @@ def convert_barSet_to_DataFrame(stock_data, _, ticker):
         return df, close_col
 
     return None, None
-
 
 def compute_moving_averages(df_stock_, ticker, df_news):
         close_col = f"{ticker}_close" if f"{ticker}_close" in df_stock_.columns else None
@@ -372,6 +406,61 @@ def get_sentiment_gpt4(news_headline):
         messages=[{"role": "user", "content": f"Analyze the sentiment of this stock-related news: {news_headline}"}]
     )
     return response["choices"][0]["message"]["content"]
+
+# (function) def load_and_plot_stock_data(
+#     ticker: Any,
+#     start_date: Any,
+#     end_date: Any,
+#     plot: bool = True
+# ) -> (tuple[None, None] | tuple[DataFrame, str | None])
+
+def load_and_plot_stock_data(ticker, start_date, end_date, plot=True):
+    barset = fetch_stock_data(ticker, start_date, end_date)
+
+    if barset is None:
+        st.error("⚠️ Failed to fetch stock data.")
+        return None, None
+
+    df, close_col = convert_barSet_to_DataFrame(barset, None, ticker)
+
+    if df is None or df.empty or close_col not in df.columns:
+        st.warning(f"⚠️ No valid data for {ticker}.")
+        return None, None
+
+    if plot:
+        chart_key = f"stock_price_chart_{random.randint(1000, 9999)}"
+        fig = px.line(df, x=df.index, y=close_col, title=f"{ticker} Stock Price")
+        st.plotly_chart(fig, use_container_width=True, key=chart_key)
+
+    return df, close_col
+
+
+def compute_price_features(df, close_col, short_window=50, long_window=100):
+    """
+    Compute SMA, EMA, and percentage change on the closing price column.
+
+    Args:
+        df (pd.DataFrame): Stock price data.
+        close_col (str): Column name for close prices (e.g. 'AAPL_close').
+        short_window (int): Window for short-term SMA.
+        long_window (int): Window for long-term SMA.
+
+    Returns:
+        pd.DataFrame: DataFrame with new SMA, EMA, and % Change columns added.
+    """
+    if close_col not in df.columns:
+        st.error(f"⚠️ '{close_col}' not found in data.")
+        return df
+
+    df["SMA_50"] = df[close_col].rolling(window=short_window, min_periods=1).mean()
+    df["EMA_20"] = df[close_col].ewm(span=20, adjust=False).mean()
+    df["SMA_100"] = df[close_col].rolling(window=long_window, min_periods=1).mean()
+    df["% Change"] = df[close_col].pct_change()
+
+    df.dropna(inplace=True)
+    return df
+
+
 
  
 
