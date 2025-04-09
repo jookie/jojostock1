@@ -1,7 +1,6 @@
 # 
 # source venv/bin/activate
 # source /Users/dovpeles/workspace/jojostock1/jojostock1/jojostock1/venv/bin/activate
-
 # rm -rf .git
 # export PATH=/usr/local/share/npm/bin:$PATH
 # git checkout -b my-new-branch
@@ -10,7 +9,6 @@
 # git remote add origin https://github.com/jookie/jojoStock.git
 # git push --set-upstream origin main
 # git branch -M main
-source venv/bin/activate
 git add .
 git commit -m "refactore"
 git push -u origin main
