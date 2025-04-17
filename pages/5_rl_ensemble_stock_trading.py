@@ -11,8 +11,8 @@ def main():
     import matplotlib.pyplot as plt
 
     # matplotlib.use('Agg')
-    import datetime
-
+    # import datetime
+    from datetime import datetime
     from lib.rl.config_tickers import DOW_30_TICKER
     from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
     from lib.rl.meta.preprocessor.preprocessors import FeatureEngineer, data_split
@@ -43,6 +43,18 @@ def main():
         TRADE_START_DATE,
         TRADE_END_DATE,
     )
+    
+    from lib.utility.util import (
+        get_ticker_start_end_date,
+        get_real_time_price,
+        fetch_stock_data,
+        fetch_news_data,
+        analyze_sentiment,
+        display_sentiment_summary,
+        plot_stock_data,
+        alpaca_hist,
+        get_baseline2
+    )
 
     check_and_make_directories(
         [DATA_SAVE_DIR, TRAINED_MODEL_DIR, TENSORBOARD_LOG_DIR, RESULTS_DIR]
@@ -53,11 +65,17 @@ def main():
     TEST_START_DATE = "2021-01-01"
     TEST_END_DATE = "2022-06-01"
 
-    df = YahooDownloader(
-        start_date=TRAIN_START_DATE, end_date=TEST_END_DATE, ticker_list=DOW_30_TICKER
-    ).fetch_data()
-
+    # Convert strings to datetime.date DOV to ALPACA
+    # df = YahooDownloader(
+    #     start_date=TRAIN_START_DATE, end_date=TEST_END_DATE, ticker_list=DOW_30_TICKER
+    # ).fetch_data()
+    
+    df = alpaca_hist(
+        tickers = DOW_30_TICKER, start_date=TRAIN_START_DATE, end_date=TEST_END_DATE
+    )
+    
     df.sort_values(["date", "tic"]).head()
+    # Convert strings to datetime.date DOV to ALPACA
 
     fe = FeatureEngineer(
         use_technical_indicator=True,
@@ -90,6 +108,14 @@ def main():
 
     rebalance_window = 63  # rebalance_window is the number of days to retrain the model
     validation_window = 63  # validation_window is the number of days to do validation and trading (e.g. if validation_window=63, then both validation and trading period will be 63 days)
+    
+    
+    # Convert strings to datetime.date DOV to ALPACA
+    TRAIN_START_DATE = datetime.strptime(TRAIN_START_DATE, "%Y-%m-%d").date()
+    TRAIN_END_DATE = datetime.strptime(TRAIN_END_DATE, "%Y-%m-%d").date()
+    TEST_START_DATE = datetime.strptime(TEST_START_DATE, "%Y-%m-%d").date()
+    TEST_END_DATE = datetime.strptime(TEST_END_DATE, "%Y-%m-%d").date()
+    # Convert strings to datetime.date DOV to ALPACA
 
     ensemble_agent = DRLEnsembleAgent(
         df=processed,
@@ -171,15 +197,18 @@ def main():
 
     df_account_value.account_value.plot()
 
+     # Convert strings to datetime.date DOV to ALPACA
     print("==============Get Backtest Results===========")
-    now = datetime.datetime.now().strftime("%Y%m%d-%Hh%M")
+    # now = datetime.datetime.now().strftime("%Y%m%d-%Hh%M")
+    now = datetime.now().strftime("%Y%m%d-%Hh%M")
+     # Convert strings to datetime.date DOV to ALPACA
 
     perf_stats_all = backtest_stats(account_value=df_account_value)
     perf_stats_all = pd.DataFrame(perf_stats_all)
 
     # baseline stats
     print("==============Get Baseline Stats===========")
-    baseline_df = get_baseline(
+    baseline_df = get_baseline2(
         ticker="^DJI",
         start=df_account_value.loc[0, "date"],
         end=df_account_value.loc[len(df_account_value) - 1, "date"],

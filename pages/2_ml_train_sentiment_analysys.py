@@ -80,7 +80,7 @@ with st.expander("📘 About this project"):
     - [Financial News Sentiment Tool](https://github.com/IshanDissanayake/Financial-News-Sentiment-Analysis-Tool)
     """)
 
-ticker, start_date, end_date = get_ticker_start_end_date(index_dict)
+ticker, start_date, end_date , cash_at_risk = get_ticker_start_end_date()
 
 # Check if the ticker and start date are provided
 if ticker and start_date:
@@ -91,10 +91,7 @@ if ticker and start_date:
 
 
     fig = px.line(df_stock_, x=df_stock_.index, y=close_col, title=f"{ticker} Stock Price")
-    # st.plotly_chart(fig, use_container_width=True, key="data_chart")
-
-    # st.plotly_chart(fig)
-
+    
     pricing_data, predictions = st.tabs(["Pricing Data", "Predictions"])
 
     with pricing_data:

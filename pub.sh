@@ -9,8 +9,9 @@
 # git remote add origin https://github.com/jookie/jojoStock.git
 # git push --set-upstream origin main
 # git branch -M main
+source venv/bin/activate
 git add .
-git commit -m "refactore"
+git commit -m "refactor00"
 git push -u origin main
 # 1. Click on the "New" button to create a new repository.
 # 2. Name your repository and add a description.
@@ -19,6 +20,3 @@ git push -u origin main
 # git remote add origin https://github.com/jookie/news-stocks.git
 # git branch -M main
 # git push -u origin main
-
-
-

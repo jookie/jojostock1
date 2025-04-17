@@ -1,5 +1,4 @@
 # from lumibot.brokers import Alpaca
-# from lumibot.backtesting import YahooDataBacktesting
 
 from __future__ import annotations
 import warnings ; warnings.filterwarnings("ignore")

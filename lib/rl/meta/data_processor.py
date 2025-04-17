@@ -9,15 +9,20 @@ from lib.rl.meta.data_processors.processor_yahoofinance import (
     YahooFinanceProcessor as YahooFinance,
 )
 
+from lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET
+ALPACA_API_BASE_URL = 'https://paper-api.alpaca.markets'
+from alpaca.data.historical import StockHistoricalDataClient
+
 
 class DataProcessor:
     def __init__(self, data_source, tech_indicator=None, vix=None, **kwargs):
         if data_source == "alpaca":
             try:
-                API_KEY = kwargs.get("API_KEY")
-                API_SECRET = kwargs.get("API_SECRET")
-                API_BASE_URL = kwargs.get("API_BASE_URL")
-                self.processor = Alpaca(API_KEY, API_SECRET, API_BASE_URL)
+                API_KEY = ALPACA_API_KEY
+                API_SECRET = ALPACA_API_SECRET
+                API_BASE_URL = ALPACA_API_BASE_URL
+                self.processor = StockHistoricalDataClient(ALPACA_API_KEY, ALPACA_API_SECRET)
+                # self.processor = Alpaca(API_KEY, API_SECRET, API_BASE_URL)
                 jprint("Alpaca successfully connected")
             except BaseException:
                 raise ValueError("Please input correct account info for alpaca!")

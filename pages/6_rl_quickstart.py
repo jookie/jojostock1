@@ -2,13 +2,17 @@
 
 # https://finrl.readthedocs.io/en/latest/reference/reference.html
 # https://finrl.readthedocs.io/en/latest/start/quick_start.html
-# https://finrl.readthedocs.io/en/latest/start/installation.html
+# https://finrl.reaqq``````````````````````````qqqdthedocs.io/en/latest/start/installation.html
 
 import os
+import sys
+sys.path.append("lib")
 from typing import List
 from argparse import ArgumentParser
-from lib.rl import config
 from lib.rl.config_tickers import DOW_30_TICKER
+from lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET
+API_BASE_URL = 'https://paper-api.alpaca.markets'
+
 from lib.rl.config import (
     DATA_SAVE_DIR,
     TRAINED_MODEL_DIR,
@@ -31,7 +35,7 @@ from lib.rl.config import (
 
 # construct environment
 from lib.rl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
-
+from lib.rl import config
 
 def build_parser():
     parser = ArgumentParser()
@@ -69,7 +73,8 @@ def main():
             start_date=TRAIN_START_DATE,
             end_date=TRAIN_END_DATE,
             ticker_list=DOW_30_TICKER,
-            data_source="yahoofinance",
+            # data_source="yahoofinance",
+            data_source="alpaca",
             time_interval="1D",
             technical_indicator_list=INDICATORS,
             drl_lib="elegantrl",
@@ -91,7 +96,8 @@ def main():
             start_date=TEST_START_DATE,
             end_date=TEST_END_DATE,
             ticker_list=DOW_30_TICKER,
-            data_source="yahoofinance",
+            # data_source="yahoofinance",
+            data_source="alpaca",
             time_interval="1D",
             technical_indicator_list=INDICATORS,
             drl_lib="elegantrl",
@@ -109,7 +115,8 @@ def main():
             start_date=TRADE_START_DATE,
             end_date=TRADE_END_DATE,
             ticker_list=DOW_30_TICKER,
-            data_source="yahoofinance",
+            # data_source="yahoofinance",
+            data_source="alpaca",
             time_interval="1D",
             technical_indicator_list=INDICATORS,
             drl_lib="elegantrl",

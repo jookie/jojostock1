@@ -19,8 +19,6 @@ labels = ["positive", "negative", "neutral"]
 
 # added by dov to prevent TOKENIZERS_PARALLELISM the warning:
 # TOKENIZERS_PARALLELISM=False
-
-
 # Step 1: Sentiment Analysis with BERT
 # We will use the transformers library from Hugging Face to load a pre-trained BERT model for sentiment analysis. This model will classify financial news or tweets as positive, neutral, or negative.
 
