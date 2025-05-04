@@ -1,5 +1,5 @@
 from __future__ import annotations
-from lib.utility.jprint import jprint
+# from lib.utility.jprint import jprint
 import numpy as np
 import pandas as pd
 
@@ -18,7 +18,7 @@ class DataProcessor:
                 API_SECRET = kwargs.get("API_SECRET")
                 API_BASE_URL = kwargs.get("API_BASE_URL")
                 self.processor = Alpaca(API_KEY, API_SECRET, API_BASE_URL)
-                jprint("Alpaca successfully connected")
+                print("Alpaca successfully connected")
             except BaseException:
                 raise ValueError("Please input correct account info for alpaca!")
 
@@ -64,6 +64,11 @@ class DataProcessor:
 
     def add_vix(self, df) -> pd.DataFrame:
         df = self.processor.add_vix(df)
+        # Add this validation
+        if 'close' not in df.columns:
+            raise ValueError("Input data missing 'close' column")
+    
+       # Rest of your implementation...
 
         return df
 

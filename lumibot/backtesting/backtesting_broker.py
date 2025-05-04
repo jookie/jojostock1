@@ -1,3 +1,4 @@
+import finrl
 import logging
 import traceback
 from datetime import timedelta
@@ -28,6 +29,8 @@ class BacktestingBroker(Broker):
 
         # Legacy strategy.backtest code will always pass in a config even for Brokers that don't need it, so
         # catch it here and ignore it in this class. Child classes that need it should error check it themselves.
+        print(f"++++DOV DOV DOVBacktestingBroker(Broker)+++++++++++++++++++++++++++++++++++++++++{data_source}+++++++++++++=")
+        print(config)
         # self._config = config
 
         if not isinstance(self.data_source, DataSourceBacktesting):

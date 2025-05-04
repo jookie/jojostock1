@@ -1,13 +1,9 @@
+from __future__ import annotations
 """
 DRL models from ElegantRL: https://github.com/AI4Finance-Foundation/ElegantRL
 """
 
-from __future__ import annotations
-
 import torch
-
-
-from __future__ import annotations
 from lib.utility.jprint import jprint
 import torch
 from lib.rl.agents.elegantrl import *

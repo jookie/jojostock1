@@ -96,7 +96,7 @@ class AlpacaProcessor:
         tic, df, times = args
         tmp_df = pd.DataFrame(index=times)
         tic_df = df[df.tic == tic].set_index("timestamp")
-
+            
         # Step 1: Merging dataframes to avoid loop
         tmp_df = tmp_df.merge(
             tic_df[["open", "high", "low", "close", "volume"]],
@@ -249,6 +249,10 @@ class AlpacaProcessor:
         return self.clean_data(vix_df)
 
     def add_vix(self, data):
+        # Add this validation
+        if 'close' not in df.columns:
+            raise ValueError("Input data missing 'close' column")
+    
         with ThreadPoolExecutor() as executor:
             future = executor.submit(self.download_and_clean_data)
             cleaned_vix = future.result()

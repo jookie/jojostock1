@@ -1,62 +1,119 @@
-import pandas as pd
-from datetime import date, timedelta
-from dateutil.relativedelta import relativedelta
-from alpaca.data.historical import StockHistoricalDataClient
-from alpaca.data.requests import StockBarsRequest
-from alpaca.data.timeframe import TimeFrame
-import os
+from lumibot.strategies import Strategy
+from lumibot.backtesting import BacktestingBroker
+from lumibot.data_sources import AlpacaData  
+from datetime import datetime, timedelta
 from lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET
+from alpaca_trade_api import REST 
+from pages.TraderBot.finbert_utils import estimate_sentiment
+from lumibot.brokers.alpaca import Alpaca
+BASE_URL = "https://paper-api.alpaca.markets"
 
-# Initialize Alpaca Data Client
-client = StockHistoricalDataClient(ALPACA_API_KEY, ALPACA_API_SECRET)
-tickers = ["AAPL", "MSFT", "TSLA", "GOOGL", "NVDA"]
-start_date = date.today() - timedelta(days=10)
-end_date   = date.today() - timedelta(days=1)
+ALPACA_CREDS = {
+    "API_KEY": ALPACA_API_KEY, 
+    "API_SECRET": ALPACA_API_SECRET, 
+    "PAPER": True
+}
 
-print(f"Fetching data from {start_date} to {end_date}")
 
-# Prepare dictionary to store data
-data_frames = {}
+class AlpacaBacktesting(AlpacaData):
+    """Custom Alpaca Backtesting Data Source"""
+    IS_BACKTESTING_DATA_SOURCE = True  # Correct flag for backtesting
+    
+    def __init__(self, datetime_start, datetime_end, **kwargs):
+        config = {
+            'API_KEY': ALPACA_API_KEY,
+            'API_SECRET': ALPACA_API_SECRET,
+            'PAPER': True,
+            'is_backtesting': True  # Explicitly mark as backtesting
+        }
+        super().__init__(config=config)
+        self._datetime_start = datetime_start
+        self._datetime_end = datetime_end
 
-for ticker in tickers:
-    print(f"Fetching: {ticker}")
-    try:
-        request_params = StockBarsRequest(
-            symbol_or_symbols=ticker,
-            timeframe=TimeFrame.Day,
-            start=start_date,
-            end=end_date
-        )
+    @property
+    def datetime_start(self):
+        return self._datetime_start
 
-        bars = client.get_stock_bars(request_params).df
+    @property
+    def datetime_end(self):
+        return self._datetime_end
+    
+    
+class MLTrader(Strategy): 
+    def initialize(self, symbol:str="SPY", cash_at_risk:float=.5): 
+        self.symbol = symbol
+        self.sleeptime = "24H" 
+        self.last_trade = None 
+        self.cash_at_risk = cash_at_risk
+        self.api = REST(base_url=BASE_URL, key_id=API_KEY, secret_key=API_SECRET)
 
-        if bars.empty:
-            print(f"⚠️ No data for {ticker}")
-            continue
+    def position_sizing(self): 
+        cash = self.get_cash() 
+        last_price = self.get_last_price(self.symbol)
+        quantity = round(cash * self.cash_at_risk / last_price,0)
+        return cash, last_price, quantity
 
-        # Normalize index to ensure it's flat datetime, not tuple
-        if isinstance(bars.index, pd.MultiIndex):
-            bars.reset_index(inplace=True)
-            bars.set_index("timestamp", inplace=True)
+    def get_dates(self): 
+        today = self.get_datetime()
+        three_days_prior = today - timedelta(days=3)
+        return today.strftime('%Y-%m-%d'), three_days_prior.strftime('%Y-%m-%d')
 
-        df = bars[["open", "high", "low", "close", "volume"]].copy()
-        df.columns = ["Open", "High", "Low", "Close", "Volume"]
+    def get_sentiment(self): 
+        today, three_days_prior = self.get_dates()
+        news = self.api.get_news(symbol=self.symbol, 
+                                 start=three_days_prior, 
+                                 end=today) 
+        news = [ev.__dict__["_raw"]["headline"] for ev in news]
+        probability, sentiment = estimate_sentiment(news)
+        return probability, sentiment 
 
-        # Convert index to datetime.date safely
-        df.index = pd.to_datetime(df.index).date
+    def on_trading_iteration(self):
+        cash, last_price, quantity = self.position_sizing() 
+        probability, sentiment = self.get_sentiment()
 
-        data_frames[ticker] = df
+        if cash > last_price: 
+            if sentiment == "positive" and probability > .999: 
+                if self.last_trade == "sell": 
+                    self.sell_all() 
+                order = self.create_order(
+                    self.symbol, 
+                    quantity, 
+                    "buy", 
+                    type="bracket", 
+                    take_profit_price=last_price*1.20, 
+                    stop_loss_price=last_price*.95
+                )
+                self.submit_order(order) 
+                self.last_trade = "buy"
+            elif sentiment == "negative" and probability > .999: 
+                if self.last_trade == "buy": 
+                    self.sell_all() 
+                order = self.create_order(
+                    self.symbol, 
+                    quantity, 
+                    "sell", 
+                    type="bracket", 
+                    take_profit_price=last_price*.8, 
+                    stop_loss_price=last_price*1.05
+                )
+                self.submit_order(order) 
+                self.last_trade = "sell"
 
-    except Exception as e:
-        print(f"❌ Failed to fetch {ticker}: {e}")
+# Backtest execution
+start_date = datetime(2020, 1, 1)
+end_date = datetime(2023, 12, 31)
 
-# Combine into MultiIndex DataFrame
-if data_frames:
-    combined_df = pd.concat(data_frames.values(), axis=1, keys=data_frames.keys())
-    print(combined_df.head())
+broker = Alpaca(ALPACA_CREDS) 
+strategy = MLTrader(name='mlstrat', broker=broker, 
+                    parameters = {"symbol":"SPY", 
+                                 "cash_at_risk":.5})
 
-    # Optional: Save to CSV
-    combined_df.to_csv("alpaca_6_months_data.csv")
-    print("📁 Saved to alpaca_6_months_data.csv")
-else:
-    print("🚫 No data returned for any ticker.")
+# Run backtest with custom data source
+results = strategy.backtest(
+    AlpacaBacktesting,
+    start_date,
+    end_date,
+    parameters={"symbol": "SPY", "cash_at_risk": 0.5}
+)
+
+print(f"Backtest Results:\n{results}")

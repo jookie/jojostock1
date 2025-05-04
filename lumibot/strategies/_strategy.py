@@ -1010,6 +1010,10 @@ class _Strategy:
             name = self.__name__
 
         self._name = name
+        
+        
+        # DOV
+        print(f"datasource_class: {datasource_class}")
 
         # Create an adapter with 'strategy_name' set to the instance's name
         if not hasattr(self, "logger") or self.logger is None:

@@ -1,5 +1,5 @@
 from __future__ import annotations
-from lib.utility.jprint import jprint
+# from lib.utility.jprint import jprint
 
 from lib.rl.config import ERL_PARAMS
 from lib.rl.config import INDICATORS
@@ -34,7 +34,13 @@ def train(
     data = dp.add_technical_indicator(data, technical_indicator_list)
     if if_vix:
         data = dp.add_vix(data)
-    price_array, tech_array, turbulence_array = dp.df_to_array(data, if_vix)
+    price_array, tech_array, turbulence_array = dp.df_to_array(data,  technical_indicator_list, if_vix=if_vix)
+    # import numpy as np   
+    # # Add validation
+    # assert not np.isnan(price_array).any(), "NaN values found in price array"
+    # assert not np.isnan(tech_array).any(), "NaN values found in tech array"
+    # assert not np.isnan(turbulence_array).any(), "NaN values found in turbulence array"
+        
     env_config = {
         "price_array": price_array,
         "tech_array": tech_array,
@@ -94,9 +100,9 @@ def train(
         trained_model = agent.train_model(
             model=model, tb_log_name=model_name, total_timesteps=total_timesteps
         )
-        jprint("Training is finished!")
+        print("Training is finished!")
         trained_model.save(cwd)
-        jprint("Trained model is saved in " + str(cwd))
+        print("Trained model is saved in " + str(cwd))
     else:
         raise ValueError("DRL library input is NOT supported. Please check.")
 
