@@ -4,26 +4,26 @@ import os
 from argparse import ArgumentParser
 from typing import List
 
-from lib.rl.config import ALPACA_API_BASE_URL
-from lib.rl.config import DATA_SAVE_DIR
-from lib.rl.config import ERL_PARAMS
-from lib.rl.config import INDICATORS
-from lib.rl.config import RESULTS_DIR
-from lib.rl.config import TENSORBOARD_LOG_DIR
-from lib.rl.config import TEST_END_DATE
-from lib.rl.config import TEST_START_DATE
-from lib.rl.config import TRADE_END_DATE
-from lib.rl.config import TRADE_START_DATE
-from lib.rl.config import TRAIN_END_DATE
-from lib.rl.config import TRAIN_START_DATE
-from lib.rl.config import TRAINED_MODEL_DIR
-from lib.rl.config_tickers import DOW_30_TICKER
-from lib.rl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
+from finrl.config import ALPACA_API_BASE_URL
+from finrl.config import DATA_SAVE_DIR
+from finrl.config import ERL_PARAMS
+from finrl.config import INDICATORS
+from finrl.config import RESULTS_DIR
+from finrl.config import TENSORBOARD_LOG_DIR
+from finrl.config import TEST_END_DATE
+from finrl.config import TEST_START_DATE
+from finrl.config import TRADE_END_DATE
+from finrl.config import TRADE_START_DATE
+from finrl.config import TRAIN_END_DATE
+from finrl.config import TRAIN_START_DATE
+from finrl.config import TRAINED_MODEL_DIR
+from finrl.config_tickers import DOW_30_TICKER
+from finrl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
 
 # construct environment
 
 # try:
-#     from lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET
+#     from finrl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET
 # except ImportError:
 #     raise FileNotFoundError(
 #         "Please set your own ALPACA_API_KEY and ALPACA_API_SECRET in config_private.py"
@@ -57,7 +57,7 @@ def main() -> int:
     )
 
     if options.mode == "train":
-        from lib.rl import train
+        from finrl import train
 
         env = StockTradingEnv
 
@@ -81,7 +81,7 @@ def main() -> int:
             kwargs=kwargs,
         )
     elif options.mode == "test":
-        from lib.rl import test
+        from finrl import test
 
         env = StockTradingEnv
 
@@ -104,10 +104,10 @@ def main() -> int:
             kwargs=kwargs,
         )
     elif options.mode == "trade":
-        from lib.rl import trade
+        from finrl import trade
 
         try:
-            from lib.rl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET
+            from finrl.config_private import ALPACA_API_KEY, ALPACA_API_SECRET
         except ImportError:
             raise FileNotFoundError(
                 "Please set your own ALPACA_API_KEY and ALPACA_API_SECRET in config_private.py"

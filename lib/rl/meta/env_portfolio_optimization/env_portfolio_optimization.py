@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 from gym import spaces
 from gym.utils import seeding
-from lib.rl.config import RESULTS_DIR
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from stable_baselines3.common.vec_env import DummyVecEnv
@@ -140,7 +140,7 @@ class PortfolioOptimizationEnv(gym.Env):
         self._new_gym_api = new_gym_api
 
         # results file
-        self._results_file = self._cwd / RESULTS_DIR / "rl"
+        self._results_file = self._cwd / "results" / "rl"
         self._results_file.mkdir(parents=True, exist_ok=True)
 
         # initialize price variation

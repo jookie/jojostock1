@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from lib.rl.meta.env_stock_trading.env_stock_papertrading import AlpacaPaperTrading
-from lib.rl.test import test
+from finrl.meta.env_stock_trading.env_stock_papertrading import AlpacaPaperTrading
+from finrl.test import test
 
 
 def trade(

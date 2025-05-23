@@ -1,0 +1,2 @@
+Stock market sentiment analysis is one of the web scraping methods for finance that helps gather data to make informed business decisions. Research shows that stock market price movements correlate with public sentiments regarding the companies.
+Thus, sentiment about the company in the media, industry reports, social media reviews, or investors’ opinions can provide great insights into how the prices of stocks change

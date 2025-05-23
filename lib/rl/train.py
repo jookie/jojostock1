@@ -1,15 +1,14 @@
 from __future__ import annotations
-# from lib.utility.jprint import jprint
 
-from lib.rl.config import ERL_PARAMS
-from lib.rl.config import INDICATORS
-from lib.rl.config import RLlib_PARAMS
-from lib.rl.config import SAC_PARAMS
-from lib.rl.config import TRAIN_END_DATE
-from lib.rl.config import TRAIN_START_DATE
-from lib.rl.config_tickers import DOW_30_TICKER
-from lib.rl.meta.data_processor import DataProcessor
-from lib.rl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
+from finrl.config import ERL_PARAMS
+from finrl.config import INDICATORS
+from finrl.config import RLlib_PARAMS
+from finrl.config import SAC_PARAMS
+from finrl.config import TRAIN_END_DATE
+from finrl.config import TRAIN_START_DATE
+from finrl.config_tickers import DOW_30_TICKER
+from finrl.meta.data_processor import DataProcessor
+from finrl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
 
 # construct environment
 
@@ -34,13 +33,7 @@ def train(
     data = dp.add_technical_indicator(data, technical_indicator_list)
     if if_vix:
         data = dp.add_vix(data)
-    price_array, tech_array, turbulence_array = dp.df_to_array(data,  technical_indicator_list, if_vix=if_vix)
-    # import numpy as np   
-    # # Add validation
-    # assert not np.isnan(price_array).any(), "NaN values found in price array"
-    # assert not np.isnan(tech_array).any(), "NaN values found in tech array"
-    # assert not np.isnan(turbulence_array).any(), "NaN values found in turbulence array"
-        
+    price_array, tech_array, turbulence_array = dp.df_to_array(data, if_vix)
     env_config = {
         "price_array": price_array,
         "tech_array": tech_array,
@@ -53,7 +46,7 @@ def train(
     cwd = kwargs.get("cwd", "./" + str(model_name))
 
     if drl_lib == "elegantrl":
-        from lib.rl.agents.elegantrl.models import DRLAgent as DRLAgent_erl
+        from finrl.agents.elegantrl.models import DRLAgent as DRLAgent_erl
 
         break_step = kwargs.get("break_step", 1e6)
         erl_params = kwargs.get("erl_params")
@@ -70,7 +63,7 @@ def train(
     elif drl_lib == "rllib":
         total_episodes = kwargs.get("total_episodes", 100)
         rllib_params = kwargs.get("rllib_params")
-        from lib.rl.agents.rllib.models import DRLAgent as DRLAgent_rllib
+        from finrl.agents.rllib.models import DRLAgent as DRLAgent_rllib
 
         agent_rllib = DRLAgent_rllib(
             env=env,
@@ -93,7 +86,7 @@ def train(
     elif drl_lib == "stable_baselines3":
         total_timesteps = kwargs.get("total_timesteps", 1e6)
         agent_params = kwargs.get("agent_params")
-        from lib.rl.agents.stablebaselines3.models import DRLAgent as DRLAgent_sb3
+        from finrl.agents.stablebaselines3.models import DRLAgent as DRLAgent_sb3
 
         agent = DRLAgent_sb3(env=env_instance)
         model = agent.get_model(model_name, model_kwargs=agent_params)

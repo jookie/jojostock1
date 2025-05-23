@@ -1,7 +1,5 @@
 # DRL models from Stable Baselines 3
-# jojostock1/lib/rl/agents/stablebaselines3/models.py
 from __future__ import annotations
-from lib.utility.jprint import jprint
 
 import time
 
@@ -16,11 +14,10 @@ from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.noise import NormalActionNoise
 from stable_baselines3.common.noise import OrnsteinUhlenbeckActionNoise
 from stable_baselines3.common.vec_env import DummyVecEnv
-from lib.rl.config import RESULTS_DIR
 
-from lib.rl import config
-from lib.rl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
-from lib.rl.meta.preprocessor.preprocessors import data_split
+from finrl import config
+from finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
+from finrl.meta.preprocessor.preprocessors import data_split
 
 MODELS = {"a2c": A2C, "ddpg": DDPG, "td3": TD3, "sac": SAC, "ppo": PPO}
 
@@ -52,8 +49,8 @@ class TensorboardCallback(BaseCallback):
                 # Handle the case where neither "rewards" nor "reward" is found
                 self.logger.record(key="train/reward", value=None)
                 # Print the original error and the inner error for debugging
-                jprint("Original Error:", error)
-                jprint("Inner Error:", inner_error)
+                print("Original Error:", error)
+                print("Inner Error:", inner_error)
         return True
 
 
@@ -102,8 +99,7 @@ class DRLAgent:
             model_kwargs["action_noise"] = NOISE[model_kwargs["action_noise"]](
                 mean=np.zeros(n_actions), sigma=0.1 * np.ones(n_actions)
             )
-        
-        jprint(model_kwargs)
+        print(model_kwargs)
         return MODELS[model_name](
             policy=policy,
             env=self.env,
@@ -151,7 +147,7 @@ class DRLAgent:
             # state_memory=test_env.env_method(method_name="save_state_memory")
 
             if dones[0]:
-                jprint("hit end!")
+                print("hit end!")
                 break
         return account_memory[0], actions_memory[0]
 
@@ -164,7 +160,7 @@ class DRLAgent:
         try:
             # load agent
             model = MODELS[model_name].load(cwd)
-            jprint("Successfully load model", "cwd")
+            print("Successfully load model", cwd)
         except BaseException as error:
             raise ValueError(f"Failed to load agent. Error: {str(error)}") from error
 
@@ -185,8 +181,8 @@ class DRLAgent:
             episode_return = total_asset / environment.initial_total_asset
             episode_returns.append(episode_return)
 
-        jprint("lib/rl/agents/stablebaselines3/models.py: episode_return", "episode_return")
-        jprint("lib/rl/agents/stablebaselines3/models.py: Test Finished!")
+        print("episode_return", episode_return)
+        print("Test Finished!")
         return episode_total_assets
 
 
@@ -216,7 +212,7 @@ class DRLEnsembleAgent:
             temp_model_kwargs["action_noise"] = NOISE[
                 temp_model_kwargs["action_noise"]
             ](mean=np.zeros(n_actions), sigma=0.1 * np.ones(n_actions))
-        jprint("lib/rl/agents/stablebaselines3/models.py:", "temp_model_kwargs")
+        print(temp_model_kwargs)
         return MODELS[model_name](
             policy=policy,
             env=env,
@@ -239,14 +235,11 @@ class DRLEnsembleAgent:
         )
         return model
 
-    
-
-    
     @staticmethod
     def get_validation_sharpe(iteration, model_name):
         """Calculate Sharpe ratio based on validation results"""
         df_total_value = pd.read_csv(
-            f"{RESULTS_DIR}/account_value_validation_{model_name}_{iteration}.csv"
+            f"results/account_value_validation_{model_name}_{iteration}.csv"
         )
         # If the agent did not make any transaction
         if df_total_value["daily_return"].var() == 0:
@@ -349,11 +342,11 @@ class DRLEnsembleAgent:
             action, _states = model.predict(trade_obs)
             trade_obs, rewards, dones, info = trade_env.step(action)
             if i == (len(trade_data.index.unique()) - 2):
-                jprint("env_test.render()")
+                # print(env_test.render())
                 last_state = trade_env.envs[0].render()
 
         df_last_state = pd.DataFrame({"last_state": last_state})
-        df_last_state.to_csv(f"{RESULTS_DIR}/last_state_{name}_{i}.csv", index=False)
+        df_last_state.to_csv(f"results/last_state_{name}_{i}.csv", index=False)
         return last_state
 
     def _train_window(
@@ -375,7 +368,6 @@ class DRLEnsembleAgent:
             return None, sharpe_list, -1
 
         print(f"======{model_name} Training========")
-        jprint("agents/stablebaselines3/models.py:", "Training")
         model = self.get_model(
             model_name, self.train_env, policy="MlpPolicy", model_kwargs=model_kwargs
         )
@@ -386,13 +378,12 @@ class DRLEnsembleAgent:
             iter_num=i,
             total_timesteps=timesteps_dict[model_name],
         )  # 100_000
-        jprint(
+        print(
             f"======{model_name} Validation from: ",
             validation_start_date,
             "to ",
             validation_end_date,
         )
-        jprint("lib/rl/agents/stablebaselines3/models.py:", "Training")
         val_env = DummyVecEnv(
             [
                 lambda: StockTradingEnv(
@@ -423,8 +414,7 @@ class DRLEnsembleAgent:
             test_obs=val_obs,
         )
         sharpe = self.get_validation_sharpe(i, model_name=model_name)
-        print(f"{model_name} Sharpe Ratio: ", sharpe, "")
-        jprint("lib/rl/agents/stablebaselines3/models.py:", "Training")
+        print(f"{model_name} Sharpe Ratio: ", sharpe)
         sharpe_list.append(sharpe)
         return model, sharpe_list, sharpe
 
@@ -450,7 +440,6 @@ class DRLEnsembleAgent:
 
         """Ensemble Strategy that combines A2C, PPO, DDPG, SAC, and TD3"""
         print("============Start Ensemble Strategy============")
-        jprint("lib/rl/agents/stablebaselines3/models.py:", "Training")
         # for ensemble model, it's necessary to feed the last state
         # of the previous model to the current model as the initial state
         last_state_ensemble = []
@@ -484,7 +473,6 @@ class DRLEnsembleAgent:
             iteration_list.append(i)
 
             print("============================================")
-            jprint("lib/rl/agents/stablebaselines3/models.py:", "Training")
             # initial state is empty
             if i - self.rebalance_window - self.validation_window == 0:
                 # inital state
@@ -515,8 +503,7 @@ class DRLEnsembleAgent:
                 historical_turbulence.turbulence.values
             )
 
-            print(historical_turbulence_mean,"","")
-            jprint("lib/rl/agents/stablebaselines3/models.py:", "Training")
+            # print(historical_turbulence_mean)
 
             if historical_turbulence_mean > insample_turbulence_threshold:
                 # if the mean of the historical data is greater than the 90% quantile of insample turbulence data
@@ -534,8 +521,7 @@ class DRLEnsembleAgent:
             turbulence_threshold = np.quantile(
                 insample_turbulence.turbulence.values, 0.99
             )
-            print("turbulence_threshold: ", turbulence_threshold, "")
-            jprint("lib/rl/agents/stablebaselines3/models.py:", "Training")
+            print("turbulence_threshold: ", turbulence_threshold)
 
             # Environment Setup starts
             # training env
@@ -584,7 +570,7 @@ class DRLEnsembleAgent:
                 ],
             )
             # print("training: ",len(data_split(df, start=20090000, end=test.datadate.unique()[i-rebalance_window]) ))
-            jprint("==============Model Training===========")
+            # print("==============Model Training===========")
             # Train Each Model
             for model_name in MODELS.keys():
                 # Train The Model
@@ -610,7 +596,6 @@ class DRLEnsembleAgent:
                 "to ",
                 self.unique_trade_date[i - self.rebalance_window],
             )
-            jprint("lib/rl/agents/stablebaselines3/models.py:", "Training")
             # Environment setup for model retraining up to first trade date
             # train_full = data_split(self.df, start=self.train_period[0],
             # end=self.unique_trade_date[i - self.rebalance_window])
@@ -642,7 +627,6 @@ class DRLEnsembleAgent:
                 "to ",
                 self.unique_trade_date[i],
             )
-            jprint("lib/rl/agents/stablebaselines3/models.py:", "Training")
             # print("Used Model: ", model_ensemble)
             last_state_ensemble = self.DRL_prediction(
                 model=model_ensemble,
@@ -656,7 +640,6 @@ class DRLEnsembleAgent:
 
         end = time.time()
         print("Ensemble Strategy took: ", (end - start) / 60, " minutes")
-        jprint("lib/rl/agents/stablebaselines3/models.py:", "Training")
 
         df_summary = pd.DataFrame(
             [

@@ -1431,43 +1431,48 @@ FX_TICKER = [
     "EURDKK=X",
 ]
 
-
-# Here's the example using Streamlit:
-
-# To create an example using Streamlit with the following requirements:
-
-# A selectbox to select a single index from index_dict.
-# A multiselect to choose some tickers belonging to the selected index.
-# We'll assume that DOW_30_TICKER, NAS_100_TICKER, and SP_500_TICKER are predefined lists containing the tickers for each respective index.
-custom_index = ["MMM", "AXP", "BA", "CAT", "CSCO"]
-
-
-sector_dict = {
-    "Technology": ["AAPL", "MSFT", "GOOGL", "META", "TSLA"],
-    "Healthcare": ["JNJ", "PFE", "MRK", "UNH", "ABBV"],
-    "Finance": ["JPM", "BAC", "WFC", "C", "GS"],
-    "Consumer Discretionary": ["AMZN", "HD", "NKE", "MCD", "SBUX"],
-    "Energy": ["XOM", "CVX", "COP", "PSX", "VLO"]
-}
-usa_dict = {
-    # usa_dict[S&P 500]
-  "NYSE": SP_500_TICKER  
-}
-
-index_dict = {
-    "Dow 30": DOW_30_TICKER,
-    "Nasdaq 100": NAS_100_TICKER,
-    "S&P 500": SP_500_TICKER,
-    "Hang Seng Index" : HSI_50_TICKER, 
-    "SSE 50" :SSE_50_TICKER, 
-    "CSI 300" : CSI_300_TICKER, 
-    "CAC 40" : CAC_40_TICKER, 
-    "DAX 30" : DAX_30_TICKER, 
-    "TecDAX" : TECDAX_TICKER, 
-    "MDAX_50" : MDAX_50_TICKER, 
-    "SDAX 50" : SDAX_50_TICKER, 
-    "LQ45" : LQ45_TICKER, 
-    "SRI-KEHATI.JK" : SRI_KEHATI_TICKER , 
-    "FX Ticker":FX_TICKER, 
-    "Custom" : custom_index
-    }
+# Taiwan
+TAI_0050_TICKER = [
+    "3008",  # Largan Precision Co., Ltd.
+    "1303",  # Nan Ya Plastics Corporation
+    "2412",  # Chunghwa Telecom Co., Ltd.
+    "1301",  # Formosa Plastics Corporation
+    "1216",  # Uni-President Enterprises Corporation
+    "2881",  # Fubon Financial Holding Co., Ltd.
+    "2882",  # Cathay Financial Holding Co., Ltd.
+    "5871",  # China Development Financial Holding Corporation
+    "2886",  # Mega Financial Holding Co., Ltd.
+    "2891",  # CTBC Financial Holding Co., Ltd.
+    "2884",  # E.SUN Financial Holding Co., Ltd.
+    "5880",  # Yuanta Financial Holding Co., Ltd.
+    "2883",  # China Development Financial Holding Corporation
+    "2892",  # First Financial Holding Co., Ltd.
+    "2880",  # SinoPac Financial Holdings Company Limited
+    "2303",  # United Microelectronics Corporation
+    "1326",  # Formosa Chemicals & Fibre Corporation
+    "1101",  # Taiwan Cement Corp.
+    "3006",  # Advanced Semiconductor Engineering, Inc.
+    "3045",  # Compal Electronics Inc.
+    "2912",  # President Chain Store Corporation
+    "2327",  # ASE Technology Holding Co., Ltd.
+    "1304",  # China Petrochemical Development Corporation
+    "2379",  # Realtek Semiconductor Corp.
+    "2801",  # Chang Hwa Commercial Bank, Ltd.
+    "1402",  # Far Eastern New Century Corporation
+    "2345",  # Acer Incorporated
+    "2301",  # Lite-On Technology Corporation
+    "2408",  # AU Optronics Corp.
+    "2357",  # Asustek Computer Inc.
+    "9910",  # Feng Hsin Iron & Steel Co., Ltd.
+    "2395",  # Advantech Co., Ltd.
+    "2353",  # Acer Incorporated
+    "2354",  # Micro-Star International Co., Ltd.
+    "3711",  # ASE Technology Holding Co., Ltd.
+    "2890",  # Taishin Financial Holding Co., Ltd.
+    "2377",  # Micro-Star International Co., Ltd.
+    "4904",  # Far EasTone Telecommunications Co., Ltd.
+    "2324",  # Compal Electronics, Inc.
+    "2305",  # First International Computer, Inc.
+    "1102",  # Asia Cement Corporation
+    "9933",  # Mega Financial Holding Co., Ltd.
+]

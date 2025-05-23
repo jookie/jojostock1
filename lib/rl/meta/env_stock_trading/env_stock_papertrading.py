@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 import torch
 
-from lib.rl.meta.data_processors.processor_alpaca import AlpacaProcessor
+from finrl.meta.data_processors.processor_alpaca import AlpacaProcessor
 
 
 class AlpacaPaperTrading:
@@ -74,7 +74,7 @@ class AlpacaPaperTrading:
                 try:
                     trainer.restore(cwd)
                     self.agent = trainer
-                    jprint("Restoring from checkpoint path", cwd)
+                    print("Restoring from checkpoint path", cwd)
                 except:
                     raise ValueError("Fail to load agent!")
 
@@ -84,7 +84,7 @@ class AlpacaPaperTrading:
                 try:
                     # load agent
                     self.model = PPO.load(cwd)
-                    jprint("Successfully load model", cwd)
+                    print("Successfully load model", cwd)
                 except:
                     raise ValueError("Fail to load agent!")
 
@@ -149,7 +149,7 @@ class AlpacaPaperTrading:
             temp_time = time1 - time0
             total_time += temp_time
         latency = total_time / test_times
-        jprint("latency for data processing: ", latency)
+        print("latency for data processing: ", latency)
         return latency
 
     def run(self):
@@ -158,11 +158,11 @@ class AlpacaPaperTrading:
             self.alpaca.cancel_order(order.id)
 
         # Wait for market to open.
-        jprint("Waiting for market to open...")
+        print("Waiting for market to open...")
         tAMO = threading.Thread(target=self.awaitMarketOpen)
         tAMO.start()
         tAMO.join()
-        jprint("Market opened.")
+        print("Market opened.")
         while True:
             # Figure out when the market will close so we can prepare to sell beforehand.
             clock = self.alpaca.get_clock()
@@ -174,11 +174,11 @@ class AlpacaPaperTrading:
 
             if self.timeToClose < (60):
                 # Close all positions when 1 minutes til market close.
-                jprint("Market closing soon. Stop trading.")
+                print("Market closing soon. Stop trading.")
                 break
 
                 """# Close all positions when 1 minutes til market close.
-            jprint("Market closing soon.  Closing positions.")
+            print("Market closing soon.  Closing positions.")
 
             positions = self.alpaca.list_positions()
             for position in positions:
@@ -193,7 +193,7 @@ class AlpacaPaperTrading:
               tSubmitOrder.join()
 
             # Run script again after market close for next trading day.
-            jprint("Sleeping until market close (15 minutes).")
+            print("Sleeping until market close (15 minutes).")
             time.sleep(60 * 15)"""
 
             else:
@@ -214,7 +214,7 @@ class AlpacaPaperTrading:
             ).timestamp()
             currTime = clock.timestamp.replace(tzinfo=datetime.timezone.utc).timestamp()
             timeToOpen = int((openingTime - currTime) / 60)
-            jprint(str(timeToOpen) + " minutes til market open.")
+            print(str(timeToOpen) + " minutes til market open.")
             time.sleep(60)
             isOpen = self.alpaca.get_clock().is_open
 
@@ -334,14 +334,14 @@ class AlpacaPaperTrading:
                 tech,
             )
         ).astype(np.float32)
-        jprint(len(self.stockUniverse))
+        print(len(self.stockUniverse))
         return state
 
     def submitOrder(self, qty, stock, side, resp):
         if qty > 0:
             try:
                 self.alpaca.submit_order(stock, qty, side, "market", "day")
-                jprint(
+                print(
                     "Market order of | "
                     + str(qty)
                     + " "
@@ -352,7 +352,7 @@ class AlpacaPaperTrading:
                 )
                 resp.append(True)
             except:
-                jprint(
+                print(
                     "Order of | "
                     + str(qty)
                     + " "
@@ -363,7 +363,7 @@ class AlpacaPaperTrading:
                 )
                 resp.append(False)
         else:
-            jprint(
+            print(
                 "Quantity is 0, order of | "
                 + str(qty)
                 + " "

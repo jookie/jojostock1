@@ -1,8 +1,6 @@
 from __future__ import annotations
-from lib.utility.jprint import jprint
 
 import datetime
-from multiprocessing.sharedctypes import Value
 
 import numpy as np
 import pandas as pd
@@ -11,8 +9,8 @@ from sklearn.base import TransformerMixin
 from sklearn.preprocessing import MaxAbsScaler
 from stockstats import StockDataFrame as Sdf
 
-from lib.rl import config
-from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
+from finrl import config
+from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
 
 
 def load_dataset(*, file_name: str) -> pd.DataFrame:
@@ -151,22 +149,22 @@ class FeatureEngineer:
         # add technical indicators using stockstats
         if self.use_technical_indicator:
             df = self.add_technical_indicator(df)
-            jprint("lib/rl/meta/preprocessor/preprocessors.py: Successfully added technical indicators")
+            print("Successfully added technical indicators")
 
         # add vix for multiple stock
         if self.use_vix:
             df = self.add_vix(df)
-            jprint("lib/rl/meta/preprocessor/preprocessors.py: Successfully added vix")
+            print("Successfully added vix")
 
         # add turbulence index for multiple stock
         if self.use_turbulence:
             df = self.add_turbulence(df)
-            jprint("lib/rl/meta/preprocessor/preprocessors.py:  Successfully added turbulence index")
+            print("Successfully added turbulence index")
 
         # add user defined feature
         if self.user_defined_feature:
             df = self.add_user_defined_feature(df)
-            jprint("Successfully added user defined features")
+            print("Successfully added user defined features")
 
         # fill the missing values at the beginning and the end
         df = df.ffill().bfill()
@@ -228,7 +226,7 @@ class FeatureEngineer:
                         [indicator_df, temp_indicator], axis=0, ignore_index=True
                     )
                 except Exception as e:
-                    jprint(e)
+                    print(e)
             df = df.merge(
                 indicator_df[["tic", "date", indicator]], on=["tic", "date"], how="left"
             )

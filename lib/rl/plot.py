@@ -1,9 +1,5 @@
 from __future__ import annotations
-# silence warnings
-import warnings
-warnings.filterwarnings('ignore')
-import streamlit as st
-from lib.utility.jprint import jprint
+
 import copy
 import datetime
 from copy import deepcopy
@@ -12,22 +8,14 @@ import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-
+import pyfolio
 from pyfolio import timeseries
 
-from lib.rl import config
-from lib.rl.meta.data_processors.func import date2str
-from lib.rl.meta.data_processors.func import str2date
-from lib.rl.meta.preprocessor.yahoodownloader import YahooDownloader
+from finrl import config
+from finrl.meta.data_processors.func import date2str
+from finrl.meta.data_processors.func import str2date
+from finrl.meta.preprocessor.yahoodownloader import YahooDownloader
 
-from copy import deepcopy
-
-import pyfolio as pf
-import datetime as dt
-
-# Convert strings to datetime.date DOV to ALPACA
-from lib.utility.util import get_baseline2
-# Convert strings to datetime.date DOV to ALPACA
 
 def get_daily_return(df, value_col_name="account_value"):
     df = deepcopy(df)
@@ -37,6 +25,7 @@ def get_daily_return(df, value_col_name="account_value"):
     df.index = df.index.tz_localize("UTC")
     return pd.Series(df["daily_return"], index=df.index)
 
+
 def convert_daily_return_to_pyfolio_ts(df):
     strategy_ret = df.copy()
     strategy_ret["date"] = pd.to_datetime(strategy_ret["date"])
@@ -44,6 +33,7 @@ def convert_daily_return_to_pyfolio_ts(df):
     strategy_ret.index = strategy_ret.index.tz_localize("UTC")
     del strategy_ret["date"]
     return pd.Series(strategy_ret["daily_return"].values, index=strategy_ret.index)
+
 
 def backtest_stats(account_value, value_col_name="account_value"):
     dr_test = get_daily_return(account_value, value_col_name=value_col_name)
@@ -53,17 +43,11 @@ def backtest_stats(account_value, value_col_name="account_value"):
         transactions=None,
         turnover_denom="AGB",
     )
-    # jprint(perf_stats_all)
-    st.table(perf_stats_all)
+    print(perf_stats_all)
     return perf_stats_all
 
-import streamlit as st
-
-import matplotlib.pyplot as plt
-import pandas as pd
 
 def backtest_plot(
-    
     account_value,
     baseline_start=config.TRADE_START_DATE,
     baseline_end=config.TRADE_END_DATE,
@@ -74,26 +58,19 @@ def backtest_plot(
     df["date"] = pd.to_datetime(df["date"])
     test_returns = get_daily_return(df, value_col_name=value_col_name)
 
-    # Convert strings to datetime.date DOV to ALPACA
-    baseline_df = get_baseline2(
+    baseline_df = get_baseline(
         ticker=baseline_ticker, start=baseline_start, end=baseline_end
     )
-    # Convert strings to datetime.date DOV to ALPACA
+
     baseline_df["date"] = pd.to_datetime(baseline_df["date"], format="%Y-%m-%d")
     baseline_df = pd.merge(df[["date"]], baseline_df, how="left", on="date")
     baseline_df = baseline_df.fillna(method="ffill").fillna(method="bfill")
     baseline_returns = get_daily_return(baseline_df, value_col_name="close")
-   
-    result = pd.merge(test_returns, baseline_returns, left_index=True, right_index=True, suffixes=('_test', '_baseline'))
-    with pf.plotting.plotting_context(font_scale=1.1):
-        fig, ax = plt.subplots()
-        pf.create_full_tear_sheet(
-            returns=test_returns, 
-            benchmark_rets=baseline_returns, 
-            set_context=False
+
+    with pyfolio.plotting.plotting_context(font_scale=1.1):
+        pyfolio.create_full_tear_sheet(
+            returns=test_returns, benchmark_rets=baseline_returns, set_context=False
         )
-        result.plot(ax=ax)
-        st.pyplot(fig)
 
 
 def get_baseline(ticker, start, end):
@@ -342,8 +319,7 @@ def plot_return(
     final_return = {}
     for col in columns_strtegy:
         final_return[col] = result.iloc[-1][col]
-    jprint("final return: ", final_return)
-    st.table(final_return)
+    print("final return: ", final_return)
 
     result.reindex()
 

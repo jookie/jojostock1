@@ -1,29 +1,22 @@
-# Many platforms exist for simulated trading (paper trading) which can be used for building and developing the methods discussed. 
+# Disclaimer: Nothing herein is financial advice, and NOT a recommendation to trade real money. Many platforms exist for simulated trading (paper trading) which can be used for building and developing the methods discussed. Please use common sense and always first consult a professional before trading or investing.
 # -----------------------------------------------------------------------------------------------------------------------------------------
 # Import related modules
 from __future__ import annotations
 
+import numpy as np
+
+
 import os
 import time
-from copy import deepcopy
 
 import gym
-import numpy as np
-import numpy.random as rd
-import pandas as pd
-import torch
 import torch.nn as nn
 from torch import Tensor
 from torch.distributions.normal import Normal
 
-from lib.rl.config import INDICATORS
-from lib.rl.config_tickers import DOW_30_TICKER
-from lib.rl.meta.data_processor import DataProcessor
-from lib.rl.meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
-from lib.rl.plot import backtest_plot
-from lib.rl.plot import backtest_stats
-from lib.rl.plot import get_baseline
-from lib.rl.plot import get_daily_return
+
+# -----------------------------------------------------------------------------------------------------------------------------------------
+# PPO
 
 
 class ActorPPO(nn.Module):
@@ -284,11 +277,23 @@ class AgentPPO(AgentBase):
         get_action = self.act.get_action
         convert = self.act.convert_action_for_env
         for i in range(horizon_len):
+            
+            print("DEBUG: ary_state shape =", np.shape(ary_state))
+            
+            
             state = torch.as_tensor(ary_state, dtype=torch.float32, device=self.device)
             action, logprob = (t.squeeze(0) for t in get_action(state.unsqueeze(0))[:2])
 
             ary_action = convert(action).detach().cpu().numpy()
-            ary_state, reward, done, _ = env.step(ary_action)
+            # ary_state, reward, done, _ = env.step(ary_action)
+            if ary_state is None or np.size(ary_state) != 333:
+                print("ERROR: Invalid state received:", ary_state)
+                break  # or return, or skip — depending on where this is
+                        
+            ary_state, reward, terminated, truncated, _ = env.step(ary_action)
+            done = terminated or truncated
+
+            
             if done:
                 ary_state = env.reset()
 
@@ -420,7 +425,9 @@ def train_agent(args: Config):
     agent = args.agent_class(
         args.net_dims, args.state_dim, args.action_dim, gpu_id=args.gpu_id, args=args
     )
-    agent.states = env.reset()[np.newaxis, :]
+    state, _ = env.reset()
+    agent.states = state[np.newaxis, :]
+    # agent.states = env.reset()[np.newaxis, :]
 
     evaluator = Evaluator(
         eval_env=build_env(args.env_class, args.env_args),
@@ -686,14 +693,7 @@ class DRLAgent:
 # -----------------------------------------------------------------------------------------------------------------------------------------
 # Train & Test Functions
 
-from lib.rl.config import ERL_PARAMS
-from lib.rl.config import INDICATORS
-from lib.rl.config import RLlib_PARAMS
-from lib.rl.config import SAC_PARAMS
-from lib.rl.config import TRAIN_END_DATE
-from lib.rl.config import TRAIN_START_DATE
-from lib.rl.config_tickers import DOW_30_TICKER
-from lib.rl.meta.data_processor import DataProcessor
+from finrl.meta.data_processor import DataProcessor
 
 # construct environment
 
@@ -750,12 +750,6 @@ def train(
 
 # -----------------------------------------------------------------------------------------------------------------------------------------
 
-from lib.rl.config import INDICATORS
-from lib.rl.config import RLlib_PARAMS
-from lib.rl.config import TEST_END_DATE
-from lib.rl.config import TEST_START_DATE
-from lib.rl.config_tickers import DOW_30_TICKER
-
 
 def test(
     start_date,
@@ -771,7 +765,7 @@ def test(
     **kwargs,
 ):
     # import data processor
-    from lib.rl.meta.data_processor import DataProcessor
+    from finrl.meta.data_processor import DataProcessor
 
     # fetch data
     dp = DataProcessor(data_source, **kwargs)
@@ -812,38 +806,43 @@ def test(
 # -----------------------------------------------------------------------------------------------------------------------------------------
 
 import alpaca_trade_api as tradeapi
-import exchange_calendars as tc
+import pandas_market_calendars as tc
 import numpy as np
 import pandas as pd
-import pytz
 import yfinance as yf
-import matplotlib.ticker as ticker
-import matplotlib.dates as mdates
-from datetime import datetime as dt
-from lib.rl.plot import backtest_stats
-import matplotlib.pyplot as plt
-
+import pytz  
 
 def get_trading_days(start, end):
     nyse = tc.get_calendar("NYSE")
-    df = nyse.sessions_in_range(
-        pd.Timestamp(start, tz=pytz.UTC), pd.Timestamp(end, tz=pytz.UTC)
+    # Get schedule and extract dates
+    schedule = nyse.schedule(
+        start_date=pd.Timestamp(start, tz=pytz.UTC),
+        end_date  =pd.Timestamp(end  , tz=pytz.UTC)
     )
-    trading_days = []
-    for day in df:
-        trading_days.append(str(day)[:10])
-
+    trading_days = [str(date.date()) for date in schedule.index]
     return trading_days
-
 
 def alpaca_history(key, secret, url, start, end):
     api = tradeapi.REST(key, secret, url, "v2")
     trading_days = get_trading_days(start, end)
     df = pd.DataFrame()
+    
+    daily_frames = []
     for day in trading_days:
-        df = df.append(
-            api.get_portfolio_history(date_start=day, timeframe="5Min").df.iloc[:78]
-        )
+        # Fetch intraday data for a single day
+        daily_data = api.get_portfolio_history(
+            date_start=day, 
+            date_end=day,  # Critical fix
+            timeframe="5Min"
+        ).df.iloc[:78]
+        daily_frames.append(daily_data)
+    df = pd.concat(daily_frames, axis=0)    
+    
+    # for day in trading_days:
+    #     df = df.append(
+    #         api.get_portfolio_history(date_start=day, timeframe="5Min").df.iloc[:78]
+    #     )
+        
     equities = df.equity.values
     cumu_returns = equities / equities[0]
     cumu_returns = cumu_returns[~np.isnan(cumu_returns)]
@@ -853,7 +852,11 @@ def alpaca_history(key, secret, url, start, end):
 
 def DIA_history(start):
     data_df = yf.download(["^DJI"], start=start, interval="5m")
+    if data_df.empty:
+        raise ValueError("Failed to download DJI data. Check date or ticker.")
     data_df = data_df.iloc[:]
+    # Use "Close" instead of "Adj Close"
+    # baseline_returns = data_df["Close"].values / data_df["Close"].values[0]
     baseline_returns = data_df["Adj Close"].values / data_df["Adj Close"].values[0]
     return data_df, baseline_returns
 

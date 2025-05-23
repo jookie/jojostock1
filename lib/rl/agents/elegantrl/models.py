@@ -1,17 +1,13 @@
-from __future__ import annotations
 """
 DRL models from ElegantRL: https://github.com/AI4Finance-Foundation/ElegantRL
 """
 
+from __future__ import annotations
+
 import torch
-from lib.utility.jprint import jprint
-import torch
-from lib.rl.agents.elegantrl import *
-from lib.rl.agents.elegantrl.models  import Config
-from lib.rl.agents.elegantrl.models import train_agent
-# from elegantrl.agents import *
-# from elegantrl.train.config import Config
-# from elegantrl.train.run import train_agent
+from elegantrl.agents import *
+from elegantrl.train.config import Config
+from elegantrl.train.run import train_agent
 
 MODELS = {
     "ddpg": AgentDDPG,
@@ -168,6 +164,6 @@ class DRLAgent:
             episode_returns.append(episode_return)
             if done:
                 break
-        jprint("Test Finished!")
-        jprint("episode_retuen", episode_return)
+        print("Test Finished!")
+        print("episode_retuen", episode_return)
         return episode_total_assets

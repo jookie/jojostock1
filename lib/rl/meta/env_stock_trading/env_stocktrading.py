@@ -1,8 +1,4 @@
 from __future__ import annotations
-import streamlit as st
-import sys
-sys.path.append('../lib/rl')
-from lib.utility.jprint import jprint
 
 from typing import List
 
@@ -14,7 +10,6 @@ import pandas as pd
 from gymnasium import spaces
 from gymnasium.utils import seeding
 from stable_baselines3.common.vec_env import DummyVecEnv
-from lib.rl.config import RESULTS_DIR
 
 matplotlib.use("Agg")
 
@@ -101,7 +96,6 @@ class StockTradingEnv(gym.Env):
         )  # we need sometimes to preserve the state in the middle of trading process
         self.date_memory = [self._get_date()]
         #         self.logger = Logger('results',[CSVOutputFormat])
-        #         self.logger = Logger(,[CSVOutputFormat])
         # self.reset()
         self._seed()
 
@@ -220,8 +214,7 @@ class StockTradingEnv(gym.Env):
 
     def _make_plot(self):
         plt.plot(self.asset_memory, "r")
-        plt.savefig("{}/account_value_trade_{}.png".format(RESULTS_DIR, self.episode))
-        # plt.savefig(f"{}/account_value_trade_{self.episode}.png")
+        plt.savefig(f"results/account_value_trade_{self.episode}.png")
         plt.close()
 
     def step(self, actions):
@@ -261,49 +254,38 @@ class StockTradingEnv(gym.Env):
             df_rewards["date"] = self.date_memory[:-1]
             if self.episode % self.print_verbosity == 0:
                 print(f"day: {self.day}, episode: {self.episode}")
-                print(f"day: {self.day}, episode: {self.episode}")
                 print(f"begin_total_asset: {self.asset_memory[0]:0.2f}")
                 print(f"end_total_asset: {end_total_asset:0.2f}")
                 print(f"total_reward: {tot_reward:0.2f}")
                 print(f"total_cost: {self.cost:0.2f}")
                 print(f"total_trades: {self.trades}")
-                
-                st.write(f"day: {self.day}, episode: {self.episode}")
-                st.write(f"begin_total_asset: {self.asset_memory[0]:0.2f}")
-                st.write(f"end_total_asset: {end_total_asset:0.2f}")
-                st.write(f"total_reward: {tot_reward:0.2f}")
-                st.write(f"total_cost: {self.cost:0.2f}")
-                st.write(f"total_trades: {self.trades}")
-                
                 if df_total_value["daily_return"].std() != 0:
                     print(f"Sharpe: {sharpe:0.3f}")
-                    print(f"Sharpe: {sharpe:0.3f}")
-                    
-                jprint("meta/env_stock_trading/env_stocktrading.py===================")
+                print("=================================")
 
             if (self.model_name != "") and (self.mode != ""):
                 df_actions = self.save_action_memory()
                 df_actions.to_csv(
-                    "{}/actions_{}_{}_{}.csv".format(
-                        RESULTS_DIR, self.mode, self.model_name, self.iteration
+                    "results/actions_{}_{}_{}.csv".format(
+                        self.mode, self.model_name, self.iteration
                     )
                 )
                 df_total_value.to_csv(
-                    "{}/account_value_{}_{}_{}.csv".format(
-                        RESULTS_DIR ,self.mode, self.model_name, self.iteration
+                    "results/account_value_{}_{}_{}.csv".format(
+                        self.mode, self.model_name, self.iteration
                     ),
                     index=False,
                 )
                 df_rewards.to_csv(
-                    "{}/account_rewards_{}_{}_{}.csv".format(
-                         RESULTS_DIR, self.mode, self.model_name, self.iteration
+                    "results/account_rewards_{}_{}_{}.csv".format(
+                        self.mode, self.model_name, self.iteration
                     ),
                     index=False,
                 )
                 plt.plot(self.asset_memory, "r")
                 plt.savefig(
-                    "{}/account_value_{}_{}_{}.png".format(
-                        RESULTS_DIR, self.mode, self.model_name, self.iteration
+                    "results/account_value_{}_{}_{}.png".format(
+                        self.mode, self.model_name, self.iteration
                     )
                 )
                 plt.close()
